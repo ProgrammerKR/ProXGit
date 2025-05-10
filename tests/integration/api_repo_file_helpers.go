@@ -6,11 +6,19 @@ package integration
 import (
 	"strings"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/git"
 	api "code.gitea.io/gitea/modules/structs"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 )
 
 func createFileInBranch(user *user_model.User, repo *repo_model.Repository, treePath, branchName, content string) (*api.FilesResponse, error) {

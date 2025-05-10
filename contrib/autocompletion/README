@@ -1,7 +1,11 @@
 Bash and Zsh completion
 =======================
 
+<<<<<<< HEAD
 From within the gitea root run:
+=======
+From within the proxgit root run:
+>>>>>>> master
 
 ```bash
 source contrib/autocompletion/bash_autocomplete
@@ -13,5 +17,10 @@ or for zsh run:
 source contrib/autocompletion/zsh_autocomplete
 ```
 
+<<<<<<< HEAD
 These scripts will check if gitea is on the path and if so add autocompletion for `gitea`. Or if not autocompletion will work for `./gitea`.
 If gitea has been installed as a different program pass in the `PROG` environment variable to set the correct program name.
+=======
+These scripts will check if proxgit is on the path and if so add autocompletion for `proxgit`. Or if not autocompletion will work for `./proxgit`.
+If proxgit has been installed as a different program pass in the `PROG` environment variable to set the correct program name.
+>>>>>>> master

@@ -7,7 +7,11 @@ import (
 	"crypto/subtle"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )

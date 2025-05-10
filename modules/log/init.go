@@ -8,8 +8,13 @@ import (
 	"runtime"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/process"
 	"code.gitea.io/gitea/modules/util/rotatingfilewriter"
+=======
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/util/rotatingfilewriter"
+>>>>>>> master
 )
 
 var projectPackagePrefix string

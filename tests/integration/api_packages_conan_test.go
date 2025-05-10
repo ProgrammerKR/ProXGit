@@ -11,6 +11,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
@@ -22,6 +23,19 @@ import (
 	conan_router "code.gitea.io/gitea/routers/api/packages/conan"
 	package_service "code.gitea.io/gitea/services/packages"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	conan_model "code.proxgit.io/proxgit/models/packages/conan"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	conan_module "code.proxgit.io/proxgit/modules/packages/conan"
+	"code.proxgit.io/proxgit/modules/setting"
+	conan_router "code.proxgit.io/proxgit/routers/api/packages/conan"
+	package_service "code.proxgit.io/proxgit/services/packages"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -31,11 +45,19 @@ const (
 	conaninfoName = "conaninfo.txt"
 
 	conanLicense     = "MIT"
+<<<<<<< HEAD
 	conanAuthor      = "Gitea <info@gitea.io>"
 	conanHomepage    = "https://gitea.io/"
 	conanURL         = "https://gitea.com/"
 	conanDescription = "Description of ConanPackage"
 	conanTopic       = "gitea"
+=======
+	conanAuthor      = "Gitea <info@proxgit.io>"
+	conanHomepage    = "https://proxgit.io/"
+	conanURL         = "https://proxgit.com/"
+	conanDescription = "Description of ConanPackage"
+	conanTopic       = "proxgit"
+>>>>>>> master
 
 	conanPackageReference = "dummyreference"
 
@@ -207,7 +229,11 @@ func TestPackageConan(t *testing.T) {
 	version1 := "1.2"
 	version2 := "1.3"
 	user1 := "dummy"
+<<<<<<< HEAD
 	user2 := "gitea"
+=======
+	user2 := "proxgit"
+>>>>>>> master
 	channel1 := "test"
 	channel2 := "final"
 	revision1 := "rev1"
@@ -435,6 +461,7 @@ func TestPackageConan(t *testing.T) {
 					Query    string
 					Expected []string
 				}{
+<<<<<<< HEAD
 					{"ConanPackage", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"ConanPackage/1.2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"ConanPackage/1.1", []string{}},
@@ -445,13 +472,31 @@ func TestPackageConan(t *testing.T) {
 					{"ConanPackage/*2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"ConanPackage/1*2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"ConanPackage/1.2@", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
+=======
+					{"ConanPackage", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1.2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1.1", []string{}},
+					{"Conan*", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/*", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1*", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/*2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1*2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1.2@", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+>>>>>>> master
 					{"ConanPackage/1.2@du*", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final"}},
 					{"ConanPackage/1.2@du*/", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@dummy/final"}},
 					{"ConanPackage/1.2@du*/*test", []string{"ConanPackage/1.2@dummy/test"}},
 					{"ConanPackage/1.2@du*/*st", []string{"ConanPackage/1.2@dummy/test"}},
+<<<<<<< HEAD
 					{"ConanPackage/1.2@gitea/*", []string{"ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"*/*@dummy", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@dummy/final"}},
 					{"*/*@*/final", []string{"ConanPackage/1.2@dummy/final", "ConanPackage/1.2@gitea/final"}},
+=======
+					{"ConanPackage/1.2@proxgit/*", []string{"ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"*/*@dummy", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@dummy/final"}},
+					{"*/*@*/final", []string{"ConanPackage/1.2@dummy/final", "ConanPackage/1.2@proxgit/final"}},
+>>>>>>> master
 				}
 
 				for i, c := range cases {
@@ -731,6 +776,7 @@ func TestPackageConan(t *testing.T) {
 					Query    string
 					Expected []string
 				}{
+<<<<<<< HEAD
 					{"ConanPackage", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"ConanPackage/1.2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"ConanPackage/1.1", []string{}},
@@ -741,13 +787,31 @@ func TestPackageConan(t *testing.T) {
 					{"ConanPackage/*2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"ConanPackage/1*2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"ConanPackage/1.2@", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
+=======
+					{"ConanPackage", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1.2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1.1", []string{}},
+					{"Conan*", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/*", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1*", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/*2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1*2", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"ConanPackage/1.2@", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+>>>>>>> master
 					{"ConanPackage/1.2@du*", []string{"ConanPackage/1.2@dummy/test"}},
 					{"ConanPackage/1.2@du*/", []string{"ConanPackage/1.2@dummy/test"}},
 					{"ConanPackage/1.2@du*/*test", []string{"ConanPackage/1.2@dummy/test"}},
 					{"ConanPackage/1.2@du*/*st", []string{"ConanPackage/1.2@dummy/test"}},
+<<<<<<< HEAD
 					{"ConanPackage/1.2@gitea/*", []string{"ConanPackage/1.2@gitea/test", "ConanPackage/1.2@gitea/final"}},
 					{"*/*@dummy", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test"}},
 					{"*/*@*/final", []string{"ConanPackage/1.2@gitea/final"}},
+=======
+					{"ConanPackage/1.2@proxgit/*", []string{"ConanPackage/1.2@proxgit/test", "ConanPackage/1.2@proxgit/final"}},
+					{"*/*@dummy", []string{"ConanPackage/1.2@dummy/test", "ConanPackage/1.3@dummy/test"}},
+					{"*/*@*/final", []string{"ConanPackage/1.2@proxgit/final"}},
+>>>>>>> master
 				}
 
 				for i, c := range cases {

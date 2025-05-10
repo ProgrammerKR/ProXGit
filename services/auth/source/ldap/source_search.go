@@ -11,8 +11,13 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/go-ldap/ldap/v3"
 )

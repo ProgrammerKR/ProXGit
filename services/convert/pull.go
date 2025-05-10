@@ -7,6 +7,7 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/perm"
@@ -22,6 +23,23 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/gitdiff"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/cachegroup"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/gitdiff"
+>>>>>>> master
 )
 
 // ToAPIPullRequest assumes following fields have been assigned with valid values:

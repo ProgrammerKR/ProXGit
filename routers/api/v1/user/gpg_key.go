@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
@@ -17,6 +18,17 @@ import (
 	"code.gitea.io/gitea/routers/api/v1/utils"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+>>>>>>> master
 )
 
 func listGPGKeys(ctx *context.APIContext, uid int64, listOptions db.ListOptions) {

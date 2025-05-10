@@ -6,10 +6,17 @@ package issues
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	project_model "code.gitea.io/gitea/models/project"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	project_model "code.proxgit.io/proxgit/models/project"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // LoadProject load the project the issue was assigned to

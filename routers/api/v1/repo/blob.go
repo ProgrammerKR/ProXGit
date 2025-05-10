@@ -6,8 +6,13 @@ package repo
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/services/context"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	"code.proxgit.io/proxgit/services/context"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 )
 
 // GetBlob get the blob of a repository file.

@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -35,6 +36,33 @@ import (
 	mirror_service "code.gitea.io/gitea/services/mirror"
 	repo_service "code.gitea.io/gitea/services/repository"
 	wiki_service "code.gitea.io/gitea/services/wiki"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	unit_model "code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/indexer/code"
+	issue_indexer "code.proxgit.io/proxgit/modules/indexer/issues"
+	"code.proxgit.io/proxgit/modules/indexer/stats"
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/validation"
+	"code.proxgit.io/proxgit/modules/web"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	"code.proxgit.io/proxgit/services/migrations"
+	mirror_service "code.proxgit.io/proxgit/services/mirror"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	wiki_service "code.proxgit.io/proxgit/services/wiki"
+>>>>>>> master
 
 	"xorm.io/xorm/convert"
 )

@@ -8,9 +8,15 @@ import (
 	"fmt"
 	"hash"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/ProtonMail/go-crypto/openpgp/packet"
 )

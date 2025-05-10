@@ -15,11 +15,19 @@ const (
 	id                = "System.Gitea"
 	semver            = "1.0.1"
 	authors           = "Gitea Authors"
+<<<<<<< HEAD
 	projectURL        = "https://gitea.io"
 	description       = "Package Description"
 	releaseNotes      = "Package Release Notes"
 	readme            = "Readme"
 	repositoryURL     = "https://gitea.io/gitea/gitea"
+=======
+	projectURL        = "https://proxgit.io"
+	description       = "Package Description"
+	releaseNotes      = "Package Release Notes"
+	readme            = "Readme"
+	repositoryURL     = "https://proxgit.io/proxgit/proxgit"
+>>>>>>> master
 	targetFramework   = ".NETStandard2.1"
 	dependencyID      = "System.Text.Json"
 	dependencyVersion = "5.0.0"

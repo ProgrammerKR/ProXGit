@@ -8,11 +8,19 @@ import (
 	"net/http/httptest"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/models/user"
 	gitea_context "code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/models/user"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -39,6 +47,7 @@ func TestRenderHelperMention(t *testing.T) {
 	// when using web context, use user.IsUserVisibleToViewer to check
 	req, err := http.NewRequest(http.MethodGet, "/", nil)
 	assert.NoError(t, err)
+<<<<<<< HEAD
 	base := gitea_context.NewBaseContextForTest(httptest.NewRecorder(), req)
 	giteaCtx := gitea_context.NewWebContext(base, &contexttest.MockRender{}, nil)
 
@@ -49,4 +58,16 @@ func TestRenderHelperMention(t *testing.T) {
 	assert.NoError(t, err)
 	assert.True(t, FormalRenderHelperFuncs().IsUsernameMentionable(giteaCtx, userPublic))
 	assert.True(t, FormalRenderHelperFuncs().IsUsernameMentionable(giteaCtx, userPrivate))
+=======
+	base := proxgit_context.NewBaseContextForTest(httptest.NewRecorder(), req)
+	proxgitCtx := proxgit_context.NewWebContext(base, &contexttest.MockRender{}, nil)
+
+	assert.True(t, FormalRenderHelperFuncs().IsUsernameMentionable(proxgitCtx, userPublic))
+	assert.False(t, FormalRenderHelperFuncs().IsUsernameMentionable(proxgitCtx, userPrivate))
+
+	proxgitCtx.Doer, err = user.GetUserByName(db.DefaultContext, userPrivate)
+	assert.NoError(t, err)
+	assert.True(t, FormalRenderHelperFuncs().IsUsernameMentionable(proxgitCtx, userPublic))
+	assert.True(t, FormalRenderHelperFuncs().IsUsernameMentionable(proxgitCtx, userPrivate))
+>>>>>>> master
 }

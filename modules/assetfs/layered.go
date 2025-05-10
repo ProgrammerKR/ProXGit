@@ -14,10 +14,17 @@ import (
 	"sort"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/process"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/fsnotify/fsnotify"
 )

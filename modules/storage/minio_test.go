@@ -10,7 +10,11 @@ import (
 	"os"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/minio/minio-go/v7"
 	"github.com/stretchr/testify/assert"
@@ -26,7 +30,11 @@ func TestMinioStorageIterator(t *testing.T) {
 			Endpoint:        "minio:9000",
 			AccessKeyID:     "123456",
 			SecretAccessKey: "12345678",
+<<<<<<< HEAD
 			Bucket:          "gitea",
+=======
+			Bucket:          "proxgit",
+>>>>>>> master
 			Location:        "us-east-1",
 		},
 	})

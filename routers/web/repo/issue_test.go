@@ -6,7 +6,11 @@ package repo
 import (
 	"testing"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

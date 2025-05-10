@@ -15,13 +15,21 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/build/codeformat"
+=======
+	"code.proxgit.io/proxgit/build/codeformat"
+>>>>>>> master
 )
 
 // Windows has a limitation for command line arguments, the size can not exceed 32KB.
 // So we have to feed the files to some tools (like gofmt) batch by batch
 
+<<<<<<< HEAD
 // We also introduce a `gitea-fmt` command, it does better import formatting than gofmt/goimports. `gitea-fmt` calls `gofmt` internally.
+=======
+// We also introduce a `proxgit-fmt` command, it does better import formatting than gofmt/goimports. `proxgit-fmt` calls `gofmt` internally.
+>>>>>>> master
 
 var optionLogVerbose bool
 
@@ -70,7 +78,11 @@ func newFileCollector(fileFilter string, batchSize int) (*fileCollector, error) 
 
 		co.excludePatterns = append(co.excludePatterns, regexp.MustCompile(`.*\bbindata\.go$`))
 		co.excludePatterns = append(co.excludePatterns, regexp.MustCompile(`\.pb\.go$`))
+<<<<<<< HEAD
 		co.excludePatterns = append(co.excludePatterns, regexp.MustCompile(`tests/gitea-repositories-meta`))
+=======
+		co.excludePatterns = append(co.excludePatterns, regexp.MustCompile(`tests/proxgit-repositories-meta`))
+>>>>>>> master
 		co.excludePatterns = append(co.excludePatterns, regexp.MustCompile(`tests/integration/migration-test`))
 		co.excludePatterns = append(co.excludePatterns, regexp.MustCompile(`modules/git/tests`))
 		co.excludePatterns = append(co.excludePatterns, regexp.MustCompile(`models/fixtures`))
@@ -226,7 +238,11 @@ func containsString(a []string, s string) bool {
 	return false
 }
 
+<<<<<<< HEAD
 func giteaFormatGoImports(files []string, doWriteFile bool) error {
+=======
+func proxgitFormatGoImports(files []string, doWriteFile bool) error {
+>>>>>>> master
 	for _, file := range files {
 		if err := codeformat.FormatGoImports(file, doWriteFile); err != nil {
 			log.Printf("failed to format go imports: %s, err=%v", file, err)
@@ -263,11 +279,19 @@ func main() {
 		substArgs := substArgFiles(subArgs, files)
 		logVerbose("batch cmd: %s %v", subCmd, substArgs)
 		switch subCmd {
+<<<<<<< HEAD
 		case "gitea-fmt":
 			if containsString(subArgs, "-d") {
 				log.Print("the -d option is not supported by gitea-fmt")
 			}
 			cmdErrors = append(cmdErrors, giteaFormatGoImports(files, containsString(subArgs, "-w")))
+=======
+		case "proxgit-fmt":
+			if containsString(subArgs, "-d") {
+				log.Print("the -d option is not supported by proxgit-fmt")
+			}
+			cmdErrors = append(cmdErrors, proxgitFormatGoImports(files, containsString(subArgs, "-w")))
+>>>>>>> master
 			cmdErrors = append(cmdErrors, passThroughCmd("gofmt", append([]string{"-w", "-r", "interface{} -> any"}, substArgs...)))
 			cmdErrors = append(cmdErrors, passThroughCmd("go", append([]string{"run", os.Getenv("GOFUMPT_PACKAGE"), "-extra"}, substArgs...)))
 		default:

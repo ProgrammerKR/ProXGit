@@ -9,6 +9,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/unittest"
@@ -16,6 +17,15 @@ import (
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -39,7 +49,11 @@ func TestParsePatch_skipTo(t *testing.T) {
 --- "a/A \\ B"
 +++ "b/A \\ B"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -50,7 +64,11 @@ diff --git "\\a/README.md" "\\b/README.md"
 --- "\\a/README.md"
 +++ "\\b/README.md"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -70,7 +88,11 @@ diff --git "\\a/README.md" "\\b/README.md"
 --- "a/A \\ B"
 +++ "b/A \\ B"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -89,7 +111,11 @@ diff --git "\\a/README.md" "\\b/README.md"
 --- "\\a/README.md"
 +++ "\\b/README.md"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -100,7 +126,11 @@ diff --git "a/A \\ B" "b/A \\ B"
 --- "a/A \\ B"
 +++ "b/A \\ B"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -119,7 +149,11 @@ diff --git "a/A \\ B" "b/A \\ B"
 --- "a/A \\ B"
 +++ "b/A \\ B"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -130,7 +164,11 @@ diff --git "a/A \\ B" "b/A \\ B"
 --- "a/A \\ B"
 +++ "b/A \\ B"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -141,7 +179,11 @@ diff --git "\\a/README.md" "\\b/README.md"
 --- "\\a/README.md"
 +++ "\\b/README.md"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -204,7 +246,11 @@ func TestParsePatch_singlefile(t *testing.T) {
 --- "\\a/README.md"
 +++ "\\b/README.md"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -223,7 +269,11 @@ func TestParsePatch_singlefile(t *testing.T) {
 --- "a/A \\ B"
 +++ "b/A \\ B"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -484,7 +534,11 @@ index 0000000..6bb8f39
 --- a/README.md
 +++ b/README.md
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -500,7 +554,11 @@ index 0000000..6bb8f39
 --- "a/A \\ B"
 +++ "b/A \\ B"
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -516,7 +574,11 @@ index 0000000..6bb8f39
 --- "a/A \\ B"
 +++ b/A/B
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -532,7 +594,11 @@ index 0000000..6bb8f39
 --- a/README.md
 +++ b/README.md
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release

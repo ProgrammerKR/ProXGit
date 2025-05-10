@@ -12,6 +12,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -19,6 +20,15 @@ import (
 	helm_module "code.gitea.io/gitea/modules/packages/helm"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	helm_module "code.proxgit.io/proxgit/modules/packages/helm"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v3"

@@ -8,9 +8,15 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/packages/container/helm"
 	"code.gitea.io/gitea/modules/validation"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/packages/container/helm"
+	"code.proxgit.io/proxgit/modules/validation"
+>>>>>>> master
 
 	oci "github.com/opencontainers/image-spec/specs-go/v1"
 )

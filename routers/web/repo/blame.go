@@ -12,6 +12,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/charset"
@@ -23,6 +24,19 @@ import (
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/charset"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/git/languagestats"
+	"code.proxgit.io/proxgit/modules/highlight"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 type blameRow struct {

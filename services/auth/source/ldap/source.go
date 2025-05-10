@@ -6,10 +6,17 @@ package ldap
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/secret"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/secret"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // .____     ________      _____ __________

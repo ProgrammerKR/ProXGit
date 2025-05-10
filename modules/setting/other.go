@@ -3,7 +3,11 @@
 
 package setting
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/modules/log"
+=======
+import "code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 type OtherConfig struct {
 	ShowFooterVersion          bool

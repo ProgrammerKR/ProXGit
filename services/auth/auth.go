@@ -11,6 +11,7 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/auth/webauthn"
 	"code.gitea.io/gitea/modules/log"
@@ -20,6 +21,17 @@ import (
 	"code.gitea.io/gitea/modules/web/middleware"
 	gitea_context "code.gitea.io/gitea/services/context"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/auth/webauthn"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/session"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 type globalVarsStruct struct {
@@ -149,7 +161,11 @@ func handleSignIn(resp http.ResponseWriter, req *http.Request, sess SessionStore
 	middleware.SetLocaleCookie(resp, user.Language, 0)
 
 	// force to generate a new CSRF token
+<<<<<<< HEAD
 	if ctx := gitea_context.GetWebContext(req.Context()); ctx != nil {
+=======
+	if ctx := proxgit_context.GetWebContext(req.Context()); ctx != nil {
+>>>>>>> master
 		ctx.Csrf.PrepareForSessionUser(ctx)
 	}
 }

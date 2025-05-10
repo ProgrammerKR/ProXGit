@@ -14,6 +14,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -34,6 +35,28 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	issue_service "code.gitea.io/gitea/services/issue"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	pull_model "code.proxgit.io/proxgit/models/pull"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/globallock"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/references"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 )
 
 // getMergeMessage composes the message used when merging a pull request.
@@ -64,7 +87,11 @@ func getMergeMessage(ctx context.Context, baseGitRepo *git.Repository, pr *issue
 	reviewedBy := pr.GetApprovers(ctx)
 
 	if mergeStyle != "" {
+<<<<<<< HEAD
 		templateFilepath := fmt.Sprintf(".gitea/default_merge_message/%s_TEMPLATE.md", strings.ToUpper(string(mergeStyle)))
+=======
+		templateFilepath := fmt.Sprintf(".proxgit/default_merge_message/%s_TEMPLATE.md", strings.ToUpper(string(mergeStyle)))
+>>>>>>> master
 		commit, err := baseGitRepo.GetBranchCommit(pr.BaseRepo.DefaultBranch)
 		if err != nil {
 			return "", "", err

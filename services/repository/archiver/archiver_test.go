@@ -7,11 +7,19 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/services/contexttest"
 
 	_ "code.gitea.io/gitea/models/actions"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/services/contexttest"
+
+	_ "code.proxgit.io/proxgit/models/actions"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

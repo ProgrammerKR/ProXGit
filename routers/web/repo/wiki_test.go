@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
@@ -18,6 +19,17 @@ import (
 	"code.gitea.io/gitea/services/contexttest"
 	"code.gitea.io/gitea/services/forms"
 	wiki_service "code.gitea.io/gitea/services/wiki"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/contexttest"
+	"code.proxgit.io/proxgit/services/forms"
+	wiki_service "code.proxgit.io/proxgit/services/wiki"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

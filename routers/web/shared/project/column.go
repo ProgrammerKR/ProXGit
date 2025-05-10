@@ -4,9 +4,15 @@
 package project
 
 import (
+<<<<<<< HEAD
 	project_model "code.gitea.io/gitea/models/project"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/services/context"
+=======
+	project_model "code.proxgit.io/proxgit/models/project"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // MoveColumns moves or keeps columns in a project and sorts them inside that project

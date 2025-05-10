@@ -9,7 +9,11 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	base "code.gitea.io/gitea/modules/migration"
+=======
+	base "code.proxgit.io/proxgit/modules/migration"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -22,7 +26,11 @@ func TestGitHubDownloadRepo(t *testing.T) {
 		t.Skip("Skipping GitHub migration test because GITHUB_READ_TOKEN is empty")
 	}
 	ctx := t.Context()
+<<<<<<< HEAD
 	downloader := NewGithubDownloaderV3(ctx, "https://github.com", "", "", token, "go-gitea", "test_repo")
+=======
+	downloader := NewGithubDownloaderV3(ctx, "https://github.com", "", "", token, "go-proxgit", "test_repo")
+>>>>>>> master
 	err := downloader.RefreshRate(ctx)
 	assert.NoError(t, err)
 
@@ -30,16 +38,27 @@ func TestGitHubDownloadRepo(t *testing.T) {
 	assert.NoError(t, err)
 	assertRepositoryEqual(t, &base.Repository{
 		Name:          "test_repo",
+<<<<<<< HEAD
 		Owner:         "go-gitea",
 		Description:   "Test repository for testing migration from github to gitea",
 		CloneURL:      "https://github.com/go-gitea/test_repo.git",
 		OriginalURL:   "https://github.com/go-gitea/test_repo",
+=======
+		Owner:         "go-proxgit",
+		Description:   "Test repository for testing migration from github to proxgit",
+		CloneURL:      "https://github.com/go-proxgit/test_repo.git",
+		OriginalURL:   "https://github.com/go-proxgit/test_repo",
+>>>>>>> master
 		DefaultBranch: "master",
 	}, repo)
 
 	topics, err := downloader.GetTopics(ctx)
 	assert.NoError(t, err)
+<<<<<<< HEAD
 	assert.Contains(t, topics, "gitea")
+=======
+	assert.Contains(t, topics, "proxgit")
+>>>>>>> master
 
 	milestones, err := downloader.GetMilestones(ctx)
 	assert.NoError(t, err)
@@ -269,7 +288,11 @@ func TestGitHubDownloadRepo(t *testing.T) {
 					Description: "Improvements or additions to documentation",
 				},
 			},
+<<<<<<< HEAD
 			PatchURL: "https://github.com/go-gitea/test_repo/pull/3.patch",
+=======
+			PatchURL: "https://github.com/go-proxgit/test_repo/pull/3.patch",
+>>>>>>> master
 			Head: base.PullRequestBranch{
 				Ref:      "master",
 				CloneURL: "https://github.com/mrsdizzie/test_repo.git",
@@ -281,7 +304,11 @@ func TestGitHubDownloadRepo(t *testing.T) {
 			Base: base.PullRequestBranch{
 				Ref:       "master",
 				SHA:       "72866af952e98d02a73003501836074b286a78f6",
+<<<<<<< HEAD
 				OwnerName: "go-gitea",
+=======
+				OwnerName: "go-proxgit",
+>>>>>>> master
 				RepoName:  "test_repo",
 			},
 			Closed:         timePtr(time.Date(2019, 11, 12, 21, 39, 27, 0, time.UTC)),
@@ -307,7 +334,11 @@ func TestGitHubDownloadRepo(t *testing.T) {
 					Description: "Something isn't working",
 				},
 			},
+<<<<<<< HEAD
 			PatchURL: "https://github.com/go-gitea/test_repo/pull/4.patch",
+=======
+			PatchURL: "https://github.com/go-proxgit/test_repo/pull/4.patch",
+>>>>>>> master
 			Head: base.PullRequestBranch{
 				Ref:       "test-branch",
 				SHA:       "2be9101c543658591222acbee3eb799edfc3853d",
@@ -318,7 +349,11 @@ func TestGitHubDownloadRepo(t *testing.T) {
 			Base: base.PullRequestBranch{
 				Ref:       "master",
 				SHA:       "f32b0a9dfd09a60f616f29158f772cedd89942d2",
+<<<<<<< HEAD
 				OwnerName: "go-gitea",
+=======
+				OwnerName: "go-proxgit",
+>>>>>>> master
 				RepoName:  "test_repo",
 			},
 			Merged:         false,
@@ -387,7 +422,11 @@ func TestGitHubDownloadRepo(t *testing.T) {
 					ID:        363017488,
 					Content:   "This is a good pull request.",
 					TreePath:  "README.md",
+<<<<<<< HEAD
 					DiffHunk:  "@@ -1,2 +1,4 @@\n # test_repo\n Test repository for testing migration from github to gitea\n+",
+=======
+					DiffHunk:  "@@ -1,2 +1,4 @@\n # test_repo\n Test repository for testing migration from github to proxgit\n+",
+>>>>>>> master
 					Position:  3,
 					CommitID:  "2be9101c543658591222acbee3eb799edfc3853d",
 					PosterID:  81045,
@@ -452,7 +491,11 @@ func TestGithubMultiToken(t *testing.T) {
 
 	for _, tC := range testCases {
 		t.Run(tC.desc, func(t *testing.T) {
+<<<<<<< HEAD
 			opts := base.MigrateOptions{CloneAddr: "https://github.com/go-gitea/gitea", AuthToken: tC.token}
+=======
+			opts := base.MigrateOptions{CloneAddr: "https://github.com/go-proxgit/proxgit", AuthToken: tC.token}
+>>>>>>> master
 			client, err := factory.New(t.Context(), opts)
 			require.NoError(t, err)
 

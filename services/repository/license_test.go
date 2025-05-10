@@ -7,7 +7,11 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	repo_module "code.gitea.io/gitea/modules/repository"
+=======
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -37,8 +41,13 @@ func Test_detectLicense(t *testing.T) {
 	for _, licenseName := range repo_module.Licenses {
 		license, err := repo_module.GetLicense(licenseName, &repo_module.LicenseValues{
 			Owner: "Gitea",
+<<<<<<< HEAD
 			Email: "teabot@gitea.io",
 			Repo:  "gitea",
+=======
+			Email: "teabot@proxgit.io",
+			Repo:  "proxgit",
+>>>>>>> master
 			Year:  "2024",
 		})
 		assert.NoError(t, err)

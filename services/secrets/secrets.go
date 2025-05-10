@@ -6,8 +6,13 @@ package secrets
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	secret_model "code.gitea.io/gitea/models/secret"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	secret_model "code.proxgit.io/proxgit/models/secret"
+>>>>>>> master
 )
 
 func CreateOrUpdateSecret(ctx context.Context, ownerID, repoID int64, name, data, description string) (*secret_model.Secret, bool, error) {

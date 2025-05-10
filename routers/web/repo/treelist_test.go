@@ -7,10 +7,17 @@ import (
 	"html/template"
 	"testing"
 
+<<<<<<< HEAD
 	pull_model "code.gitea.io/gitea/models/pull"
 	"code.gitea.io/gitea/modules/fileicon"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/services/gitdiff"
+=======
+	pull_model "code.proxgit.io/proxgit/models/pull"
+	"code.proxgit.io/proxgit/modules/fileicon"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/services/gitdiff"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

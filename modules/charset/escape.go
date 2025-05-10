@@ -12,9 +12,15 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/translation"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 )
 
 // RuneNBSP is the codepoint for NBSP

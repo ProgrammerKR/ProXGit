@@ -13,10 +13,17 @@ import (
 	"net/url"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/proxy"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/proxy"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"golang.org/x/sync/errgroup"
 )
@@ -77,7 +84,11 @@ func (c *HTTPClient) batch(ctx context.Context, operation string, objects []Poin
 	// but some (incorrect) lfs servers like aliyun require it, so maybe adding an empty ref here doesn't break the correct ones.
 	// https://github.com/git-lfs/git-lfs/blob/a32a02b44bf8a511aa14f047627c49e1a7fd5021/docs/api/batch.md?plain=1#L37
 	//
+<<<<<<< HEAD
 	// UPDATE: it can't use "empty ref" here because it breaks others like https://github.com/go-gitea/gitea/issues/33453
+=======
+	// UPDATE: it can't use "empty ref" here because it breaks others like https://github.com/go-proxgit/proxgit/issues/33453
+>>>>>>> master
 	request := &BatchRequest{operation, c.transferNames(), nil, objects}
 
 	payload := new(bytes.Buffer)

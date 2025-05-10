@@ -17,7 +17,11 @@ func Test_shortenFilename(t *testing.T) {
 		expected string
 	}{
 		{
+<<<<<<< HEAD
 			"code.gitea.io/routers/common/logger_context.go",
+=======
+			"code.proxgit.io/routers/common/logger_context.go",
+>>>>>>> master
 			"NO_FALLBACK",
 			"common/logger_context.go",
 		},

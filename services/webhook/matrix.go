@@ -14,6 +14,7 @@ import (
 	"regexp"
 	"strings"
 
+<<<<<<< HEAD
 	webhook_model "code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/base"
 	"code.gitea.io/gitea/modules/git"
@@ -23,6 +24,17 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/util"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	webhook_model "code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 )
 
 func init() {
@@ -89,7 +101,11 @@ type MatrixPayload struct {
 	MsgType       string               `json:"msgtype"`
 	Format        string               `json:"format"`
 	FormattedBody string               `json:"formatted_body"`
+<<<<<<< HEAD
 	Commits       []*api.PayloadCommit `json:"io.gitea.commits,omitempty"`
+=======
+	Commits       []*api.PayloadCommit `json:"io.proxgit.commits,omitempty"`
+>>>>>>> master
 }
 
 type matrixConvertor struct {

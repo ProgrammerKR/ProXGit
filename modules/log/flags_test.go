@@ -6,7 +6,11 @@ package log
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

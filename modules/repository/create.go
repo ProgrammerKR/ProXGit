@@ -9,8 +9,13 @@ import (
 	"os"
 	"path/filepath"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	repo_model "code.gitea.io/gitea/models/repo"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+>>>>>>> master
 )
 
 const notRegularFileMode = os.ModeSymlink | os.ModeNamedPipe | os.ModeSocket | os.ModeDevice | os.ModeCharDevice | os.ModeIrregular

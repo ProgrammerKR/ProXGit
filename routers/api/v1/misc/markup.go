@@ -6,6 +6,7 @@ package misc
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/markup/markdown"
 	api "code.gitea.io/gitea/modules/structs"
@@ -13,6 +14,15 @@ import (
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/routers/common"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // Markup render markup document to HTML

@@ -7,8 +7,13 @@ import (
 	"context"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 )

@@ -6,11 +6,19 @@ package explore
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+>>>>>>> master
 )
 
 // TopicSearch search for creating topic

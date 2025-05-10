@@ -7,7 +7,11 @@ import (
 	"bytes"
 	"sort"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // Tag represents a Git tag.

@@ -11,6 +11,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
@@ -19,6 +20,16 @@ import (
 	"code.gitea.io/gitea/modules/packages/npm"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/packages/npm"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -38,8 +49,13 @@ func TestPackageNpm(t *testing.T) {
 	packageDescription := "Test Description"
 	packageBinName := "cli"
 	packageBinPath := "./cli.sh"
+<<<<<<< HEAD
 	repoType := "gitea"
 	repoURL := "http://localhost:3000/gitea/test.git"
+=======
+	repoType := "proxgit"
+	repoURL := "http://localhost:3000/proxgit/test.git"
+>>>>>>> master
 
 	data := "H4sIAAAAAAAA/ytITM5OTE/VL4DQelnF+XkMVAYGBgZmJiYK2MRBwNDcSIHB2NTMwNDQzMwAqA7IMDUxA9LUdgg2UFpcklgEdAql5kD8ogCnhwio5lJQUMpLzE1VslJQcihOzi9I1S9JLS7RhSYIJR2QgrLUouLM/DyQGkM9Az1D3YIiqExKanFyUWZBCVQ2BKhVwQVJDKwosbQkI78IJO/tZ+LsbRykxFXLNdA+HwWjYBSMgpENACgAbtAACAAA"
 
@@ -270,7 +286,11 @@ func TestPackageNpm(t *testing.T) {
 		}{
 			{"", 0, 0, 1, 1},
 			{"", 0, 10, 1, 1},
+<<<<<<< HEAD
 			{"gitea", 0, 10, 0, 0},
+=======
+			{"proxgit", 0, 10, 0, 0},
+>>>>>>> master
 			{"test", 0, 10, 1, 1},
 			{"test", 1, 10, 1, 0},
 		}

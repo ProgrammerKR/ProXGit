@@ -6,7 +6,11 @@ package translation
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation/i18n"
+=======
+	"code.proxgit.io/proxgit/modules/translation/i18n"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

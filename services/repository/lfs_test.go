@@ -8,6 +8,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -16,6 +17,16 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/storage"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -31,7 +42,11 @@ func TestGarbageCollectLFSMetaObjects(t *testing.T) {
 	assert.NoError(t, err)
 
 	// add lfs object
+<<<<<<< HEAD
 	lfsContent := []byte("gitea1")
+=======
+	lfsContent := []byte("proxgit1")
+>>>>>>> master
 	lfsOid := storeObjectInRepo(t, repo.ID, &lfsContent)
 
 	// gc

@@ -7,9 +7,15 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -30,6 +36,7 @@ index 0000000..4ac13c1
 --- /dev/null
 +++ b/.gitmodules
 @@ -0,0 +1,3 @@
+<<<<<<< HEAD
 +[submodule "gitea-mirror"]
 +	path = gitea-mirror
 +	url = https://gitea.com/gitea/gitea-mirror
@@ -38,6 +45,16 @@ new file mode 160000
 index 0000000..68972a9
 --- /dev/null
 +++ b/gitea-mirror
+=======
++[submodule "proxgit-mirror"]
++	path = proxgit-mirror
++	url = https://proxgit.com/proxgit/proxgit-mirror
+diff --git a/proxgit-mirror b/proxgit-mirror
+new file mode 160000
+index 0000000..68972a9
+--- /dev/null
++++ b/proxgit-mirror
+>>>>>>> master
 @@ -0,0 +1 @@
 +Subproject commit 68972a994719ae5c74e28d8fa82fa27c23399bc8
 `,
@@ -47,10 +64,17 @@ index 0000000..68972a9
 		},
 		{
 			name: "updated",
+<<<<<<< HEAD
 			gitdiff: `diff --git a/gitea-mirror b/gitea-mirror
 index 68972a9..c8ffe77 160000
 --- a/gitea-mirror
 +++ b/gitea-mirror
+=======
+			gitdiff: `diff --git a/proxgit-mirror b/proxgit-mirror
+index 68972a9..c8ffe77 160000
+--- a/proxgit-mirror
++++ b/proxgit-mirror
+>>>>>>> master
 @@ -1 +1 @@
 -Subproject commit 68972a994719ae5c74e28d8fa82fa27c23399bc8
 +Subproject commit c8ffe777cf9c5bb47a38e3e0b3a3b5de6cd8813d
@@ -69,6 +93,7 @@ index 4ac13c1..0510edd 100644
 --- a/.gitmodules
 +++ b/.gitmodules
 @@ -1,3 +1,3 @@
+<<<<<<< HEAD
  [submodule "gitea-mirror"]
 -	path = gitea-mirror
 +	path = gitea
@@ -77,6 +102,16 @@ diff --git a/gitea-mirror b/gitea
 similarity index 100%
 rename from gitea-mirror
 rename to gitea
+=======
+ [submodule "proxgit-mirror"]
+-	path = proxgit-mirror
++	path = proxgit
+ 	url = https://proxgit.com/proxgit/proxgit-mirror
+diff --git a/proxgit-mirror b/proxgit
+similarity index 100%
+rename from proxgit-mirror
+rename to proxgit
+>>>>>>> master
 `,
 		},
 		{
@@ -86,6 +121,7 @@ index 0510edd..e69de29 100644
 --- a/.gitmodules
 +++ b/.gitmodules
 @@ -1,3 +0,0 @@
+<<<<<<< HEAD
 -[submodule "gitea-mirror"]
 -	path = gitea
 -	url = https://gitea.com/gitea/gitea-mirror
@@ -93,6 +129,15 @@ diff --git a/gitea b/gitea
 deleted file mode 160000
 index c8ffe77..0000000
 --- a/gitea
+=======
+-[submodule "proxgit-mirror"]
+-	path = proxgit
+-	url = https://proxgit.com/proxgit/proxgit-mirror
+diff --git a/proxgit b/proxgit
+deleted file mode 160000
+index c8ffe77..0000000
+--- a/proxgit
+>>>>>>> master
 +++ /dev/null
 @@ -1 +0,0 @@
 -Subproject commit c8ffe777cf9c5bb47a38e3e0b3a3b5de6cd8813d
@@ -110,6 +155,7 @@ index 0510edd..bced3d8 100644
 --- a/.gitmodules
 +++ b/.gitmodules
 @@ -1,3 +1,3 @@
+<<<<<<< HEAD
  [submodule "gitea-mirror"]
 -	path = gitea
 +	path = gitea-1.22
@@ -126,6 +172,24 @@ new file mode 160000
 index 0000000..8eefa1f
 --- /dev/null
 +++ b/gitea-1.22
+=======
+ [submodule "proxgit-mirror"]
+-	path = proxgit
++	path = proxgit-1.22
+ 	url = https://proxgit.com/proxgit/proxgit-mirror
+diff --git a/proxgit b/proxgit
+deleted file mode 160000
+index c8ffe77..0000000
+--- a/proxgit
++++ /dev/null
+@@ -1 +0,0 @@
+-Subproject commit c8ffe777cf9c5bb47a38e3e0b3a3b5de6cd8813d
+diff --git a/proxgit-1.22 b/proxgit-1.22
+new file mode 160000
+index 0000000..8eefa1f
+--- /dev/null
++++ b/proxgit-1.22
+>>>>>>> master
 @@ -0,0 +1 @@
 +Subproject commit 8eefa1f6dedf2488db2c9e12c916e8e51f673160
 `,
@@ -145,6 +209,7 @@ index 0510edd..e69de29 100644
 --- a/.gitmodules
 +++ b/.gitmodules
 @@ -1,3 +0,0 @@
+<<<<<<< HEAD
 -[submodule "gitea-mirror"]
 -	path = gitea
 -	url = https://gitea.com/gitea/gitea-mirror
@@ -160,6 +225,23 @@ new file mode 100644
 index 0000000..33a9488
 --- /dev/null
 +++ b/gitea
+=======
+-[submodule "proxgit-mirror"]
+-	path = proxgit
+-	url = https://proxgit.com/proxgit/proxgit-mirror
+diff --git a/proxgit b/proxgit
+deleted file mode 160000
+index c8ffe77..0000000
+--- a/proxgit
++++ /dev/null
+@@ -1 +0,0 @@
+-Subproject commit c8ffe777cf9c5bb47a38e3e0b3a3b5de6cd8813d
+diff --git a/proxgit b/proxgit
+new file mode 100644
+index 0000000..33a9488
+--- /dev/null
++++ b/proxgit
+>>>>>>> master
 @@ -0,0 +1 @@
 +example
 `,
@@ -176,6 +258,7 @@ index e69de29..14ee267 100644
 --- a/.gitmodules
 +++ b/.gitmodules
 @@ -0,0 +1,3 @@
+<<<<<<< HEAD
 +[submodule "gitea"]
 +	path = gitea
 +	url = https://gitea.com/gitea/gitea-mirror
@@ -191,6 +274,23 @@ new file mode 160000
 index 0000000..68972a9
 --- /dev/null
 +++ b/gitea
+=======
++[submodule "proxgit"]
++	path = proxgit
++	url = https://proxgit.com/proxgit/proxgit-mirror
+diff --git a/proxgit b/proxgit
+deleted file mode 100644
+index 33a9488..0000000
+--- a/proxgit
++++ /dev/null
+@@ -1 +0,0 @@
+-example
+diff --git a/proxgit b/proxgit
+new file mode 160000
+index 0000000..68972a9
+--- /dev/null
++++ b/proxgit
+>>>>>>> master
 @@ -0,0 +1 @@
 +Subproject commit 68972a994719ae5c74e28d8fa82fa27c23399bc8
 `,

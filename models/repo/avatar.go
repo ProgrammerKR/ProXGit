@@ -11,12 +11,21 @@ import (
 	"net/url"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/avatar"
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/storage"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/avatar"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+>>>>>>> master
 )
 
 // CustomAvatarRelativePath returns repository custom avatar file path.

@@ -10,12 +10,21 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"xorm.io/builder"
@@ -64,7 +73,11 @@ func TestIssueAPIURL(t *testing.T) {
 	err := issue.LoadAttributes(db.DefaultContext)
 
 	assert.NoError(t, err)
+<<<<<<< HEAD
 	assert.Equal(t, "https://try.gitea.io/api/v1/repos/user2/repo1/issues/1", issue.APIURL(db.DefaultContext))
+=======
+	assert.Equal(t, "https://try.proxgit.io/api/v1/repos/user2/repo1/issues/1", issue.APIURL(db.DefaultContext))
+>>>>>>> master
 }
 
 func TestGetIssuesByIDs(t *testing.T) {

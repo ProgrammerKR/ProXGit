@@ -4,8 +4,13 @@ import {fileURLToPath} from 'node:url';
 
 const cssVarFiles = [
   fileURLToPath(new URL('web_src/css/base.css', import.meta.url)),
+<<<<<<< HEAD
   fileURLToPath(new URL('web_src/css/themes/theme-gitea-light.css', import.meta.url)),
   fileURLToPath(new URL('web_src/css/themes/theme-gitea-dark.css', import.meta.url)),
+=======
+  fileURLToPath(new URL('web_src/css/themes/theme-proxgit-light.css', import.meta.url)),
+  fileURLToPath(new URL('web_src/css/themes/theme-proxgit-dark.css', import.meta.url)),
+>>>>>>> master
 ];
 
 export default defineConfig({

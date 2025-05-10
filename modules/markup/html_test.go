@@ -8,12 +8,21 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/emoji"
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/markup/markdown"
 	"code.gitea.io/gitea/modules/setting"
 	testModule "code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/emoji"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	testModule "code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -59,7 +68,11 @@ func TestRender_Commits(t *testing.T) {
 	test(commitCompareWithHash, `<p><a href="`+commitCompareWithHash+`" rel="nofollow"><code>65f1bf27bc...65f1bf27bc (L2)</code></a></p>`)
 
 	test("commit "+sha, `<p>commit <a href="`+commitPath+`" rel="nofollow"><code>65f1bf27bc</code></a></p>`)
+<<<<<<< HEAD
 	test("/home/gitea/"+sha, "<p>/home/gitea/"+sha+"</p>")
+=======
+	test("/home/proxgit/"+sha, "<p>/home/proxgit/"+sha+"</p>")
+>>>>>>> master
 	test("deadbeef", `<p>deadbeef</p>`)
 	test("d27ace93", `<p>d27ace93</p>`)
 	test(sha[:14]+".x", `<p>`+sha[:14]+`.x</p>`)
@@ -83,6 +96,7 @@ func TestRender_CrossReferences(t *testing.T) {
 		"test-owner/test-repo#12345",
 		`<p><a href="/test-owner/test-repo/issues/12345" class="ref-issue" rel="nofollow">test-owner/test-repo#12345</a></p>`)
 	test(
+<<<<<<< HEAD
 		"go-gitea/gitea#12345",
 		`<p><a href="/go-gitea/gitea/issues/12345" class="ref-issue" rel="nofollow">go-gitea/gitea#12345</a></p>`)
 	test(
@@ -97,6 +111,22 @@ func TestRender_CrossReferences(t *testing.T) {
 	test(
 		util.URLJoin(markup.TestAppURL, "gogitea", "some-repo-name", "issues", "12345"),
 		`<p><a href="`+util.URLJoin(markup.TestAppURL, "gogitea", "some-repo-name", "issues", "12345")+`" class="ref-issue" rel="nofollow">gogitea/some-repo-name#12345</a></p>`)
+=======
+		"go-proxgit/proxgit#12345",
+		`<p><a href="/go-proxgit/proxgit/issues/12345" class="ref-issue" rel="nofollow">go-proxgit/proxgit#12345</a></p>`)
+	test(
+		"/home/proxgit/go-proxgit/proxgit#12345",
+		`<p>/home/proxgit/go-proxgit/proxgit#12345</p>`)
+	test(
+		util.URLJoin(markup.TestAppURL, "goproxgit", "proxgit", "issues", "12345"),
+		`<p><a href="`+util.URLJoin(markup.TestAppURL, "goproxgit", "proxgit", "issues", "12345")+`" class="ref-issue" rel="nofollow">goproxgit/proxgit#12345</a></p>`)
+	test(
+		util.URLJoin(markup.TestAppURL, "go-proxgit", "proxgit", "issues", "12345"),
+		`<p><a href="`+util.URLJoin(markup.TestAppURL, "go-proxgit", "proxgit", "issues", "12345")+`" class="ref-issue" rel="nofollow">go-proxgit/proxgit#12345</a></p>`)
+	test(
+		util.URLJoin(markup.TestAppURL, "goproxgit", "some-repo-name", "issues", "12345"),
+		`<p><a href="`+util.URLJoin(markup.TestAppURL, "goproxgit", "some-repo-name", "issues", "12345")+`" class="ref-issue" rel="nofollow">goproxgit/some-repo-name#12345</a></p>`)
+>>>>>>> master
 
 	inputURL := "https://host/a/b/commit/0123456789012345678901234567890123456789/foo.txt?a=b#L2-L3"
 	test(
@@ -152,8 +182,13 @@ func TestRender_links(t *testing.T) {
 		"http://142.42.1.1/",
 		`<p><a href="http://142.42.1.1/" rel="nofollow">http://142.42.1.1/</a></p>`)
 	test(
+<<<<<<< HEAD
 		"https://github.com/go-gitea/gitea/?p=aaa/bbb.html#ccc-ddd",
 		`<p><a href="https://github.com/go-gitea/gitea/?p=aaa/bbb.html#ccc-ddd" rel="nofollow">https://github.com/go-gitea/gitea/?p=aaa/bbb.html#ccc-ddd</a></p>`)
+=======
+		"https://github.com/go-proxgit/proxgit/?p=aaa/bbb.html#ccc-ddd",
+		`<p><a href="https://github.com/go-proxgit/proxgit/?p=aaa/bbb.html#ccc-ddd" rel="nofollow">https://github.com/go-proxgit/proxgit/?p=aaa/bbb.html#ccc-ddd</a></p>`)
+>>>>>>> master
 	test(
 		"https://en.wikipedia.org/wiki/URL_(disambiguation)",
 		`<p><a href="https://en.wikipedia.org/wiki/URL_(disambiguation)" rel="nofollow">https://en.wikipedia.org/wiki/URL_(disambiguation)</a></p>`)
@@ -164,11 +199,19 @@ func TestRender_links(t *testing.T) {
 		"https://stackoverflow.com/questions/2896191/what-is-go-used-fore",
 		`<p><a href="https://stackoverflow.com/questions/2896191/what-is-go-used-fore" rel="nofollow">https://stackoverflow.com/questions/2896191/what-is-go-used-fore</a></p>`)
 	test(
+<<<<<<< HEAD
 		"https://username:password@gitea.com",
 		`<p><a href="https://username:password@gitea.com" rel="nofollow">https://username:password@gitea.com</a></p>`)
 	test(
 		"ftp://gitea.com/file.txt",
 		`<p><a href="ftp://gitea.com/file.txt" rel="nofollow">ftp://gitea.com/file.txt</a></p>`)
+=======
+		"https://username:password@proxgit.com",
+		`<p><a href="https://username:password@proxgit.com" rel="nofollow">https://username:password@proxgit.com</a></p>`)
+	test(
+		"ftp://proxgit.com/file.txt",
+		`<p><a href="ftp://proxgit.com/file.txt" rel="nofollow">ftp://proxgit.com/file.txt</a></p>`)
+>>>>>>> master
 	test(
 		"magnet:?xt=urn:btih:5dee65101db281ac9c46344cd6b175cdcadabcde&dn=download",
 		`<p><a href="magnet:?xt=urn:btih:5dee65101db281ac9c46344cd6b175cdcadabcde&amp;dn=download" rel="nofollow">magnet:?xt=urn:btih:5dee65101db281ac9c46344cd6b175cdcadabcde&amp;dn=download</a></p>`)
@@ -205,8 +248,13 @@ func TestRender_links(t *testing.T) {
 		"www",
 		`<p>www</p>`)
 	test(
+<<<<<<< HEAD
 		"ftps://gitea.com",
 		`<p>ftps://gitea.com</p>`)
+=======
+		"ftps://proxgit.com",
+		`<p>ftps://proxgit.com</p>`)
+>>>>>>> master
 
 	t.Run("LinkEllipsis", func(t *testing.T) {
 		input := util.EllipsisDisplayString("http://10.1.2.3", 12)
@@ -230,6 +278,7 @@ func TestRender_email(t *testing.T) {
 
 	// Text that should be turned into email link
 	test(
+<<<<<<< HEAD
 		"info@gitea.com",
 		`<p><a href="mailto:info@gitea.com" rel="nofollow">info@gitea.com</a></p>`)
 	test(
@@ -247,6 +296,25 @@ func TestRender_email(t *testing.T) {
 	test(
 		"send email to info@gitea.co.uk.",
 		`<p>send email to <a href="mailto:info@gitea.co.uk" rel="nofollow">info@gitea.co.uk</a>.</p>`)
+=======
+		"info@proxgit.com",
+		`<p><a href="mailto:info@proxgit.com" rel="nofollow">info@proxgit.com</a></p>`)
+	test(
+		"(info@proxgit.com)",
+		`<p>(<a href="mailto:info@proxgit.com" rel="nofollow">info@proxgit.com</a>)</p>`)
+	test(
+		"[info@proxgit.com]",
+		`<p>[<a href="mailto:info@proxgit.com" rel="nofollow">info@proxgit.com</a>]</p>`)
+	test(
+		"info@proxgit.com.",
+		`<p><a href="mailto:info@proxgit.com" rel="nofollow">info@proxgit.com</a>.</p>`)
+	test(
+		"firstname+lastname@proxgit.com",
+		`<p><a href="mailto:firstname+lastname@proxgit.com" rel="nofollow">firstname+lastname@proxgit.com</a></p>`)
+	test(
+		"send email to info@proxgit.co.uk.",
+		`<p>send email to <a href="mailto:info@proxgit.co.uk" rel="nofollow">info@proxgit.co.uk</a>.</p>`)
+>>>>>>> master
 
 	test(
 		`j.doe@example.com,
@@ -264,6 +332,7 @@ func TestRender_email(t *testing.T) {
 	test("email@domain@domain.com", `<p>email@<a href="mailto:domain@domain.com" rel="nofollow">domain@domain.com</a></p>`)
 
 	// match GitHub behavior
+<<<<<<< HEAD
 	test(`"info@gitea.com"`, `<p>&#34;<a href="mailto:info@gitea.com" rel="nofollow">info@gitea.com</a>&#34;</p>`)
 
 	// Test that should *not* be turned into email links
@@ -282,6 +351,26 @@ func TestRender_email(t *testing.T) {
 	test(
 		"gitea@gmail.c",
 		`<p>gitea@gmail.c</p>`)
+=======
+	test(`"info@proxgit.com"`, `<p>&#34;<a href="mailto:info@proxgit.com" rel="nofollow">info@proxgit.com</a>&#34;</p>`)
+
+	// Test that should *not* be turned into email links
+	test(
+		"/home/proxgit/mailstore/info@proxgit/com",
+		`<p>/home/proxgit/mailstore/info@proxgit/com</p>`)
+	test(
+		"git@try.proxgit.io:go-proxgit/proxgit.git",
+		`<p>git@try.proxgit.io:go-proxgit/proxgit.git</p>`)
+	test(
+		"https://foo:bar@proxgit.io",
+		`<p><a href="https://foo:bar@proxgit.io" rel="nofollow">https://foo:bar@proxgit.io</a></p>`)
+	test(
+		"proxgit@3",
+		`<p>proxgit@3</p>`)
+	test(
+		"proxgit@gmail.c",
+		`<p>proxgit@gmail.c</p>`)
+>>>>>>> master
 	test(
 		"email@domain..com",
 		`<p>email@domain..com</p>`)
@@ -329,8 +418,13 @@ func TestRender_emoji(t *testing.T) {
 
 	// Text that should be turned into or recognized as emoji
 	test(
+<<<<<<< HEAD
 		":gitea:",
 		`<p><span class="emoji" aria-label="gitea"><img alt=":gitea:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/gitea.png"/></span></p>`)
+=======
+		":proxgit:",
+		`<p><span class="emoji" aria-label="proxgit"><img alt=":proxgit:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/proxgit.png"/></span></p>`)
+>>>>>>> master
 	test(
 		":custom-emoji:",
 		`<p>:custom-emoji:</p>`)
@@ -339,10 +433,17 @@ func TestRender_emoji(t *testing.T) {
 		":custom-emoji:",
 		`<p><span class="emoji" aria-label="custom-emoji"><img alt=":custom-emoji:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/custom-emoji.png"/></span></p>`)
 	test(
+<<<<<<< HEAD
 		"这是字符:1::+1: some🐊 \U0001f44d:custom-emoji: :gitea:",
 		`<p>这是字符:1:<span class="emoji" aria-label="thumbs up">👍</span> some<span class="emoji" aria-label="crocodile">🐊</span> `+
 			`<span class="emoji" aria-label="thumbs up">👍</span><span class="emoji" aria-label="custom-emoji"><img alt=":custom-emoji:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/custom-emoji.png"/></span> `+
 			`<span class="emoji" aria-label="gitea"><img alt=":gitea:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/gitea.png"/></span></p>`)
+=======
+		"这是字符:1::+1: some🐊 \U0001f44d:custom-emoji: :proxgit:",
+		`<p>这是字符:1:<span class="emoji" aria-label="thumbs up">👍</span> some<span class="emoji" aria-label="crocodile">🐊</span> `+
+			`<span class="emoji" aria-label="thumbs up">👍</span><span class="emoji" aria-label="custom-emoji"><img alt=":custom-emoji:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/custom-emoji.png"/></span> `+
+			`<span class="emoji" aria-label="proxgit"><img alt=":proxgit:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/proxgit.png"/></span></p>`)
+>>>>>>> master
 	test(
 		"Some text with 😄 in the middle",
 		`<p>Some text with <span class="emoji" aria-label="grinning face with smiling eyes">😄</span> in the middle</p>`)
@@ -471,7 +572,11 @@ func TestRender_ShortLinks(t *testing.T) {
 func Test_ParseClusterFuzz(t *testing.T) {
 	setting.AppURL = markup.TestAppURL
 
+<<<<<<< HEAD
 	localMetas := map[string]string{"user": "go-gitea", "repo": "gitea"}
+=======
+	localMetas := map[string]string{"user": "go-proxgit", "repo": "proxgit"}
+>>>>>>> master
 
 	data := "<A><maTH><tr><MN><bodY ÿ><temPlate></template><tH><tr></A><tH><d<bodY "
 
@@ -495,7 +600,11 @@ func TestPostProcess(t *testing.T) {
 
 	test := func(input, expected string) {
 		var res strings.Builder
+<<<<<<< HEAD
 		err := markup.PostProcessDefault(markup.NewTestRenderContext(markup.TestAppURL, map[string]string{"user": "go-gitea", "repo": "gitea"}), strings.NewReader(input), &res)
+=======
+		err := markup.PostProcessDefault(markup.NewTestRenderContext(markup.TestAppURL, map[string]string{"user": "go-proxgit", "repo": "proxgit"}), strings.NewReader(input), &res)
+>>>>>>> master
 		assert.NoError(t, err)
 		assert.Equal(t, strings.TrimSpace(expected), strings.TrimSpace(res.String()))
 	}
@@ -507,6 +616,7 @@ func TestPostProcess(t *testing.T) {
 
 	// But cross-referenced issue index should work.
 	test(
+<<<<<<< HEAD
 		"go-gitea/gitea#12345",
 		`<a href="/go-gitea/gitea/issues/12345" class="ref-issue">go-gitea/gitea#12345</a>`)
 
@@ -514,6 +624,15 @@ func TestPostProcess(t *testing.T) {
 	test(
 		":gitea:",
 		`<span class="emoji" aria-label="gitea"><img alt=":gitea:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/gitea.png"/></span>`)
+=======
+		"go-proxgit/proxgit#12345",
+		`<a href="/go-proxgit/proxgit/issues/12345" class="ref-issue">go-proxgit/proxgit#12345</a>`)
+
+	// Test that other post-processing still works.
+	test(
+		":proxgit:",
+		`<span class="emoji" aria-label="proxgit"><img alt=":proxgit:" src="`+setting.StaticURLPrefix+`/assets/img/emoji/proxgit.png"/></span>`)
+>>>>>>> master
 	test(
 		"Some text with 😄 in the middle",
 		`Some text with <span class="emoji" aria-label="grinning face with smiling eyes">😄</span> in the middle`)
@@ -531,8 +650,13 @@ func TestIssue16020(t *testing.T) {
 	setting.AppURL = markup.TestAppURL
 
 	localMetas := map[string]string{
+<<<<<<< HEAD
 		"user": "go-gitea",
 		"repo": "gitea",
+=======
+		"user": "go-proxgit",
+		"repo": "proxgit",
+>>>>>>> master
 	}
 
 	data := `<img src="data:image/png;base64,i//V"/>`

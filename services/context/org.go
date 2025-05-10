@@ -7,6 +7,7 @@ package context
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/organization"
 	"code.gitea.io/gitea/models/perm"
 	"code.gitea.io/gitea/models/unit"
@@ -15,6 +16,16 @@ import (
 	"code.gitea.io/gitea/modules/markup/markdown"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/perm"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // Organization contains organization context

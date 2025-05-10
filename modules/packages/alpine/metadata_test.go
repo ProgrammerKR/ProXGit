@@ -14,11 +14,19 @@ import (
 )
 
 const (
+<<<<<<< HEAD
 	packageName        = "gitea"
 	packageVersion     = "1.0.1"
 	packageDescription = "Package Description"
 	packageProjectURL  = "https://gitea.io"
 	packageMaintainer  = "KN4CK3R <dummy@gitea.io>"
+=======
+	packageName        = "proxgit"
+	packageVersion     = "1.0.1"
+	packageDescription = "Package Description"
+	packageProjectURL  = "https://proxgit.io"
+	packageMaintainer  = "KN4CK3R <dummy@proxgit.io>"
+>>>>>>> master
 )
 
 func createPKGINFOContent(name, version string) []byte {
@@ -37,9 +45,15 @@ maintainer = ` + packageMaintainer + `
 license = MIT
 depend = common
 install_if = value
+<<<<<<< HEAD
 depend = gitea
 provides = common
 provides = gitea`)
+=======
+depend = proxgit
+provides = common
+provides = proxgit`)
+>>>>>>> master
 }
 
 func TestParsePackage(t *testing.T) {
@@ -137,7 +151,12 @@ func TestParsePackageInfo(t *testing.T) {
 		assert.Equal(t, "origin", p.FileMetadata.Origin)
 		assert.Equal(t, "1111e709613fbc979651b09ac2bc27c6591a9999", p.FileMetadata.CommitHash)
 		assert.Equal(t, "value", p.FileMetadata.InstallIf)
+<<<<<<< HEAD
 		assert.ElementsMatch(t, []string{"common", "gitea"}, p.FileMetadata.Provides)
 		assert.ElementsMatch(t, []string{"common", "gitea"}, p.FileMetadata.Dependencies)
+=======
+		assert.ElementsMatch(t, []string{"common", "proxgit"}, p.FileMetadata.Provides)
+		assert.ElementsMatch(t, []string{"common", "proxgit"}, p.FileMetadata.Dependencies)
+>>>>>>> master
 	})
 }

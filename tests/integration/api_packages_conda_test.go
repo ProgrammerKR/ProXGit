@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -19,6 +20,15 @@ import (
 	conda_module "code.gitea.io/gitea/modules/packages/conda"
 	"code.gitea.io/gitea/modules/zstd"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	conda_module "code.proxgit.io/proxgit/modules/packages/conda"
+	"code.proxgit.io/proxgit/modules/zstd"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/dsnet/compress/bzip2"
 	"github.com/stretchr/testify/assert"

@@ -4,7 +4,11 @@
 package feed
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // RenderBranchFeed render format for branch or file

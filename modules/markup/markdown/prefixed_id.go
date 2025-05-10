@@ -7,9 +7,15 @@ import (
 	"bytes"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/markup/common"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/markup/common"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 )

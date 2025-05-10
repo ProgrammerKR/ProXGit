@@ -6,9 +6,15 @@ package git
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/setting"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

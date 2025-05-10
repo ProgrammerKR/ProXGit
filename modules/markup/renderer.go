@@ -9,7 +9,11 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // Renderer defines an interface for rendering markup file to HTML

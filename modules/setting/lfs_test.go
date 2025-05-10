@@ -96,7 +96,11 @@ STORAGE_TYPE = minio
 
 	assert.NoError(t, loadLFSFrom(cfg))
 	assert.EqualValues(t, "minio", LFS.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", LFS.Storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", LFS.Storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "lfs/", LFS.Storage.MinioConfig.BasePath)
 }
 

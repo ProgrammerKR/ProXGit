@@ -6,8 +6,13 @@ package repo
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

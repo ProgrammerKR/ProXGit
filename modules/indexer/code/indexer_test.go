@@ -9,6 +9,7 @@ import (
 	"slices"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	indexer_module "code.gitea.io/gitea/modules/indexer"
@@ -22,6 +23,21 @@ import (
 	_ "code.gitea.io/gitea/models"
 	_ "code.gitea.io/gitea/models/actions"
 	_ "code.gitea.io/gitea/models/activities"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	indexer_module "code.proxgit.io/proxgit/modules/indexer"
+	"code.proxgit.io/proxgit/modules/indexer/code/bleve"
+	"code.proxgit.io/proxgit/modules/indexer/code/elasticsearch"
+	"code.proxgit.io/proxgit/modules/indexer/code/internal"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/util"
+
+	_ "code.proxgit.io/proxgit/models"
+	_ "code.proxgit.io/proxgit/models/actions"
+	_ "code.proxgit.io/proxgit/models/activities"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -305,7 +321,11 @@ func TestESIndexAndSearch(t *testing.T) {
 		return
 	}
 
+<<<<<<< HEAD
 	indexer := elasticsearch.NewIndexer(u, "gitea_codes")
+=======
+	indexer := elasticsearch.NewIndexer(u, "proxgit_codes")
+>>>>>>> master
 	if _, err := indexer.Init(t.Context()); err != nil {
 		if indexer != nil {
 			indexer.Close()

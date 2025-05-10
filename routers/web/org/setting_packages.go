@@ -7,11 +7,19 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/templates"
 	shared "code.gitea.io/gitea/routers/web/shared/packages"
 	shared_user "code.gitea.io/gitea/routers/web/shared/user"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	shared "code.proxgit.io/proxgit/routers/web/shared/packages"
+	shared_user "code.proxgit.io/proxgit/routers/web/shared/user"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const (

@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/gitrepo"
 	"code.gitea.io/gitea/modules/private"
@@ -16,6 +17,17 @@ import (
 
 // SetDefaultBranch updates the default branch
 func SetDefaultBranch(ctx *gitea_context.PrivateContext) {
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/private"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+)
+
+// SetDefaultBranch updates the default branch
+func SetDefaultBranch(ctx *proxgit_context.PrivateContext) {
+>>>>>>> master
 	ownerName := ctx.PathParam("owner")
 	repoName := ctx.PathParam("repo")
 	branch := ctx.PathParam("branch")

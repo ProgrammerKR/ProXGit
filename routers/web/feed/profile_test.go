@@ -5,10 +5,17 @@ package feed_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/routers/web/feed"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/routers/web/feed"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

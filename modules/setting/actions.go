@@ -8,7 +8,11 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // Actions settings
@@ -50,7 +54,11 @@ const (
 	defaultActionsURLGitHub = "github" // https://github.com
 	defaultActionsURLSelf   = "self"   // the root URL of the self-hosted Gitea instance
 	// DefaultActionsURL only supports GitHub and the self-hosted Gitea.
+<<<<<<< HEAD
 	// It's intentionally not supported more, so please be cautious before adding more like "gitea" or "gitlab".
+=======
+	// It's intentionally not supported more, so please be cautious before adding more like "proxgit" or "gitlab".
+>>>>>>> master
 	// If you get some trouble with `uses: username/action_name@version` in your workflow,
 	// please consider to use `uses: https://the_url_you_want_to_use/username/action_name@version` instead.
 )

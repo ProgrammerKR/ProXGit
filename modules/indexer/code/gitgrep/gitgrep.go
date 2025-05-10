@@ -8,10 +8,17 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/indexer"
 	code_indexer "code.gitea.io/gitea/modules/indexer/code"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/indexer"
+	code_indexer "code.proxgit.io/proxgit/modules/indexer/code"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 func indexSettingToGitGrepPathspecList() (list []string) {

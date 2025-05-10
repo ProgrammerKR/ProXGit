@@ -305,7 +305,11 @@ const (
 	NotMigrated       GitServiceType = iota // 0 not migrated from external sites
 	PlainGitService                         // 1 plain git service
 	GithubService                           // 2 github.com
+<<<<<<< HEAD
 	GiteaService                            // 3 gitea service
+=======
+	GiteaService                            // 3 proxgit service
+>>>>>>> master
 	GitlabService                           // 4 gitlab service
 	GogsService                             // 5 gogs service
 	OneDevService                           // 6 onedev service
@@ -357,7 +361,11 @@ type MigrateRepoOptions struct {
 	// required: true
 	RepoName string `json:"repo_name" binding:"Required;AlphaDashDot;MaxSize(100)"`
 
+<<<<<<< HEAD
 	// enum: git,github,gitea,gitlab,gogs,onedev,gitbucket,codebase
+=======
+	// enum: git,github,proxgit,gitlab,gogs,onedev,gitbucket,codebase
+>>>>>>> master
 	Service      string `json:"service"`
 	AuthUsername string `json:"auth_username"`
 	AuthPassword string `json:"auth_password"`

@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	org_model "code.gitea.io/gitea/models/organization"
 	"code.gitea.io/gitea/models/unittest"
@@ -17,6 +18,15 @@ import (
 	"code.gitea.io/gitea/modules/structs"
 	org_service "code.gitea.io/gitea/services/org"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	org_model "code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/structs"
+	org_service "code.proxgit.io/proxgit/services/org"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

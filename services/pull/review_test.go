@@ -6,11 +6,19 @@ package pull_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	pull_service "code.gitea.io/gitea/services/pull"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

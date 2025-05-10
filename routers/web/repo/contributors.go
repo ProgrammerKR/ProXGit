@@ -7,9 +7,15 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/services/context"
 	contributors_service "code.gitea.io/gitea/services/repository"
+=======
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/services/context"
+	contributors_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 const (

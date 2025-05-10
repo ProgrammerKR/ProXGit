@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/perm"
@@ -49,6 +50,50 @@ import (
 	_ "code.gitea.io/gitea/modules/session" // to registers all internal adapters
 
 	"gitea.com/go-chi/captcha"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/perm"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/metrics"
+	"code.proxgit.io/proxgit/modules/public"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/validation"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	"code.proxgit.io/proxgit/modules/web/routing"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/routers/web/admin"
+	"code.proxgit.io/proxgit/routers/web/auth"
+	"code.proxgit.io/proxgit/routers/web/devtest"
+	"code.proxgit.io/proxgit/routers/web/events"
+	"code.proxgit.io/proxgit/routers/web/explore"
+	"code.proxgit.io/proxgit/routers/web/feed"
+	"code.proxgit.io/proxgit/routers/web/healthcheck"
+	"code.proxgit.io/proxgit/routers/web/misc"
+	"code.proxgit.io/proxgit/routers/web/org"
+	org_setting "code.proxgit.io/proxgit/routers/web/org/setting"
+	"code.proxgit.io/proxgit/routers/web/repo"
+	"code.proxgit.io/proxgit/routers/web/repo/actions"
+	repo_setting "code.proxgit.io/proxgit/routers/web/repo/setting"
+	shared_actions "code.proxgit.io/proxgit/routers/web/shared/actions"
+	"code.proxgit.io/proxgit/routers/web/shared/project"
+	"code.proxgit.io/proxgit/routers/web/user"
+	user_setting "code.proxgit.io/proxgit/routers/web/user/setting"
+	"code.proxgit.io/proxgit/routers/web/user/setting/security"
+	auth_service "code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+
+	_ "code.proxgit.io/proxgit/modules/session" // to registers all internal adapters
+
+	"proxgit.com/go-chi/captcha"
+>>>>>>> master
 	chi_middleware "github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
 	"github.com/klauspost/compress/gzhttp"
@@ -419,7 +464,11 @@ func registerWebRoutes(m *web.Router) {
 
 	addWebhookAddRoutes := func() {
 		m.Get("/{type}/new", repo_setting.WebhooksNew)
+<<<<<<< HEAD
 		m.Post("/gitea/new", web.Bind(forms.NewWebhookForm{}), repo_setting.GiteaHooksNewPost)
+=======
+		m.Post("/proxgit/new", web.Bind(forms.NewWebhookForm{}), repo_setting.GiteaHooksNewPost)
+>>>>>>> master
 		m.Post("/gogs/new", web.Bind(forms.NewGogshookForm{}), repo_setting.GogsHooksNewPost)
 		m.Post("/slack/new", web.Bind(forms.NewSlackHookForm{}), repo_setting.SlackHooksNewPost)
 		m.Post("/discord/new", web.Bind(forms.NewDiscordHookForm{}), repo_setting.DiscordHooksNewPost)
@@ -433,7 +482,11 @@ func registerWebRoutes(m *web.Router) {
 	}
 
 	addWebhookEditRoutes := func() {
+<<<<<<< HEAD
 		m.Post("/gitea/{id}", web.Bind(forms.NewWebhookForm{}), repo_setting.GiteaHooksEditPost)
+=======
+		m.Post("/proxgit/{id}", web.Bind(forms.NewWebhookForm{}), repo_setting.GiteaHooksEditPost)
+>>>>>>> master
 		m.Post("/gogs/{id}", web.Bind(forms.NewGogshookForm{}), repo_setting.GogsHooksEditPost)
 		m.Post("/slack/{id}", web.Bind(forms.NewSlackHookForm{}), repo_setting.SlackHooksEditPost)
 		m.Post("/discord/{id}", web.Bind(forms.NewDiscordHookForm{}), repo_setting.DiscordHooksEditPost)

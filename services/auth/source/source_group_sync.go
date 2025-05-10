@@ -7,11 +7,19 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/organization"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
 	org_service "code.gitea.io/gitea/services/org"
+=======
+	"code.proxgit.io/proxgit/models/organization"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	org_service "code.proxgit.io/proxgit/services/org"
+>>>>>>> master
 )
 
 type syncType int

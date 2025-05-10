@@ -9,8 +9,13 @@ import (
 	"text/template"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	gossh "golang.org/x/crypto/ssh"
 )
@@ -56,7 +61,11 @@ var SSH = struct {
 	ServerMACs:                    []string{"hmac-sha2-256-etm@openssh.com", "hmac-sha2-256", "hmac-sha1"},
 	MinimumKeySizeCheck:           true,
 	MinimumKeySizes:               map[string]int{"ed25519": 256, "ed25519-sk": 256, "ecdsa": 256, "ecdsa-sk": 256, "rsa": 3071},
+<<<<<<< HEAD
 	ServerHostKeys:                []string{"ssh/gitea.rsa", "ssh/gogs.rsa"},
+=======
+	ServerHostKeys:                []string{"ssh/proxgit.rsa", "ssh/gogs.rsa"},
+>>>>>>> master
 	AuthorizedKeysCommandTemplate: "{{.AppPath}} --config={{.CustomConf}} serv key-{{.Key.ID}}",
 	PerWriteTimeout:               PerWriteTimeout,
 	PerWritePerKbTimeout:          PerWritePerKbTimeout,
@@ -137,7 +146,11 @@ func loadSSHFrom(rootCfg ConfigProvider) {
 		SSH.StartBuiltinServer = false
 	}
 
+<<<<<<< HEAD
 	SSH.TrustedUserCAKeysFile = sec.Key("SSH_TRUSTED_USER_CA_KEYS_FILENAME").MustString(filepath.Join(SSH.RootPath, "gitea-trusted-user-ca-keys.pem"))
+=======
+	SSH.TrustedUserCAKeysFile = sec.Key("SSH_TRUSTED_USER_CA_KEYS_FILENAME").MustString(filepath.Join(SSH.RootPath, "proxgit-trusted-user-ca-keys.pem"))
+>>>>>>> master
 
 	for _, caKey := range SSH.TrustedUserCAKeys {
 		pubKey, _, _, _, err := gossh.ParseAuthorizedKey([]byte(caKey))

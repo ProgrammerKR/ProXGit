@@ -1,0 +1,6 @@
+#!/bin/bash
+[[ -f ./setup ]] && source ./setup
+
+pushd /app/proxgit >/dev/null
+exec su-exec $USER /usr/local/bin/proxgit web
+popd

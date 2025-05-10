@@ -7,7 +7,11 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 )
 
 // GitPushOptions is a wrapper around a map[string]string

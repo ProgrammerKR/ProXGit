@@ -14,9 +14,15 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/proxy"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/proxy"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/42wim/httpsig"
 )

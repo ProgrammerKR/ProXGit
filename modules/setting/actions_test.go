@@ -143,7 +143,11 @@ DEFAULT_ACTIONS_URL = self
 			name: "custom url",
 			iniStr: `
 [actions]
+<<<<<<< HEAD
 DEFAULT_ACTIONS_URL = https://gitea.com
+=======
+DEFAULT_ACTIONS_URL = https://proxgit.com
+>>>>>>> master
 `,
 			wantErr: assert.NoError,
 			wantURL: "https://github.com",
@@ -152,7 +156,11 @@ DEFAULT_ACTIONS_URL = https://gitea.com
 			name: "custom urls",
 			iniStr: `
 [actions]
+<<<<<<< HEAD
 DEFAULT_ACTIONS_URL = https://gitea.com,https://github.com
+=======
+DEFAULT_ACTIONS_URL = https://proxgit.com,https://github.com
+>>>>>>> master
 `,
 			wantErr: assert.NoError,
 			wantURL: "https://github.com",
@@ -161,7 +169,11 @@ DEFAULT_ACTIONS_URL = https://gitea.com,https://github.com
 			name: "invalid",
 			iniStr: `
 [actions]
+<<<<<<< HEAD
 DEFAULT_ACTIONS_URL = gitea
+=======
+DEFAULT_ACTIONS_URL = proxgit
+>>>>>>> master
 `,
 			wantErr: assert.Error,
 			wantURL: "https://github.com",

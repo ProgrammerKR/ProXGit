@@ -11,6 +11,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/analyze"
 	"code.gitea.io/gitea/modules/charset"
@@ -25,6 +26,22 @@ import (
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/typesniffer"
 	"code.gitea.io/gitea/modules/util"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/analyze"
+	"code.proxgit.io/proxgit/modules/charset"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/indexer"
+	"code.proxgit.io/proxgit/modules/indexer/code/internal"
+	indexer_internal "code.proxgit.io/proxgit/modules/indexer/internal"
+	inner_elasticsearch "code.proxgit.io/proxgit/modules/indexer/internal/elasticsearch"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/typesniffer"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/go-enry/go-enry/v2"
 	"github.com/olivere/elastic/v7"

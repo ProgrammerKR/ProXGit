@@ -12,7 +12,11 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/htmlutil"
+=======
+	"code.proxgit.io/proxgit/modules/htmlutil"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 )

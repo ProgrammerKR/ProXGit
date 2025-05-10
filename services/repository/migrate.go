@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -24,6 +25,22 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	unit_model "code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/migration"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 func cloneWiki(ctx context.Context, u *user_model.User, opts migration.MigrateOptions, migrateTimeout time.Duration) (string, error) {

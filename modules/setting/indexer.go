@@ -9,7 +9,11 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // Indexer settings
@@ -38,14 +42,22 @@ var Indexer = struct {
 	IssuePath:        "indexers/issues.bleve",
 	IssueConnStr:     "",
 	IssueConnAuth:    "",
+<<<<<<< HEAD
 	IssueIndexerName: "gitea_issues",
+=======
+	IssueIndexerName: "proxgit_issues",
+>>>>>>> master
 
 	RepoIndexerEnabled:   false,
 	RepoIndexerRepoTypes: []string{"sources", "forks", "mirrors", "templates"},
 	RepoType:             "bleve",
 	RepoPath:             "indexers/repos.bleve",
 	RepoConnStr:          "",
+<<<<<<< HEAD
 	RepoIndexerName:      "gitea_codes",
+=======
+	RepoIndexerName:      "proxgit_codes",
+>>>>>>> master
 	MaxIndexerFileSize:   1024 * 1024,
 	ExcludeVendored:      true,
 }
@@ -83,7 +95,11 @@ func loadIndexerFrom(rootCfg ConfigProvider) {
 		Indexer.RepoPath = filepath.ToSlash(filepath.Join(AppWorkPath, Indexer.RepoPath))
 	}
 	Indexer.RepoConnStr = sec.Key("REPO_INDEXER_CONN_STR").MustString("")
+<<<<<<< HEAD
 	Indexer.RepoIndexerName = sec.Key("REPO_INDEXER_NAME").MustString("gitea_codes")
+=======
+	Indexer.RepoIndexerName = sec.Key("REPO_INDEXER_NAME").MustString("proxgit_codes")
+>>>>>>> master
 
 	Indexer.IncludePatterns = IndexerGlobFromString(sec.Key("REPO_INDEXER_INCLUDE").MustString(""))
 	Indexer.ExcludePatterns = IndexerGlobFromString(sec.Key("REPO_INDEXER_EXCLUDE").MustString(""))

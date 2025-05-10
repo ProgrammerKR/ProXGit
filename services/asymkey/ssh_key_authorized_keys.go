@@ -10,10 +10,17 @@ import (
 	"path/filepath"
 	"time"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // RewriteAllPublicKeys removes any authorized key and rewrite all keys from database again.
@@ -63,7 +70,11 @@ func rewriteAllPublicKeys(ctx context.Context) error {
 			return err
 		}
 		if isExist {
+<<<<<<< HEAD
 			bakPath := fmt.Sprintf("%s_%d.gitea_bak", fPath, time.Now().Unix())
+=======
+			bakPath := fmt.Sprintf("%s_%d.proxgit_bak", fPath, time.Now().Unix())
+>>>>>>> master
 			if err = util.CopyFile(fPath, bakPath); err != nil {
 				return err
 			}

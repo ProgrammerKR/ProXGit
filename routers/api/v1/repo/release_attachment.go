@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
@@ -17,6 +18,17 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/context/upload"
 	"code.gitea.io/gitea/services/convert"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	attachment_service "code.proxgit.io/proxgit/services/attachment"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/context/upload"
+	"code.proxgit.io/proxgit/services/convert"
+>>>>>>> master
 )
 
 func checkReleaseMatchRepo(ctx *context.APIContext, releaseID int64) bool {

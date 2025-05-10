@@ -6,12 +6,21 @@ package webhook
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/hostmatcher"
 	"code.gitea.io/gitea/modules/setting"
 
 	_ "code.gitea.io/gitea/models"
 	_ "code.gitea.io/gitea/models/actions"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/hostmatcher"
+	"code.proxgit.io/proxgit/modules/setting"
+
+	_ "code.proxgit.io/proxgit/models"
+	_ "code.proxgit.io/proxgit/models/actions"
+>>>>>>> master
 )
 
 func TestMain(m *testing.M) {

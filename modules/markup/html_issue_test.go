@@ -9,10 +9,17 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/htmlutil"
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/markup/markdown"
 	testModule "code.gitea.io/gitea/modules/test"
+=======
+	"code.proxgit.io/proxgit/modules/htmlutil"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	testModule "code.proxgit.io/proxgit/modules/test"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

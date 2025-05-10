@@ -7,10 +7,17 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/reqctx"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/web/middleware"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+>>>>>>> master
 
 	"github.com/go-chi/chi/v5"
 )

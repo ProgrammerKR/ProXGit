@@ -10,7 +10,11 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -22,13 +26,22 @@ func TestParsePackage(t *testing.T) {
 	packageVersion := "1.0.1-pre"
 	packageTag := "latest"
 	packageAuthor := "KN4CK3R"
+<<<<<<< HEAD
 	packageBin := "gitea"
+=======
+	packageBin := "proxgit"
+>>>>>>> master
 	packageDescription := "Test Description"
 	data := "H4sIAAAAAAAA/ytITM5OTE/VL4DQelnF+XkMVAYGBgZmJiYK2MRBwNDcSIHB2NTMwNDQzMwAqA7IMDUxA9LUdgg2UFpcklgEdAql5kD8ogCnhwio5lJQUMpLzE1VslJQcihOzi9I1S9JLS7RhSYIJR2QgrLUouLM/DyQGkM9Az1D3YIiqExKanFyUWZBCVQ2BKhVwQVJDKwosbQkI78IJO/tZ+LsbRykxFXLNdA+HwWjYBSMgpENACgAbtAACAAA"
 	integrity := "sha512-yA4FJsVhetynGfOC1jFf79BuS+jrHbm0fhh+aHzCQkOaOBXKf9oBnC4a6DnLLnEsHQDRLYd00cwj8sCXpC+wIg=="
 	repository := Repository{
+<<<<<<< HEAD
 		Type: "gitea",
 		URL:  "http://localhost:3000/gitea/test.git",
+=======
+		Type: "proxgit",
+		URL:  "http://localhost:3000/proxgit/test.git",
+>>>>>>> master
 	}
 
 	t.Run("InvalidUpload", func(t *testing.T) {
@@ -253,7 +266,11 @@ func TestParsePackage(t *testing.T) {
 						Description: packageDescription,
 						Author:      User{Name: packageAuthor},
 						License:     "MIT",
+<<<<<<< HEAD
 						Homepage:    "https://gitea.io/",
+=======
+						Homepage:    "https://proxgit.io/",
+>>>>>>> master
 						Readme:      packageDescription,
 						Dependencies: map[string]string{
 							"package": "1.2.0",
@@ -292,7 +309,11 @@ func TestParsePackage(t *testing.T) {
 		assert.Equal(t, packageAuthor, p.Metadata.Author)
 		assert.Equal(t, packageBin, p.Metadata.Bin["bin"])
 		assert.Equal(t, "MIT", p.Metadata.License)
+<<<<<<< HEAD
 		assert.Equal(t, "https://gitea.io/", p.Metadata.ProjectURL)
+=======
+		assert.Equal(t, "https://proxgit.io/", p.Metadata.ProjectURL)
+>>>>>>> master
 		assert.Contains(t, p.Metadata.Dependencies, "package")
 		assert.Equal(t, "1.2.0", p.Metadata.Dependencies["package"])
 		assert.Equal(t, repository.Type, p.Metadata.Repository.Type)

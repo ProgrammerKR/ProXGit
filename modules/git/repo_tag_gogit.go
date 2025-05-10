@@ -9,7 +9,11 @@ package git
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/go-git/go-git/v5/plumbing"
 )

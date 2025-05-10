@@ -7,7 +7,11 @@ import (
 	"regexp"
 	"testing"
 
+<<<<<<< HEAD
 	"gitea.com/go-chi/binding"
+=======
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 )
 
 func getRegexPatternErrorString(pattern string) string {

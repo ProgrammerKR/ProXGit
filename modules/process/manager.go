@@ -12,7 +12,11 @@ import (
 	"sync/atomic"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/gtprof"
+=======
+	"code.proxgit.io/proxgit/modules/gtprof"
+>>>>>>> master
 )
 
 // TODO: This packages still uses a singleton for the Manager.

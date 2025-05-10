@@ -70,6 +70,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
@@ -101,6 +102,39 @@ import (
 	_ "code.gitea.io/gitea/routers/api/v1/swagger" // for swagger generation
 
 	"gitea.com/go-chi/binding"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/activitypub"
+	"code.proxgit.io/proxgit/routers/api/v1/admin"
+	"code.proxgit.io/proxgit/routers/api/v1/misc"
+	"code.proxgit.io/proxgit/routers/api/v1/notify"
+	"code.proxgit.io/proxgit/routers/api/v1/org"
+	"code.proxgit.io/proxgit/routers/api/v1/packages"
+	"code.proxgit.io/proxgit/routers/api/v1/repo"
+	"code.proxgit.io/proxgit/routers/api/v1/settings"
+	"code.proxgit.io/proxgit/routers/api/v1/user"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/services/actions"
+	"code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+
+	_ "code.proxgit.io/proxgit/routers/api/v1/swagger" // for swagger generation
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 	"github.com/go-chi/cors"
 )
 
@@ -884,7 +918,11 @@ func individualPermsChecker(ctx *context.APIContext) {
 // check for and warn against deprecated authentication options
 func checkDeprecatedAuthMethods(ctx *context.APIContext) {
 	if ctx.FormString("token") != "" || ctx.FormString("access_token") != "" {
+<<<<<<< HEAD
 		ctx.Resp.Header().Set("X-Gitea-Warning", "token and access_token API authentication is deprecated and will be removed in gitea 1.23. Please use AuthorizationHeaderToken instead. Existing queries will continue to work but without authorization.")
+=======
+		ctx.Resp.Header().Set("X-Gitea-Warning", "token and access_token API authentication is deprecated and will be removed in proxgit 1.23. Please use AuthorizationHeaderToken instead. Existing queries will continue to work but without authorization.")
+>>>>>>> master
 	}
 }
 

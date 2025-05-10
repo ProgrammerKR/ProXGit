@@ -9,8 +9,13 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/santhosh-tekuri/jsonschema/v5"
 	"gopkg.in/yaml.v3"

@@ -10,6 +10,7 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
@@ -17,6 +18,15 @@ import (
 	"code.gitea.io/gitea/modules/git/attribute"
 	"code.gitea.io/gitea/modules/lfs"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/git/attribute"
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // UploadRepoFileOptions contains the uploaded repository file options

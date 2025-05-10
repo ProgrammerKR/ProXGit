@@ -15,6 +15,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
@@ -24,6 +25,17 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/routers/api/actions"
 	actions_service "code.gitea.io/gitea/services/actions"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/storage"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/routers/api/actions"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/encoding/protojson"

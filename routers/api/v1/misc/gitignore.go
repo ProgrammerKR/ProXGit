@@ -6,11 +6,19 @@ package misc
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/options"
 	repo_module "code.gitea.io/gitea/modules/repository"
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/options"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // Shows a list of all Gitignore templates

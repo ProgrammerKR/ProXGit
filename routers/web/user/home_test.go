@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
@@ -14,6 +15,15 @@ import (
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

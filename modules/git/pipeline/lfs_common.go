@@ -7,7 +7,11 @@ import (
 	"fmt"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 )
 
 // LFSResult represents commits found using a provided pointer file hash

@@ -9,9 +9,15 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	gitea_html "code.gitea.io/gitea/modules/htmlutil"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/public"
+=======
+	proxgit_html "code.proxgit.io/proxgit/modules/htmlutil"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/public"
+>>>>>>> master
 )
 
 var svgIcons map[string]string
@@ -58,7 +64,11 @@ func MockIcon(icon string) func() {
 
 // RenderHTML renders icons - arguments icon name (string), size (int), class (string)
 func RenderHTML(icon string, others ...any) template.HTML {
+<<<<<<< HEAD
 	size, class := gitea_html.ParseSizeAndClass(defaultSize, "", others...)
+=======
+	size, class := proxgit_html.ParseSizeAndClass(defaultSize, "", others...)
+>>>>>>> master
 	if svgStr, ok := svgIcons[icon]; ok {
 		// the code is somewhat hacky, but it just works, because the SVG contents are all normalized
 		if size != defaultSize {

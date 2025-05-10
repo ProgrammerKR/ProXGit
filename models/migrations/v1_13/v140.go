@@ -6,8 +6,13 @@ package v1_13 //nolint
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

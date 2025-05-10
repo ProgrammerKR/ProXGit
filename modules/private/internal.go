@@ -12,11 +12,19 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/proxyprotocol"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/proxyprotocol"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // Response is used for internal request response (for user message and error message)

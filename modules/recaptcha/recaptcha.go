@@ -11,9 +11,15 @@ import (
 	"net/url"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // Response is the structure of JSON returned from API

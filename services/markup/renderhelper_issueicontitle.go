@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"html/template"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/perm/access"
 	"code.gitea.io/gitea/models/repo"
@@ -20,6 +21,19 @@ import (
 
 func renderRepoIssueIconTitle(ctx context.Context, opts markup.RenderIssueIconTitleOptions) (_ template.HTML, err error) {
 	webCtx := gitea_context.GetWebContext(ctx)
+=======
+	"code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/perm/access"
+	"code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/htmlutil"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/util"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+)
+
+func renderRepoIssueIconTitle(ctx context.Context, opts markup.RenderIssueIconTitleOptions) (_ template.HTML, err error) {
+	webCtx := proxgit_context.GetWebContext(ctx)
+>>>>>>> master
 	if webCtx == nil {
 		return "", errors.New("context is not a web context")
 	}

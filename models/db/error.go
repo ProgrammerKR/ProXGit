@@ -6,7 +6,11 @@ package db
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // ErrCancelled represents an error due to context cancellation

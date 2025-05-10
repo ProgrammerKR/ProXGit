@@ -6,10 +6,17 @@ package actions
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/storage"
 	"code.gitea.io/gitea/services/context"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // Artifacts using the v4 backend are stored as a single combined zip file per artifact on the backend

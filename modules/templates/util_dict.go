@@ -10,9 +10,15 @@ import (
 	"html/template"
 	"reflect"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 func dictMerge(base map[string]any, arg any) bool {

@@ -9,7 +9,11 @@ import (
 	"image/png"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/avatar"
+=======
+	"code.proxgit.io/proxgit/modules/avatar"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

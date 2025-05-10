@@ -10,8 +10,13 @@ import (
 	"io"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/modules/zstd"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/zstd"
+>>>>>>> master
 
 	"github.com/blakesmith/ar"
 	"github.com/stretchr/testify/assert"
@@ -19,12 +24,20 @@ import (
 )
 
 const (
+<<<<<<< HEAD
 	packageName         = "gitea"
+=======
+	packageName         = "proxgit"
+>>>>>>> master
 	packageVersion      = "0:1.0.1-te~st"
 	packageArchitecture = "amd64"
 	packageAuthor       = "KN4CK3R"
 	description         = "Description with multiple lines."
+<<<<<<< HEAD
 	projectURL          = "https://gitea.io"
+=======
+	projectURL          = "https://proxgit.io"
+>>>>>>> master
 )
 
 func TestParsePackage(t *testing.T) {
@@ -68,7 +81,11 @@ func TestParsePackage(t *testing.T) {
 			Mode: 0o600,
 			Size: 50,
 		})
+<<<<<<< HEAD
 		tw.Write([]byte("Package: gitea\nVersion: 1.0.0\nArchitecture: amd64\n"))
+=======
+		tw.Write([]byte("Package: proxgit\nVersion: 1.0.0\nArchitecture: amd64\n"))
+>>>>>>> master
 		tw.Close()
 
 		cases := []struct {
@@ -115,7 +132,11 @@ func TestParsePackage(t *testing.T) {
 				p, err := ParsePackage(data)
 				assert.NotNil(t, p)
 				assert.NoError(t, err)
+<<<<<<< HEAD
 				assert.Equal(t, "gitea", p.Name)
+=======
+				assert.Equal(t, "proxgit", p.Name)
+>>>>>>> master
 
 				t.Run("TrailingSlash", func(t *testing.T) {
 					data := createArchive(map[string][]byte{"control.tar" + c.Extension + "/": cbuf.Bytes()})
@@ -123,7 +144,11 @@ func TestParsePackage(t *testing.T) {
 					p, err := ParsePackage(data)
 					assert.NotNil(t, p)
 					assert.NoError(t, err)
+<<<<<<< HEAD
 					assert.Equal(t, "gitea", p.Name)
+=======
+					assert.Equal(t, "proxgit", p.Name)
+>>>>>>> master
 				})
 			})
 		}
@@ -133,7 +158,11 @@ func TestParsePackage(t *testing.T) {
 func TestParseControlFile(t *testing.T) {
 	buildContent := func(name, version, architecture string) *bytes.Buffer {
 		var buf bytes.Buffer
+<<<<<<< HEAD
 		buf.WriteString("Package: " + name + "\nVersion: " + version + "\nArchitecture: " + architecture + "\nMaintainer: " + packageAuthor + " <kn4ck3r@gitea.io>\nHomepage: " + projectURL + "\nDepends: a,\n b\nDescription: Description\n with multiple\n lines.")
+=======
+		buf.WriteString("Package: " + name + "\nVersion: " + version + "\nArchitecture: " + architecture + "\nMaintainer: " + packageAuthor + " <kn4ck3r@proxgit.io>\nHomepage: " + projectURL + "\nDepends: a,\n b\nDescription: Description\n with multiple\n lines.")
+>>>>>>> master
 		return &buf
 	}
 

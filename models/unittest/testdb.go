@@ -11,6 +11,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/system"
 	"code.gitea.io/gitea/modules/auth/password/hash"
@@ -23,13 +24,31 @@ import (
 	"code.gitea.io/gitea/modules/tempdir"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/system"
+	"code.proxgit.io/proxgit/modules/auth/password/hash"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/setting/config"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/tempdir"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"xorm.io/xorm"
 	"xorm.io/xorm/names"
 )
 
+<<<<<<< HEAD
 var giteaRoot string
+=======
+var proxgitRoot string
+>>>>>>> master
 
 func fatalTestError(fmtStr string, args ...any) {
 	_, _ = fmt.Fprintf(os.Stderr, fmtStr, args...)
@@ -74,41 +93,70 @@ type TestOptions struct {
 // test database. Creates the test database, and sets necessary settings.
 func MainTest(m *testing.M, testOptsArg ...*TestOptions) {
 	testOpts := util.OptionalArg(testOptsArg, &TestOptions{})
+<<<<<<< HEAD
 	giteaRoot = test.SetupGiteaRoot()
 	setting.CustomPath = filepath.Join(giteaRoot, "custom")
 	InitSettingsForTesting()
 
 	fixturesOpts := FixturesOptions{Dir: filepath.Join(giteaRoot, "models", "fixtures"), Files: testOpts.FixtureFiles}
+=======
+	proxgitRoot = test.SetupGiteaRoot()
+	setting.CustomPath = filepath.Join(proxgitRoot, "custom")
+	InitSettingsForTesting()
+
+	fixturesOpts := FixturesOptions{Dir: filepath.Join(proxgitRoot, "models", "fixtures"), Files: testOpts.FixtureFiles}
+>>>>>>> master
 	if err := CreateTestEngine(fixturesOpts); err != nil {
 		fatalTestError("Error creating test engine: %v\n", err)
 	}
 
 	setting.IsInTesting = true
+<<<<<<< HEAD
 	setting.AppURL = "https://try.gitea.io/"
 	setting.Domain = "try.gitea.io"
+=======
+	setting.AppURL = "https://try.proxgit.io/"
+	setting.Domain = "try.proxgit.io"
+>>>>>>> master
 	setting.RunUser = "runuser"
 	setting.SSH.User = "sshuser"
 	setting.SSH.BuiltinServerUser = "builtinuser"
 	setting.SSH.Port = 3000
+<<<<<<< HEAD
 	setting.SSH.Domain = "try.gitea.io"
 	setting.Database.Type = "sqlite3"
 	setting.Repository.DefaultBranch = "master" // many test code still assume that default branch is called "master"
 	repoRootPath, cleanup1, err := tempdir.OsTempDir("gitea-test").MkdirTempRandom("repos")
+=======
+	setting.SSH.Domain = "try.proxgit.io"
+	setting.Database.Type = "sqlite3"
+	setting.Repository.DefaultBranch = "master" // many test code still assume that default branch is called "master"
+	repoRootPath, cleanup1, err := tempdir.OsTempDir("proxgit-test").MkdirTempRandom("repos")
+>>>>>>> master
 	if err != nil {
 		fatalTestError("TempDir: %v\n", err)
 	}
 	defer cleanup1()
 
 	setting.RepoRootPath = repoRootPath
+<<<<<<< HEAD
 	appDataPath, cleanup2, err := tempdir.OsTempDir("gitea-test").MkdirTempRandom("appdata")
+=======
+	appDataPath, cleanup2, err := tempdir.OsTempDir("proxgit-test").MkdirTempRandom("appdata")
+>>>>>>> master
 	if err != nil {
 		fatalTestError("TempDir: %v\n", err)
 	}
 	defer cleanup2()
 
 	setting.AppDataPath = appDataPath
+<<<<<<< HEAD
 	setting.AppWorkPath = giteaRoot
 	setting.StaticRootPath = giteaRoot
+=======
+	setting.AppWorkPath = proxgitRoot
+	setting.StaticRootPath = proxgitRoot
+>>>>>>> master
 	setting.GravatarSource = "https://secure.gravatar.com/avatar/"
 
 	setting.Attachment.Storage.Path = filepath.Join(setting.AppDataPath, "attachments")
@@ -137,7 +185,11 @@ func MainTest(m *testing.M, testOptsArg ...*TestOptions) {
 	if err = storage.Init(); err != nil {
 		fatalTestError("storage.Init: %v\n", err)
 	}
+<<<<<<< HEAD
 	if err = SyncDirs(filepath.Join(giteaRoot, "tests", "gitea-repositories-meta"), setting.RepoRootPath); err != nil {
+=======
+	if err = SyncDirs(filepath.Join(proxgitRoot, "tests", "proxgit-repositories-meta"), setting.RepoRootPath); err != nil {
+>>>>>>> master
 		fatalTestError("util.SyncDirs: %v\n", err)
 	}
 
@@ -199,7 +251,11 @@ func PrepareTestDatabase() error {
 // by tests that use the above MainTest(..) function.
 func PrepareTestEnv(t testing.TB) {
 	assert.NoError(t, PrepareTestDatabase())
+<<<<<<< HEAD
 	metaPath := filepath.Join(giteaRoot, "tests", "gitea-repositories-meta")
+=======
+	metaPath := filepath.Join(proxgitRoot, "tests", "proxgit-repositories-meta")
+>>>>>>> master
 	assert.NoError(t, SyncDirs(metaPath, setting.RepoRootPath))
 	test.SetupGiteaRoot() // Makes sure GITEA_ROOT is set
 }

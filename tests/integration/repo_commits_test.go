@@ -11,6 +11,7 @@ import (
 	"sync"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
@@ -18,6 +19,15 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"
@@ -159,7 +169,11 @@ func TestRepoCommitsWithStatusSuccess(t *testing.T) {
 }
 
 func TestRepoCommitsWithStatusError(t *testing.T) {
+<<<<<<< HEAD
 	doTestRepoCommitWithStatus(t, "error", "gitea-exclamation", "red")
+=======
+	doTestRepoCommitWithStatus(t, "error", "proxgit-exclamation", "red")
+>>>>>>> master
 }
 
 func TestRepoCommitsWithStatusFailure(t *testing.T) {
@@ -167,7 +181,11 @@ func TestRepoCommitsWithStatusFailure(t *testing.T) {
 }
 
 func TestRepoCommitsWithStatusWarning(t *testing.T) {
+<<<<<<< HEAD
 	doTestRepoCommitWithStatus(t, "warning", "gitea-exclamation", "yellow")
+=======
+	doTestRepoCommitWithStatus(t, "warning", "proxgit-exclamation", "yellow")
+>>>>>>> master
 }
 
 func TestRepoCommitsStatusParallel(t *testing.T) {

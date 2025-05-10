@@ -61,13 +61,21 @@ yjAbmt9LsOMp8xMamFkSQ38fP5EFjdz8LA4do2C69VvqWXAJgrPbKZb58/xZXrKoW6ttW13Bhvzi
 	assert.NoError(t, err)
 	assert.NotNil(t, rp)
 
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", rp.Name)
+=======
+	assert.Equal(t, "proxgit", rp.Name)
+>>>>>>> master
 	assert.Equal(t, "1.0.5", rp.Version)
 	assert.Equal(t, "ruby", rp.Metadata.Platform)
 	assert.Equal(t, "Gitea package", rp.Metadata.Summary)
 	assert.Equal(t, "RubyGems package test", rp.Metadata.Description)
 	assert.Equal(t, []string{"Gitea"}, rp.Metadata.Authors)
+<<<<<<< HEAD
 	assert.Equal(t, "https://gitea.io/", rp.Metadata.ProjectURL)
+=======
+	assert.Equal(t, "https://proxgit.io/", rp.Metadata.ProjectURL)
+>>>>>>> master
 	assert.Equal(t, []string{"MIT"}, rp.Metadata.Licenses)
 	assert.Empty(t, rp.Metadata.RequiredRubygemsVersion)
 	assert.Len(t, rp.Metadata.RequiredRubyVersion, 1)

@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/organization"
 	access_model "code.gitea.io/gitea/models/perm/access"
@@ -14,6 +15,15 @@ import (
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/tests"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 )
 
 func assertUserDeleted(t *testing.T, userID int64) {

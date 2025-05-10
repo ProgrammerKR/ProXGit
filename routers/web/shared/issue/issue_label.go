@@ -6,11 +6,19 @@ package issue
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/base"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // PrepareFilterIssueLabels reads the "labels" query parameter, sets `ctx.Data["Labels"]` and `ctx.Data["SelectLabels"]`

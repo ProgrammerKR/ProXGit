@@ -13,9 +13,15 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // Scheme describes protocol types
@@ -55,7 +61,11 @@ var (
 	// PublicURLDetection controls how to use the HTTP request headers to detect public URL
 	PublicURLDetection string
 
+<<<<<<< HEAD
 	// AppSubURL represents the sub-url mounting point for gitea, parsed from "ROOT_URL"
+=======
+	// AppSubURL represents the sub-url mounting point for proxgit, parsed from "ROOT_URL"
+>>>>>>> master
 	// It is either "" or starts with '/' and ends without '/', such as '/{sub-path}'.
 	// This value is empty if site does not have sub-url.
 	AppSubURL string

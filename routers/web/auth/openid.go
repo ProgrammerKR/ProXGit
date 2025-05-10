@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/auth/openid"
 	"code.gitea.io/gitea/modules/log"
@@ -18,6 +19,18 @@ import (
 	"code.gitea.io/gitea/services/auth"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/forms"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/auth/openid"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 )
 
 const (

@@ -8,9 +8,15 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // env keys for git hooks need
@@ -76,7 +82,11 @@ func FullPushingEnvironment(author, committer *user_model.User, repo *repo_model
 		EnvRepoID+"="+strconv.FormatInt(repo.ID, 10),
 		EnvPRID+"="+strconv.FormatInt(prID, 10),
 		EnvAppURL+"="+setting.AppURL,
+<<<<<<< HEAD
 		"SSH_ORIGINAL_COMMAND=gitea-internal",
+=======
+		"SSH_ORIGINAL_COMMAND=proxgit-internal",
+>>>>>>> master
 	)
 
 	if !committer.KeepEmailPrivate {

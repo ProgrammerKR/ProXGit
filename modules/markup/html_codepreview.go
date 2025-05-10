@@ -9,8 +9,13 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 )

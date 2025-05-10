@@ -11,6 +11,7 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models"
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -21,6 +22,18 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models"
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	lru "github.com/hashicorp/golang-lru/v2"
 	"xorm.io/builder"

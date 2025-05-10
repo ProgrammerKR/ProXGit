@@ -11,10 +11,17 @@ import (
 	"fmt"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	lru "github.com/hashicorp/golang-lru/v2"
 	"xorm.io/builder"

@@ -8,7 +8,11 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	packages_module "code.gitea.io/gitea/modules/packages"
+=======
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+>>>>>>> master
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 	"github.com/sassoftware/go-rpmutils"

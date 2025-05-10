@@ -6,9 +6,15 @@ package v1_6 //nolint
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

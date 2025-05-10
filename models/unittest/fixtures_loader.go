@@ -12,7 +12,11 @@ import (
 	"slices"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 
 	"gopkg.in/yaml.v3"
 	"xorm.io/xorm"

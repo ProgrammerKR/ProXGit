@@ -15,6 +15,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
@@ -22,6 +23,15 @@ import (
 	user_model "code.gitea.io/gitea/models/user"
 	pub_module "code.gitea.io/gitea/modules/packages/pub"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	pub_module "code.proxgit.io/proxgit/modules/packages/pub"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

@@ -19,9 +19,15 @@ type CommitStatusMap = {
 const commitStatus: CommitStatusMap = {
   pending: {name: 'octicon-dot-fill', color: 'yellow'},
   success: {name: 'octicon-check', color: 'green'},
+<<<<<<< HEAD
   error: {name: 'gitea-exclamation', color: 'red'},
   failure: {name: 'octicon-x', color: 'red'},
   warning: {name: 'gitea-exclamation', color: 'yellow'},
+=======
+  error: {name: 'proxgit-exclamation', color: 'red'},
+  failure: {name: 'octicon-x', color: 'red'},
+  warning: {name: 'proxgit-exclamation', color: 'yellow'},
+>>>>>>> master
 };
 
 export default defineComponent({
@@ -439,7 +445,11 @@ export default defineComponent({
               class="item navigation tw-py-1" :class="{'disabled': page === 1}"
               @click="changePage(1)" :title="textFirstPage"
             >
+<<<<<<< HEAD
               <svg-icon name="gitea-double-chevron-left" :size="16" class="tw-mr-1"/>
+=======
+              <svg-icon name="proxgit-double-chevron-left" :size="16" class="tw-mr-1"/>
+>>>>>>> master
             </a>
             <a
               class="item navigation tw-py-1" :class="{'disabled': page === 1}"
@@ -458,7 +468,11 @@ export default defineComponent({
               class="item navigation tw-py-1" :class="{'disabled': page === finalPage}"
               @click="changePage(finalPage)" :title="textLastPage"
             >
+<<<<<<< HEAD
               <svg-icon name="gitea-double-chevron-right" :size="16" class="tw-ml-1"/>
+=======
+              <svg-icon name="proxgit-double-chevron-right" :size="16" class="tw-ml-1"/>
+>>>>>>> master
             </a>
           </div>
         </div>

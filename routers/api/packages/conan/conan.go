@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
@@ -27,6 +28,23 @@ import (
 	"code.gitea.io/gitea/services/context"
 	notify_service "code.gitea.io/gitea/services/notify"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	conan_model "code.proxgit.io/proxgit/models/packages/conan"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	conan_module "code.proxgit.io/proxgit/modules/packages/conan"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/routers/api/packages/helper"
+	auth_service "code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/context"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 )
 
 const (

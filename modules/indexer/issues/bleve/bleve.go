@@ -7,12 +7,21 @@ import (
 	"context"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer"
 	indexer_internal "code.gitea.io/gitea/modules/indexer/internal"
 	inner_bleve "code.gitea.io/gitea/modules/indexer/internal/bleve"
 	"code.gitea.io/gitea/modules/indexer/issues/internal"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/indexer"
+	indexer_internal "code.proxgit.io/proxgit/modules/indexer/internal"
+	inner_bleve "code.proxgit.io/proxgit/modules/indexer/internal/bleve"
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/blevesearch/bleve/v2"
 	"github.com/blevesearch/bleve/v2/analysis/analyzer/custom"

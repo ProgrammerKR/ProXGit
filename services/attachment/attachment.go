@@ -9,11 +9,19 @@ import (
 	"fmt"
 	"io"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/storage"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context/upload"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context/upload"
+>>>>>>> master
 
 	"github.com/google/uuid"
 )

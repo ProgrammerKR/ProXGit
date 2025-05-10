@@ -54,8 +54,13 @@ func TestIsAutomaticReply(t *testing.T) {
 
 	for _, c := range cases {
 		b := enmime.Builder().
+<<<<<<< HEAD
 			From("Dummy", "dummy@gitea.io").
 			To("Dummy", "dummy@gitea.io")
+=======
+			From("Dummy", "dummy@proxgit.io").
+			To("Dummy", "dummy@proxgit.io")
+>>>>>>> master
 		for k, v := range c.Headers {
 			b = b.Header(k, v)
 		}

@@ -6,6 +6,7 @@ package stats
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/git/languagestats"
@@ -14,6 +15,16 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/process"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/git/languagestats"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // DBIndexer implements Indexer interface to use database's like search

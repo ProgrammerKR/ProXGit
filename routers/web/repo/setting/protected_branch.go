@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	"code.gitea.io/gitea/models/organization"
 	"code.gitea.io/gitea/models/perm"
@@ -25,6 +26,21 @@ import (
 	"code.gitea.io/gitea/services/forms"
 	pull_service "code.gitea.io/gitea/services/pull"
 	"code.gitea.io/gitea/services/repository"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	"code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/web/repo"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	"code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 
 	"github.com/gobwas/glob"
 )

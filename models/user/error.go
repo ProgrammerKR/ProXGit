@@ -6,7 +6,11 @@ package user
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // ErrUserAlreadyExist represents a "user already exists" error.

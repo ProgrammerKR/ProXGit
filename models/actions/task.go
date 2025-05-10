@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unit"
@@ -20,6 +21,18 @@ import (
 	"code.gitea.io/gitea/modules/util"
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+>>>>>>> master
 	lru "github.com/hashicorp/golang-lru/v2"
 	"github.com/nektos/act/pkg/jobparser"
 	"google.golang.org/protobuf/types/known/timestamppb"

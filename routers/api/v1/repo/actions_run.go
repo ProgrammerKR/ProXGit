@@ -6,10 +6,17 @@ package repo
 import (
 	"errors"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/routers/common"
 	"code.gitea.io/gitea/services/context"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func DownloadActionsRunJobLogs(ctx *context.APIContext) {

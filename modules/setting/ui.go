@@ -6,8 +6,13 @@ package setting
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // UI settings
@@ -84,11 +89,19 @@ var UI = struct {
 	CodeCommentLines:        4,
 	ReactionMaxUserNum:      10,
 	MaxDisplayFileSize:      8388608,
+<<<<<<< HEAD
 	DefaultTheme:            `gitea-auto`,
 	FileIconTheme:           `material`,
 	Reactions:               []string{`+1`, `-1`, `laugh`, `hooray`, `confused`, `heart`, `rocket`, `eyes`},
 	CustomEmojis:            []string{`git`, `gitea`, `codeberg`, `gitlab`, `github`, `gogs`},
 	CustomEmojisMap:         map[string]string{"git": ":git:", "gitea": ":gitea:", "codeberg": ":codeberg:", "gitlab": ":gitlab:", "github": ":github:", "gogs": ":gogs:"},
+=======
+	DefaultTheme:            `proxgit-auto`,
+	FileIconTheme:           `material`,
+	Reactions:               []string{`+1`, `-1`, `laugh`, `hooray`, `confused`, `heart`, `rocket`, `eyes`},
+	CustomEmojis:            []string{`git`, `proxgit`, `codeberg`, `gitlab`, `github`, `gogs`},
+	CustomEmojisMap:         map[string]string{"git": ":git:", "proxgit": ":proxgit:", "codeberg": ":codeberg:", "gitlab": ":gitlab:", "github": ":github:", "gogs": ":gogs:"},
+>>>>>>> master
 	ExploreDefaultSort:      "recentupdate",
 	PreferredTimestampTense: "mixed",
 
@@ -142,7 +155,11 @@ var UI = struct {
 	}{
 		Author:      "Gitea - Git with a cup of tea",
 		Description: "Gitea (Git with a cup of tea) is a painless self-hosted Git service written in Go",
+<<<<<<< HEAD
 		Keywords:    "go,git,self-hosted,gitea",
+=======
+		Keywords:    "go,git,self-hosted,proxgit",
+>>>>>>> master
 	},
 }
 

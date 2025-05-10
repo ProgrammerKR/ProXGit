@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -19,6 +20,19 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

@@ -4,8 +4,13 @@
 package swagger
 
 import (
+<<<<<<< HEAD
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/services/forms"
+=======
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 )
 
 // not actually a response, just a hack to get go-swagger to include definitions

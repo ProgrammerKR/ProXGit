@@ -9,6 +9,7 @@ import (
 	"os"
 	"strings"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
@@ -19,6 +20,18 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	notify_service "code.gitea.io/gitea/services/notify"
 	pull_service "code.gitea.io/gitea/services/pull"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/private"
+	"code.proxgit.io/proxgit/modules/setting"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+>>>>>>> master
 )
 
 // ProcReceive handle proc receive work

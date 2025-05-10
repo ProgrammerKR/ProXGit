@@ -10,9 +10,15 @@ import (
 	"net/url"
 	"sort"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	npm_module "code.gitea.io/gitea/modules/packages/npm"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	npm_module "code.proxgit.io/proxgit/modules/packages/npm"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 func createPackageMetadataResponse(registryURL string, pds []*packages_model.PackageDescriptor) *npm_module.PackageMetadata {

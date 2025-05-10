@@ -10,8 +10,13 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // DetermineEndpoint determines an endpoint from the clone url or uses the specified LFS url.

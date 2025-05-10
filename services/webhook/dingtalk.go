@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"strings"
 
+<<<<<<< HEAD
 	webhook_model "code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/git"
 	api "code.gitea.io/gitea/modules/structs"
@@ -17,6 +18,15 @@ import (
 	webhook_module "code.gitea.io/gitea/modules/webhook"
 
 	dingtalk "gitea.com/lunny/dingtalk_webhook"
+=======
+	webhook_model "code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+
+	dingtalk "proxgit.com/lunny/dingtalk_webhook"
+>>>>>>> master
 )
 
 type (

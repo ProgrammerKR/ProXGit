@@ -7,9 +7,15 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/services/context"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // TopicsPost response for creating repository

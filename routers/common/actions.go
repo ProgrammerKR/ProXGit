@@ -7,11 +7,19 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/actions"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func DownloadActionsRunJobLogsWithIndex(ctx *context.Base, ctxRepo *repo_model.Repository, runID, jobIndex int64) error {

@@ -7,12 +7,21 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/routers/api/v1/utils"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+>>>>>>> master
 )
 
 // AddIssueSubscription Subscribe user to issue

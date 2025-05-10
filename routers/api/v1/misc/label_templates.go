@@ -6,10 +6,17 @@ package misc
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	repo_module "code.gitea.io/gitea/modules/repository"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
+=======
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+>>>>>>> master
 )
 
 // Shows a list of all Label templates

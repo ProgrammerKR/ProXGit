@@ -9,6 +9,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
@@ -22,6 +23,21 @@ import (
 	"code.gitea.io/gitea/services/auth/source/ldap"
 	org_service "code.gitea.io/gitea/services/org"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/auth/source/ldap"
+	org_service "code.proxgit.io/proxgit/services/org"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -138,7 +154,11 @@ func (te *ldapTestEnv) buildAuthSourcePayload(csrf string, opts ...ldapAuthOptio
 		"name":                     "ldap",
 		"host":                     te.serverHost,
 		"port":                     te.serverPort,
+<<<<<<< HEAD
 		"bind_dn":                  "uid=gitea,ou=service,dc=planetexpress,dc=com",
+=======
+		"bind_dn":                  "uid=proxgit,ou=service,dc=planetexpress,dc=com",
+>>>>>>> master
 		"bind_password":            "password",
 		"user_base":                "ou=people,dc=planetexpress,dc=com",
 		"filter":                   userFilter,
@@ -215,7 +235,11 @@ func TestLDAPAuthChange(t *testing.T) {
 	host, _ := doc.Find(`input[name="host"]`).Attr("value")
 	assert.Equal(t, te.serverHost, host)
 	binddn, _ := doc.Find(`input[name="bind_dn"]`).Attr("value")
+<<<<<<< HEAD
 	assert.Equal(t, "uid=gitea,ou=service,dc=planetexpress,dc=com", binddn)
+=======
+	assert.Equal(t, "uid=proxgit,ou=service,dc=planetexpress,dc=com", binddn)
+>>>>>>> master
 
 	req = NewRequestWithValues(t, "POST", href, te.buildAuthSourcePayload(csrf, ldapAuthOptions{groupTeamMapRemoval: "off"}))
 	session.MakeRequest(t, req, http.StatusSeeOther)
@@ -226,7 +250,11 @@ func TestLDAPAuthChange(t *testing.T) {
 	host, _ = doc.Find(`input[name="host"]`).Attr("value")
 	assert.Equal(t, te.serverHost, host)
 	binddn, _ = doc.Find(`input[name="bind_dn"]`).Attr("value")
+<<<<<<< HEAD
 	assert.Equal(t, "uid=gitea,ou=service,dc=planetexpress,dc=com", binddn)
+=======
+	assert.Equal(t, "uid=proxgit,ou=service,dc=planetexpress,dc=com", binddn)
+>>>>>>> master
 }
 
 func TestLDAPUserSync(t *testing.T) {
@@ -524,7 +552,11 @@ func TestLDAPEmailSignin(t *testing.T) {
 				UserName: "u1",
 				Password: "xx",
 				FullName: "user 1",
+<<<<<<< HEAD
 				Email:    "u1@gitea.com",
+=======
+				Email:    "u1@proxgit.com",
+>>>>>>> master
 			},
 		},
 		serverHost: "mock-host",

@@ -14,6 +14,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -22,6 +23,16 @@ import (
 	debian_module "code.gitea.io/gitea/modules/packages/debian"
 	packages_cleanup_service "code.gitea.io/gitea/services/packages/cleanup"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/base"
+	debian_module "code.proxgit.io/proxgit/modules/packages/debian"
+	packages_cleanup_service "code.proxgit.io/proxgit/services/packages/cleanup"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/blakesmith/ar"
 	"github.com/stretchr/testify/assert"
@@ -31,7 +42,11 @@ func TestPackageDebian(t *testing.T) {
 	defer tests.PrepareTestEnv(t)()
 	user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
+<<<<<<< HEAD
 	packageName := "gitea"
+=======
+	packageName := "proxgit"
+>>>>>>> master
 	packageVersion := "1.0.3"
 	packageVersion2 := "1.0.4"
 	packageDescription := "Package Description"
@@ -62,7 +77,11 @@ func TestPackageDebian(t *testing.T) {
 		return &buf
 	}
 
+<<<<<<< HEAD
 	distributions := []string{"test", "gitea"}
+=======
+	distributions := []string{"test", "proxgit"}
+>>>>>>> master
 	components := []string{"main", "stable"}
 	architectures := []string{"all", "amd64"}
 

@@ -16,6 +16,7 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -41,6 +42,33 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/context/upload"
 	"code.gitea.io/gitea/services/gitdiff"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/charset"
+	csv_module "code.proxgit.io/proxgit/modules/csv"
+	"code.proxgit.io/proxgit/modules/fileicon"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/typesniffer"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/context/upload"
+	"code.proxgit.io/proxgit/services/gitdiff"
+>>>>>>> master
 )
 
 const (

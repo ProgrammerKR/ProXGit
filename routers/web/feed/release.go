@@ -6,9 +6,15 @@ package feed
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 
 	"github.com/gorilla/feeds"
 )

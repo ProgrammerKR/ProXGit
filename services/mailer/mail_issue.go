@@ -7,6 +7,7 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	issues_model "code.gitea.io/gitea/models/issues"
 	access_model "code.gitea.io/gitea/models/perm/access"
@@ -16,6 +17,17 @@ import (
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 const MailBatchSize = 100 // batch size used in mailIssueCommentBatch

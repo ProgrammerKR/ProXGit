@@ -7,11 +7,19 @@ import (
 	"errors"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 
 	chi_cache "gitea.com/go-chi/cache" //nolint:depguard
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+
+	chi_cache "proxgit.com/go-chi/cache" //nolint:depguard
+>>>>>>> master
 )
 
 type GetJSONError struct {

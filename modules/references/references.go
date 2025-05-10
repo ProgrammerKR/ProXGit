@@ -11,10 +11,17 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/markup/mdstripper"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup/mdstripper"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 var (
@@ -37,7 +44,11 @@ var (
 	// e.g. org/repo#12345
 	crossReferenceIssueNumericPattern = regexp.MustCompile(`(?:\s|^|\(|\[)([0-9a-zA-Z-_\.]+/[0-9a-zA-Z-_\.]+[#!][0-9]+)(?:\s|$|\)|\]|[:;,.?!]\s|[:;,.?!]$)`)
 	// crossReferenceCommitPattern matches a string that references a commit in a different repository
+<<<<<<< HEAD
 	// e.g. go-gitea/gitea@d8a994ef, go-gitea/gitea@d8a994ef243349f321568f9e36d5c3f444b99cae (7-40 characters)
+=======
+	// e.g. go-proxgit/proxgit@d8a994ef, go-proxgit/proxgit@d8a994ef243349f321568f9e36d5c3f444b99cae (7-40 characters)
+>>>>>>> master
 	crossReferenceCommitPattern = regexp.MustCompile(`(?:\s|^|\(|\[)([0-9a-zA-Z-_\.]+)/([0-9a-zA-Z-_\.]+)@([0-9a-f]{7,64})(?:\s|$|\)|\]|[:;,.?!]\s|[:;,.?!]$)`)
 	// spaceTrimmedPattern let's find the trailing space
 	spaceTrimmedPattern = regexp.MustCompile(`(?:.*[0-9a-zA-Z-_])\s`)
@@ -47,9 +58,15 @@ var (
 	issueCloseKeywordsPat, issueReopenKeywordsPat *regexp.Regexp
 	issueKeywordsOnce                             sync.Once
 
+<<<<<<< HEAD
 	giteaHostInit         sync.Once
 	giteaHost             string
 	giteaIssuePullPattern *regexp.Regexp
+=======
+	proxgitHostInit         sync.Once
+	proxgitHost             string
+	proxgitIssuePullPattern *regexp.Regexp
+>>>>>>> master
 
 	actionStrings = []string{
 		"none",
@@ -171,26 +188,45 @@ func doNewKeywords(closeKeywords, reopenKeywords []string) {
 
 // getGiteaHostName returns a normalized string with the local host name, with no scheme or port information
 func getGiteaHostName() string {
+<<<<<<< HEAD
 	giteaHostInit.Do(func() {
 		if uapp, err := url.Parse(setting.AppURL); err == nil {
 			giteaHost = strings.ToLower(uapp.Host)
 			giteaIssuePullPattern = regexp.MustCompile(
+=======
+	proxgitHostInit.Do(func() {
+		if uapp, err := url.Parse(setting.AppURL); err == nil {
+			proxgitHost = strings.ToLower(uapp.Host)
+			proxgitIssuePullPattern = regexp.MustCompile(
+>>>>>>> master
 				`(\s|^|\(|\[)` +
 					regexp.QuoteMeta(strings.TrimSpace(setting.AppURL)) +
 					`([0-9a-zA-Z-_\.]+/[0-9a-zA-Z-_\.]+)/` +
 					`((?:issues)|(?:pulls))/([0-9]+)(?:\s|$|\)|\]|[:;,.?!]\s|[:;,.?!]$)`)
 		} else {
+<<<<<<< HEAD
 			giteaHost = ""
 			giteaIssuePullPattern = nil
 		}
 	})
 	return giteaHost
+=======
+			proxgitHost = ""
+			proxgitIssuePullPattern = nil
+		}
+	})
+	return proxgitHost
+>>>>>>> master
 }
 
 // getGiteaIssuePullPattern
 func getGiteaIssuePullPattern() *regexp.Regexp {
 	getGiteaHostName()
+<<<<<<< HEAD
 	return giteaIssuePullPattern
+=======
+	return proxgitIssuePullPattern
+>>>>>>> master
 }
 
 // FindAllMentionsMarkdown matches mention patterns in given content and
@@ -256,8 +292,13 @@ func convertFullHTMLReferencesToShortRefs(re *regexp.Regexp, contentBytes *[]byt
 	//
 	// We want to transform something like:
 	//
+<<<<<<< HEAD
 	// this is a https://ourgitea.com/git/owner/repo/issues/123456789, foo
 	// https://ourgitea.com/git/owner/repo/pulls/123456789
+=======
+	// this is a https://ourproxgit.com/git/owner/repo/issues/123456789, foo
+	// https://ourproxgit.com/git/owner/repo/pulls/123456789
+>>>>>>> master
 	//
 	// Into something like:
 	//
@@ -266,7 +307,11 @@ func convertFullHTMLReferencesToShortRefs(re *regexp.Regexp, contentBytes *[]byt
 
 	pos := 0
 	for {
+<<<<<<< HEAD
 		// re looks for something like: (\s|^|\(|\[)https://ourgitea.com/git/(owner/repo)/(issues)/(123456789)(?:\s|$|\)|\]|[:;,.?!]\s|[:;,.?!]$)
+=======
+		// re looks for something like: (\s|^|\(|\[)https://ourproxgit.com/git/(owner/repo)/(issues)/(123456789)(?:\s|$|\)|\]|[:;,.?!]\s|[:;,.?!]$)
+>>>>>>> master
 		match := re.FindSubmatchIndex((*contentBytes)[pos:])
 		if match == nil {
 			break

@@ -17,8 +17,13 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/proxy"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/proxy"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // GPGSettings represents the default GPG settings for this repository
@@ -267,7 +272,11 @@ func GetDivergingCommits(ctx context.Context, repoPath, baseBranch, targetBranch
 
 // CreateBundle create bundle content to the target path
 func (repo *Repository) CreateBundle(ctx context.Context, commit string, out io.Writer) error {
+<<<<<<< HEAD
 	tmp, cleanup, err := setting.AppDataTempDir("git-repo-content").MkdirTempRandom("gitea-bundle")
+=======
+	tmp, cleanup, err := setting.AppDataTempDir("git-repo-content").MkdirTempRandom("proxgit-bundle")
+>>>>>>> master
 	if err != nil {
 		return err
 	}

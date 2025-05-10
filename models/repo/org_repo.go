@@ -8,9 +8,15 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	org_model "code.gitea.io/gitea/models/organization"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	org_model "code.proxgit.io/proxgit/models/organization"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

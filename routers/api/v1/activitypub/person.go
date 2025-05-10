@@ -8,10 +8,17 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/activitypub"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/activitypub"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 
 	ap "github.com/go-ap/activitypub"
 	"github.com/go-ap/jsonld"

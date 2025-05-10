@@ -6,11 +6,19 @@
 	{{svg "octicon-check" 18 "commit-status icon text green"}}
 {{end}}
 {{if eq .State "error"}}
+<<<<<<< HEAD
 	{{svg "gitea-exclamation" 18 "commit-status icon text red"}}
+=======
+	{{svg "proxgit-exclamation" 18 "commit-status icon text red"}}
+>>>>>>> master
 {{end}}
 {{if eq .State "failure"}}
 	{{svg "octicon-x" 18 "commit-status icon text red"}}
 {{end}}
 {{if eq .State "warning"}}
+<<<<<<< HEAD
 	{{svg "gitea-exclamation" 18 "commit-status icon text yellow"}}
+=======
+	{{svg "proxgit-exclamation" 18 "commit-status icon text yellow"}}
+>>>>>>> master
 {{end}}

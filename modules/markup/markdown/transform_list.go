@@ -6,7 +6,11 @@ package markdown
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 	east "github.com/yuin/goldmark/extension/ast"

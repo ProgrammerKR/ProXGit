@@ -7,6 +7,7 @@ import (
 	"context"
 	"strings"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
@@ -18,6 +19,19 @@ import (
 	asymkey_service "code.gitea.io/gitea/services/asymkey"
 	source_service "code.gitea.io/gitea/services/auth/source"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	user_model "code.proxgit.io/proxgit/models/user"
+	auth_module "code.proxgit.io/proxgit/modules/auth"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	source_service "code.proxgit.io/proxgit/services/auth/source"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 // Sync causes this ldap source to synchronize its users with the db

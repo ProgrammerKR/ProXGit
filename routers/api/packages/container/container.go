@@ -14,6 +14,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	packages_model "code.gitea.io/gitea/models/packages"
 	container_model "code.gitea.io/gitea/models/packages/container"
@@ -30,6 +31,24 @@ import (
 	"code.gitea.io/gitea/services/context"
 	packages_service "code.gitea.io/gitea/services/packages"
 	container_service "code.gitea.io/gitea/services/packages/container"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	container_model "code.proxgit.io/proxgit/models/packages/container"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	container_module "code.proxgit.io/proxgit/modules/packages/container"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/api/packages/helper"
+	auth_service "code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/context"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+	container_service "code.proxgit.io/proxgit/services/packages/container"
+>>>>>>> master
 
 	digest "github.com/opencontainers/go-digest"
 )
@@ -781,7 +800,11 @@ func GetTagList(ctx *context.Context) {
 }
 
 // FIXME: Workaround to be removed in v1.20
+<<<<<<< HEAD
 // https://github.com/go-gitea/gitea/issues/19586
+=======
+// https://github.com/go-proxgit/proxgit/issues/19586
+>>>>>>> master
 func workaroundGetContainerBlob(ctx *context.Context, opts *container_model.BlobSearchOptions) (*packages_model.PackageFileDescriptor, error) {
 	blob, err := container_model.GetContainerBlob(ctx, opts)
 	if err != nil {

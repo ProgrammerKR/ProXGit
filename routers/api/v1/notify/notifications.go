@@ -7,11 +7,19 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/routers/api/v1/utils"
 	"code.gitea.io/gitea/services/context"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // NewAvailable check if unread notifications exist

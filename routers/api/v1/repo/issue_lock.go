@@ -7,10 +7,17 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/services/context"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // LockIssue lock an issue

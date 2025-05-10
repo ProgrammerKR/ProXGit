@@ -6,12 +6,21 @@ package setting
 import (
 	"path/filepath"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 // AdoptOrDeleteRepository adopts or deletes a repository

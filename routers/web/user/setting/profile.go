@@ -14,6 +14,7 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/avatars"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
@@ -32,6 +33,26 @@ import (
 	"code.gitea.io/gitea/services/forms"
 	user_service "code.gitea.io/gitea/services/user"
 	"code.gitea.io/gitea/services/webtheme"
+=======
+	"code.proxgit.io/proxgit/models/avatars"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/modules/typesniffer"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	user_service "code.proxgit.io/proxgit/services/user"
+	"code.proxgit.io/proxgit/services/webtheme"
+>>>>>>> master
 )
 
 const (

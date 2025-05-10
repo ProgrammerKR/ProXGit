@@ -6,8 +6,13 @@ package fileicon
 import (
 	"html/template"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/svg"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/svg"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 func BasicEntryIconName(entry *EntryInfo) string {

@@ -14,8 +14,13 @@ export function initInstall() {
 }
 
 function initPreInstall() {
+<<<<<<< HEAD
   const defaultDbUser = 'gitea';
   const defaultDbName = 'gitea';
+=======
+  const defaultDbUser = 'proxgit';
+  const defaultDbName = 'proxgit';
+>>>>>>> master
 
   const defaultDbHosts: Record<string, string> = {
     mysql: '127.0.0.1:3306',

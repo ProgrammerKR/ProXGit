@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/organization"
 	access_model "code.gitea.io/gitea/models/perm/access"
@@ -21,6 +22,20 @@ import (
 	"code.gitea.io/gitea/services/convert"
 	issue_service "code.gitea.io/gitea/services/issue"
 	pull_service "code.gitea.io/gitea/services/pull"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+>>>>>>> master
 )
 
 // ListPullReviews lists all reviews of a pull request

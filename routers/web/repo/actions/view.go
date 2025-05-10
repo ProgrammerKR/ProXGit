@@ -16,6 +16,7 @@ import (
 	"strconv"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -34,6 +35,26 @@ import (
 	actions_service "code.gitea.io/gitea/services/actions"
 	context_module "code.gitea.io/gitea/services/context"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/common"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+	context_module "code.proxgit.io/proxgit/services/context"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 
 	"github.com/nektos/act/pkg/model"
 	"xorm.io/builder"

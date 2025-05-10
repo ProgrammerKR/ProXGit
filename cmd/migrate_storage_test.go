@@ -8,6 +8,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -16,6 +17,16 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/storage"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

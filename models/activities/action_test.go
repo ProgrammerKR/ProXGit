@@ -8,6 +8,7 @@ import (
 	"path"
 	"testing"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	issue_model "code.gitea.io/gitea/models/issues"
@@ -16,6 +17,16 @@ import (
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/test"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	issue_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -34,7 +45,11 @@ func TestAction_GetRepoLink(t *testing.T) {
 	owner := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: repo.OwnerID})
 	comment := unittest.AssertExistsAndLoadBean(t, &issue_model.Comment{ID: 2})
 	action := &activities_model.Action{RepoID: repo.ID, CommentID: comment.ID}
+<<<<<<< HEAD
 	defer test.MockVariableValue(&setting.AppURL, "https://try.gitea.io/suburl/")()
+=======
+	defer test.MockVariableValue(&setting.AppURL, "https://try.proxgit.io/suburl/")()
+>>>>>>> master
 	defer test.MockVariableValue(&setting.AppSubURL, "/suburl")()
 	expected := path.Join(setting.AppSubURL, owner.Name, repo.Name)
 	assert.Equal(t, expected, action.GetRepoLink(db.DefaultContext))

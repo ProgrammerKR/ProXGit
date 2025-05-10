@@ -6,6 +6,7 @@ package indexer
 import (
 	"context"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
@@ -16,6 +17,18 @@ import (
 	"code.gitea.io/gitea/modules/repository"
 	"code.gitea.io/gitea/modules/setting"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	code_indexer "code.proxgit.io/proxgit/modules/indexer/code"
+	issue_indexer "code.proxgit.io/proxgit/modules/indexer/issues"
+	stats_indexer "code.proxgit.io/proxgit/modules/indexer/stats"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 )
 
 type indexerNotifier struct {

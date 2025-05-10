@@ -12,6 +12,7 @@ import (
 	"strings"
 	"text/tabwriter"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/migrations"
 	migrate_base "code.gitea.io/gitea/models/migrations/base"
@@ -19,6 +20,15 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/services/doctor"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/migrations"
+	migrate_base "code.proxgit.io/proxgit/models/migrations/base"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/doctor"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 	"xorm.io/xorm"

@@ -9,10 +9,17 @@ import (
 	"strings"
 	"sync/atomic"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/perm"
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/perm"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // Type is Unit's Type

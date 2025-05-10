@@ -8,12 +8,21 @@ import (
 	"path/filepath"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 
 	_ "code.gitea.io/gitea/models/actions"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+
+	_ "code.proxgit.io/proxgit/models/actions"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

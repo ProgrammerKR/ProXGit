@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
 	access_model "code.gitea.io/gitea/models/perm/access"
@@ -25,6 +26,21 @@ import (
 	"code.gitea.io/gitea/routers/api/packages/helper"
 	"code.gitea.io/gitea/services/context"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/optional"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	npm_module "code.proxgit.io/proxgit/modules/packages/npm"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/api/packages/helper"
+	"code.proxgit.io/proxgit/services/context"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 
 	"github.com/hashicorp/go-version"
 )

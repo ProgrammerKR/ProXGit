@@ -6,7 +6,11 @@ package math
 import (
 	"bytes"
 
+<<<<<<< HEAD
 	giteaUtil "code.gitea.io/gitea/modules/util"
+=======
+	proxgitUtil "code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/parser"
@@ -55,7 +59,11 @@ func (b *blockParser) Open(parent ast.Node, reader text.Reader, pc parser.Contex
 	node := NewBlock(dollars, pos)
 
 	// Now we need to check if the ending block is on the segment...
+<<<<<<< HEAD
 	endBytes := giteaUtil.Iif(dollars, b.endBytesDollars, b.endBytesSquare)
+=======
+	endBytes := proxgitUtil.Iif(dollars, b.endBytesDollars, b.endBytesSquare)
+>>>>>>> master
 	idx := bytes.Index(line[pos+2:], endBytes)
 	if idx >= 0 {
 		// for case: "$$ ... $$ any other text" (this case will be handled by the inline parser)
@@ -94,16 +102,27 @@ func (b *blockParser) Continue(node ast.Node, reader text.Reader, pc parser.Cont
 	line, segment := reader.PeekLine()
 	w, pos := util.IndentWidth(line, reader.LineOffset())
 	if w < 4 {
+<<<<<<< HEAD
 		endBytes := giteaUtil.Iif(block.Dollars, b.endBytesDollars, b.endBytesSquare)
 		if bytes.HasPrefix(line[pos:], endBytes) && util.IsBlank(line[pos+len(endBytes):]) {
 			if util.IsBlank(line[pos+len(endBytes):]) {
 				newline := giteaUtil.Iif(line[len(line)-1] != '\n', 0, 1)
+=======
+		endBytes := proxgitUtil.Iif(block.Dollars, b.endBytesDollars, b.endBytesSquare)
+		if bytes.HasPrefix(line[pos:], endBytes) && util.IsBlank(line[pos+len(endBytes):]) {
+			if util.IsBlank(line[pos+len(endBytes):]) {
+				newline := proxgitUtil.Iif(line[len(line)-1] != '\n', 0, 1)
+>>>>>>> master
 				reader.Advance(segment.Stop - segment.Start - newline + segment.Padding)
 				return parser.Close
 			}
 		}
 	}
+<<<<<<< HEAD
 	start := segment.Start + giteaUtil.Iif(pos > block.Indent, block.Indent, pos)
+=======
+	start := segment.Start + proxgitUtil.Iif(pos > block.Indent, block.Indent, pos)
+>>>>>>> master
 	seg := text.NewSegmentPadding(start, segment.Stop, segment.Padding)
 	node.Lines().Append(seg)
 	return parser.Continue | parser.NoChildren

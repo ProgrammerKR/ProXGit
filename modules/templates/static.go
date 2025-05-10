@@ -8,8 +8,13 @@ package templates
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/assetfs"
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/assetfs"
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 )
 
 // GlobalModTime provide a global mod time for embedded asset files

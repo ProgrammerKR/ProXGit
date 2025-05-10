@@ -20,6 +20,7 @@ import (
 
 	_ "image/jpeg" // Needed for jpeg support
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/auth/openid"
@@ -34,6 +35,22 @@ import (
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/modules/validation"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/auth/openid"
+	"code.proxgit.io/proxgit/modules/auth/password/hash"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/validation"
+>>>>>>> master
 
 	"golang.org/x/text/runes"
 	"golang.org/x/text/transform"
@@ -579,7 +596,11 @@ var (
 		"..",
 		".well-known",
 
+<<<<<<< HEAD
 		"api",     // gitea api
+=======
+		"api",     // proxgit api
+>>>>>>> master
 		"metrics", // prometheus metrics api
 		"v2",      // container registry api
 
@@ -610,7 +631,11 @@ var (
 		"swagger.v1.json",
 
 		"ghost",         // reserved name for deleted users (id: -1)
+<<<<<<< HEAD
 		"gitea-actions", // gitea builtin user (id: -2)
+=======
+		"proxgit-actions", // proxgit builtin user (id: -2)
+>>>>>>> master
 	}
 
 	// These names are reserved for user accounts: user's keys, user's rss feed, user's avatar, etc.

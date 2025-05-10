@@ -6,7 +6,11 @@ package optional_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

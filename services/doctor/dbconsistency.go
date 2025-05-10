@@ -6,6 +6,7 @@ package doctor
 import (
 	"context"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
@@ -15,6 +16,17 @@ import (
 	secret_model "code.gitea.io/gitea/models/secret"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/migrations"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	secret_model "code.proxgit.io/proxgit/models/secret"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 type consistencyCheck struct {

@@ -12,6 +12,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/perm"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -19,6 +20,15 @@ import (
 	"code.gitea.io/gitea/modules/queue"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/services/forms"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/perm"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/queue"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

@@ -4,8 +4,13 @@
 package install
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

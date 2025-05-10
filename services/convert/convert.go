@@ -11,6 +11,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/auth"
@@ -32,6 +33,29 @@ import (
 	"code.gitea.io/gitea/services/gitdiff"
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/auth"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	"code.proxgit.io/proxgit/services/gitdiff"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+>>>>>>> master
 )
 
 // ToEmail convert models.EmailAddress to api.Email

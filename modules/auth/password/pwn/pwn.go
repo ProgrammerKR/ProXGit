@@ -14,7 +14,11 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 const passwordURL = "https://api.pwnedpasswords.com/range/"

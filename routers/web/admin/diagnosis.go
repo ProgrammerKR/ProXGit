@@ -9,10 +9,17 @@ import (
 	"runtime/pprof"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/tailmsg"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/tailmsg"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func MonitorDiagnosis(ctx *context.Context) {
@@ -27,7 +34,11 @@ func MonitorDiagnosis(ctx *context.Context) {
 	httplib.ServeSetHeaders(ctx.Resp, &httplib.ServeHeaderOptions{
 		ContentType: "application/zip",
 		Disposition: "attachment",
+<<<<<<< HEAD
 		Filename:    fmt.Sprintf("gitea-diagnosis-%s.zip", time.Now().Format("20060102-150405")),
+=======
+		Filename:    fmt.Sprintf("proxgit-diagnosis-%s.zip", time.Now().Format("20060102-150405")),
+>>>>>>> master
 	})
 
 	zipWriter := zip.NewWriter(ctx.Resp)

@@ -7,8 +7,13 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

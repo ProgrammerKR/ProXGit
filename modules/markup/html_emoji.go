@@ -6,8 +6,13 @@ package markup
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/emoji"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/emoji"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

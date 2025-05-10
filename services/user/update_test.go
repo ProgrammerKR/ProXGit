@@ -6,12 +6,21 @@ package user
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	password_module "code.gitea.io/gitea/modules/auth/password"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	password_module "code.proxgit.io/proxgit/modules/auth/password"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -30,7 +39,11 @@ func TestUpdateUser(t *testing.T) {
 	opts := &UpdateOptions{
 		KeepEmailPrivate:             optional.Some(false),
 		FullName:                     optional.Some("Changed Name"),
+<<<<<<< HEAD
 		Website:                      optional.Some("https://gitea.com/"),
+=======
+		Website:                      optional.Some("https://proxgit.com/"),
+>>>>>>> master
 		Location:                     optional.Some("location"),
 		Description:                  optional.Some("description"),
 		AllowGitHook:                 optional.Some(true),

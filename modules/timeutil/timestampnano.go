@@ -6,7 +6,11 @@ package timeutil
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // TimeStampNano is for nano time in database, do not use it unless there is a real requirement.

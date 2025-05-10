@@ -4,8 +4,13 @@
 package options
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/assetfs"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/assetfs"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 func CustomAssets() *assetfs.Layer {

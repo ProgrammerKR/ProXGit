@@ -101,17 +101,29 @@ export function easyMDEToolbarActions(easyMde: typeof EasyMDE, editor: ComboMark
       title: 'Side by Side',
     },
 
+<<<<<<< HEAD
     // gitea's custom actions
     'gitea-checkbox-empty': {
+=======
+    // proxgit's custom actions
+    'proxgit-checkbox-empty': {
+>>>>>>> master
       action(e) {
         const cm = e.codemirror;
         cm.replaceSelection(`\n- [ ] ${cm.getSelection()}`);
         cm.focus();
       },
+<<<<<<< HEAD
       icon: svg('gitea-empty-checkbox'),
       title: 'Add Checkbox (empty)',
     },
     'gitea-checkbox-checked': {
+=======
+      icon: svg('proxgit-empty-checkbox'),
+      title: 'Add Checkbox (empty)',
+    },
+    'proxgit-checkbox-checked': {
+>>>>>>> master
       action(e) {
         const cm = e.codemirror;
         cm.replaceSelection(`\n- [x] ${cm.getSelection()}`);
@@ -120,7 +132,11 @@ export function easyMDEToolbarActions(easyMde: typeof EasyMDE, editor: ComboMark
       icon: svg('octicon-checkbox'),
       title: 'Add Checkbox (checked)',
     },
+<<<<<<< HEAD
     'gitea-switch-to-textarea': {
+=======
+    'proxgit-switch-to-textarea': {
+>>>>>>> master
       action: () => {
         editor.userPreferredEditor = 'textarea';
         editor.switchToTextarea();
@@ -128,7 +144,11 @@ export function easyMDEToolbarActions(easyMde: typeof EasyMDE, editor: ComboMark
       icon: svg('octicon-arrow-switch'),
       title: 'Revert to simple textarea',
     },
+<<<<<<< HEAD
     'gitea-code-inline': {
+=======
+    'proxgit-code-inline': {
+>>>>>>> master
       action(e) {
         const cm = e.codemirror;
         const selection = cm.getSelection();

@@ -8,8 +8,13 @@ import (
 	"io"
 	"path"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	trend "github.com/buildkite/terminal-to-html/v3"
 	"github.com/go-enry/go-enry/v2"

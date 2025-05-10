@@ -6,9 +6,15 @@ package git_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	"code.gitea.io/gitea/models/unittest"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	"code.proxgit.io/proxgit/models/unittest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -73,32 +79,56 @@ func TestIsUserAllowedToControlTag(t *testing.T) {
 			allowed: true,
 		},
 		{
+<<<<<<< HEAD
 			name:    "gitea",
+=======
+			name:    "proxgit",
+>>>>>>> master
 			userid:  1,
 			allowed: true,
 		},
 		{
+<<<<<<< HEAD
 			name:    "gitea",
+=======
+			name:    "proxgit",
+>>>>>>> master
 			userid:  3,
 			allowed: false,
 		},
 		{
+<<<<<<< HEAD
 			name:    "test-gitea",
+=======
+			name:    "test-proxgit",
+>>>>>>> master
 			userid:  1,
 			allowed: true,
 		},
 		{
+<<<<<<< HEAD
 			name:    "test-gitea",
+=======
+			name:    "test-proxgit",
+>>>>>>> master
 			userid:  3,
 			allowed: false,
 		},
 		{
+<<<<<<< HEAD
 			name:    "gitea-test",
+=======
+			name:    "proxgit-test",
+>>>>>>> master
 			userid:  1,
 			allowed: true,
 		},
 		{
+<<<<<<< HEAD
 			name:    "gitea-test",
+=======
+			name:    "proxgit-test",
+>>>>>>> master
 			userid:  3,
 			allowed: true,
 		},
@@ -122,7 +152,11 @@ func TestIsUserAllowedToControlTag(t *testing.T) {
 	t.Run("Glob", func(t *testing.T) {
 		protectedTags := []*git_model.ProtectedTag{
 			{
+<<<<<<< HEAD
 				NamePattern:      `*gitea`,
+=======
+				NamePattern:      `*proxgit`,
+>>>>>>> master
 				AllowlistUserIDs: []int64{1},
 			},
 			{
@@ -144,7 +178,11 @@ func TestIsUserAllowedToControlTag(t *testing.T) {
 	t.Run("Regex", func(t *testing.T) {
 		protectedTags := []*git_model.ProtectedTag{
 			{
+<<<<<<< HEAD
 				NamePattern:      `/gitea\z/`,
+=======
+				NamePattern:      `/proxgit\z/`,
+>>>>>>> master
 				AllowlistUserIDs: []int64{1},
 			},
 			{

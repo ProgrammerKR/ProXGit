@@ -12,6 +12,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/organization"
@@ -33,6 +34,29 @@ import (
 	"code.gitea.io/gitea/services/convert"
 	"code.gitea.io/gitea/services/forms"
 	issue_service "code.gitea.io/gitea/services/issue"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	project_model "code.proxgit.io/proxgit/models/project"
+	"code.proxgit.io/proxgit/models/renderhelper"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/optional"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	"code.proxgit.io/proxgit/services/forms"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+>>>>>>> master
 )
 
 const (
@@ -58,12 +82,21 @@ var IssueTemplateCandidates = []string{
 	"issue_template.md",
 	"issue_template.yaml",
 	"issue_template.yml",
+<<<<<<< HEAD
 	".gitea/ISSUE_TEMPLATE.md",
 	".gitea/ISSUE_TEMPLATE.yaml",
 	".gitea/ISSUE_TEMPLATE.yml",
 	".gitea/issue_template.md",
 	".gitea/issue_template.yaml",
 	".gitea/issue_template.yml",
+=======
+	".proxgit/ISSUE_TEMPLATE.md",
+	".proxgit/ISSUE_TEMPLATE.yaml",
+	".proxgit/ISSUE_TEMPLATE.yml",
+	".proxgit/issue_template.md",
+	".proxgit/issue_template.yaml",
+	".proxgit/issue_template.yml",
+>>>>>>> master
 	".github/ISSUE_TEMPLATE.md",
 	".github/ISSUE_TEMPLATE.yaml",
 	".github/ISSUE_TEMPLATE.yml",

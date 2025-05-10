@@ -4,10 +4,17 @@
 package mirror
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/queue"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/queue"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 var mirrorQueue *queue.WorkerPoolQueue[*SyncRequest]

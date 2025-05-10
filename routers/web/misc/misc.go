@@ -7,11 +7,19 @@ import (
 	"net/http"
 	"path"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/httpcache"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/httpcache"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 func SSHInfo(rw http.ResponseWriter, req *http.Request) {
@@ -20,7 +28,11 @@ func SSHInfo(rw http.ResponseWriter, req *http.Request) {
 		return
 	}
 	rw.Header().Set("content-type", "text/json;charset=UTF-8")
+<<<<<<< HEAD
 	_, err := rw.Write([]byte(`{"type":"gitea","version":1}`))
+=======
+	_, err := rw.Write([]byte(`{"type":"proxgit","version":1}`))
+>>>>>>> master
 	if err != nil {
 		log.Error("fail to write result: err: %v", err)
 		rw.WriteHeader(http.StatusInternalServerError)

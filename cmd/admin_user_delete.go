@@ -8,9 +8,15 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/storage"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/storage"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

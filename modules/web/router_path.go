@@ -8,8 +8,13 @@ import (
 	"regexp"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/go-chi/chi/v5"
 )

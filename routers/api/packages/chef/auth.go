@@ -24,10 +24,17 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	chef_module "code.gitea.io/gitea/modules/packages/chef"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/auth"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	chef_module "code.proxgit.io/proxgit/modules/packages/chef"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/auth"
+>>>>>>> master
 )
 
 const (

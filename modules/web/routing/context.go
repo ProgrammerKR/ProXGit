@@ -7,8 +7,13 @@ import (
 	"context"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/gtprof"
 	"code.gitea.io/gitea/modules/reqctx"
+=======
+	"code.proxgit.io/proxgit/modules/gtprof"
+	"code.proxgit.io/proxgit/modules/reqctx"
+>>>>>>> master
 )
 
 type contextKeyType struct{}

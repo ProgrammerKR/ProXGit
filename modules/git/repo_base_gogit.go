@@ -10,9 +10,15 @@ import (
 	"context"
 	"path/filepath"
 
+<<<<<<< HEAD
 	gitealog "code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	proxgitlog "code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/go-git/go-billy/v5"
 	"github.com/go-git/go-billy/v5/osfs"
@@ -96,7 +102,11 @@ func (repo *Repository) Close() error {
 		return nil
 	}
 	if err := repo.gogitStorage.Close(); err != nil {
+<<<<<<< HEAD
 		gitealog.Error("Error closing storage: %v", err)
+=======
+		proxgitlog.Error("Error closing storage: %v", err)
+>>>>>>> master
 	}
 	repo.gogitStorage = nil
 	repo.LastCommitCache = nil

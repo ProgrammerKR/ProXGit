@@ -10,12 +10,21 @@ import (
 	"path/filepath"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/routers"
 	"code.gitea.io/gitea/tests"
 
 	"gitea.com/go-chi/session"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/routers"
+	"code.proxgit.io/proxgit/tests"
+
+	"proxgit.com/go-chi/session"
+>>>>>>> master
 	"github.com/stretchr/testify/assert"
 )
 

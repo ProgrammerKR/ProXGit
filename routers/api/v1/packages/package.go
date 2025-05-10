@@ -7,6 +7,7 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/packages"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/optional"
@@ -16,6 +17,17 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	"code.proxgit.io/proxgit/models/packages"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/optional"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 )
 
 // ListPackages gets all packages of an owner

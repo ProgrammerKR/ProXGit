@@ -25,6 +25,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -33,6 +34,16 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	chef_router "code.gitea.io/gitea/routers/api/packages/chef"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	chef_module "code.proxgit.io/proxgit/modules/packages/chef"
+	"code.proxgit.io/proxgit/modules/setting"
+	chef_router "code.proxgit.io/proxgit/routers/api/packages/chef"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -376,7 +387,11 @@ nwIDAQAB
 		}{
 			{"", 0, 0, 1, 1},
 			{"", 0, 10, 1, 1},
+<<<<<<< HEAD
 			{"gitea", 0, 10, 0, 0},
+=======
+			{"proxgit", 0, 10, 0, 0},
+>>>>>>> master
 			{"test", 0, 10, 1, 1},
 			{"test", 1, 10, 1, 0},
 		}

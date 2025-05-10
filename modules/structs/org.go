@@ -43,7 +43,11 @@ type CreateOrgOption struct {
 	RepoAdminChangeTeamAccess bool   `json:"repo_admin_change_team_access"`
 }
 
+<<<<<<< HEAD
 // TODO: make EditOrgOption fields optional after https://gitea.com/go-chi/binding/pulls/5 got merged
+=======
+// TODO: make EditOrgOption fields optional after https://proxgit.com/go-chi/binding/pulls/5 got merged
+>>>>>>> master
 
 // EditOrgOption options for editing an organization
 type EditOrgOption struct {

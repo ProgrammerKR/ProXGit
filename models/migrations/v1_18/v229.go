@@ -6,7 +6,11 @@ package v1_18 //nolint
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/issues"
+=======
+	"code.proxgit.io/proxgit/models/issues"
+>>>>>>> master
 
 	"xorm.io/builder"
 	"xorm.io/xorm"

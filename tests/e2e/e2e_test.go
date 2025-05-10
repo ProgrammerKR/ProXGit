@@ -17,6 +17,7 @@ import (
 	"path/filepath"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/log"
@@ -26,6 +27,17 @@ import (
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/routers"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/testlogger"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 )
 
 var testE2eWebRoutes *web.Router

@@ -7,8 +7,13 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // FormString returns the first value matching the provided key in the form as a string

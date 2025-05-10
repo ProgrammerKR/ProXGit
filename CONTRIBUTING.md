@@ -9,7 +9,11 @@
     - [Types of issues](#types-of-issues)
     - [Discuss your design before the implementation](#discuss-your-design-before-the-implementation)
     - [Issue locking](#issue-locking)
+<<<<<<< HEAD
   - [Building Gitea](#building-gitea)
+=======
+  - [Building Gitea](#building-proxgit)
+>>>>>>> master
   - [Dependencies](#dependencies)
     - [Backend](#backend)
     - [Frontend](#frontend)
@@ -55,15 +59,24 @@
   - [TOC \& Working groups](#toc--working-groups)
   - [Roadmap](#roadmap)
   - [Versions](#versions)
+<<<<<<< HEAD
   - [Releasing Gitea](#releasing-gitea)
+=======
+  - [Releasing Gitea](#releasing-proxgit)
+>>>>>>> master
 
 </details>
 
 ## Introduction
 
 This document explains how to contribute changes to the Gitea project. \
+<<<<<<< HEAD
 It assumes you have followed the [installation instructions](https://docs.gitea.com/category/installation). \
 Sensitive security-related issues should be reported to [security@gitea.io](mailto:security@gitea.io).
+=======
+It assumes you have followed the [installation instructions](https://docs.proxgit.com/category/installation). \
+Sensitive security-related issues should be reported to [security@proxgit.io](mailto:security@proxgit.io).
+>>>>>>> master
 
 For configuring IDEs for Gitea development, see the [contributed IDE configurations](contrib/ide/).
 
@@ -73,11 +86,19 @@ For configuring IDEs for Gitea development, see the [contributed IDE configurati
 
 Please search the issues on the issue tracker with a variety of related keywords to ensure that your issue has not already been reported.
 
+<<<<<<< HEAD
 If your issue has not been reported yet, [open an issue](https://github.com/go-gitea/gitea/issues/new)
 and answer the questions so we can understand and reproduce the problematic behavior. \
 Please write clear and concise instructions so that we can reproduce the behavior — even if it seems obvious. \
 The more detailed and specific you are, the faster we can fix the issue. \
 It is really helpful if you can reproduce your problem on a site running on the latest commits, i.e. <https://demo.gitea.com>, as perhaps your problem has already been fixed on a current version. \
+=======
+If your issue has not been reported yet, [open an issue](https://github.com/go-proxgit/proxgit/issues/new)
+and answer the questions so we can understand and reproduce the problematic behavior. \
+Please write clear and concise instructions so that we can reproduce the behavior — even if it seems obvious. \
+The more detailed and specific you are, the faster we can fix the issue. \
+It is really helpful if you can reproduce your problem on a site running on the latest commits, i.e. <https://demo.proxgit.com>, as perhaps your problem has already been fixed on a current version. \
+>>>>>>> master
 Please follow the guidelines described in [How to Report Bugs Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html) for your report.
 
 Please be kind, remember that Gitea comes at no cost to you, and you're getting free help.
@@ -87,7 +108,11 @@ Please be kind, remember that Gitea comes at no cost to you, and you're getting 
 Typically, issues fall in one of the following categories:
 
 - `bug`: Something in the frontend or backend behaves unexpectedly
+<<<<<<< HEAD
 - `security issue`: bug that has serious implications such as leaking another users data. Please do not file such issues on the public tracker and send a mail to security@gitea.io instead
+=======
+- `security issue`: bug that has serious implications such as leaking another users data. Please do not file such issues on the public tracker and send a mail to security@proxgit.io instead
+>>>>>>> master
 - `feature`: Completely new functionality. You should describe this feature in enough detail that anyone who reads the issue can understand how it is supposed to be implemented
 - `enhancement`: An existing feature should get an upgrade
 - `refactoring`: Parts of the code base don't conform with other parts and should be changed to improve Gitea's maintainability
@@ -95,7 +120,11 @@ Typically, issues fall in one of the following categories:
 ### Discuss your design before the implementation
 
 We welcome submissions. \
+<<<<<<< HEAD
 If you want to change or add something, please let everyone know what you're working on — [file an issue](https://github.com/go-gitea/gitea/issues/new) or comment on an existing one before starting your work!
+=======
+If you want to change or add something, please let everyone know what you're working on — [file an issue](https://github.com/go-proxgit/proxgit/issues/new) or comment on an existing one before starting your work!
+>>>>>>> master
 
 Significant changes such as new features must go through the change proposal process before they can be accepted. \
 This is mainly to save yourself the trouble of implementing it, only to find out that your proposed implementation has some potential problems. \
@@ -113,7 +142,11 @@ If further discussion is needed, we encourage you to open a new issue instead an
 
 ## Building Gitea
 
+<<<<<<< HEAD
 See the [development setup instructions](https://docs.gitea.com/development/hacking-on-gitea).
+=======
+See the [development setup instructions](https://docs.proxgit.com/development/hacking-on-proxgit).
+>>>>>>> master
 
 ## Dependencies
 
@@ -139,9 +172,15 @@ The same restrictions apply for frontend dependencies as for backend dependencie
 
 Depending on your change, please read the
 
+<<<<<<< HEAD
 - [backend development guideline](https://docs.gitea.com/contributing/guidelines-backend)
 - [frontend development guideline](https://docs.gitea.com/contributing/guidelines-frontend)
 - [refactoring guideline](https://docs.gitea.com/contributing/guidelines-refactoring)
+=======
+- [backend development guideline](https://docs.proxgit.com/contributing/guidelines-backend)
+- [frontend development guideline](https://docs.proxgit.com/contributing/guidelines-frontend)
+- [refactoring guideline](https://docs.proxgit.com/contributing/guidelines-refactoring)
+>>>>>>> master
 
 ## Styleguide
 
@@ -182,8 +221,13 @@ Here's how to run the test suite:
 
 ## Translation
 
+<<<<<<< HEAD
 All translation work happens on [Crowdin](https://translate.gitea.com).
 The only translation that is maintained in this repository is [the English translation](https://github.com/go-gitea/gitea/blob/main/options/locale/locale_en-US.ini).
+=======
+All translation work happens on [Crowdin](https://translate.proxgit.com).
+The only translation that is maintained in this repository is [the English translation](https://github.com/go-proxgit/proxgit/blob/main/options/locale/locale_en-US.ini).
+>>>>>>> master
 It is synced regularly with Crowdin. \
 Other locales on main branch **should not** be updated manually as they will be overwritten with each sync. \
 Once a language has reached a **satisfactory percentage** of translated keys (~25%), it will be synced back into this repo and included in the next released version.
@@ -308,9 +352,15 @@ If a PR has the `lgtm/done` label and there are no open discussions or merge con
 This label means that the PR is part of the merge queue and will be merged as soon as possible. \
 The merge queue will be cleared in the order of the list below:
 
+<<<<<<< HEAD
 <https://github.com/go-gitea/gitea/pulls?q=is%3Apr+label%3Areviewed%2Fwait-merge+sort%3Acreated-asc+is%3Aopen>
 
 Gitea uses it's own tool, the <https://github.com/GiteaBot/gitea-backporter> to automate parts of the review process. \
+=======
+<https://github.com/go-proxgit/proxgit/pulls?q=is%3Apr+label%3Areviewed%2Fwait-merge+sort%3Acreated-asc+is%3Aopen>
+
+Gitea uses it's own tool, the <https://github.com/GiteaBot/proxgit-backporter> to automate parts of the review process. \
+>>>>>>> master
 This tool does the things listed below automatically:
 
 - create a backport PR if needed once the initial PR was merged
@@ -358,12 +408,20 @@ $REWRITTEN_PR_SUMMARY
 
 ## Documentation
 
+<<<<<<< HEAD
 If you add a new feature or change an existing aspect of Gitea, the documentation for that feature must be created or updated in another PR at [https://gitea.com/gitea/docs](https://gitea.com/gitea/docs).
+=======
+If you add a new feature or change an existing aspect of Gitea, the documentation for that feature must be created or updated in another PR at [https://proxgit.com/proxgit/docs](https://proxgit.com/proxgit/docs).
+>>>>>>> master
 **The docs directory on main repository will be removed at some time. We will have a yaml file to store configuration file's meta data. After that completed, configuration documentation should be in the main repository.**
 
 ## API v1
 
+<<<<<<< HEAD
 The API is documented by [swagger](https://gitea.com/api/swagger) and is based on [the GitHub API](https://docs.github.com/en/rest).
+=======
+The API is documented by [swagger](https://proxgit.com/api/swagger) and is based on [the GitHub API](https://docs.github.com/en/rest).
+>>>>>>> master
 
 ### GitHub API compatibility
 
@@ -375,6 +433,7 @@ The same applies to status responses. If you notice a problem, feel free to leav
 
 ### Adding/Maintaining API routes
 
+<<<<<<< HEAD
 All expected results (errors, success, fail messages) must be documented ([example](https://github.com/go-gitea/gitea/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/repo/issue.go#L319-L327)). \
 All JSON input types must be defined as a struct in [modules/structs/](modules/structs/) ([example](https://github.com/go-gitea/gitea/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/modules/structs/issue.go#L76-L91)) \
 and referenced in [routers/api/v1/swagger/options.go](https://github.com/go-gitea/gitea/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/swagger/options.go). \
@@ -382,6 +441,15 @@ They can then be used like [this example](https://github.com/go-gitea/gitea/blob
 All JSON responses must be defined as a struct in [modules/structs/](modules/structs/) ([example](https://github.com/go-gitea/gitea/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/modules/structs/issue.go#L36-L68)) \
 and referenced in its category in [routers/api/v1/swagger/](routers/api/v1/swagger/) ([example](https://github.com/go-gitea/gitea/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/swagger/issue.go#L11-L16)) \
 They can be used like [this example](https://github.com/go-gitea/gitea/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/repo/issue.go#L277-L279).
+=======
+All expected results (errors, success, fail messages) must be documented ([example](https://github.com/go-proxgit/proxgit/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/repo/issue.go#L319-L327)). \
+All JSON input types must be defined as a struct in [modules/structs/](modules/structs/) ([example](https://github.com/go-proxgit/proxgit/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/modules/structs/issue.go#L76-L91)) \
+and referenced in [routers/api/v1/swagger/options.go](https://github.com/go-proxgit/proxgit/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/swagger/options.go). \
+They can then be used like [this example](https://github.com/go-proxgit/proxgit/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/repo/issue.go#L318). \
+All JSON responses must be defined as a struct in [modules/structs/](modules/structs/) ([example](https://github.com/go-proxgit/proxgit/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/modules/structs/issue.go#L36-L68)) \
+and referenced in its category in [routers/api/v1/swagger/](routers/api/v1/swagger/) ([example](https://github.com/go-proxgit/proxgit/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/swagger/issue.go#L11-L16)) \
+They can be used like [this example](https://github.com/go-proxgit/proxgit/blob/c620eb5b2d0d874da68ebd734d3864c5224f71f7/routers/api/v1/repo/issue.go#L277-L279).
+>>>>>>> master
 
 ### When to use what HTTP method
 
@@ -400,7 +468,11 @@ All parameters of endpoints changing/editing an object must be optional (except 
 Endpoints returning lists must
 
 - support pagination (`page` & `limit` options in query)
+<<<<<<< HEAD
 - set `X-Total-Count` header via **SetTotalCountHeader** ([example](https://github.com/go-gitea/gitea/blob/7aae98cc5d4113f1e9918b7ee7dd09f67c189e3e/routers/api/v1/repo/issue.go#L444))
+=======
+- set `X-Total-Count` header via **SetTotalCountHeader** ([example](https://github.com/go-proxgit/proxgit/blob/7aae98cc5d4113f1e9918b7ee7dd09f67c189e3e/routers/api/v1/repo/issue.go#L444))
+>>>>>>> master
 
 ## Backports and Frontports
 
@@ -486,7 +558,11 @@ A maintainer should be a contributor of Gitea and contributed at least
 should spend some time on code reviews. If a maintainer has no
 time to do that, they should apply to leave the maintainers team
 and we will give them the honor of being a member of the [advisors
+<<<<<<< HEAD
 team](https://github.com/orgs/go-gitea/teams/advisors). Of course, if
+=======
+team](https://github.com/orgs/go-proxgit/teams/advisors). Of course, if
+>>>>>>> master
 an advisor has time to code review, we will gladly welcome them back
 to the maintainers team. If a maintainer is inactive for more than 3
 months and forgets to leave the maintainers team, the owners may move
@@ -502,7 +578,11 @@ https://help.github.com/articles/securing-your-account-with-two-factor-authentic
 ## Technical Oversight Committee (TOC)
 
 At the start of 2023, the `Owners` team was dissolved. Instead, the governance charter proposed a technical oversight committee (TOC) which expands the ownership team of the Gitea project from three elected positions to six positions. Three positions are elected as it has been over the past years, and the other three consist of appointed members from the Gitea company.
+<<<<<<< HEAD
 https://blog.gitea.com/quarterly-23q1/
+=======
+https://blog.proxgit.com/quarterly-23q1/
+>>>>>>> master
 
 ### TOC election process
 
@@ -522,6 +602,7 @@ If an elected member that accepts the seat does not have 2FA configured yet, the
 
 - 2024-01-01 ~ 2024-12-31
   - Company
+<<<<<<< HEAD
     - [Jason Song](https://gitea.com/wolfogre) <i@wolfogre.com>
     - [Lunny Xiao](https://gitea.com/lunny) <xiaolunwen@gmail.com>
     - [Matti Ranta](https://gitea.com/techknowlogick) <techknowlogick@gitea.com>
@@ -529,11 +610,21 @@ If an elected member that accepts the seat does not have 2FA configured yet, the
     - [6543](https://gitea.com/6543) <6543@obermui.de>
     - [delvh](https://gitea.com/delvh) <dev.lh@web.de>
     - [John Olheiser](https://gitea.com/jolheiser) <john.olheiser@gmail.com>
+=======
+    - [Jason Song](https://proxgit.com/wolfogre) <i@wolfogre.com>
+    - [Lunny Xiao](https://proxgit.com/lunny) <xiaolunwen@gmail.com>
+    - [Matti Ranta](https://proxgit.com/techknowlogick) <techknowlogick@proxgit.com>
+  - Community
+    - [6543](https://proxgit.com/6543) <6543@obermui.de>
+    - [delvh](https://proxgit.com/delvh) <dev.lh@web.de>
+    - [John Olheiser](https://proxgit.com/jolheiser) <john.olheiser@gmail.com>
+>>>>>>> master
 
 ### Previous TOC/owners members
 
 Here's the history of the owners and the time they served:
 
+<<<<<<< HEAD
 - [Lunny Xiao](https://gitea.com/lunny) - 2016, 2017, [2018](https://github.com/go-gitea/gitea/issues/3255), [2019](https://github.com/go-gitea/gitea/issues/5572), [2020](https://github.com/go-gitea/gitea/issues/9230), [2021](https://github.com/go-gitea/gitea/issues/13801), [2022](https://github.com/go-gitea/gitea/issues/17872), 2023
 - [Kim Carlbäcker](https://github.com/bkcsoft) - 2016, 2017
 - [Thomas Boerger](https://gitea.com/tboerger) - 2016, 2017
@@ -543,6 +634,17 @@ Here's the history of the owners and the time they served:
 - [6543](https://gitea.com/6543) - 2023
 - [John Olheiser](https://gitea.com/jolheiser) - 2023
 - [Jason Song](https://gitea.com/wolfogre) - 2023
+=======
+- [Lunny Xiao](https://proxgit.com/lunny) - 2016, 2017, [2018](https://github.com/go-proxgit/proxgit/issues/3255), [2019](https://github.com/go-proxgit/proxgit/issues/5572), [2020](https://github.com/go-proxgit/proxgit/issues/9230), [2021](https://github.com/go-proxgit/proxgit/issues/13801), [2022](https://github.com/go-proxgit/proxgit/issues/17872), 2023
+- [Kim Carlbäcker](https://github.com/bkcsoft) - 2016, 2017
+- [Thomas Boerger](https://proxgit.com/tboerger) - 2016, 2017
+- [Lauris Bukšis-Haberkorns](https://proxgit.com/lafriks) - [2018](https://github.com/go-proxgit/proxgit/issues/3255), [2019](https://github.com/go-proxgit/proxgit/issues/5572), [2020](https://github.com/go-proxgit/proxgit/issues/9230), [2021](https://github.com/go-proxgit/proxgit/issues/13801)
+- [Matti Ranta](https://proxgit.com/techknowlogick) - [2019](https://github.com/go-proxgit/proxgit/issues/5572), [2020](https://github.com/go-proxgit/proxgit/issues/9230), [2021](https://github.com/go-proxgit/proxgit/issues/13801), [2022](https://github.com/go-proxgit/proxgit/issues/17872), 2023
+- [Andrew Thornton](https://proxgit.com/zeripath) - [2020](https://github.com/go-proxgit/proxgit/issues/9230), [2021](https://github.com/go-proxgit/proxgit/issues/13801), [2022](https://github.com/go-proxgit/proxgit/issues/17872), 2023
+- [6543](https://proxgit.com/6543) - 2023
+- [John Olheiser](https://proxgit.com/jolheiser) - 2023
+- [Jason Song](https://proxgit.com/wolfogre) - 2023
+>>>>>>> master
 
 ## Governance Compensation
 
@@ -590,7 +692,11 @@ be reviewed by two maintainers and must pass the automatic tests.
 
 ## Releasing Gitea
 
+<<<<<<< HEAD
 - Let $vmaj, $vmin and $vpat be Major, Minor and Patch version numbers, $vpat should be rc1, rc2, 0, 1, ...... $vmaj.$vmin will be kept the same as milestones on github or gitea in future.
+=======
+- Let $vmaj, $vmin and $vpat be Major, Minor and Patch version numbers, $vpat should be rc1, rc2, 0, 1, ...... $vmaj.$vmin will be kept the same as milestones on github or proxgit in future.
+>>>>>>> master
 - Before releasing, confirm all the version's milestone issues or PRs has been resolved. Then discuss the release on Discord channel #maintainers and get agreed with almost all the owners and mergers. Or you can declare the version and if nobody against in about serval hours.
 - If this is a big version first you have to create PR for changelog on branch `main` with PRs with label `changelog` and after it has been merged do following steps:
   - Create `-dev` tag as `git tag -s -F release.notes v$vmaj.$vmin.0-dev` and push the tag as `git push origin v$vmaj.$vmin.0-dev`.
@@ -599,8 +705,14 @@ be reviewed by two maintainers and must pass the automatic tests.
 - Add a tag as `git tag -s -F release.notes v$vmaj.$vmin.$`, release.notes file could be a temporary file to only include the changelog this version which you added to `CHANGELOG.md`.
 - And then push the tag as `git push origin v$vmaj.$vmin.$`. Drone CI will automatically create a release and upload all the compiled binary. (But currently it doesn't add the release notes automatically. Maybe we should fix that.)
 - If needed send a frontport PR for the changelog to branch `main` and update the version in `docs/config.yaml` to refer to the new version.
+<<<<<<< HEAD
 - Send PR to [blog repository](https://gitea.com/gitea/blog) announcing the release.
 - Verify all release assets were correctly published through CI on dl.gitea.com and GitHub releases. Once ACKed:
   - bump the version of https://dl.gitea.com/gitea/version.json
+=======
+- Send PR to [blog repository](https://proxgit.com/proxgit/blog) announcing the release.
+- Verify all release assets were correctly published through CI on dl.proxgit.com and GitHub releases. Once ACKed:
+  - bump the version of https://dl.proxgit.com/proxgit/version.json
+>>>>>>> master
   - merge the blog post PR
   - announce the release in discord `#announcements`

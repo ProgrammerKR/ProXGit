@@ -7,12 +7,21 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/routers/api/v1/utils"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 func ListBlocks(ctx *context.APIContext, blocker *user_model.User) {

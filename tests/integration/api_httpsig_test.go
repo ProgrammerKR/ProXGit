@@ -9,11 +9,19 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/setting"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/42wim/httpsig"
 	"golang.org/x/crypto/ssh"
@@ -111,7 +119,11 @@ func TestHTTPSigCert(t *testing.T) {
 
 	// parse our private key and create the httpsig request
 	sshSigner, _ := ssh.ParsePrivateKey([]byte(httpsigPrivateKey))
+<<<<<<< HEAD
 	keyID := "gitea"
+=======
+	keyID := "proxgit"
+>>>>>>> master
 
 	// create our certificate signer using the ssh signer and our certificate
 	certSigner, err := ssh.NewCertSigner(pkcert.(*ssh.Certificate), sshSigner)

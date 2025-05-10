@@ -11,11 +11,19 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -25,10 +33,17 @@ func TestPackageGo(t *testing.T) {
 
 	user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
+<<<<<<< HEAD
 	packageName := "gitea.com/go-gitea/gitea"
 	packageVersion := "v0.0.1"
 	packageVersion2 := "v0.0.2"
 	goModContent := `module "gitea.com/go-gitea/gitea"`
+=======
+	packageName := "proxgit.com/go-proxgit/proxgit"
+	packageVersion := "v0.0.1"
+	packageVersion2 := "v0.0.2"
+	goModContent := `module "proxgit.com/go-proxgit/proxgit"`
+>>>>>>> master
 
 	createArchive := func(files map[string][]byte) []byte {
 		var buf bytes.Buffer

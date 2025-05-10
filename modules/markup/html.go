@@ -11,7 +11,11 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup/common"
+=======
+	"code.proxgit.io/proxgit/modules/markup/common"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

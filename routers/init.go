@@ -9,6 +9,7 @@ import (
 	"reflect"
 	"runtime"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models"
 	authmodel "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/cache"
@@ -55,6 +56,54 @@ import (
 	"code.gitea.io/gitea/services/task"
 	"code.gitea.io/gitea/services/uinotification"
 	"code.gitea.io/gitea/services/webhook"
+=======
+	"code.proxgit.io/proxgit/models"
+	authmodel "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/eventsource"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/highlight"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/external"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/ssh"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/svg"
+	"code.proxgit.io/proxgit/modules/system"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/modules/web/routing"
+	actions_router "code.proxgit.io/proxgit/routers/api/actions"
+	packages_router "code.proxgit.io/proxgit/routers/api/packages"
+	apiv1 "code.proxgit.io/proxgit/routers/api/v1"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/routers/private"
+	web_routers "code.proxgit.io/proxgit/routers/web"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	"code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/auth/source/oauth2"
+	"code.proxgit.io/proxgit/services/automerge"
+	"code.proxgit.io/proxgit/services/cron"
+	feed_service "code.proxgit.io/proxgit/services/feed"
+	indexer_service "code.proxgit.io/proxgit/services/indexer"
+	"code.proxgit.io/proxgit/services/mailer"
+	mailer_incoming "code.proxgit.io/proxgit/services/mailer/incoming"
+	markup_service "code.proxgit.io/proxgit/services/markup"
+	repo_migrations "code.proxgit.io/proxgit/services/migrations"
+	mirror_service "code.proxgit.io/proxgit/services/mirror"
+	"code.proxgit.io/proxgit/services/oauth2_provider"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	release_service "code.proxgit.io/proxgit/services/release"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	"code.proxgit.io/proxgit/services/repository/archiver"
+	"code.proxgit.io/proxgit/services/task"
+	"code.proxgit.io/proxgit/services/uinotification"
+	"code.proxgit.io/proxgit/services/webhook"
+>>>>>>> master
 )
 
 func mustInit(fn func() error) {
@@ -203,7 +252,11 @@ func NormalRoutes() *web.Router {
 		prefix := "/api/actions"
 		r.Mount(prefix, actions_router.Routes(prefix))
 
+<<<<<<< HEAD
 		// TODO: Pipeline api used for runner internal communication with gitea server. but only artifact is used for now.
+=======
+		// TODO: Pipeline api used for runner internal communication with proxgit server. but only artifact is used for now.
+>>>>>>> master
 		// In Github, it uses ACTIONS_RUNTIME_URL=https://pipelines.actions.githubusercontent.com/fLgcSHkPGySXeIFrg8W8OBSfeg3b5Fls1A1CwX566g8PayEGlg/
 		// TODO: this prefix should be generated with a token string with runner ?
 		prefix = "/api/actions_pipeline"

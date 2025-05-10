@@ -13,8 +13,13 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/packages"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/packages"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 var (

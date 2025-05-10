@@ -10,8 +10,13 @@ import (
 	"errors"
 	"io"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/typesniffer"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/typesniffer"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // This file contains common functions between the gogit and !gogit variants for git Blobs

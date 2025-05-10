@@ -6,7 +6,11 @@
 package options
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/assetfs"
+=======
+	"code.proxgit.io/proxgit/modules/assetfs"
+>>>>>>> master
 )
 
 func BuiltinAssets() *assetfs.Layer {

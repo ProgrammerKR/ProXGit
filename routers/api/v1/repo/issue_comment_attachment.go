@@ -7,6 +7,7 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
@@ -19,6 +20,20 @@ import (
 	"code.gitea.io/gitea/services/context/upload"
 	"code.gitea.io/gitea/services/convert"
 	issue_service "code.gitea.io/gitea/services/issue"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	attachment_service "code.proxgit.io/proxgit/services/attachment"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/context/upload"
+	"code.proxgit.io/proxgit/services/convert"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+>>>>>>> master
 )
 
 // GetIssueCommentAttachment gets a single attachment of the comment

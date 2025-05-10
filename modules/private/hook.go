@@ -8,10 +8,17 @@ import (
 	"fmt"
 	"net/url"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/repository"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // Git environment variables

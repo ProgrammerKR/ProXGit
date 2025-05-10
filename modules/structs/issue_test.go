@@ -16,6 +16,7 @@ func TestIssueTemplate_Type(t *testing.T) {
 		want     IssueTemplateType
 	}{
 		{
+<<<<<<< HEAD
 			fileName: ".gitea/ISSUE_TEMPLATE/bug_report.yaml",
 			want:     IssueTemplateTypeYaml,
 		},
@@ -29,6 +30,21 @@ func TestIssueTemplate_Type(t *testing.T) {
 		},
 		{
 			fileName: ".gitea/ISSUE_TEMPLATE/config.yaml",
+=======
+			fileName: ".proxgit/ISSUE_TEMPLATE/bug_report.yaml",
+			want:     IssueTemplateTypeYaml,
+		},
+		{
+			fileName: ".proxgit/ISSUE_TEMPLATE/bug_report.md",
+			want:     IssueTemplateTypeMarkdown,
+		},
+		{
+			fileName: ".proxgit/ISSUE_TEMPLATE/bug_report.txt",
+			want:     "",
+		},
+		{
+			fileName: ".proxgit/ISSUE_TEMPLATE/config.yaml",
+>>>>>>> master
 			want:     "",
 		},
 	}

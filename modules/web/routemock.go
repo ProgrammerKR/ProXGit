@@ -6,7 +6,11 @@ package web
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // MockAfterMiddlewares is a general mock point, it's between middlewares and the handler

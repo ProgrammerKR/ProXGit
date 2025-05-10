@@ -9,11 +9,19 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -111,10 +119,17 @@ func TestAPICreateBranch(t *testing.T) {
 	onGiteaRun(t, testAPICreateBranches)
 }
 
+<<<<<<< HEAD
 func testAPICreateBranches(t *testing.T, giteaURL *url.URL) {
 	username := "user2"
 	ctx := NewAPITestContext(t, username, "my-noo-repo", auth_model.AccessTokenScopeWriteRepository, auth_model.AccessTokenScopeWriteUser)
 	giteaURL.Path = ctx.GitPath()
+=======
+func testAPICreateBranches(t *testing.T, proxgitURL *url.URL) {
+	username := "user2"
+	ctx := NewAPITestContext(t, username, "my-noo-repo", auth_model.AccessTokenScopeWriteRepository, auth_model.AccessTokenScopeWriteUser)
+	proxgitURL.Path = ctx.GitPath()
+>>>>>>> master
 
 	t.Run("CreateRepo", doAPICreateRepository(ctx, false))
 	testCases := []struct {
@@ -309,9 +324,15 @@ func TestAPICreateBranchWithSyncBranches(t *testing.T) {
 	_, err = db.DeleteByBean(db.DefaultContext, git_model.Branch{RepoID: 1})
 	assert.NoError(t, err)
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
 		ctx := NewAPITestContext(t, "user2", "repo1", auth_model.AccessTokenScopeWriteRepository, auth_model.AccessTokenScopeWriteUser)
 		giteaURL.Path = ctx.GitPath()
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+		ctx := NewAPITestContext(t, "user2", "repo1", auth_model.AccessTokenScopeWriteRepository, auth_model.AccessTokenScopeWriteUser)
+		proxgitURL.Path = ctx.GitPath()
+>>>>>>> master
 
 		testAPICreateBranch(t, ctx.Session, "user2", "repo1", "", "new_branch", http.StatusCreated)
 	})

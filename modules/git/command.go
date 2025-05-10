@@ -17,11 +17,19 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git/internal" //nolint:depguard // only this file can use the internal type CmdArg, other files and packages should use AddXxx functions
 	"code.gitea.io/gitea/modules/gtprof"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/process"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/git/internal" //nolint:depguard // only this file can use the internal type CmdArg, other files and packages should use AddXxx functions
+	"code.proxgit.io/proxgit/modules/gtprof"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // TrustedCmdArgs returns the trusted arguments for git command.
@@ -215,7 +223,11 @@ type RunOpts struct {
 	// Dir is the working dir for the git command, however:
 	// FIXME: this could be incorrect in many cases, for example:
 	// * /some/path/.git
+<<<<<<< HEAD
 	// * /some/path/.git/gitea-data/data/repositories/user/repo.git
+=======
+	// * /some/path/.git/proxgit-data/data/repositories/user/repo.git
+>>>>>>> master
 	// If "user/repo.git" is invalid/broken, then running git command in it will use "/some/path/.git", and produce unexpected results
 	// The correct approach is to use `--git-dir" global argument
 	Dir string
@@ -268,7 +280,11 @@ func CommonGitCmdEnvs() []string {
 	}...)
 }
 
+<<<<<<< HEAD
 // CommonCmdServEnvs is like CommonGitCmdEnvs, but it only returns minimal required environment variables for the "gitea serv" command
+=======
+// CommonCmdServEnvs is like CommonGitCmdEnvs, but it only returns minimal required environment variables for the "proxgit serv" command
+>>>>>>> master
 func CommonCmdServEnvs() []string {
 	return commonBaseEnvs()
 }

@@ -8,10 +8,17 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -32,7 +39,11 @@ func TestAdminUserCreate(t *testing.T) {
 			MustChangePassword bool
 		}
 		createCheck := func(name, args string) check {
+<<<<<<< HEAD
 			require.NoError(t, app.Run(strings.Fields(fmt.Sprintf("./gitea admin user create --username %s --email %s@gitea.local %s --password foobar", name, name, args))))
+=======
+			require.NoError(t, app.Run(strings.Fields(fmt.Sprintf("./proxgit admin user create --username %s --email %s@proxgit.local %s --password foobar", name, name, args))))
+>>>>>>> master
 			u := unittest.AssertExistsAndLoadBean(t, &user_model.User{LowerName: name})
 			return check{IsAdmin: u.IsAdmin, MustChangePassword: u.MustChangePassword}
 		}
@@ -51,7 +62,11 @@ func TestAdminUserCreate(t *testing.T) {
 	})
 
 	createUser := func(name string, args ...string) error {
+<<<<<<< HEAD
 		return app.Run(append([]string{"./gitea", "admin", "user", "create", "--username", name, "--email", name + "@gitea.local"}, args...))
+=======
+		return app.Run(append([]string{"./proxgit", "admin", "user", "create", "--username", name, "--email", name + "@proxgit.local"}, args...))
+>>>>>>> master
 	}
 
 	t.Run("UserType", func(t *testing.T) {
@@ -78,7 +93,11 @@ func TestAdminUserCreate(t *testing.T) {
 		assert.NoError(t, createUser("u", "--random-password", "--access-token"))
 		assert.Equal(t, 1, unittest.GetCount(t, &user_model.User{}))
 		assert.Equal(t, 1, unittest.GetCount(t, &auth_model.AccessToken{}))
+<<<<<<< HEAD
 		accessToken := unittest.AssertExistsAndLoadBean(t, &auth_model.AccessToken{Name: "gitea-admin"})
+=======
+		accessToken := unittest.AssertExistsAndLoadBean(t, &auth_model.AccessToken{Name: "proxgit-admin"})
+>>>>>>> master
 		hasScopes, err := accessToken.Scope.HasScope(auth_model.AccessTokenScopeWriteAdmin, auth_model.AccessTokenScopeWriteRepository)
 		assert.NoError(t, err)
 		assert.True(t, hasScopes)
@@ -125,7 +144,11 @@ func TestAdminUserCreate(t *testing.T) {
 			Name:      "u-FullNameWithSpace",
 			LowerName: "u-fullnamewithspace",
 			FullName:  "First O'Middle Last",
+<<<<<<< HEAD
 			Email:     "u-FullNameWithSpace@gitea.local",
+=======
+			Email:     "u-FullNameWithSpace@proxgit.local",
+>>>>>>> master
 		})
 
 		assert.NoError(t, createUser("u-FullNameEmpty", "--random-password", "--fullname", ""))

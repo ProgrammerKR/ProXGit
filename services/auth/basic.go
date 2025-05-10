@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	auth_model "code.gitea.io/gitea/models/auth"
 	user_model "code.gitea.io/gitea/models/user"
@@ -17,6 +18,16 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/util"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // Ensure the struct implements the interface.

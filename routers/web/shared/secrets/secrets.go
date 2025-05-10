@@ -4,6 +4,7 @@
 package secrets
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	secret_model "code.gitea.io/gitea/models/secret"
 	"code.gitea.io/gitea/modules/log"
@@ -12,6 +13,16 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/forms"
 	secret_service "code.gitea.io/gitea/services/secrets"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	secret_model "code.proxgit.io/proxgit/models/secret"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	secret_service "code.proxgit.io/proxgit/services/secrets"
+>>>>>>> master
 )
 
 func SetSecretsContext(ctx *context.Context, ownerID, repoID int64) {

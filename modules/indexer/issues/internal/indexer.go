@@ -7,8 +7,13 @@ import (
 	"context"
 	"errors"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer"
 	"code.gitea.io/gitea/modules/indexer/internal"
+=======
+	"code.proxgit.io/proxgit/modules/indexer"
+	"code.proxgit.io/proxgit/modules/indexer/internal"
+>>>>>>> master
 )
 
 // Indexer defines an interface to indexer issues contents

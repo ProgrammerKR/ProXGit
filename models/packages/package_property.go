@@ -6,7 +6,11 @@ package packages
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

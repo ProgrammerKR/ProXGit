@@ -7,6 +7,7 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	org_model "code.gitea.io/gitea/models/organization"
@@ -17,6 +18,18 @@ import (
 	"code.gitea.io/gitea/modules/storage"
 	"code.gitea.io/gitea/modules/util"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	org_model "code.proxgit.io/proxgit/models/organization"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	secret_model "code.proxgit.io/proxgit/models/secret"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/util"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 // deleteOrganization deletes models associated to an organization.

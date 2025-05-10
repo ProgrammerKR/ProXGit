@@ -7,8 +7,13 @@ import (
 	"context"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/reqctx"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 const ContextDataKeySignedUser = "SignedUser"

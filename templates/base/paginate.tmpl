@@ -8,7 +8,11 @@
 			<div class="ui borderless pagination menu">
 				{{if $showFirstLast}}
 				<a class="{{if .IsFirst}}disabled{{end}} item navigation" {{if not .IsFirst}}href="{{$paginationLink}}{{if $paginationParams}}?{{$paginationParams}}{{end}}"{{end}}>
+<<<<<<< HEAD
 					{{svg "gitea-double-chevron-left" 16 "tw-mr-1"}}
+=======
+					{{svg "proxgit-double-chevron-left" 16 "tw-mr-1"}}
+>>>>>>> master
 					<span class="navigation_label">{{ctx.Locale.Tr "admin.first_page"}}</span>
 				</a>
 				{{end}}
@@ -35,7 +39,11 @@
 				{{if $showFirstLast}}
 				<a class="{{if .IsLast}}disabled{{end}} item navigation" {{if not .IsLast}}href="{{$paginationLink}}?page={{.TotalPages}}{{if $paginationParams}}&{{$paginationParams}}{{end}}"{{end}}>
 					<span class="navigation_label">{{ctx.Locale.Tr "admin.last_page"}}</span>
+<<<<<<< HEAD
 					{{svg "gitea-double-chevron-right" 16 "tw-ml-1"}}
+=======
+					{{svg "proxgit-double-chevron-right" 16 "tw-ml-1"}}
+>>>>>>> master
 				</a>
 				{{end}}
 			</div>

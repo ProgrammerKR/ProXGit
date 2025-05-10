@@ -7,7 +7,11 @@ package structs
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 // User represents a user
@@ -28,7 +32,11 @@ type User struct {
 	Email string `json:"email"`
 	// URL to the user's avatar
 	AvatarURL string `json:"avatar_url"`
+<<<<<<< HEAD
 	// URL to the user's gitea page
+=======
+	// URL to the user's proxgit page
+>>>>>>> master
 	HTMLURL string `json:"html_url"`
 	// User locale
 	Language string `json:"language"`

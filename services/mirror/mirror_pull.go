@@ -9,6 +9,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	system_model "code.gitea.io/gitea/models/system"
 	"code.gitea.io/gitea/modules/cache"
@@ -26,6 +27,25 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	notify_service "code.gitea.io/gitea/services/notify"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	system_model "code.proxgit.io/proxgit/models/system"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/git"
+	giturl "code.proxgit.io/proxgit/modules/git/url"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/globallock"
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/proxy"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 // gitShortEmptySha Git short empty SHA

@@ -6,7 +6,11 @@ package repo
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+>>>>>>> master
 )
 
 func TestMain(m *testing.M) {

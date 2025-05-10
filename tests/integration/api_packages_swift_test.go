@@ -13,6 +13,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -21,6 +22,16 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	swift_router "code.gitea.io/gitea/routers/api/packages/swift"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	swift_module "code.proxgit.io/proxgit/modules/packages/swift"
+	"code.proxgit.io/proxgit/modules/setting"
+	swift_router "code.proxgit.io/proxgit/routers/api/packages/swift"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -38,7 +49,11 @@ func TestPackageSwift(t *testing.T) {
 	packageVersion2 := "1.0.4"
 	packageAuthor := "KN4CK3R"
 	packageDescription := "Gitea Test Package"
+<<<<<<< HEAD
 	packageRepositoryURL := "https://gitea.io/gitea/gitea"
+=======
+	packageRepositoryURL := "https://proxgit.io/proxgit/proxgit"
+>>>>>>> master
 	contentManifest1 := "// swift-tools-version:5.7\n//\n//  Package.swift"
 	contentManifest2 := "// swift-tools-version:5.6\n//\n//  Package@swift-5.6.swift"
 

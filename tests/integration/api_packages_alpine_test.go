@@ -14,6 +14,7 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -21,6 +22,15 @@ import (
 	alpine_module "code.gitea.io/gitea/modules/packages/alpine"
 	alpine_service "code.gitea.io/gitea/services/packages/alpine"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	alpine_module "code.proxgit.io/proxgit/modules/packages/alpine"
+	alpine_service "code.proxgit.io/proxgit/services/packages/alpine"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -30,7 +40,11 @@ func TestPackageAlpine(t *testing.T) {
 
 	user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
+<<<<<<< HEAD
 	packageName := "gitea-test"
+=======
+	packageName := "proxgit-test"
+>>>>>>> master
 	packageVersion := "1.4.1-r3"
 
 	base64AlpinePackageContent := `H4sIAAAAAAACA9ML9nT30wsKdtTLzjNJzjYuckjPLElN1DUzMUxMNTa11CsqTtQrKE1ioAAYAIGZ
@@ -225,12 +239,21 @@ AACAX/AKARNTyAAoAAA=`
 					assert.Contains(t, content, "A:x86_64\n")
 					assert.NotContains(t, content, "A:noarch\n")
 					assert.Contains(t, content, "T:Gitea Test Package\n")
+<<<<<<< HEAD
 					assert.Contains(t, content, "U:https://gitea.io/\n")
 					assert.Contains(t, content, "L:MIT\n")
 					assert.Contains(t, content, "S:1353\n")
 					assert.Contains(t, content, "I:4096\n")
 					assert.Contains(t, content, "o:gitea-test\n")
 					assert.Contains(t, content, "m:KN4CK3R <kn4ck3r@gitea.io>\n")
+=======
+					assert.Contains(t, content, "U:https://proxgit.io/\n")
+					assert.Contains(t, content, "L:MIT\n")
+					assert.Contains(t, content, "S:1353\n")
+					assert.Contains(t, content, "I:4096\n")
+					assert.Contains(t, content, "o:proxgit-test\n")
+					assert.Contains(t, content, "m:KN4CK3R <kn4ck3r@proxgit.io>\n")
+>>>>>>> master
 					assert.Contains(t, content, "t:1679498030\n")
 				})
 
@@ -261,11 +284,19 @@ AACAX/AKARNTyAAoAAA=`
 
 					// noarch package should be available with every architecture requested
 					for _, arch := range []string{alpine_module.NoArch, "x86_64", "my_arch"} {
+<<<<<<< HEAD
 						req := NewRequest(t, "GET", fmt.Sprintf("%s/%s/%s/%s/gitea-noarch-1.4-r0.apk", rootURL, branch, repository, arch))
 						MakeRequest(t, req, http.StatusOK)
 					}
 
 					req = NewRequest(t, "DELETE", fmt.Sprintf("%s/%s/%s/noarch/gitea-noarch-1.4-r0.apk", rootURL, branch, repository)).
+=======
+						req := NewRequest(t, "GET", fmt.Sprintf("%s/%s/%s/%s/proxgit-noarch-1.4-r0.apk", rootURL, branch, repository, arch))
+						MakeRequest(t, req, http.StatusOK)
+					}
+
+					req = NewRequest(t, "DELETE", fmt.Sprintf("%s/%s/%s/noarch/proxgit-noarch-1.4-r0.apk", rootURL, branch, repository)).
+>>>>>>> master
 						AddBasicAuth(user.Name)
 					MakeRequest(t, req, http.StatusNoContent)
 				})

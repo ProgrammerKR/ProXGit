@@ -6,8 +6,13 @@ package markup
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/references"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/references"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 )

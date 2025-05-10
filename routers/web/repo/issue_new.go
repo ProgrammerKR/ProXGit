@@ -13,6 +13,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/organization"
 	project_model "code.gitea.io/gitea/models/project"
@@ -33,6 +34,28 @@ import (
 	"code.gitea.io/gitea/services/context/upload"
 	"code.gitea.io/gitea/services/forms"
 	issue_service "code.gitea.io/gitea/services/issue"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	project_model "code.proxgit.io/proxgit/models/project"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/git"
+	issue_template "code.proxgit.io/proxgit/modules/issue/template"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/context/upload"
+	"code.proxgit.io/proxgit/services/forms"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+>>>>>>> master
 )
 
 // Tries to load and set an issue template. The first return value indicates if a template was loaded.

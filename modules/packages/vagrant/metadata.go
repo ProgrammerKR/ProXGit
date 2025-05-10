@@ -9,8 +9,13 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/validation"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/validation"
+>>>>>>> master
 )
 
 const (

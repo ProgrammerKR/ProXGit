@@ -37,7 +37,11 @@ if [ ! -f ${GITEA_APP_INI} ]; then
     SSH_LISTEN_PORT=${SSH_LISTEN_PORT:-$SSH_PORT} \
     DB_TYPE=${DB_TYPE:-"sqlite3"} \
     DB_HOST=${DB_HOST:-"localhost:3306"} \
+<<<<<<< HEAD
     DB_NAME=${DB_NAME:-"gitea"} \
+=======
+    DB_NAME=${DB_NAME:-"proxgit"} \
+>>>>>>> master
     DB_USER=${DB_USER:-"root"} \
     DB_PASSWD=${DB_PASSWD:-""} \
     INSTALL_LOCK=${INSTALL_LOCK:-"false"} \

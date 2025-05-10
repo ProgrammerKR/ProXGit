@@ -7,6 +7,7 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/setting"
@@ -16,6 +17,17 @@ import (
 	"code.gitea.io/gitea/routers/api/v1/utils"
 	"code.gitea.io/gitea/services/context"
 	webhook_service "code.gitea.io/gitea/services/webhook"
+=======
+	"code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	webhook_service "code.proxgit.io/proxgit/services/webhook"
+>>>>>>> master
 )
 
 // ListHooks list system's webhooks

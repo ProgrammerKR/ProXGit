@@ -6,9 +6,15 @@ package convert
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/perm"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/models/perm"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // ToUser convert user_model.User to api.User

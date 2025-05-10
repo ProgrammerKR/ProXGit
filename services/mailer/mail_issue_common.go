@@ -11,6 +11,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/renderhelper"
@@ -23,6 +24,20 @@ import (
 	incoming_payload "code.gitea.io/gitea/services/mailer/incoming/payload"
 	sender_service "code.gitea.io/gitea/services/mailer/sender"
 	"code.gitea.io/gitea/services/mailer/token"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/renderhelper"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/emoji"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/translation"
+	incoming_payload "code.proxgit.io/proxgit/services/mailer/incoming/payload"
+	sender_service "code.proxgit.io/proxgit/services/mailer/sender"
+	"code.proxgit.io/proxgit/services/mailer/token"
+>>>>>>> master
 )
 
 // maxEmailBodySize is the approximate maximum size of an email body in bytes

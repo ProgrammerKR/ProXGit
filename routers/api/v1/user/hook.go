@@ -6,11 +6,19 @@ package user
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/routers/api/v1/utils"
 	"code.gitea.io/gitea/services/context"
 	webhook_service "code.gitea.io/gitea/services/webhook"
+=======
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	webhook_service "code.proxgit.io/proxgit/services/webhook"
+>>>>>>> master
 )
 
 // ListHooks list the authenticated user's webhooks

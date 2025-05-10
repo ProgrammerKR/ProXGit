@@ -3,7 +3,11 @@
 
 package actions
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/services/context"
+=======
+import "code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 
 // API for actions of a repository or organization
 type API interface {

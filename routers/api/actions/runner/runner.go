@@ -8,6 +8,7 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
@@ -19,6 +20,19 @@ import (
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
 	"code.gitea.io/actions-proto-go/runner/v1/runnerv1connect"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/util"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+	"code.proxgit.io/actions-proto-go/runner/v1/runnerv1connect"
+>>>>>>> master
 	"connectrpc.com/connect"
 	gouuid "github.com/google/uuid"
 	"google.golang.org/grpc/codes"

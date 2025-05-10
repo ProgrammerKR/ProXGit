@@ -14,7 +14,11 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 )
 
 var defaultFileBlockSize int64 = 32 * 1024

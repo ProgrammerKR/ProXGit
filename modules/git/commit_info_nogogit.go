@@ -12,7 +12,11 @@ import (
 	"path"
 	"sort"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // GetCommitsInfo gets information of all commits that are corresponding to these entries

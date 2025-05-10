@@ -9,12 +9,21 @@ import (
 	"reflect"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/htmlutil"
 	"code.gitea.io/gitea/modules/reqctx"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/web/middleware"
 
 	"gitea.com/go-chi/binding"
+=======
+	"code.proxgit.io/proxgit/modules/htmlutil"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 	"github.com/go-chi/chi/v5"
 )
 

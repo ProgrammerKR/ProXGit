@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	access_model "code.gitea.io/gitea/models/perm/access"
@@ -25,6 +26,23 @@ import (
 	notify_service "code.gitea.io/gitea/services/notify"
 	pull_service "code.gitea.io/gitea/services/pull"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	pull_model "code.proxgit.io/proxgit/models/pull"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/queue"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 // prAutoMergeQueue represents a queue to handle update pull request tests

@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/modules/util"
@@ -14,6 +15,15 @@ import (
 	shared_user "code.gitea.io/gitea/routers/web/shared/user"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/forms"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	shared_user "code.proxgit.io/proxgit/routers/web/shared/user"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 )
 
 type OAuth2CommonHandlers struct {

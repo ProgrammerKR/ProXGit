@@ -13,6 +13,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	auth_model "code.gitea.io/gitea/models/auth"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -25,6 +26,20 @@ import (
 	actions_service "code.gitea.io/gitea/services/actions"
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+>>>>>>> master
 	"connectrpc.com/connect"
 	"github.com/stretchr/testify/assert"
 )
@@ -37,12 +52,20 @@ func TestJobWithNeeds(t *testing.T) {
 		expectedStatuses map[string]string
 	}{
 		{
+<<<<<<< HEAD
 			treePath: ".gitea/workflows/job-with-needs.yml",
+=======
+			treePath: ".proxgit/workflows/job-with-needs.yml",
+>>>>>>> master
 			fileContent: `name: job-with-needs
 on:
   push:
     paths:
+<<<<<<< HEAD
       - '.gitea/workflows/job-with-needs.yml'
+=======
+      - '.proxgit/workflows/job-with-needs.yml'
+>>>>>>> master
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -68,12 +91,20 @@ jobs:
 			},
 		},
 		{
+<<<<<<< HEAD
 			treePath: ".gitea/workflows/job-with-needs-fail.yml",
+=======
+			treePath: ".proxgit/workflows/job-with-needs-fail.yml",
+>>>>>>> master
 			fileContent: `name: job-with-needs-fail
 on:
   push:
     paths:
+<<<<<<< HEAD
       - '.gitea/workflows/job-with-needs-fail.yml'
+=======
+      - '.proxgit/workflows/job-with-needs-fail.yml'
+>>>>>>> master
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -96,12 +127,20 @@ jobs:
 			},
 		},
 		{
+<<<<<<< HEAD
 			treePath: ".gitea/workflows/job-with-needs-fail-if.yml",
+=======
+			treePath: ".proxgit/workflows/job-with-needs-fail-if.yml",
+>>>>>>> master
 			fileContent: `name: job-with-needs-fail-if
 on:
   push:
     paths:
+<<<<<<< HEAD
       - '.gitea/workflows/job-with-needs-fail-if.yml'
+=======
+      - '.proxgit/workflows/job-with-needs-fail-if.yml'
+>>>>>>> master
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -178,12 +217,20 @@ func TestJobNeedsMatrix(t *testing.T) {
 		expectedTaskNeeds map[string]*runnerv1.TaskNeed // jobID => TaskNeed
 	}{
 		{
+<<<<<<< HEAD
 			treePath: ".gitea/workflows/jobs-outputs-with-matrix.yml",
+=======
+			treePath: ".proxgit/workflows/jobs-outputs-with-matrix.yml",
+>>>>>>> master
 			fileContent: `name: jobs-outputs-with-matrix
 on:
   push:
     paths:
+<<<<<<< HEAD
       - '.gitea/workflows/jobs-outputs-with-matrix.yml'
+=======
+      - '.proxgit/workflows/jobs-outputs-with-matrix.yml'
+>>>>>>> master
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -244,12 +291,20 @@ jobs:
 			},
 		},
 		{
+<<<<<<< HEAD
 			treePath: ".gitea/workflows/jobs-outputs-with-matrix-failure.yml",
+=======
+			treePath: ".proxgit/workflows/jobs-outputs-with-matrix-failure.yml",
+>>>>>>> master
 			fileContent: `name: jobs-outputs-with-matrix-failure
 on:
   push:
     paths:
+<<<<<<< HEAD
       - '.gitea/workflows/jobs-outputs-with-matrix-failure.yml'
+=======
+      - '.proxgit/workflows/jobs-outputs-with-matrix-failure.yml'
+>>>>>>> master
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -355,7 +410,11 @@ func TestActionsGiteaContext(t *testing.T) {
 		user2Session := loginUser(t, user2.Name)
 		user2Token := getTokenForLoggedInUser(t, user2Session, auth_model.AccessTokenScopeWriteRepository, auth_model.AccessTokenScopeWriteUser)
 
+<<<<<<< HEAD
 		apiBaseRepo := createActionsTestRepo(t, user2Token, "actions-gitea-context", false)
+=======
+		apiBaseRepo := createActionsTestRepo(t, user2Token, "actions-proxgit-context", false)
+>>>>>>> master
 		baseRepo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: apiBaseRepo.ID})
 		user2APICtx := NewAPITestContext(t, baseRepo.OwnerName, baseRepo.Name, auth_model.AccessTokenScopeWriteRepository)
 
@@ -363,7 +422,11 @@ func TestActionsGiteaContext(t *testing.T) {
 		runner.registerAsRepoRunner(t, baseRepo.OwnerName, baseRepo.Name, "mock-runner", []string{"ubuntu-latest"}, false)
 
 		// init the workflow
+<<<<<<< HEAD
 		wfTreePath := ".gitea/workflows/pull.yml"
+=======
+		wfTreePath := ".proxgit/workflows/pull.yml"
+>>>>>>> master
 		wfFileContent := `name: Pull Request
 on: pull_request
 jobs:
@@ -426,7 +489,11 @@ jobs:
 		assert.Equal(t, setting.AppURL, gtCtx["server_url"].GetStringValue())
 		assert.Equal(t, actionRun.CommitSHA, gtCtx["sha"].GetStringValue())
 		assert.Equal(t, actionRun.WorkflowID, gtCtx["workflow"].GetStringValue())
+<<<<<<< HEAD
 		assert.Equal(t, setting.Actions.DefaultActionsURL.URL(), gtCtx["gitea_default_actions_url"].GetStringValue())
+=======
+		assert.Equal(t, setting.Actions.DefaultActionsURL.URL(), gtCtx["proxgit_default_actions_url"].GetStringValue())
+>>>>>>> master
 		token := gtCtx["token"].GetStringValue()
 		assert.Equal(t, actionTask.TokenLastEight, token[len(token)-8:])
 	})
@@ -439,7 +506,11 @@ func TestActionsGiteaContextEphemeral(t *testing.T) {
 		user2Session := loginUser(t, user2.Name)
 		user2Token := getTokenForLoggedInUser(t, user2Session, auth_model.AccessTokenScopeWriteRepository, auth_model.AccessTokenScopeWriteUser)
 
+<<<<<<< HEAD
 		apiBaseRepo := createActionsTestRepo(t, user2Token, "actions-gitea-context", false)
+=======
+		apiBaseRepo := createActionsTestRepo(t, user2Token, "actions-proxgit-context", false)
+>>>>>>> master
 		baseRepo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: apiBaseRepo.ID})
 		user2APICtx := NewAPITestContext(t, baseRepo.OwnerName, baseRepo.Name, auth_model.AccessTokenScopeWriteRepository)
 
@@ -451,7 +522,11 @@ func TestActionsGiteaContextEphemeral(t *testing.T) {
 		assert.NoError(t, err)
 
 		// init the workflow
+<<<<<<< HEAD
 		wfTreePath := ".gitea/workflows/pull.yml"
+=======
+		wfTreePath := ".proxgit/workflows/pull.yml"
+>>>>>>> master
 		wfFileContent := `name: Pull Request
 on: pull_request
 jobs:
@@ -518,7 +593,11 @@ jobs:
 		assert.Equal(t, setting.AppURL, gtCtx["server_url"].GetStringValue())
 		assert.Equal(t, actionRun.CommitSHA, gtCtx["sha"].GetStringValue())
 		assert.Equal(t, actionRun.WorkflowID, gtCtx["workflow"].GetStringValue())
+<<<<<<< HEAD
 		assert.Equal(t, setting.Actions.DefaultActionsURL.URL(), gtCtx["gitea_default_actions_url"].GetStringValue())
+=======
+		assert.Equal(t, setting.Actions.DefaultActionsURL.URL(), gtCtx["proxgit_default_actions_url"].GetStringValue())
+>>>>>>> master
 		token := gtCtx["token"].GetStringValue()
 		assert.Equal(t, actionTask.TokenLastEight, token[len(token)-8:])
 

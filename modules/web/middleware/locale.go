@@ -6,8 +6,13 @@ package middleware
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
 	"code.gitea.io/gitea/modules/translation/i18n"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/modules/translation/i18n"
+>>>>>>> master
 
 	"golang.org/x/text/language"
 )

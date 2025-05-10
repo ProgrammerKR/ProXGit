@@ -6,7 +6,11 @@ package setting
 import (
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 var Camo = struct {

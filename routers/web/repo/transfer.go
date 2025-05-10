@@ -4,8 +4,13 @@
 package repo
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/services/context"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	"code.proxgit.io/proxgit/services/context"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 func acceptTransfer(ctx *context.Context) {

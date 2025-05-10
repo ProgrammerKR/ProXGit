@@ -8,13 +8,22 @@ import (
 	"path/filepath"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type TempDir struct {
 	// base is the base directory for temporary files, it must exist before accessing and won't be created automatically.
+<<<<<<< HEAD
 	// for example: base="/system-tmpdir", sub="gitea-tmp"
+=======
+	// for example: base="/system-tmpdir", sub="proxgit-tmp"
+>>>>>>> master
 	base, sub string
 }
 

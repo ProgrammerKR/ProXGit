@@ -6,12 +6,21 @@ package user
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/optional"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	"code.proxgit.io/proxgit/modules/optional"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 // GetUserSettings returns user settings

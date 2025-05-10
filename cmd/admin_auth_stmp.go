@@ -7,9 +7,15 @@ import (
 	"errors"
 	"strings"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/auth/source/smtp"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/auth/source/smtp"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

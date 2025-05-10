@@ -7,6 +7,7 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -20,6 +21,21 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/storage"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	project_model "code.proxgit.io/proxgit/models/project"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	system_model "code.proxgit.io/proxgit/models/system"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/storage"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 )
 
 // NewIssue creates new issue with labels for repository.

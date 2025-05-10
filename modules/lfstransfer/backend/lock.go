@@ -13,15 +13,26 @@ import (
 	"strconv"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	lfslock "code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	lfslock "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/charmbracelet/git-lfs-transfer/transfer"
 )
 
+<<<<<<< HEAD
 var _ transfer.LockBackend = &giteaLockBackend{}
 
 type giteaLockBackend struct {
+=======
+var _ transfer.LockBackend = &proxgitLockBackend{}
+
+type proxgitLockBackend struct {
+>>>>>>> master
 	ctx          context.Context
 	g            *GiteaBackend
 	server       *url.URL
@@ -32,11 +43,19 @@ type giteaLockBackend struct {
 
 func newGiteaLockBackend(g *GiteaBackend) transfer.LockBackend {
 	server := g.server.JoinPath("locks")
+<<<<<<< HEAD
 	return &giteaLockBackend{ctx: g.ctx, g: g, server: server, authToken: g.authToken, internalAuth: g.internalAuth, logger: g.logger}
 }
 
 // Create implements transfer.LockBackend
 func (g *giteaLockBackend) Create(path, refname string) (transfer.Lock, error) {
+=======
+	return &proxgitLockBackend{ctx: g.ctx, g: g, server: server, authToken: g.authToken, internalAuth: g.internalAuth, logger: g.logger}
+}
+
+// Create implements transfer.LockBackend
+func (g *proxgitLockBackend) Create(path, refname string) (transfer.Lock, error) {
+>>>>>>> master
 	reqBody := lfslock.LFSLockRequest{Path: path}
 
 	bodyBytes, err := json.Marshal(reqBody)
@@ -87,7 +106,11 @@ func (g *giteaLockBackend) Create(path, refname string) (transfer.Lock, error) {
 }
 
 // Unlock implements transfer.LockBackend
+<<<<<<< HEAD
 func (g *giteaLockBackend) Unlock(lock transfer.Lock) error {
+=======
+func (g *proxgitLockBackend) Unlock(lock transfer.Lock) error {
+>>>>>>> master
 	reqBody := lfslock.LFSLockDeleteRequest{}
 
 	bodyBytes, err := json.Marshal(reqBody)
@@ -118,7 +141,11 @@ func (g *giteaLockBackend) Unlock(lock transfer.Lock) error {
 }
 
 // FromPath implements transfer.LockBackend
+<<<<<<< HEAD
 func (g *giteaLockBackend) FromPath(path string) (transfer.Lock, error) {
+=======
+func (g *proxgitLockBackend) FromPath(path string) (transfer.Lock, error) {
+>>>>>>> master
 	v := url.Values{
 		argPath: []string{path},
 	}
@@ -135,7 +162,11 @@ func (g *giteaLockBackend) FromPath(path string) (transfer.Lock, error) {
 }
 
 // FromID implements transfer.LockBackend
+<<<<<<< HEAD
 func (g *giteaLockBackend) FromID(id string) (transfer.Lock, error) {
+=======
+func (g *proxgitLockBackend) FromID(id string) (transfer.Lock, error) {
+>>>>>>> master
 	v := url.Values{
 		argID: []string{id},
 	}
@@ -152,7 +183,11 @@ func (g *giteaLockBackend) FromID(id string) (transfer.Lock, error) {
 }
 
 // Range implements transfer.LockBackend
+<<<<<<< HEAD
 func (g *giteaLockBackend) Range(cursor string, limit int, iter func(transfer.Lock) error) (string, error) {
+=======
+func (g *proxgitLockBackend) Range(cursor string, limit int, iter func(transfer.Lock) error) (string, error) {
+>>>>>>> master
 	v := url.Values{
 		argLimit: []string{strconv.FormatInt(int64(limit), 10)},
 	}
@@ -174,7 +209,11 @@ func (g *giteaLockBackend) Range(cursor string, limit int, iter func(transfer.Lo
 	return cursor, nil
 }
 
+<<<<<<< HEAD
 func (g *giteaLockBackend) queryLocks(v url.Values) ([]transfer.Lock, string, error) {
+=======
+func (g *proxgitLockBackend) queryLocks(v url.Values) ([]transfer.Lock, string, error) {
+>>>>>>> master
 	serverURLWithQuery := g.server.JoinPath() // get a copy
 	serverURLWithQuery.RawQuery = v.Encode()
 	headers := map[string]string{
@@ -218,51 +257,91 @@ func (g *giteaLockBackend) queryLocks(v url.Values) ([]transfer.Lock, string, er
 	return respLocks, respBody.Next, nil
 }
 
+<<<<<<< HEAD
 var _ transfer.Lock = &giteaLock{}
 
 type giteaLock struct {
 	g        *giteaLockBackend
+=======
+var _ transfer.Lock = &proxgitLock{}
+
+type proxgitLock struct {
+	g        *proxgitLockBackend
+>>>>>>> master
 	id       string
 	path     string
 	lockedAt time.Time
 	owner    string
 }
 
+<<<<<<< HEAD
 func newGiteaLock(g *giteaLockBackend, id, path string, lockedAt time.Time, owner string) transfer.Lock {
 	return &giteaLock{g: g, id: id, path: path, lockedAt: lockedAt, owner: owner}
 }
 
 // Unlock implements transfer.Lock
 func (g *giteaLock) Unlock() error {
+=======
+func newGiteaLock(g *proxgitLockBackend, id, path string, lockedAt time.Time, owner string) transfer.Lock {
+	return &proxgitLock{g: g, id: id, path: path, lockedAt: lockedAt, owner: owner}
+}
+
+// Unlock implements transfer.Lock
+func (g *proxgitLock) Unlock() error {
+>>>>>>> master
 	return g.g.Unlock(g)
 }
 
 // ID implements transfer.Lock
+<<<<<<< HEAD
 func (g *giteaLock) ID() string {
+=======
+func (g *proxgitLock) ID() string {
+>>>>>>> master
 	return g.id
 }
 
 // Path implements transfer.Lock
+<<<<<<< HEAD
 func (g *giteaLock) Path() string {
+=======
+func (g *proxgitLock) Path() string {
+>>>>>>> master
 	return g.path
 }
 
 // FormattedTimestamp implements transfer.Lock
+<<<<<<< HEAD
 func (g *giteaLock) FormattedTimestamp() string {
+=======
+func (g *proxgitLock) FormattedTimestamp() string {
+>>>>>>> master
 	return g.lockedAt.UTC().Format(time.RFC3339)
 }
 
 // OwnerName implements transfer.Lock
+<<<<<<< HEAD
 func (g *giteaLock) OwnerName() string {
 	return g.owner
 }
 
 func (g *giteaLock) CurrentUser() (string, error) {
+=======
+func (g *proxgitLock) OwnerName() string {
+	return g.owner
+}
+
+func (g *proxgitLock) CurrentUser() (string, error) {
+>>>>>>> master
 	return userSelf, nil
 }
 
 // AsLockSpec implements transfer.Lock
+<<<<<<< HEAD
 func (g *giteaLock) AsLockSpec(ownerID bool) ([]string, error) {
+=======
+func (g *proxgitLock) AsLockSpec(ownerID bool) ([]string, error) {
+>>>>>>> master
 	msgs := []string{
 		"lock " + g.ID(),
 		fmt.Sprintf("path %s %s", g.ID(), g.Path()),
@@ -284,7 +363,11 @@ func (g *giteaLock) AsLockSpec(ownerID bool) ([]string, error) {
 }
 
 // AsArguments implements transfer.Lock
+<<<<<<< HEAD
 func (g *giteaLock) AsArguments() []string {
+=======
+func (g *proxgitLock) AsArguments() []string {
+>>>>>>> master
 	return []string{
 		"id=" + g.ID(),
 		"path=" + g.Path(),

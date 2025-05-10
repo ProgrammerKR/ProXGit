@@ -15,12 +15,21 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/packages/rubygems"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/packages/rubygems"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -102,13 +111,22 @@ dependencies:
       - !ruby/object:Gem::Version
         version: '5.2'
 description: RubyGems package test
+<<<<<<< HEAD
 email: rubygems@gitea.io
+=======
+email: rubygems@proxgit.io
+>>>>>>> master
 executables: []
 extensions: []
 extra_rdoc_files: []
 files:
+<<<<<<< HEAD
 - lib/gitea.rb
 homepage: https://gitea.io/
+=======
+- lib/proxgit.rb
+homepage: https://proxgit.io/
+>>>>>>> master
 licenses:
 - MIT
 metadata: {}
@@ -138,7 +156,11 @@ test_files: []
 	metadataGz := makeArchiveFileGz([]byte(metadataContent))
 	dataTarGz := makeArchiveFileGz(makeArchiveFileTar([]*tarFile{
 		{
+<<<<<<< HEAD
 			Name: "lib/gitea.rb",
+=======
+			Name: "lib/proxgit.rb",
+>>>>>>> master
 			Data: []byte("class Gitea\nend"),
 		},
 	}))
@@ -174,12 +196,20 @@ func TestPackageRubyGems(t *testing.T) {
 
 	user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
+<<<<<<< HEAD
 	testGemName := "gitea"
+=======
+	testGemName := "proxgit"
+>>>>>>> master
 	testGemVersion := "1.0.5"
 	testGemContent := makeRubyGem(testGemName, testGemVersion)
 	testGemContentChecksum := fmt.Sprintf("%x", sha256.Sum256(testGemContent))
 
+<<<<<<< HEAD
 	testAnotherGemName := "gitea-another"
+=======
+	testAnotherGemName := "proxgit-another"
+>>>>>>> master
 	testAnotherGemVersion := "0.99"
 
 	root := fmt.Sprintf("/api/packages/%s/rubygems", user.Name)
@@ -296,8 +326,13 @@ gAAAAP//MS06Gw==`)
 		req := NewRequest(t, "GET", root+"/versions").AddBasicAuth(user.Name)
 		resp := MakeRequest(t, req, http.StatusOK)
 		assert.Equal(t, `---
+<<<<<<< HEAD
 gitea 1.0.5 08843c2dd0ea19910e6b056b98e38f1c
 gitea-another 0.99 8b639e4048d282941485368ec42609be
+=======
+proxgit 1.0.5 08843c2dd0ea19910e6b056b98e38f1c
+proxgit-another 0.99 8b639e4048d282941485368ec42609be
+>>>>>>> master
 `, resp.Body.String())
 	})
 

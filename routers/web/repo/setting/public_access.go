@@ -8,12 +8,21 @@ import (
 	"slices"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/perm"
 	"code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unit"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/perm"
+	"code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const tplRepoSettingsPublicAccess templates.TplName = "repo/settings/public_access"

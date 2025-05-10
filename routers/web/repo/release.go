@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	"code.gitea.io/gitea/models/renderhelper"
@@ -30,6 +31,28 @@ import (
 	"code.gitea.io/gitea/services/context/upload"
 	"code.gitea.io/gitea/services/forms"
 	release_service "code.gitea.io/gitea/services/release"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	"code.proxgit.io/proxgit/models/renderhelper"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/web/feed"
+	shared_user "code.proxgit.io/proxgit/routers/web/shared/user"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/context/upload"
+	"code.proxgit.io/proxgit/services/forms"
+	release_service "code.proxgit.io/proxgit/services/release"
+>>>>>>> master
 )
 
 const (

@@ -9,9 +9,15 @@ import (
 	"os"
 	"text/tabwriter"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	auth_service "code.gitea.io/gitea/services/auth"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	auth_service "code.proxgit.io/proxgit/services/auth"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

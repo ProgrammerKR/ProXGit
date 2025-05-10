@@ -10,7 +10,11 @@ import (
 	"sync/atomic"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/tailmsg"
+=======
+	"code.proxgit.io/proxgit/modules/tailmsg"
+>>>>>>> master
 )
 
 type traceBuiltinStarter struct{}

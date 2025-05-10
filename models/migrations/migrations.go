@@ -9,6 +9,7 @@ import (
 	"errors"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/v1_10"
 	"code.gitea.io/gitea/models/migrations/v1_11"
 	"code.gitea.io/gitea/models/migrations/v1_12"
@@ -31,6 +32,30 @@ import (
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/migrations/v1_10"
+	"code.proxgit.io/proxgit/models/migrations/v1_11"
+	"code.proxgit.io/proxgit/models/migrations/v1_12"
+	"code.proxgit.io/proxgit/models/migrations/v1_13"
+	"code.proxgit.io/proxgit/models/migrations/v1_14"
+	"code.proxgit.io/proxgit/models/migrations/v1_15"
+	"code.proxgit.io/proxgit/models/migrations/v1_16"
+	"code.proxgit.io/proxgit/models/migrations/v1_17"
+	"code.proxgit.io/proxgit/models/migrations/v1_18"
+	"code.proxgit.io/proxgit/models/migrations/v1_19"
+	"code.proxgit.io/proxgit/models/migrations/v1_20"
+	"code.proxgit.io/proxgit/models/migrations/v1_21"
+	"code.proxgit.io/proxgit/models/migrations/v1_22"
+	"code.proxgit.io/proxgit/models/migrations/v1_23"
+	"code.proxgit.io/proxgit/models/migrations/v1_24"
+	"code.proxgit.io/proxgit/models/migrations/v1_6"
+	"code.proxgit.io/proxgit/models/migrations/v1_7"
+	"code.proxgit.io/proxgit/models/migrations/v1_8"
+	"code.proxgit.io/proxgit/models/migrations/v1_9"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"xorm.io/xorm"
 	"xorm.io/xorm/names"
@@ -437,7 +462,11 @@ func EnsureUpToDate(ctx context.Context, x *xorm.Engine) error {
 	expectedDB := ExpectedDBVersion()
 
 	if currentDB != expectedDB {
+<<<<<<< HEAD
 		return fmt.Errorf(`current database version %d is not equal to the expected version %d. Please run "gitea [--config /path/to/app.ini] migrate" to update the database version`, currentDB, expectedDB)
+=======
+		return fmt.Errorf(`current database version %d is not equal to the expected version %d. Please run "proxgit [--config /path/to/app.ini] migrate" to update the database version`, currentDB, expectedDB)
+>>>>>>> master
 	}
 
 	return nil

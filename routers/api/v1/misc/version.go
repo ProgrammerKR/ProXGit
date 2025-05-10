@@ -6,9 +6,15 @@ package misc
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // Version shows the version of the Gitea server

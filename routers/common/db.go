@@ -8,6 +8,7 @@ import (
 	"errors"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/migrations"
 	system_model "code.gitea.io/gitea/models/system"
@@ -15,6 +16,15 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/setting/config"
 	"code.gitea.io/gitea/services/versioned_migration"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/migrations"
+	system_model "code.proxgit.io/proxgit/models/system"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/setting/config"
+	"code.proxgit.io/proxgit/services/versioned_migration"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )
@@ -54,7 +64,11 @@ func migrateWithSetting(ctx context.Context, x *xorm.Engine) error {
 		return versioned_migration.Migrate(ctx, x)
 	} else if expected := migrations.ExpectedDBVersion(); current != expected {
 		log.Fatal(`"database.AUTO_MIGRATION" is disabled, but current database version %d is not equal to the expected version %d.`+
+<<<<<<< HEAD
 			`You can set "database.AUTO_MIGRATION" to true or migrate manually by running "gitea [--config /path/to/app.ini] migrate"`, current, expected)
+=======
+			`You can set "database.AUTO_MIGRATION" to true or migrate manually by running "proxgit [--config /path/to/app.ini] migrate"`, current, expected)
+>>>>>>> master
 	}
 	return nil
 }

@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	chef_module "code.gitea.io/gitea/modules/packages/chef"
 	"code.gitea.io/gitea/modules/setting"
@@ -14,6 +15,15 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	shared "code.gitea.io/gitea/routers/web/shared/packages"
 	"code.gitea.io/gitea/services/context"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	chef_module "code.proxgit.io/proxgit/modules/packages/chef"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	shared "code.proxgit.io/proxgit/routers/web/shared/packages"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const (

@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/analyze"
 	"code.gitea.io/gitea/modules/charset"
@@ -25,6 +26,21 @@ import (
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/typesniffer"
 	"code.gitea.io/gitea/modules/util"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/analyze"
+	"code.proxgit.io/proxgit/modules/charset"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/indexer"
+	path_filter "code.proxgit.io/proxgit/modules/indexer/code/bleve/token/path"
+	"code.proxgit.io/proxgit/modules/indexer/code/internal"
+	indexer_internal "code.proxgit.io/proxgit/modules/indexer/internal"
+	inner_bleve "code.proxgit.io/proxgit/modules/indexer/internal/bleve"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/typesniffer"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/blevesearch/bleve/v2"
 	analyzer_custom "github.com/blevesearch/bleve/v2/analysis/analyzer/custom"

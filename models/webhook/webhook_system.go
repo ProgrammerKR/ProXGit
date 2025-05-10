@@ -7,8 +7,13 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 )
 
 // GetSystemOrDefaultWebhooks returns webhooks by given argument or all if argument is missing.

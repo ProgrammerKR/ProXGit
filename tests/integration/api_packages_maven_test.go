@@ -12,6 +12,7 @@ import (
 	"sync"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -19,6 +20,15 @@ import (
 	"code.gitea.io/gitea/modules/packages/maven"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/packages/maven"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -29,12 +39,20 @@ func TestPackageMaven(t *testing.T) {
 
 	user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
+<<<<<<< HEAD
 	groupID := "com.gitea"
+=======
+	groupID := "com.proxgit"
+>>>>>>> master
 	artifactID := "test-project"
 	packageVersion := "1.0.1"
 	packageDescription := "Test Description"
 
+<<<<<<< HEAD
 	root := "/api/packages/user2/maven/com/gitea/test-project"
+=======
+	root := "/api/packages/user2/maven/com/proxgit/test-project"
+>>>>>>> master
 	filename := "any-name.jar"
 
 	putFile := func(t *testing.T, path, content string, expectedStatus int) {
@@ -81,21 +99,38 @@ func TestPackageMaven(t *testing.T) {
 		defer tests.PrintCurrentTest(t)()
 
 		// try to upload a package with legacy package name (will be saved as "GroupID-ArtifactID")
+<<<<<<< HEAD
 		legacyRootLink := "/api/packages/user2/maven/com/gitea/legacy-project"
 		req := NewRequestWithBody(t, "PUT", legacyRootLink+"/1.0.2/any-file-name?use_legacy_package_name=1", strings.NewReader("test-content")).AddBasicAuth(user.Name)
 		MakeRequest(t, req, http.StatusCreated)
 		p, err := packages.GetPackageByName(db.DefaultContext, user.ID, packages.TypeMaven, "com.gitea-legacy-project")
 		require.NoError(t, err)
 		assert.Equal(t, "com.gitea-legacy-project", p.Name)
+=======
+		legacyRootLink := "/api/packages/user2/maven/com/proxgit/legacy-project"
+		req := NewRequestWithBody(t, "PUT", legacyRootLink+"/1.0.2/any-file-name?use_legacy_package_name=1", strings.NewReader("test-content")).AddBasicAuth(user.Name)
+		MakeRequest(t, req, http.StatusCreated)
+		p, err := packages.GetPackageByName(db.DefaultContext, user.ID, packages.TypeMaven, "com.proxgit-legacy-project")
+		require.NoError(t, err)
+		assert.Equal(t, "com.proxgit-legacy-project", p.Name)
+>>>>>>> master
 
 		req = NewRequest(t, "HEAD", legacyRootLink+"/1.0.2/any-file-name").AddBasicAuth(user.Name)
 		MakeRequest(t, req, http.StatusOK)
 
+<<<<<<< HEAD
 		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.gitea-legacy-project/1.0.2")
 		MakeRequest(t, req, http.StatusOK)
 		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.gitea:legacy-project/1.0.2")
 		MakeRequest(t, req, http.StatusNotFound)
 		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.gitea%3Alegacy-project/1.0.2")
+=======
+		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.proxgit-legacy-project/1.0.2")
+		MakeRequest(t, req, http.StatusOK)
+		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.proxgit:legacy-project/1.0.2")
+		MakeRequest(t, req, http.StatusNotFound)
+		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.proxgit%3Alegacy-project/1.0.2")
+>>>>>>> master
 		MakeRequest(t, req, http.StatusNotFound)
 
 		// legacy package names should also be able to be listed
@@ -107,6 +142,7 @@ func TestPackageMaven(t *testing.T) {
 		// then upload a package with correct package name (will be saved as "GroupID:ArtifactID")
 		req = NewRequestWithBody(t, "PUT", legacyRootLink+"/1.0.3/any-file-name", strings.NewReader("test-content")).AddBasicAuth(user.Name)
 		MakeRequest(t, req, http.StatusCreated)
+<<<<<<< HEAD
 		_, err = packages.GetPackageByName(db.DefaultContext, user.ID, packages.TypeMaven, "com.gitea-legacy-project")
 		require.ErrorIs(t, err, packages.ErrPackageNotExist)
 		p, err = packages.GetPackageByName(db.DefaultContext, user.ID, packages.TypeMaven, "com.gitea:legacy-project")
@@ -120,6 +156,21 @@ func TestPackageMaven(t *testing.T) {
 		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.gitea:legacy-project/1.0.2")
 		MakeRequest(t, req, http.StatusOK)
 		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.gitea%3Alegacy-project/1.0.2")
+=======
+		_, err = packages.GetPackageByName(db.DefaultContext, user.ID, packages.TypeMaven, "com.proxgit-legacy-project")
+		require.ErrorIs(t, err, packages.ErrPackageNotExist)
+		p, err = packages.GetPackageByName(db.DefaultContext, user.ID, packages.TypeMaven, "com.proxgit:legacy-project")
+		require.NoError(t, err)
+		assert.Equal(t, "com.proxgit:legacy-project", p.Name)
+		req = NewRequest(t, "HEAD", legacyRootLink+"/1.0.2/any-file-name").AddBasicAuth(user.Name)
+		MakeRequest(t, req, http.StatusOK)
+
+		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.proxgit-legacy-project/1.0.2")
+		MakeRequest(t, req, http.StatusNotFound)
+		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.proxgit:legacy-project/1.0.2")
+		MakeRequest(t, req, http.StatusOK)
+		req = NewRequest(t, "GET", "/user2/-/packages/maven/com.proxgit%3Alegacy-project/1.0.2")
+>>>>>>> master
 		MakeRequest(t, req, http.StatusOK)
 
 		// now 2 packages should be listed
@@ -262,7 +313,11 @@ func TestPackageMaven(t *testing.T) {
 		req := NewRequest(t, "GET", root+"/maven-metadata.xml").AddBasicAuth(user.Name)
 		resp := MakeRequest(t, req, http.StatusOK)
 
+<<<<<<< HEAD
 		expectedMetadata := `<?xml version="1.0" encoding="UTF-8"?>` + "\n<metadata><groupId>com.gitea</groupId><artifactId>test-project</artifactId><versioning><release>1.0.1</release><latest>1.0.1</latest><versions><version>1.0.1</version></versions></versioning></metadata>"
+=======
+		expectedMetadata := `<?xml version="1.0" encoding="UTF-8"?>` + "\n<metadata><groupId>com.proxgit</groupId><artifactId>test-project</artifactId><versioning><release>1.0.1</release><latest>1.0.1</latest><versions><version>1.0.1</version></versions></versioning></metadata>"
+>>>>>>> master
 
 		checkHeaders(t, resp.Header(), "text/xml", int64(len(expectedMetadata)))
 
@@ -306,7 +361,11 @@ func TestPackageMavenConcurrent(t *testing.T) {
 
 	user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
+<<<<<<< HEAD
 	groupID := "com.gitea"
+=======
+	groupID := "com.proxgit"
+>>>>>>> master
 	artifactID := "test-project"
 	packageVersion := "1.0.1"
 

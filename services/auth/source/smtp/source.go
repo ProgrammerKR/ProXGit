@@ -4,8 +4,13 @@
 package smtp
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 //   _________   __________________________

@@ -6,12 +6,21 @@ package setting
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const (

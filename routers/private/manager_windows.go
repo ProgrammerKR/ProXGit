@@ -8,9 +8,15 @@ package private
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/private"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/private"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // Restart is not implemented for Windows based servers as they can't fork

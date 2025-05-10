@@ -7,7 +7,11 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 	"gopkg.in/yaml.v3"
@@ -59,7 +63,11 @@ func (rc *RenderConfig) UnmarshalYAML(value *yaml.Node) error {
 	rc.TOC = basic.TOC
 
 	type controlStringRenderConfig struct {
+<<<<<<< HEAD
 		Gitea string `yaml:"gitea"`
+=======
+		Gitea string `yaml:"proxgit"`
+>>>>>>> master
 	}
 
 	var stringBasic controlStringRenderConfig
@@ -79,7 +87,11 @@ func (rc *RenderConfig) UnmarshalYAML(value *yaml.Node) error {
 	}
 
 	type yamlRenderConfigWrapper struct {
+<<<<<<< HEAD
 		Gitea *yamlRenderConfig `yaml:"gitea"`
+=======
+		Gitea *yamlRenderConfig `yaml:"proxgit"`
+>>>>>>> master
 	}
 
 	var cfg yamlRenderConfigWrapper

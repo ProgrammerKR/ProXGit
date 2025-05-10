@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -34,6 +35,33 @@ import (
 	notify_service "code.gitea.io/gitea/services/notify"
 	release_service "code.gitea.io/gitea/services/release"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/queue"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	release_service "code.proxgit.io/proxgit/services/release"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 
 	"xorm.io/builder"
 )
@@ -298,7 +326,11 @@ func SyncBranchesToDB(ctx context.Context, repoID, pusherID int64, branchNames, 
 	// 4. Check the branches in DB if they are already synced.
 	//
 	// If the user pushes many branches at once, the Git hook will call the internal API in batches, rather than all at once.
+<<<<<<< HEAD
 	// See https://github.com/go-gitea/gitea/blob/cb52b17f92e2d2293f7c003649743464492bca48/cmd/hook.go#L27
+=======
+	// See https://github.com/go-proxgit/proxgit/blob/cb52b17f92e2d2293f7c003649743464492bca48/cmd/hook.go#L27
+>>>>>>> master
 	// For the first batch, it will hit optimization 3.
 	// For other batches, it will hit optimization 4.
 

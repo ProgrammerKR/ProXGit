@@ -6,7 +6,11 @@ package sync
 import (
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+>>>>>>> master
 )
 
 // StatusTable is a table maintains true/false values.

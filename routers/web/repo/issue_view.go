@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"sort"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -38,6 +39,36 @@ import (
 	issue_service "code.gitea.io/gitea/services/issue"
 	pull_service "code.gitea.io/gitea/services/pull"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	project_model "code.proxgit.io/proxgit/models/project"
+	pull_model "code.proxgit.io/proxgit/models/pull"
+	"code.proxgit.io/proxgit/models/renderhelper"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/emoji"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/templates/vars"
+	"code.proxgit.io/proxgit/modules/util"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/context/upload"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 // roleDescriptor returns the role descriptor for a comment in/with the given repo, poster and issue

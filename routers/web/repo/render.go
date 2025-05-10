@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"path"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/renderhelper"
 	"code.gitea.io/gitea/modules/charset"
 	"code.gitea.io/gitea/modules/git"
@@ -17,6 +18,16 @@ import (
 	"code.gitea.io/gitea/modules/typesniffer"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/renderhelper"
+	"code.proxgit.io/proxgit/modules/charset"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/typesniffer"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // RenderFile renders a file by repos path

@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -18,6 +19,16 @@ import (
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
 	asymkey_service "code.gitea.io/gitea/services/asymkey"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+>>>>>>> master
 )
 
 // NewGraph creates a basic graph

@@ -10,9 +10,15 @@ import (
 	stdurl "net/url"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // ErrWrongURLFormat represents an error with wrong url format

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 image: gitea/gitea:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}{{#if (hasPrefix "refs/heads/release/v" build.ref)}}{{trimPrefix "refs/heads/release/v" build.ref}}-{{/if}}nightly{{/if}}
+=======
+image: proxgit/proxgit:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}{{#if (hasPrefix "refs/heads/release/v" build.ref)}}{{trimPrefix "refs/heads/release/v" build.ref}}-{{/if}}nightly{{/if}}
+>>>>>>> master
 {{#if build.tags}}
 {{#unless (contains "-rc" build.tag)}}
 {{#unless (contains "-dev" build.tag)}}
@@ -12,18 +16,30 @@ tags:
 {{/if}}
 manifests:
   -
+<<<<<<< HEAD
     image: gitea/gitea:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}{{#if (hasPrefix "refs/heads/release/v" build.ref)}}{{trimPrefix "refs/heads/release/v" build.ref}}-{{/if}}nightly{{/if}}-linux-amd64
+=======
+    image: proxgit/proxgit:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}{{#if (hasPrefix "refs/heads/release/v" build.ref)}}{{trimPrefix "refs/heads/release/v" build.ref}}-{{/if}}nightly{{/if}}-linux-amd64
+>>>>>>> master
     platform:
       architecture: amd64
       os: linux
   -
+<<<<<<< HEAD
     image: gitea/gitea:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}{{#if (hasPrefix "refs/heads/release/v" build.ref)}}{{trimPrefix "refs/heads/release/v" build.ref}}-{{/if}}nightly{{/if}}-linux-arm64
+=======
+    image: proxgit/proxgit:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}{{#if (hasPrefix "refs/heads/release/v" build.ref)}}{{trimPrefix "refs/heads/release/v" build.ref}}-{{/if}}nightly{{/if}}-linux-arm64
+>>>>>>> master
     platform:
       architecture: arm64
       os: linux
       variant: v8
   -
+<<<<<<< HEAD
     image: gitea/gitea:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}{{#if (hasPrefix "refs/heads/release/v" build.ref)}}{{trimPrefix "refs/heads/release/v" build.ref}}-{{/if}}nightly{{/if}}-linux-riscv64
+=======
+    image: proxgit/proxgit:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}{{#if (hasPrefix "refs/heads/release/v" build.ref)}}{{trimPrefix "refs/heads/release/v" build.ref}}-{{/if}}nightly{{/if}}-linux-riscv64
+>>>>>>> master
     platform:
       architecture: riscv64
       os: linux

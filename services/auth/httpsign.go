@@ -11,11 +11,19 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/42wim/httpsig"
 	"golang.org/x/crypto/ssh"
@@ -190,7 +198,11 @@ func VerifyCert(r *http.Request) (*asymkey_model.PublicKey, error) {
 		return publicKey, nil
 	}
 
+<<<<<<< HEAD
 	// No public key matching a principal in the certificate is registered in gitea
+=======
+	// No public key matching a principal in the certificate is registered in proxgit
+>>>>>>> master
 	return nil, errors.New("no valid principal found")
 }
 

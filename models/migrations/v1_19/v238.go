@@ -4,7 +4,11 @@
 package v1_19 //nolint
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )
@@ -12,7 +16,11 @@ import (
 // AddUpdatedUnixToLFSMetaObject adds an updated column to the LFSMetaObject to allow for garbage collection
 func AddUpdatedUnixToLFSMetaObject(x *xorm.Engine) error {
 	// Drop the table introduced in `v211`, it's considered badly designed and doesn't look like to be used.
+<<<<<<< HEAD
 	// See: https://github.com/go-gitea/gitea/issues/21086#issuecomment-1318217453
+=======
+	// See: https://github.com/go-proxgit/proxgit/issues/21086#issuecomment-1318217453
+>>>>>>> master
 	// LFSMetaObject stores metadata for LFS tracked files.
 	type LFSMetaObject struct {
 		ID           int64              `xorm:"pk autoincr"`

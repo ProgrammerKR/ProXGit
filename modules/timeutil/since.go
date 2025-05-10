@@ -7,7 +7,11 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 )
 
 // Seconds-based time units

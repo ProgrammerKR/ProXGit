@@ -13,7 +13,11 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // IsObjectExist returns true if the given object exists in the repository.

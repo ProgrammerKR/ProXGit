@@ -164,7 +164,11 @@ func EventFormatTextMessage(mode *WriterMode, event *Event, msgFormat string, ms
 		funcName := event.Caller
 		shortFuncName := funcName
 		if flags&Lshortfuncname != 0 {
+<<<<<<< HEAD
 			// funcName = "code.gitea.io/gitea/modules/foo/bar.MyFunc.func1.2()"
+=======
+			// funcName = "code.proxgit.io/proxgit/modules/foo/bar.MyFunc.func1.2()"
+>>>>>>> master
 			slashPos := strings.LastIndexByte(funcName, '/')
 			dotPos := strings.IndexByte(funcName[slashPos+1:], '.')
 			if dotPos > 0 {

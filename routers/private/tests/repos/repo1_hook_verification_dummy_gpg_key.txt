@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # GPG key for abcde@gitea.com
+=======
+# GPG key for abcde@proxgit.com
+>>>>>>> master
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 

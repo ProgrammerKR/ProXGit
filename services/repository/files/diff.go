@@ -7,8 +7,13 @@ import (
 	"context"
 	"strings"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/services/gitdiff"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/services/gitdiff"
+>>>>>>> master
 )
 
 // GetDiffPreview produces and returns diff result of a file which is not yet committed.

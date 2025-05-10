@@ -7,8 +7,13 @@ import (
 	"errors"
 	"fmt"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )
@@ -26,7 +31,11 @@ var microcmdUserGenerateAccessToken = &cli.Command{
 			Name:    "token-name",
 			Aliases: []string{"t"},
 			Usage:   "Token name",
+<<<<<<< HEAD
 			Value:   "gitea-admin",
+=======
+			Value:   "proxgit-admin",
+>>>>>>> master
 		},
 		&cli.BoolFlag{
 			Name:  "raw",

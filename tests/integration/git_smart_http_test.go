@@ -9,9 +9,15 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -7,12 +7,21 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	user_model "code.gitea.io/gitea/models/user"
 	password_module "code.gitea.io/gitea/modules/auth/password"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/structs"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	user_model "code.proxgit.io/proxgit/models/user"
+	password_module "code.proxgit.io/proxgit/modules/auth/password"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 type UpdateOptions struct {

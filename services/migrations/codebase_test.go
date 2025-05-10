@@ -9,7 +9,11 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	base "code.gitea.io/gitea/modules/migration"
+=======
+	base "code.proxgit.io/proxgit/modules/migration"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -24,7 +28,11 @@ func TestCodebaseDownloadRepo(t *testing.T) {
 		t.Skip("skipped test because a CODEBASE_ variable was not in the environment")
 	}
 
+<<<<<<< HEAD
 	cloneAddr := "https://gitea-test.codebasehq.com/gitea-test/test.git"
+=======
+	cloneAddr := "https://proxgit-test.codebasehq.com/proxgit-test/test.git"
+>>>>>>> master
 	u, _ := url.Parse(cloneAddr)
 	if cloneUser != "" {
 		u.User = url.UserPassword(cloneUser, clonePassword)
@@ -45,7 +53,11 @@ func TestCodebaseDownloadRepo(t *testing.T) {
 		Name:        "test",
 		Owner:       "",
 		Description: "Repository Description",
+<<<<<<< HEAD
 		CloneURL:    "git@codebasehq.com:gitea-test/gitea-test/test.git",
+=======
+		CloneURL:    "git@codebasehq.com:proxgit-test/proxgit-test/test.git",
+>>>>>>> master
 		OriginalURL: cloneAddr,
 	}, repo)
 
@@ -76,8 +88,13 @@ func TestCodebaseDownloadRepo(t *testing.T) {
 			Number:      2,
 			Title:       "Open Ticket",
 			Content:     "Open Ticket Message",
+<<<<<<< HEAD
 			PosterName:  "gitea-test-43",
 			PosterEmail: "gitea-codebase@smack.email",
+=======
+			PosterName:  "proxgit-test-43",
+			PosterEmail: "proxgit-codebase@smack.email",
+>>>>>>> master
 			State:       "open",
 			Created:     time.Date(2021, time.September, 26, 19, 19, 14, 0, time.UTC),
 			Updated:     time.Date(2021, time.September, 26, 19, 19, 34, 0, time.UTC),
@@ -91,8 +108,13 @@ func TestCodebaseDownloadRepo(t *testing.T) {
 			Number:      1,
 			Title:       "Closed Ticket",
 			Content:     "Closed Ticket Message",
+<<<<<<< HEAD
 			PosterName:  "gitea-test-43",
 			PosterEmail: "gitea-codebase@smack.email",
+=======
+			PosterName:  "proxgit-test-43",
+			PosterEmail: "proxgit-codebase@smack.email",
+>>>>>>> master
 			State:       "closed",
 			Milestone:   "Milestone1",
 			Created:     time.Date(2021, time.September, 26, 19, 18, 33, 0, time.UTC),
@@ -110,8 +132,13 @@ func TestCodebaseDownloadRepo(t *testing.T) {
 	assertCommentsEqual(t, []*base.Comment{
 		{
 			IssueIndex:  2,
+<<<<<<< HEAD
 			PosterName:  "gitea-test-43",
 			PosterEmail: "gitea-codebase@smack.email",
+=======
+			PosterName:  "proxgit-test-43",
+			PosterEmail: "proxgit-codebase@smack.email",
+>>>>>>> master
 			Created:     time.Date(2021, time.September, 26, 19, 19, 34, 0, time.UTC),
 			Updated:     time.Date(2021, time.September, 26, 19, 19, 34, 0, time.UTC),
 			Content:     "open comment",
@@ -125,8 +152,13 @@ func TestCodebaseDownloadRepo(t *testing.T) {
 			Number:      3,
 			Title:       "Readme Change",
 			Content:     "Merge Request comment",
+<<<<<<< HEAD
 			PosterName:  "gitea-test-43",
 			PosterEmail: "gitea-codebase@smack.email",
+=======
+			PosterName:  "proxgit-test-43",
+			PosterEmail: "proxgit-codebase@smack.email",
+>>>>>>> master
 			State:       "open",
 			Created:     time.Date(2021, time.September, 26, 20, 25, 47, 0, time.UTC),
 			Updated:     time.Date(2021, time.September, 26, 20, 25, 47, 0, time.UTC),

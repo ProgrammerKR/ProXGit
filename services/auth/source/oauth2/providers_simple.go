@@ -4,7 +4,11 @@
 package oauth2
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/providers/azuread"

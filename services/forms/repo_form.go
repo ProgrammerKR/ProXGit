@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	project_model "code.gitea.io/gitea/models/project"
 	"code.gitea.io/gitea/modules/structs"
@@ -16,6 +17,16 @@ import (
 	"code.gitea.io/gitea/services/webhook"
 
 	"gitea.com/go-chi/binding"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	project_model "code.proxgit.io/proxgit/models/project"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/webhook"
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 )
 
 // CreateRepoForm form for creating repository

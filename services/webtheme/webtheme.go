@@ -9,11 +9,19 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/public"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/public"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 var (
@@ -35,13 +43,21 @@ type ThemeMetaInfo struct {
 
 func parseThemeMetaInfoToMap(cssContent string) map[string]string {
 	/*
+<<<<<<< HEAD
 		The theme meta info is stored in the CSS file's variables of `gitea-theme-meta-info` element,
+=======
+		The theme meta info is stored in the CSS file's variables of `proxgit-theme-meta-info` element,
+>>>>>>> master
 		which is a privately defined and is only used by backend to extract the meta info.
 		Not using ":root" because it is difficult to parse various ":root" blocks when importing other files,
 		it is difficult to control the overriding, and it's difficult to avoid user's customized overridden styles.
 	*/
 	metaInfoContent := cssContent
+<<<<<<< HEAD
 	if pos := strings.LastIndex(metaInfoContent, "gitea-theme-meta-info"); pos >= 0 {
+=======
+	if pos := strings.LastIndex(metaInfoContent, "proxgit-theme-meta-info"); pos >= 0 {
+>>>>>>> master
 		metaInfoContent = metaInfoContent[pos:]
 	}
 
@@ -59,7 +75,11 @@ func parseThemeMetaInfoToMap(cssContent string) map[string]string {
 )
 `
 	reMetaInfoItem = strings.ReplaceAll(reMetaInfoItem, "\n", "")
+<<<<<<< HEAD
 	reMetaInfoBlock := `\bgitea-theme-meta-info\s*\{(` + reMetaInfoItem + `+)\}`
+=======
+	reMetaInfoBlock := `\bproxgit-theme-meta-info\s*\{(` + reMetaInfoItem + `+)\}`
+>>>>>>> master
 	re := regexp.MustCompile(reMetaInfoBlock)
 	matchedMetaInfoBlock := re.FindAllStringSubmatch(metaInfoContent, -1)
 	if len(matchedMetaInfoBlock) == 0 {

@@ -12,9 +12,15 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup/internal"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/markup/internal"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 	"golang.org/x/sync/errgroup"
@@ -163,8 +169,13 @@ func renderIFrame(ctx *RenderContext, output io.Writer) error {
 	// TODO: when using dark theme, if the rendered content doesn't have proper style, the default text color is black, which is not easy to read
 	_, err := io.WriteString(output, fmt.Sprintf(`
 <iframe src="%s/%s/%s/render/%s/%s"
+<<<<<<< HEAD
 name="giteaExternalRender"
 onload="this.height=giteaExternalRender.document.documentElement.scrollHeight"
+=======
+name="proxgitExternalRender"
+onload="this.height=proxgitExternalRender.document.documentElement.scrollHeight"
+>>>>>>> master
 width="100%%" height="0" scrolling="no" frameborder="0" style="overflow: hidden"
 sandbox="allow-scripts"
 ></iframe>`,

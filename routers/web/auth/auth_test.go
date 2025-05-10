@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/session"
@@ -16,6 +17,16 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/auth/source/oauth2"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/session"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/auth/source/oauth2"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
@@ -23,7 +34,11 @@ import (
 )
 
 func addOAuth2Source(t *testing.T, authName string, cfg oauth2.Source) {
+<<<<<<< HEAD
 	cfg.Provider = util.IfZero(cfg.Provider, "gitea")
+=======
+	cfg.Provider = util.IfZero(cfg.Provider, "proxgit")
+>>>>>>> master
 	err := auth_model.CreateSource(db.DefaultContext, &auth_model.Source{
 		Type:     auth_model.OAuth2,
 		Name:     authName,

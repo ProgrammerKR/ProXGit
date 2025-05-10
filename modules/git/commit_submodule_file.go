@@ -7,7 +7,11 @@ package git
 import (
 	"context"
 
+<<<<<<< HEAD
 	giturl "code.gitea.io/gitea/modules/git/url"
+=======
+	giturl "code.proxgit.io/proxgit/modules/git/url"
+>>>>>>> master
 )
 
 // CommitSubmoduleFile represents a file with submodule type.

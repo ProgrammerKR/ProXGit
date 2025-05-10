@@ -9,11 +9,19 @@ import (
 	"bytes"
 	"io"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/analyze"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/git/attribute"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/modules/analyze"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/git/attribute"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 
 	"github.com/go-enry/go-enry/v2"
 )

@@ -6,7 +6,11 @@ package secrets
 import (
 	"regexp"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // https://docs.github.com/en/actions/security-guides/encrypted-secrets#naming-your-secrets

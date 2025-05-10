@@ -10,7 +10,11 @@ import (
 	"regexp"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/options"
+=======
+	"code.proxgit.io/proxgit/modules/options"
+>>>>>>> master
 )
 
 type LicenseValues struct {

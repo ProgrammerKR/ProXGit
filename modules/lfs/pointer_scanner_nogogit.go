@@ -13,8 +13,13 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/git/pipeline"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/git/pipeline"
+>>>>>>> master
 )
 
 // SearchPointerBlobs scans the whole repository for LFS pointer files

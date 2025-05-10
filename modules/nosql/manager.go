@@ -9,7 +9,11 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/process"
+=======
+	"code.proxgit.io/proxgit/modules/process"
+>>>>>>> master
 
 	"github.com/redis/go-redis/v9"
 	"github.com/syndtr/goleveldb/leveldb"

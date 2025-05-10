@@ -4,7 +4,11 @@
 
 package migration
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/modules/structs"
+=======
+import "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 // MigrateOptions defines the way a repository gets migrated
 // this is for internal usage by migrations module and func who interact with it

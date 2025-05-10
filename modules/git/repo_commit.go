@@ -11,8 +11,13 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/cache"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // GetBranchCommitID returns last commit ID string of given branch.

@@ -13,6 +13,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unit"
@@ -24,6 +25,19 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	repo_service "code.gitea.io/gitea/services/repository"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/util"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"
@@ -311,7 +325,11 @@ func testViewRepoDirectoryReadme(t *testing.T) {
 	// there are many combinations:
 	// - READMEs can be .md, .txt, or have no extension
 	// - READMEs can be tagged with a language and even a country code
+<<<<<<< HEAD
 	// - READMEs can be stored in docs/, .gitea/, or .github/
+=======
+	// - READMEs can be stored in docs/, .proxgit/, or .github/
+>>>>>>> master
 	// - READMEs can be symlinks to other files
 	// - READMEs can be broken symlinks which should not render
 	//
@@ -354,7 +372,11 @@ func testViewRepoDirectoryReadme(t *testing.T) {
 	check("subdir", "/user2/readme-test/src/branch/subdir/libcake", "README.md", "markdown", "Four pints of sugar.")
 	check("docs-direct", "/user2/readme-test/src/branch/special-subdir-docs/docs/", "README.md", "markdown", "This is in docs/")
 	check("docs", "/user2/readme-test/src/branch/special-subdir-docs/", "docs/README.md", "markdown", "This is in docs/")
+<<<<<<< HEAD
 	check(".gitea", "/user2/readme-test/src/branch/special-subdir-.gitea/", ".gitea/README.md", "markdown", "This is in .gitea/")
+=======
+	check(".proxgit", "/user2/readme-test/src/branch/special-subdir-.proxgit/", ".proxgit/README.md", "markdown", "This is in .proxgit/")
+>>>>>>> master
 	check(".github", "/user2/readme-test/src/branch/special-subdir-.github/", ".github/README.md", "markdown", "This is in .github/")
 
 	// symlinks
@@ -370,7 +392,11 @@ func testViewRepoDirectoryReadme(t *testing.T) {
 	// READMEs are searched in this order:
 	// - [README.zh-cn.md, README.zh_cn.md, README.zh.md, README_zh.md, README.md, README.txt, README,
 	//     docs/README.zh-cn.md, docs/README.zh_cn.md, docs/README.zh.md, docs/README_zh.md, docs/README.md, docs/README.txt, docs/README,
+<<<<<<< HEAD
 	//    .gitea/README.zh-cn.md, .gitea/README.zh_cn.md, .gitea/README.zh.md, .gitea/README_zh.md, .gitea/README.md, .gitea/README.txt, .gitea/README,
+=======
+	//    .proxgit/README.zh-cn.md, .proxgit/README.zh_cn.md, .proxgit/README.zh.md, .proxgit/README_zh.md, .proxgit/README.md, .proxgit/README.txt, .proxgit/README,
+>>>>>>> master
 
 	//     .github/README.zh-cn.md, .github/README.zh_cn.md, .github/README.zh.md, .github/README_zh.md, .github/README.md, .github/README.txt, .github/README]
 	// and a broken/looped symlink counts as not existing at all and should be skipped.
@@ -381,9 +407,15 @@ func testViewRepoDirectoryReadme(t *testing.T) {
 	check("fallback/4", "/user2/readme-test/src/branch/fallbacks4/", "docs/README.en.md", "markdown", "This is docs/README.en.md")
 	check("fallback/5", "/user2/readme-test/src/branch/fallbacks5/", "docs/README.md", "markdown", "This is docs/README.md")
 	check("fallback/6", "/user2/readme-test/src/branch/fallbacks6/", "docs/README", "plain-text", "This is docs/README")
+<<<<<<< HEAD
 	check("fallback/7", "/user2/readme-test/src/branch/fallbacks7/", ".gitea/README.en.md", "markdown", "This is .gitea/README.en.md")
 	check("fallback/8", "/user2/readme-test/src/branch/fallbacks8/", ".gitea/README.md", "markdown", "This is .gitea/README.md")
 	check("fallback/9", "/user2/readme-test/src/branch/fallbacks9/", ".gitea/README", "plain-text", "This is .gitea/README")
+=======
+	check("fallback/7", "/user2/readme-test/src/branch/fallbacks7/", ".proxgit/README.en.md", "markdown", "This is .proxgit/README.en.md")
+	check("fallback/8", "/user2/readme-test/src/branch/fallbacks8/", ".proxgit/README.md", "markdown", "This is .proxgit/README.md")
+	check("fallback/9", "/user2/readme-test/src/branch/fallbacks9/", ".proxgit/README", "plain-text", "This is .proxgit/README")
+>>>>>>> master
 
 	// this case tests that broken symlinks count as missing files, instead of rendering their contents
 	check("fallbacks-broken-symlinks", "/user2/readme-test/src/branch/fallbacks-broken-symlinks/", "docs/README", "plain-text", "This is docs/README")

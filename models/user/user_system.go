@@ -6,7 +6,11 @@ package user
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 const (
@@ -37,8 +41,13 @@ func (u *User) IsGhost() bool {
 
 const (
 	ActionsUserID    int64 = -2
+<<<<<<< HEAD
 	ActionsUserName        = "gitea-actions"
 	ActionsUserEmail       = "teabot@gitea.io"
+=======
+	ActionsUserName        = "proxgit-actions"
+	ActionsUserEmail       = "teabot@proxgit.io"
+>>>>>>> master
 )
 
 func IsGiteaActionsUserName(name string) bool {

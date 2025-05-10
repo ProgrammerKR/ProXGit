@@ -16,7 +16,11 @@ import (
 	_ "golang.org/x/tools/cover"
 
 	// for vet
+<<<<<<< HEAD
 	_ "code.gitea.io/gitea-vet"
+=======
+	_ "code.proxgit.io/proxgit-vet"
+>>>>>>> master
 
 	// for swagger
 	_ "github.com/go-swagger/go-swagger/cmd/swagger"

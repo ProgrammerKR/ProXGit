@@ -8,6 +8,7 @@ import (
 	"regexp"
 	"strings"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/perm"
 	"code.gitea.io/gitea/modules/log"
@@ -37,6 +38,37 @@ import (
 	"code.gitea.io/gitea/routers/api/packages/vagrant"
 	"code.gitea.io/gitea/services/auth"
 	"code.gitea.io/gitea/services/context"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/perm"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/packages/alpine"
+	"code.proxgit.io/proxgit/routers/api/packages/arch"
+	"code.proxgit.io/proxgit/routers/api/packages/cargo"
+	"code.proxgit.io/proxgit/routers/api/packages/chef"
+	"code.proxgit.io/proxgit/routers/api/packages/composer"
+	"code.proxgit.io/proxgit/routers/api/packages/conan"
+	"code.proxgit.io/proxgit/routers/api/packages/conda"
+	"code.proxgit.io/proxgit/routers/api/packages/container"
+	"code.proxgit.io/proxgit/routers/api/packages/cran"
+	"code.proxgit.io/proxgit/routers/api/packages/debian"
+	"code.proxgit.io/proxgit/routers/api/packages/generic"
+	"code.proxgit.io/proxgit/routers/api/packages/goproxy"
+	"code.proxgit.io/proxgit/routers/api/packages/helm"
+	"code.proxgit.io/proxgit/routers/api/packages/maven"
+	"code.proxgit.io/proxgit/routers/api/packages/npm"
+	"code.proxgit.io/proxgit/routers/api/packages/nuget"
+	"code.proxgit.io/proxgit/routers/api/packages/pub"
+	"code.proxgit.io/proxgit/routers/api/packages/pypi"
+	"code.proxgit.io/proxgit/routers/api/packages/rpm"
+	"code.proxgit.io/proxgit/routers/api/packages/rubygems"
+	"code.proxgit.io/proxgit/routers/api/packages/swift"
+	"code.proxgit.io/proxgit/routers/api/packages/vagrant"
+	"code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func reqPackageAccess(accessMode perm.AccessMode) func(ctx *context.Context) {

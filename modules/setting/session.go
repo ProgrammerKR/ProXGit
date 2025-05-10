@@ -8,8 +8,13 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // SessionConfig defines Session settings
@@ -33,7 +38,11 @@ var SessionConfig = struct {
 	// SameSite declares if your cookie should be restricted to a first-party or same-site context. Valid strings are "none", "lax", "strict". Default is "lax"
 	SameSite http.SameSite
 }{
+<<<<<<< HEAD
 	CookieName:  "i_like_gitea",
+=======
+	CookieName:  "i_like_proxgit",
+>>>>>>> master
 	Gclifetime:  86400,
 	Maxlifetime: 86400,
 	SameSite:    http.SameSiteLaxMode,
@@ -48,7 +57,11 @@ func loadSessionFrom(rootCfg ConfigProvider) {
 		SessionConfig.ProviderConfig = filepath.Join(AppWorkPath, SessionConfig.ProviderConfig)
 		checkOverlappedPath("[session].PROVIDER_CONFIG", SessionConfig.ProviderConfig)
 	}
+<<<<<<< HEAD
 	SessionConfig.CookieName = sec.Key("COOKIE_NAME").MustString("i_like_gitea")
+=======
+	SessionConfig.CookieName = sec.Key("COOKIE_NAME").MustString("i_like_proxgit")
+>>>>>>> master
 	SessionConfig.CookiePath = AppSubURL
 	if SessionConfig.CookiePath == "" {
 		SessionConfig.CookiePath = "/"

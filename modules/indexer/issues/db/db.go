@@ -8,6 +8,7 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issue_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/modules/indexer"
@@ -15,6 +16,15 @@ import (
 	inner_db "code.gitea.io/gitea/modules/indexer/internal/db"
 	"code.gitea.io/gitea/modules/indexer/issues/internal"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issue_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/modules/indexer"
+	indexer_internal "code.proxgit.io/proxgit/modules/indexer/internal"
+	inner_db "code.proxgit.io/proxgit/modules/indexer/internal/db"
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

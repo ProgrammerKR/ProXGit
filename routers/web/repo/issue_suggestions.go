@@ -6,10 +6,17 @@ package repo
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unit"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/services/context"
 	issue_service "code.gitea.io/gitea/services/issue"
+=======
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/services/context"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+>>>>>>> master
 )
 
 // IssueSuggestions returns a list of issue suggestions

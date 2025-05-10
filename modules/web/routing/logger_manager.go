@@ -9,8 +9,13 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/process"
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/process"
+>>>>>>> master
 )
 
 // Event indicates when the printer is triggered

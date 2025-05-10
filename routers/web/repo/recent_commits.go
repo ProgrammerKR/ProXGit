@@ -6,8 +6,13 @@ package repo
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const (

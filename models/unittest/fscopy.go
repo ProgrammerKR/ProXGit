@@ -8,7 +8,11 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // SyncFile synchronizes the two files. This is skipped if both files

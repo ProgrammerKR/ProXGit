@@ -9,7 +9,11 @@ import (
 	"io"
 	"reflect"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 const (

@@ -1,4 +1,8 @@
 -
   id: 1
   description: the badge
+<<<<<<< HEAD
   image_url: https://gitea.com/myimage.png
+=======
+  image_url: https://proxgit.com/myimage.png
+>>>>>>> master

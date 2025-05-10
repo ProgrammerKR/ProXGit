@@ -8,8 +8,13 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	nuget_module "code.gitea.io/gitea/modules/packages/nuget"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	nuget_module "code.proxgit.io/proxgit/modules/packages/nuget"
+>>>>>>> master
 )
 
 type AtomTitle struct {

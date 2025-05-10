@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"net/url"
 
+<<<<<<< HEAD
 	org_model "code.gitea.io/gitea/models/organization"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
@@ -17,6 +18,15 @@ import (
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/modules/translation"
 	sender_service "code.gitea.io/gitea/services/mailer/sender"
+=======
+	org_model "code.proxgit.io/proxgit/models/organization"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/translation"
+	sender_service "code.proxgit.io/proxgit/services/mailer/sender"
+>>>>>>> master
 )
 
 const tplTeamInviteMail templates.TplName = "team_invite"

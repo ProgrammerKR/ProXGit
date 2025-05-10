@@ -7,7 +7,11 @@ import (
 	"fmt"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 func timeEstimateString(timeSec any) string {

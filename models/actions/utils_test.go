@@ -8,7 +8,11 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -8,9 +8,15 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 
 	mc "gitea.com/go-chi/cache" //nolint:depguard
+=======
+	"code.proxgit.io/proxgit/modules/json"
+
+	mc "proxgit.com/go-chi/cache" //nolint:depguard
+>>>>>>> master
 	lru "github.com/hashicorp/golang-lru/v2"
 )
 

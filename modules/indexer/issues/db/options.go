@@ -8,11 +8,19 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issue_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/indexer/issues/internal"
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issue_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal"
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 )
 
 func ToDBOptions(ctx context.Context, options *internal.SearchOptions) (*issue_model.IssuesOptions, error) {

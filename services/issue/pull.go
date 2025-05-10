@@ -9,6 +9,7 @@ import (
 	"slices"
 	"time"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	org_model "code.gitea.io/gitea/models/organization"
 	user_model "code.gitea.io/gitea/models/user"
@@ -16,6 +17,15 @@ import (
 	"code.gitea.io/gitea/modules/gitrepo"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	org_model "code.proxgit.io/proxgit/models/organization"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 func getMergeBase(repo *git.Repository, pr *issues_model.PullRequest, baseBranch, headBranch string) (string, error) {
@@ -41,7 +51,11 @@ type ReviewRequestNotifier struct {
 	ReviewTeam *org_model.Team
 }
 
+<<<<<<< HEAD
 var codeOwnerFiles = []string{"CODEOWNERS", "docs/CODEOWNERS", ".gitea/CODEOWNERS"}
+=======
+var codeOwnerFiles = []string{"CODEOWNERS", "docs/CODEOWNERS", ".proxgit/CODEOWNERS"}
+>>>>>>> master
 
 func IsCodeOwnerFile(f string) bool {
 	return slices.Contains(codeOwnerFiles, f)
@@ -102,7 +116,11 @@ func PullRequestCodeOwnersReview(ctx context.Context, pr *issues_model.PullReque
 		return nil, err
 	}
 
+<<<<<<< HEAD
 	// https://github.com/go-gitea/gitea/issues/29763, we need to get the files changed
+=======
+	// https://github.com/go-proxgit/proxgit/issues/29763, we need to get the files changed
+>>>>>>> master
 	// between the merge base and the head commit but not the base branch and the head commit
 	changedFiles, err := repo.GetFilesChangedBetween(mergeBase, pr.GetGitRefName())
 	if err != nil {

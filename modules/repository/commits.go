@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/avatars"
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
@@ -18,6 +19,17 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/models/avatars"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/cachegroup"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // PushCommit represents a commit in a push operation.

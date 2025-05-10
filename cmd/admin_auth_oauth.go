@@ -8,9 +8,15 @@ import (
 	"fmt"
 	"net/url"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/auth/source/oauth2"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/auth/source/oauth2"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

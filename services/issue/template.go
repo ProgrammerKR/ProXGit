@@ -10,11 +10,19 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/issue/template"
 	"code.gitea.io/gitea/modules/log"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/issue/template"
+	"code.proxgit.io/proxgit/modules/log"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"gopkg.in/yaml.v3"
 )
@@ -23,8 +31,13 @@ import (
 var templateDirCandidates = []string{
 	"ISSUE_TEMPLATE",
 	"issue_template",
+<<<<<<< HEAD
 	".gitea/ISSUE_TEMPLATE",
 	".gitea/issue_template",
+=======
+	".proxgit/ISSUE_TEMPLATE",
+	".proxgit/issue_template",
+>>>>>>> master
 	".github/ISSUE_TEMPLATE",
 	".github/issue_template",
 	".gitlab/ISSUE_TEMPLATE",
@@ -32,8 +45,13 @@ var templateDirCandidates = []string{
 }
 
 var templateConfigCandidates = []string{
+<<<<<<< HEAD
 	".gitea/ISSUE_TEMPLATE/config",
 	".gitea/issue_template/config",
+=======
+	".proxgit/ISSUE_TEMPLATE/config",
+	".proxgit/issue_template/config",
+>>>>>>> master
 	".github/ISSUE_TEMPLATE/config",
 	".github/issue_template/config",
 }

@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	api "code.gitea.io/gitea/modules/structs"
@@ -15,6 +16,16 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	commitstatus_service "code.gitea.io/gitea/services/repository/commitstatus"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	commitstatus_service "code.proxgit.io/proxgit/services/repository/commitstatus"
+>>>>>>> master
 )
 
 // NewCommitStatus creates a new CommitStatus

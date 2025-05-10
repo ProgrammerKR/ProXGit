@@ -7,9 +7,15 @@ import (
 	"context"
 	"html/template"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/modules/reqctx"
 	"code.gitea.io/gitea/modules/translation"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 )
 
 func renderEmojiLegacy(ctx context.Context, text string) template.HTML {

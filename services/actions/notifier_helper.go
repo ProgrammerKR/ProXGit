@@ -10,6 +10,7 @@ import (
 	"slices"
 	"strings"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -28,6 +29,26 @@ import (
 	webhook_module "code.gitea.io/gitea/modules/webhook"
 	"code.gitea.io/gitea/services/convert"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	unit_model "code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	actions_module "code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+	"code.proxgit.io/proxgit/services/convert"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 
 	"github.com/nektos/act/pkg/jobparser"
 	"github.com/nektos/act/pkg/model"
@@ -398,7 +419,11 @@ func notifyPackage(ctx context.Context, sender *user_model.User, pd *packages_mo
 	if pd.Repository == nil {
 		// When a package is uploaded to an organization, it could trigger an event to notify.
 		// So the repository could be nil, however, actions can't support that yet.
+<<<<<<< HEAD
 		// See https://github.com/go-gitea/gitea/pull/17940
+=======
+		// See https://github.com/go-proxgit/proxgit/pull/17940
+>>>>>>> master
 		return
 	}
 

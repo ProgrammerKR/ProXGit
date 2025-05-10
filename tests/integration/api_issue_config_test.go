@@ -8,11 +8,19 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/tests"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v3"
@@ -22,7 +30,11 @@ func createIssueConfig(t *testing.T, user *user_model.User, repo *repo_model.Rep
 	config, err := yaml.Marshal(issueConfig)
 	assert.NoError(t, err)
 
+<<<<<<< HEAD
 	err = createOrReplaceFileInBranch(user, repo, ".gitea/ISSUE_TEMPLATE/config.yaml", repo.DefaultBranch, string(config))
+=======
+	err = createOrReplaceFileInBranch(user, repo, ".proxgit/ISSUE_TEMPLATE/config.yaml", repo.DefaultBranch, string(config))
+>>>>>>> master
 	assert.NoError(t, err)
 }
 
@@ -113,8 +125,13 @@ func TestAPIRepoIssueConfigPaths(t *testing.T) {
 	owner := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: repo.OwnerID})
 
 	templateConfigCandidates := []string{
+<<<<<<< HEAD
 		".gitea/ISSUE_TEMPLATE/config",
 		".gitea/issue_template/config",
+=======
+		".proxgit/ISSUE_TEMPLATE/config",
+		".proxgit/issue_template/config",
+>>>>>>> master
 		".github/ISSUE_TEMPLATE/config",
 		".github/issue_template/config",
 	}

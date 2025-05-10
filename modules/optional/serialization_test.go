@@ -7,8 +7,13 @@ import (
 	std_json "encoding/json" //nolint:depguard
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v3"
@@ -51,7 +56,11 @@ func TestOptionalToJson(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			b, err := json.Marshal(tc.obj)
 			assert.NoError(t, err)
+<<<<<<< HEAD
 			assert.Equal(t, tc.want, string(b), "gitea json module returned unexpected")
+=======
+			assert.Equal(t, tc.want, string(b), "proxgit json module returned unexpected")
+>>>>>>> master
 
 			b, err = std_json.Marshal(tc.obj)
 			assert.NoError(t, err)
@@ -89,7 +98,11 @@ func TestOptionalFromJson(t *testing.T) {
 			var obj1 testSerializationStruct
 			err := json.Unmarshal([]byte(tc.data), &obj1)
 			assert.NoError(t, err)
+<<<<<<< HEAD
 			assert.Equal(t, tc.want, obj1, "gitea json module returned unexpected")
+=======
+			assert.Equal(t, tc.want, obj1, "proxgit json module returned unexpected")
+>>>>>>> master
 
 			var obj2 testSerializationStruct
 			err = std_json.Unmarshal([]byte(tc.data), &obj2)

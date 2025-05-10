@@ -11,7 +11,11 @@ import (
 	"io"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/golang-jwt/jwt/v5"
 )

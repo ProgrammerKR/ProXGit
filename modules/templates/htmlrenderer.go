@@ -19,12 +19,21 @@ import (
 	"sync/atomic"
 	texttemplate "text/template"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/assetfs"
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/templates/scopedtmpl"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/assetfs"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates/scopedtmpl"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type TemplateExecutor scopedtmpl.TemplateExecutor

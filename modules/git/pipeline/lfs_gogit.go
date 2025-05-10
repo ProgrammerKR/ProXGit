@@ -12,7 +12,11 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 
 	gogit "github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing"

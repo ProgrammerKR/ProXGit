@@ -6,7 +6,11 @@ package session
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"gitea.com/go-chi/session"
+=======
+	"proxgit.com/go-chi/session"
+>>>>>>> master
 )
 
 type MockStore struct {

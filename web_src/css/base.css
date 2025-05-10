@@ -960,7 +960,11 @@ overflow-menu .ui.label {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .migrate .svg.gitea-git {
+=======
+.migrate .svg.proxgit-git {
+>>>>>>> master
   color: var(--color-git);
 }
 
@@ -1003,7 +1007,11 @@ table th[data-sortt-desc] .svg {
   box-shadow: 0 0 0 1px var(--color-secondary) inset;
 }
 
+<<<<<<< HEAD
 /* for "image" emojis like ":git:"  ":gitea:" and ":github:" (see CUSTOM_EMOJIS config option) */
+=======
+/* for "image" emojis like ":git:"  ":proxgit:" and ":github:" (see CUSTOM_EMOJIS config option) */
+>>>>>>> master
 .emoji img {
   border-width: 0 !important;
   margin: 0 !important;

@@ -6,8 +6,13 @@ package arch
 import (
 	"context"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	arch_module "code.gitea.io/gitea/modules/packages/arch"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	arch_module "code.proxgit.io/proxgit/modules/packages/arch"
+>>>>>>> master
 )
 
 // GetRepositories gets all available repositories

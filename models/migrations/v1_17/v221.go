@@ -7,7 +7,11 @@ import (
 	"encoding/base32"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

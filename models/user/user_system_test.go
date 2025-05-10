@@ -6,7 +6,11 @@ package user
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -22,8 +26,13 @@ func TestSystemUser(t *testing.T) {
 
 	u, err = GetPossibleUserByID(db.DefaultContext, -2)
 	require.NoError(t, err)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea-actions", u.Name)
 	assert.Equal(t, "gitea-actions", u.LowerName)
+=======
+	assert.Equal(t, "proxgit-actions", u.Name)
+	assert.Equal(t, "proxgit-actions", u.LowerName)
+>>>>>>> master
 	assert.True(t, u.IsGiteaActions())
 	assert.True(t, IsGiteaActionsUserName("Gitea-actionS"))
 

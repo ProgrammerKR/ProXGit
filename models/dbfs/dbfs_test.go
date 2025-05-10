@@ -9,7 +9,11 @@ import (
 	"os"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

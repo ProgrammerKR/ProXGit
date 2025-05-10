@@ -13,6 +13,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/base"
@@ -27,6 +28,22 @@ import (
 	"code.gitea.io/gitea/services/oauth2_provider"
 
 	"gitea.com/go-chi/binding"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/web"
+	auth_service "code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	"code.proxgit.io/proxgit/services/oauth2_provider"
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 	jwt "github.com/golang-jwt/jwt/v5"
 )
 

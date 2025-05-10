@@ -6,12 +6,21 @@ package mailer
 import (
 	"context"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	issues_model "code.gitea.io/gitea/models/issues"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // MailParticipantsComment sends new comment emails to repository watchers and mentioned people.

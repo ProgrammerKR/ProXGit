@@ -9,7 +9,11 @@ __webpack_public_path__ = `${window.config?.assetUrlPrefix ?? '/assets'}/`;
 
 function shouldIgnoreError(err: Error) {
   const ignorePatterns = [
+<<<<<<< HEAD
     '/assets/js/monaco.', // https://github.com/go-gitea/gitea/issues/30861 , https://github.com/microsoft/monaco-editor/issues/4496
+=======
+    '/assets/js/monaco.', // https://github.com/go-proxgit/proxgit/issues/30861 , https://github.com/microsoft/monaco-editor/issues/4496
+>>>>>>> master
   ];
   for (const pattern of ignorePatterns) {
     if (err.stack?.includes(pattern)) return true;
@@ -43,7 +47,11 @@ function processWindowErrorEvent({error, reason, message, type, filename, lineno
   // non-critical event from the browser. We log them but don't show them to users. Examples:
   // - https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver#observation_errors
   // - https://github.com/mozilla-mobile/firefox-ios/issues/10817
+<<<<<<< HEAD
   // - https://github.com/go-gitea/gitea/issues/20240
+=======
+  // - https://github.com/go-proxgit/proxgit/issues/20240
+>>>>>>> master
   if (!err) {
     if (message) console.error(new Error(message));
     if (runModeIsProd) return;

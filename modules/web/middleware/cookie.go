@@ -9,8 +9,13 @@ import (
 	"net/url"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/session"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/session"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // SetRedirectToCookie convenience function to set the RedirectTo cookie consistently

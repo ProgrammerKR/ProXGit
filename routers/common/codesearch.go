@@ -4,10 +4,17 @@
 package common
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer"
 	code_indexer "code.gitea.io/gitea/modules/indexer/code"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/indexer"
+	code_indexer "code.proxgit.io/proxgit/modules/indexer/code"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func PrepareCodeSearch(ctx *context.Context) (ret struct {

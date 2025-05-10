@@ -7,8 +7,13 @@ import (
 	"context"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/markup"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/markup"
+>>>>>>> master
 )
 
 func TestMain(m *testing.M) {

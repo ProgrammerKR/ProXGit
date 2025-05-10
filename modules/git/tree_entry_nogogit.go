@@ -5,7 +5,11 @@
 
 package git
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/modules/log"
+=======
+import "code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 // TreeEntry the leaf in the git tree
 type TreeEntry struct {

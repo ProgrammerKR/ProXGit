@@ -6,7 +6,11 @@ package oauth2_provider //nolint
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // Init initializes the oauth source

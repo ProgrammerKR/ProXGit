@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	actions_module "code.gitea.io/gitea/modules/actions"
@@ -15,6 +16,15 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/storage"
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	actions_module "code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

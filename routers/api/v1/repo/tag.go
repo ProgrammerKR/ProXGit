@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	"code.gitea.io/gitea/models/organization"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -19,6 +20,18 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	release_service "code.gitea.io/gitea/services/release"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	"code.proxgit.io/proxgit/models/organization"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	release_service "code.proxgit.io/proxgit/services/release"
+>>>>>>> master
 )
 
 // ListTags list all the tags of a repository

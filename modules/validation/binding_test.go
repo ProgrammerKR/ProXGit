@@ -8,7 +8,11 @@ import (
 	"net/http/httptest"
 	"testing"
 
+<<<<<<< HEAD
 	"gitea.com/go-chi/binding"
+=======
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 	chi "github.com/go-chi/chi/v5"
 	"github.com/stretchr/testify/assert"
 )

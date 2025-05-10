@@ -210,7 +210,11 @@ func runBackport(c *cli.Context) error {
 	}
 
 	if !c.Bool("no-push") {
+<<<<<<< HEAD
 		url := "https://github.com/go-gitea/gitea/compare/" + upstreamReleaseBranch + "..." + forkUser + ":" + backportBranch
+=======
+		url := "https://github.com/go-proxgit/proxgit/compare/" + upstreamReleaseBranch + "..." + forkUser + ":" + backportBranch
+>>>>>>> master
 
 		if err := gitPushUp(ctx, remote, backportBranch); err != nil {
 			return err
@@ -355,8 +359,13 @@ func determineRemote(ctx context.Context, forkUser string) (string, string, erro
 		if !strings.Contains(remote, "github.com") {
 			continue
 		}
+<<<<<<< HEAD
 		// ignore go-gitea/gitea
 		if strings.Contains(remote, "go-gitea/gitea") {
+=======
+		// ignore go-proxgit/proxgit
+		if strings.Contains(remote, "go-proxgit/proxgit") {
+>>>>>>> master
 			continue
 		}
 		if !strings.Contains(remote, forkUser) {
@@ -445,7 +454,11 @@ func determineSHAforPR(ctx context.Context, prStr, accessToken string) (string, 
 		client = client.WithAuthToken(accessToken)
 	}
 
+<<<<<<< HEAD
 	pr, _, err := client.PullRequests.Get(ctx, "go-gitea", "gitea", prNum)
+=======
+	pr, _, err := client.PullRequests.Get(ctx, "go-proxgit", "proxgit", prNum)
+>>>>>>> master
 	if err != nil {
 		return "", err
 	}

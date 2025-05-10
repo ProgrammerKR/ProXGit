@@ -13,6 +13,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/modules/optional"
 	packages_module "code.gitea.io/gitea/modules/packages"
@@ -21,6 +22,16 @@ import (
 	"code.gitea.io/gitea/routers/api/packages/helper"
 	"code.gitea.io/gitea/services/context"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/modules/optional"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	rubygems_module "code.proxgit.io/proxgit/modules/packages/rubygems"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/api/packages/helper"
+	"code.proxgit.io/proxgit/services/context"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 )
 
 func apiError(ctx *context.Context, status int, obj any) {

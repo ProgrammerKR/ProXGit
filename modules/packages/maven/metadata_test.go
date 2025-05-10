@@ -7,7 +7,11 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -15,14 +19,24 @@ import (
 )
 
 const (
+<<<<<<< HEAD
 	groupID              = "org.gitea"
+=======
+	groupID              = "org.proxgit"
+>>>>>>> master
 	artifactID           = "my-project"
 	version              = "1.0.1"
 	name                 = "My Gitea Project"
 	description          = "Package Description"
+<<<<<<< HEAD
 	projectURL           = "https://gitea.io"
 	license              = "MIT"
 	dependencyGroupID    = "org.gitea.core"
+=======
+	projectURL           = "https://proxgit.io"
+	license              = "MIT"
+	dependencyGroupID    = "org.proxgit.core"
+>>>>>>> master
 	dependencyArtifactID = "git"
 	dependencyVersion    = "5.0.0"
 )

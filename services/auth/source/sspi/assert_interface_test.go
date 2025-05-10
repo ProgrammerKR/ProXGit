@@ -4,8 +4,13 @@
 package sspi_test
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/services/auth/source/sspi"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/services/auth/source/sspi"
+>>>>>>> master
 )
 
 // This test file exists to assert that our Source exposes the interfaces that we expect

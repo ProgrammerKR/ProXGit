@@ -6,7 +6,11 @@ package meilisearch
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // VersionedIndexName returns the full index name with version

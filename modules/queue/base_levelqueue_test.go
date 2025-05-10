@@ -6,10 +6,17 @@ package queue
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/queue/lqinternal"
 	"code.gitea.io/gitea/modules/setting"
 
 	"gitea.com/lunny/levelqueue"
+=======
+	"code.proxgit.io/proxgit/modules/queue/lqinternal"
+	"code.proxgit.io/proxgit/modules/setting"
+
+	"proxgit.com/lunny/levelqueue"
+>>>>>>> master
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/syndtr/goleveldb/leveldb"

@@ -11,6 +11,7 @@ import (
 	"sync/atomic"
 	"time"
 
+<<<<<<< HEAD
 	db_model "code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/graceful"
@@ -25,6 +26,22 @@ import (
 	"code.gitea.io/gitea/modules/process"
 	"code.gitea.io/gitea/modules/queue"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	db_model "code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/indexer"
+	"code.proxgit.io/proxgit/modules/indexer/issues/bleve"
+	"code.proxgit.io/proxgit/modules/indexer/issues/db"
+	"code.proxgit.io/proxgit/modules/indexer/issues/elasticsearch"
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal"
+	"code.proxgit.io/proxgit/modules/indexer/issues/meilisearch"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/queue"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // IndexerMetadata is used to send data to the queue, so it contains only the ids.

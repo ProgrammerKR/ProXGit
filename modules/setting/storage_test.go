@@ -13,6 +13,7 @@ import (
 func Test_getStorageMultipleName(t *testing.T) {
 	iniStr := `
 [lfs]
+<<<<<<< HEAD
 MINIO_BUCKET = gitea-lfs
 
 [attachment]
@@ -21,11 +22,22 @@ MINIO_BUCKET = gitea-attachment
 [storage]
 STORAGE_TYPE = minio
 MINIO_BUCKET = gitea-storage
+=======
+MINIO_BUCKET = proxgit-lfs
+
+[attachment]
+MINIO_BUCKET = proxgit-attachment
+
+[storage]
+STORAGE_TYPE = minio
+MINIO_BUCKET = proxgit-storage
+>>>>>>> master
 `
 	cfg, err := NewConfigProviderFromData(iniStr)
 	assert.NoError(t, err)
 
 	assert.NoError(t, loadAttachmentFrom(cfg))
+<<<<<<< HEAD
 	assert.Equal(t, "gitea-attachment", Attachment.Storage.MinioConfig.Bucket)
 	assert.Equal(t, "attachments/", Attachment.Storage.MinioConfig.BasePath)
 
@@ -35,6 +47,17 @@ MINIO_BUCKET = gitea-storage
 
 	assert.NoError(t, loadAvatarsFrom(cfg))
 	assert.Equal(t, "gitea-storage", Avatar.Storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit-attachment", Attachment.Storage.MinioConfig.Bucket)
+	assert.Equal(t, "attachments/", Attachment.Storage.MinioConfig.BasePath)
+
+	assert.NoError(t, loadLFSFrom(cfg))
+	assert.Equal(t, "proxgit-lfs", LFS.Storage.MinioConfig.Bucket)
+	assert.Equal(t, "lfs/", LFS.Storage.MinioConfig.BasePath)
+
+	assert.NoError(t, loadAvatarsFrom(cfg))
+	assert.Equal(t, "proxgit-storage", Avatar.Storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "avatars/", Avatar.Storage.MinioConfig.BasePath)
 }
 
@@ -45,17 +68,29 @@ STORAGE_TYPE = lfs
 
 [storage.lfs]
 STORAGE_TYPE = minio
+<<<<<<< HEAD
 MINIO_BUCKET = gitea-storage
+=======
+MINIO_BUCKET = proxgit-storage
+>>>>>>> master
 `
 	cfg, err := NewConfigProviderFromData(iniStr)
 	assert.NoError(t, err)
 
 	assert.NoError(t, loadAttachmentFrom(cfg))
+<<<<<<< HEAD
 	assert.Equal(t, "gitea-storage", Attachment.Storage.MinioConfig.Bucket)
 	assert.Equal(t, "attachments/", Attachment.Storage.MinioConfig.BasePath)
 
 	assert.NoError(t, loadLFSFrom(cfg))
 	assert.Equal(t, "gitea-storage", LFS.Storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit-storage", Attachment.Storage.MinioConfig.Bucket)
+	assert.Equal(t, "attachments/", Attachment.Storage.MinioConfig.BasePath)
+
+	assert.NoError(t, loadLFSFrom(cfg))
+	assert.Equal(t, "proxgit-storage", LFS.Storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "lfs/", LFS.Storage.MinioConfig.BasePath)
 }
 
@@ -69,31 +104,55 @@ STORAGE_TYPE = minio
 
 	assert.NoError(t, loadPackagesFrom(cfg))
 	assert.EqualValues(t, "minio", Packages.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", Packages.Storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", Packages.Storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "packages/", Packages.Storage.MinioConfig.BasePath)
 
 	assert.NoError(t, loadRepoArchiveFrom(cfg))
 	assert.EqualValues(t, "minio", RepoArchive.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", RepoArchive.Storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", RepoArchive.Storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "repo-archive/", RepoArchive.Storage.MinioConfig.BasePath)
 
 	assert.NoError(t, loadActionsFrom(cfg))
 	assert.EqualValues(t, "minio", Actions.LogStorage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", Actions.LogStorage.MinioConfig.Bucket)
 	assert.Equal(t, "actions_log/", Actions.LogStorage.MinioConfig.BasePath)
 
 	assert.EqualValues(t, "minio", Actions.ArtifactStorage.Type)
 	assert.Equal(t, "gitea", Actions.ArtifactStorage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", Actions.LogStorage.MinioConfig.Bucket)
+	assert.Equal(t, "actions_log/", Actions.LogStorage.MinioConfig.BasePath)
+
+	assert.EqualValues(t, "minio", Actions.ArtifactStorage.Type)
+	assert.Equal(t, "proxgit", Actions.ArtifactStorage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "actions_artifacts/", Actions.ArtifactStorage.MinioConfig.BasePath)
 
 	assert.NoError(t, loadAvatarsFrom(cfg))
 	assert.EqualValues(t, "minio", Avatar.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", Avatar.Storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", Avatar.Storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "avatars/", Avatar.Storage.MinioConfig.BasePath)
 
 	assert.NoError(t, loadRepoAvatarFrom(cfg))
 	assert.EqualValues(t, "minio", RepoAvatar.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", RepoAvatar.Storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", RepoAvatar.Storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "repo-avatars/", RepoAvatar.Storage.MinioConfig.BasePath)
 }
 
@@ -107,31 +166,55 @@ STORAGE_TYPE = azureblob
 
 	assert.NoError(t, loadPackagesFrom(cfg))
 	assert.EqualValues(t, "azureblob", Packages.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", Packages.Storage.AzureBlobConfig.Container)
+=======
+	assert.Equal(t, "proxgit", Packages.Storage.AzureBlobConfig.Container)
+>>>>>>> master
 	assert.Equal(t, "packages/", Packages.Storage.AzureBlobConfig.BasePath)
 
 	assert.NoError(t, loadRepoArchiveFrom(cfg))
 	assert.EqualValues(t, "azureblob", RepoArchive.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", RepoArchive.Storage.AzureBlobConfig.Container)
+=======
+	assert.Equal(t, "proxgit", RepoArchive.Storage.AzureBlobConfig.Container)
+>>>>>>> master
 	assert.Equal(t, "repo-archive/", RepoArchive.Storage.AzureBlobConfig.BasePath)
 
 	assert.NoError(t, loadActionsFrom(cfg))
 	assert.EqualValues(t, "azureblob", Actions.LogStorage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", Actions.LogStorage.AzureBlobConfig.Container)
 	assert.Equal(t, "actions_log/", Actions.LogStorage.AzureBlobConfig.BasePath)
 
 	assert.EqualValues(t, "azureblob", Actions.ArtifactStorage.Type)
 	assert.Equal(t, "gitea", Actions.ArtifactStorage.AzureBlobConfig.Container)
+=======
+	assert.Equal(t, "proxgit", Actions.LogStorage.AzureBlobConfig.Container)
+	assert.Equal(t, "actions_log/", Actions.LogStorage.AzureBlobConfig.BasePath)
+
+	assert.EqualValues(t, "azureblob", Actions.ArtifactStorage.Type)
+	assert.Equal(t, "proxgit", Actions.ArtifactStorage.AzureBlobConfig.Container)
+>>>>>>> master
 	assert.Equal(t, "actions_artifacts/", Actions.ArtifactStorage.AzureBlobConfig.BasePath)
 
 	assert.NoError(t, loadAvatarsFrom(cfg))
 	assert.EqualValues(t, "azureblob", Avatar.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", Avatar.Storage.AzureBlobConfig.Container)
+=======
+	assert.Equal(t, "proxgit", Avatar.Storage.AzureBlobConfig.Container)
+>>>>>>> master
 	assert.Equal(t, "avatars/", Avatar.Storage.AzureBlobConfig.BasePath)
 
 	assert.NoError(t, loadRepoAvatarFrom(cfg))
 	assert.EqualValues(t, "azureblob", RepoAvatar.Storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", RepoAvatar.Storage.AzureBlobConfig.Container)
+=======
+	assert.Equal(t, "proxgit", RepoAvatar.Storage.AzureBlobConfig.Container)
+>>>>>>> master
 	assert.Equal(t, "repo-avatars/", RepoAvatar.Storage.AzureBlobConfig.BasePath)
 }
 
@@ -175,6 +258,7 @@ func Test_getStorageInheritStorageTypeLocalPath(t *testing.T) {
 	testLocalStoragePath(t, "/appdata", `
 [storage]
 STORAGE_TYPE = local
+<<<<<<< HEAD
 PATH = /data/gitea
 `, []testLocalStoragePathCase{
 		{loadAttachmentFrom, &Attachment.Storage, "/data/gitea/attachments"},
@@ -185,6 +269,18 @@ PATH = /data/gitea
 		{loadActionsFrom, &Actions.LogStorage, "/data/gitea/actions_log"},
 		{loadAvatarsFrom, &Avatar.Storage, "/data/gitea/avatars"},
 		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/data/gitea/repo-avatars"},
+=======
+PATH = /data/proxgit
+`, []testLocalStoragePathCase{
+		{loadAttachmentFrom, &Attachment.Storage, "/data/proxgit/attachments"},
+		{loadLFSFrom, &LFS.Storage, "/data/proxgit/lfs"},
+		{loadActionsFrom, &Actions.ArtifactStorage, "/data/proxgit/actions_artifacts"},
+		{loadPackagesFrom, &Packages.Storage, "/data/proxgit/packages"},
+		{loadRepoArchiveFrom, &RepoArchive.Storage, "/data/proxgit/repo-archive"},
+		{loadActionsFrom, &Actions.LogStorage, "/data/proxgit/actions_log"},
+		{loadAvatarsFrom, &Avatar.Storage, "/data/proxgit/avatars"},
+		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/data/proxgit/repo-avatars"},
+>>>>>>> master
 	})
 }
 
@@ -209,6 +305,7 @@ func Test_getStorageInheritStorageTypeLocalPathOverride(t *testing.T) {
 	testLocalStoragePath(t, "/appdata", `
 [storage]
 STORAGE_TYPE = local
+<<<<<<< HEAD
 PATH = /data/gitea
 
 [repo-archive]
@@ -222,6 +319,21 @@ PATH = /data/gitea/the-archives-dir
 		{loadActionsFrom, &Actions.LogStorage, "/data/gitea/actions_log"},
 		{loadAvatarsFrom, &Avatar.Storage, "/data/gitea/avatars"},
 		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/data/gitea/repo-avatars"},
+=======
+PATH = /data/proxgit
+
+[repo-archive]
+PATH = /data/proxgit/the-archives-dir
+`, []testLocalStoragePathCase{
+		{loadAttachmentFrom, &Attachment.Storage, "/data/proxgit/attachments"},
+		{loadLFSFrom, &LFS.Storage, "/data/proxgit/lfs"},
+		{loadActionsFrom, &Actions.ArtifactStorage, "/data/proxgit/actions_artifacts"},
+		{loadPackagesFrom, &Packages.Storage, "/data/proxgit/packages"},
+		{loadRepoArchiveFrom, &RepoArchive.Storage, "/data/proxgit/the-archives-dir"},
+		{loadActionsFrom, &Actions.LogStorage, "/data/proxgit/actions_log"},
+		{loadAvatarsFrom, &Avatar.Storage, "/data/proxgit/avatars"},
+		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/data/proxgit/repo-avatars"},
+>>>>>>> master
 	})
 }
 
@@ -229,6 +341,7 @@ func Test_getStorageInheritStorageTypeLocalPathOverrideEmpty(t *testing.T) {
 	testLocalStoragePath(t, "/appdata", `
 [storage]
 STORAGE_TYPE = local
+<<<<<<< HEAD
 PATH = /data/gitea
 
 [repo-archive]
@@ -241,6 +354,20 @@ PATH = /data/gitea
 		{loadActionsFrom, &Actions.LogStorage, "/data/gitea/actions_log"},
 		{loadAvatarsFrom, &Avatar.Storage, "/data/gitea/avatars"},
 		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/data/gitea/repo-avatars"},
+=======
+PATH = /data/proxgit
+
+[repo-archive]
+`, []testLocalStoragePathCase{
+		{loadAttachmentFrom, &Attachment.Storage, "/data/proxgit/attachments"},
+		{loadLFSFrom, &LFS.Storage, "/data/proxgit/lfs"},
+		{loadActionsFrom, &Actions.ArtifactStorage, "/data/proxgit/actions_artifacts"},
+		{loadPackagesFrom, &Packages.Storage, "/data/proxgit/packages"},
+		{loadRepoArchiveFrom, &RepoArchive.Storage, "/data/proxgit/repo-archive"},
+		{loadActionsFrom, &Actions.LogStorage, "/data/proxgit/actions_log"},
+		{loadAvatarsFrom, &Avatar.Storage, "/data/proxgit/avatars"},
+		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/data/proxgit/repo-avatars"},
+>>>>>>> master
 	})
 }
 
@@ -248,11 +375,16 @@ func Test_getStorageInheritStorageTypeLocalRelativePathOverride(t *testing.T) {
 	testLocalStoragePath(t, "/appdata", `
 [storage]
 STORAGE_TYPE = local
+<<<<<<< HEAD
 PATH = /data/gitea
+=======
+PATH = /data/proxgit
+>>>>>>> master
 
 [repo-archive]
 PATH = the-archives-dir
 `, []testLocalStoragePathCase{
+<<<<<<< HEAD
 		{loadAttachmentFrom, &Attachment.Storage, "/data/gitea/attachments"},
 		{loadLFSFrom, &LFS.Storage, "/data/gitea/lfs"},
 		{loadActionsFrom, &Actions.ArtifactStorage, "/data/gitea/actions_artifacts"},
@@ -261,6 +393,16 @@ PATH = the-archives-dir
 		{loadActionsFrom, &Actions.LogStorage, "/data/gitea/actions_log"},
 		{loadAvatarsFrom, &Avatar.Storage, "/data/gitea/avatars"},
 		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/data/gitea/repo-avatars"},
+=======
+		{loadAttachmentFrom, &Attachment.Storage, "/data/proxgit/attachments"},
+		{loadLFSFrom, &LFS.Storage, "/data/proxgit/lfs"},
+		{loadActionsFrom, &Actions.ArtifactStorage, "/data/proxgit/actions_artifacts"},
+		{loadPackagesFrom, &Packages.Storage, "/data/proxgit/packages"},
+		{loadRepoArchiveFrom, &RepoArchive.Storage, "/data/proxgit/the-archives-dir"},
+		{loadActionsFrom, &Actions.LogStorage, "/data/proxgit/actions_log"},
+		{loadAvatarsFrom, &Avatar.Storage, "/data/proxgit/avatars"},
+		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/data/proxgit/repo-avatars"},
+>>>>>>> master
 	})
 }
 
@@ -268,13 +410,21 @@ func Test_getStorageInheritStorageTypeLocalPathOverride3(t *testing.T) {
 	testLocalStoragePath(t, "/appdata", `
 [storage.repo-archive]
 STORAGE_TYPE = local
+<<<<<<< HEAD
 PATH = /data/gitea/archives
+=======
+PATH = /data/proxgit/archives
+>>>>>>> master
 `, []testLocalStoragePathCase{
 		{loadAttachmentFrom, &Attachment.Storage, "/appdata/attachments"},
 		{loadLFSFrom, &LFS.Storage, "/appdata/lfs"},
 		{loadActionsFrom, &Actions.ArtifactStorage, "/appdata/actions_artifacts"},
 		{loadPackagesFrom, &Packages.Storage, "/appdata/packages"},
+<<<<<<< HEAD
 		{loadRepoArchiveFrom, &RepoArchive.Storage, "/data/gitea/archives"},
+=======
+		{loadRepoArchiveFrom, &RepoArchive.Storage, "/data/proxgit/archives"},
+>>>>>>> master
 		{loadActionsFrom, &Actions.LogStorage, "/appdata/actions_log"},
 		{loadAvatarsFrom, &Avatar.Storage, "/appdata/avatars"},
 		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/appdata/repo-avatars"},
@@ -302,16 +452,27 @@ func Test_getStorageInheritStorageTypeLocalPathOverride4(t *testing.T) {
 	testLocalStoragePath(t, "/appdata", `
 [storage.repo-archive]
 STORAGE_TYPE = local
+<<<<<<< HEAD
 PATH = /data/gitea/archives
 
 [repo-archive]
 PATH = /tmp/gitea/archives
+=======
+PATH = /data/proxgit/archives
+
+[repo-archive]
+PATH = /tmp/proxgit/archives
+>>>>>>> master
 `, []testLocalStoragePathCase{
 		{loadAttachmentFrom, &Attachment.Storage, "/appdata/attachments"},
 		{loadLFSFrom, &LFS.Storage, "/appdata/lfs"},
 		{loadActionsFrom, &Actions.ArtifactStorage, "/appdata/actions_artifacts"},
 		{loadPackagesFrom, &Packages.Storage, "/appdata/packages"},
+<<<<<<< HEAD
 		{loadRepoArchiveFrom, &RepoArchive.Storage, "/tmp/gitea/archives"},
+=======
+		{loadRepoArchiveFrom, &RepoArchive.Storage, "/tmp/proxgit/archives"},
+>>>>>>> master
 		{loadActionsFrom, &Actions.LogStorage, "/appdata/actions_log"},
 		{loadAvatarsFrom, &Avatar.Storage, "/appdata/avatars"},
 		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/appdata/repo-avatars"},
@@ -322,7 +483,11 @@ func Test_getStorageInheritStorageTypeLocalPathOverride5(t *testing.T) {
 	testLocalStoragePath(t, "/appdata", `
 [storage.repo-archive]
 STORAGE_TYPE = local
+<<<<<<< HEAD
 PATH = /data/gitea/archives
+=======
+PATH = /data/proxgit/archives
+>>>>>>> master
 
 [repo-archive]
 `, []testLocalStoragePathCase{
@@ -330,7 +495,11 @@ PATH = /data/gitea/archives
 		{loadLFSFrom, &LFS.Storage, "/appdata/lfs"},
 		{loadActionsFrom, &Actions.ArtifactStorage, "/appdata/actions_artifacts"},
 		{loadPackagesFrom, &Packages.Storage, "/appdata/packages"},
+<<<<<<< HEAD
 		{loadRepoArchiveFrom, &RepoArchive.Storage, "/data/gitea/archives"},
+=======
+		{loadRepoArchiveFrom, &RepoArchive.Storage, "/data/proxgit/archives"},
+>>>>>>> master
 		{loadActionsFrom, &Actions.LogStorage, "/appdata/actions_log"},
 		{loadAvatarsFrom, &Avatar.Storage, "/appdata/avatars"},
 		{loadRepoAvatarFrom, &RepoAvatar.Storage, "/appdata/repo-avatars"},

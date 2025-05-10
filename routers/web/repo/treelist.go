@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	pull_model "code.gitea.io/gitea/models/pull"
 	"code.gitea.io/gitea/modules/base"
 	"code.gitea.io/gitea/modules/fileicon"
@@ -15,6 +16,15 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/gitdiff"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	pull_model "code.proxgit.io/proxgit/models/pull"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/fileicon"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/gitdiff"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 
 	"github.com/go-enry/go-enry/v2"
 )

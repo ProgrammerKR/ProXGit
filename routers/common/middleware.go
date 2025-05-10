@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/cache"
 	"code.gitea.io/gitea/modules/gtprof"
 	"code.gitea.io/gitea/modules/httplib"
@@ -17,6 +18,17 @@ import (
 	"code.gitea.io/gitea/services/context"
 
 	"gitea.com/go-chi/session"
+=======
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/gtprof"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web/routing"
+	"code.proxgit.io/proxgit/services/context"
+
+	"proxgit.com/go-chi/session"
+>>>>>>> master
 	"github.com/chi-middleware/proxy"
 	"github.com/go-chi/chi/v5"
 )

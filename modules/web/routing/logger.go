@@ -8,8 +8,13 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/web/types"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/web/types"
+>>>>>>> master
 )
 
 // NewLoggerHandler is a handler that will log routing to the router log taking account of

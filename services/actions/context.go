@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"strconv"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	actions_module "code.gitea.io/gitea/modules/actions"
@@ -18,6 +19,18 @@ import (
 )
 
 // GenerateGiteaContext generate the gitea context without token and gitea_runtime_token
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	actions_module "code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+)
+
+// GenerateGiteaContext generate the proxgit context without token and proxgit_runtime_token
+>>>>>>> master
 // job can be nil when generating a context for parsing workflow-level expressions
 func GenerateGiteaContext(run *actions_model.ActionRun, job *actions_model.ActionRunJob) map[string]any {
 	event := map[string]any{}
@@ -79,7 +92,11 @@ func GenerateGiteaContext(run *actions_model.ActionRun, job *actions_model.Actio
 		"workspace":         "",                                       // string, The default working directory on the runner for steps, and the default location of your repository when using the checkout action.
 
 		// additional contexts
+<<<<<<< HEAD
 		"gitea_default_actions_url": setting.Actions.DefaultActionsURL.URL(),
+=======
+		"proxgit_default_actions_url": setting.Actions.DefaultActionsURL.URL(),
+>>>>>>> master
 	}
 
 	if job != nil {

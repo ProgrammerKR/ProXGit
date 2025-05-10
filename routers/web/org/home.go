@@ -8,6 +8,7 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
 	"code.gitea.io/gitea/models/renderhelper"
@@ -20,6 +21,20 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	shared_user "code.gitea.io/gitea/routers/web/shared/user"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/renderhelper"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	shared_user "code.proxgit.io/proxgit/routers/web/shared/user"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const tplOrgHome templates.TplName = "org/home"

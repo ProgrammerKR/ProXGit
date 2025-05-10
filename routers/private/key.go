@@ -6,10 +6,17 @@ package private
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/modules/private"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/services/context"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/modules/private"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // UpdatePublicKeyInRepo update public key and deploy key updates

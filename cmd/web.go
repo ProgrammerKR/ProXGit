@@ -16,6 +16,7 @@ import (
 
 	_ "net/http/pprof" // Used for debugging if enabled and a web server is running
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/gtprof"
@@ -26,13 +27,29 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/routers"
 	"code.gitea.io/gitea/routers/install"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/gtprof"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/public"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers"
+	"code.proxgit.io/proxgit/routers/install"
+>>>>>>> master
 
 	"github.com/felixge/fgprof"
 	"github.com/urfave/cli/v2"
 )
 
 // PIDFile could be set from build tag
+<<<<<<< HEAD
 var PIDFile = "/run/gitea.pid"
+=======
+var PIDFile = "/run/proxgit.pid"
+>>>>>>> master
 
 // CmdWeb represents the available web sub-command.
 var CmdWeb = &cli.Command{

@@ -6,7 +6,11 @@ package validation
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -47,7 +51,11 @@ func Test_IsValidURL(t *testing.T) {
 }
 
 func Test_IsValidExternalURL(t *testing.T) {
+<<<<<<< HEAD
 	setting.AppURL = "https://try.gitea.io/"
+=======
+	setting.AppURL = "https://try.proxgit.io/"
+>>>>>>> master
 
 	cases := []struct {
 		description string
@@ -56,7 +64,11 @@ func Test_IsValidExternalURL(t *testing.T) {
 	}{
 		{
 			description: "Current instance URL",
+<<<<<<< HEAD
 			url:         "https://try.gitea.io/test",
+=======
+			url:         "https://try.proxgit.io/test",
+>>>>>>> master
 			valid:       true,
 		},
 		{
@@ -66,7 +78,11 @@ func Test_IsValidExternalURL(t *testing.T) {
 		},
 		{
 			description: "Current instance API URL",
+<<<<<<< HEAD
 			url:         "https://try.gitea.io/api/v1/user/follow",
+=======
+			url:         "https://try.proxgit.io/api/v1/user/follow",
+>>>>>>> master
 			valid:       false,
 		},
 		{
@@ -89,7 +105,11 @@ func Test_IsValidExternalURL(t *testing.T) {
 }
 
 func Test_IsValidExternalTrackerURLFormat(t *testing.T) {
+<<<<<<< HEAD
 	setting.AppURL = "https://try.gitea.io/"
+=======
+	setting.AppURL = "https://try.proxgit.io/"
+>>>>>>> master
 
 	cases := []struct {
 		description string

@@ -6,8 +6,13 @@ package auth
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // Ensure the struct implements the interface.

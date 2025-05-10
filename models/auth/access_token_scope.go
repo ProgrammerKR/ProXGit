@@ -8,7 +8,11 @@ import (
 	"slices"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/perm"
+=======
+	"code.proxgit.io/proxgit/models/perm"
+>>>>>>> master
 )
 
 // AccessTokenScopeCategory represents the scope category for an access token

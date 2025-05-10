@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -17,6 +18,17 @@ import (
 	"code.gitea.io/gitea/modules/timeutil"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 )
 
 // StopZombieTasks stops the task which have running status, but haven't been updated for a long time

@@ -6,11 +6,19 @@ package v1_19 //nolint
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/secret"
 	"code.gitea.io/gitea/modules/setting"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/secret"
+	"code.proxgit.io/proxgit/modules/setting"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

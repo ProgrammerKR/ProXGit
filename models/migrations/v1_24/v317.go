@@ -4,7 +4,11 @@
 package v1_24 //nolint
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"xorm.io/xorm"
 	"xorm.io/xorm/schemas"

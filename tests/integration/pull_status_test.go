@@ -11,6 +11,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	git_model "code.gitea.io/gitea/models/git"
 	"code.gitea.io/gitea/models/issues"
@@ -20,6 +21,17 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/services/pull"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	git_model "code.proxgit.io/proxgit/models/git"
+	"code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/services/pull"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -66,9 +78,15 @@ func TestPullCreate_CommitStatus(t *testing.T) {
 		statesIcons := map[api.CommitStatusState]string{
 			api.CommitStatusPending: "octicon-dot-fill",
 			api.CommitStatusSuccess: "octicon-check",
+<<<<<<< HEAD
 			api.CommitStatusError:   "gitea-exclamation",
 			api.CommitStatusFailure: "octicon-x",
 			api.CommitStatusWarning: "gitea-exclamation",
+=======
+			api.CommitStatusError:   "proxgit-exclamation",
+			api.CommitStatusFailure: "octicon-x",
+			api.CommitStatusWarning: "proxgit-exclamation",
+>>>>>>> master
 		}
 
 		testCtx := NewAPITestContext(t, "user1", "repo1", auth_model.AccessTokenScopeWriteRepository)

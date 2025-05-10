@@ -8,12 +8,21 @@ import (
 	"net/http"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	system_model "code.gitea.io/gitea/models/system"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	system_model "code.proxgit.io/proxgit/models/system"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const (

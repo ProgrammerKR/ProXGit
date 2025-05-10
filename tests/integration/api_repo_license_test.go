@@ -10,8 +10,13 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -50,7 +55,11 @@ func TestAPIRepoLicense(t *testing.T) {
 		})
 		session.MakeRequest(t, req, http.StatusSeeOther)
 
+<<<<<<< HEAD
 		// let gitea update repo license
+=======
+		// let proxgit update repo license
+>>>>>>> master
 		time.Sleep(time.Second)
 		checkRepoLicense(t, "user2", "repo1", []string{"BSD-2-Clause"})
 
@@ -62,7 +71,11 @@ func TestAPIRepoLicense(t *testing.T) {
 		}).AddTokenAuth(token)
 		session.MakeRequest(t, req, http.StatusOK)
 
+<<<<<<< HEAD
 		// let gitea update repo license
+=======
+		// let proxgit update repo license
+>>>>>>> master
 		time.Sleep(time.Second)
 		checkRepoLicense(t, "user2", "repo1", []string{"MIT"})
 	})

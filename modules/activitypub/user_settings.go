@@ -6,8 +6,13 @@ package activitypub
 import (
 	"context"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/util"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 const rsaBits = 3072

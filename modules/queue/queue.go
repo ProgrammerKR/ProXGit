@@ -61,7 +61,11 @@
 //	 func handler(items ...*mypkg.QueueItem) []*mypkg.QueueItem { ... }
 package queue
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/modules/util"
+=======
+import "code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 type HandlerFuncT[T any] func(...T) (unhandled []T)
 

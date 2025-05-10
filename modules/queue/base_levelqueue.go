@@ -7,10 +7,17 @@ import (
 	"context"
 	"sync/atomic"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/nosql"
 	"code.gitea.io/gitea/modules/queue/lqinternal"
 
 	"gitea.com/lunny/levelqueue"
+=======
+	"code.proxgit.io/proxgit/modules/nosql"
+	"code.proxgit.io/proxgit/modules/queue/lqinternal"
+
+	"proxgit.com/lunny/levelqueue"
+>>>>>>> master
 	"github.com/syndtr/goleveldb/leveldb"
 )
 

@@ -6,9 +6,15 @@ package oauth2
 import (
 	"html/template"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/svg"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/svg"
+>>>>>>> master
 
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/providers/openidConnect"
@@ -29,7 +35,11 @@ func (o *OpenIDProvider) DisplayName() string {
 
 // IconHTML returns icon HTML for this provider
 func (o *OpenIDProvider) IconHTML(size int) template.HTML {
+<<<<<<< HEAD
 	return svg.RenderHTML("gitea-openid", size, "tw-mr-2")
+=======
+	return svg.RenderHTML("proxgit-openid", size, "tw-mr-2")
+>>>>>>> master
 }
 
 // CreateGothProvider creates a GothProvider from this Provider

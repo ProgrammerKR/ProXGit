@@ -7,11 +7,19 @@ import (
 	goctx "context"
 	"errors"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/services/context"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // StopwatchTmplInfo is a view on a stopwatch specifically for template rendering

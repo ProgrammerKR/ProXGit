@@ -7,6 +7,7 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	issues_model "code.gitea.io/gitea/models/issues"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -14,6 +15,15 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	issue_service "code.gitea.io/gitea/services/issue"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 )
 
 type mailNotifier struct {

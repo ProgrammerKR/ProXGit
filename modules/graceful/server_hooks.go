@@ -7,7 +7,11 @@ import (
 	"os"
 	"runtime"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // awaitShutdown waits for the shutdown signal from the Manager

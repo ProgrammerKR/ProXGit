@@ -14,11 +14,19 @@ const (
 	name             = "ConanPackage"
 	version          = "1.2"
 	license          = "MIT"
+<<<<<<< HEAD
 	author           = "Gitea <info@gitea.io>"
 	homepage         = "https://gitea.io/"
 	url              = "https://gitea.com/"
 	description      = "Description of ConanPackage"
 	topic1           = "gitea"
+=======
+	author           = "Gitea <info@proxgit.io>"
+	homepage         = "https://proxgit.io/"
+	url              = "https://proxgit.com/"
+	description      = "Description of ConanPackage"
+	topic1           = "proxgit"
+>>>>>>> master
 	topic2           = "conan"
 	contentConanfile = `from conans import ConanFile, CMake, tools
 

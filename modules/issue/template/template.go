@@ -11,10 +11,17 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	api "code.gitea.io/gitea/modules/structs"
 
 	"gitea.com/go-chi/binding"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	api "code.proxgit.io/proxgit/modules/structs"
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 )
 
 // Validate checks whether an IssueTemplate is considered valid, and returns the first error

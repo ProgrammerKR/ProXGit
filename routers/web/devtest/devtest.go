@@ -13,6 +13,7 @@ import (
 	"time"
 	"unicode"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
@@ -21,6 +22,16 @@ import (
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/badge"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // List all devtest templates, they will be used for e2e tests for the UI components
@@ -168,7 +179,11 @@ func prepareMockDataBadgeActionsSvg(ctx *context.Context) {
 
 func prepareMockData(ctx *context.Context) {
 	switch ctx.Req.URL.Path {
+<<<<<<< HEAD
 	case "/devtest/gitea-ui":
+=======
+	case "/devtest/proxgit-ui":
+>>>>>>> master
 		prepareMockDataGiteaUI(ctx)
 	case "/devtest/badge-commit-sign":
 		prepareMockDataBadgeCommitSign(ctx)

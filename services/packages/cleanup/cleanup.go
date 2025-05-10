@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
 	user_model "code.gitea.io/gitea/models/user"
@@ -21,6 +22,21 @@ import (
 	container_service "code.gitea.io/gitea/services/packages/container"
 	debian_service "code.gitea.io/gitea/services/packages/debian"
 	rpm_service "code.gitea.io/gitea/services/packages/rpm"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+	alpine_service "code.proxgit.io/proxgit/services/packages/alpine"
+	arch_service "code.proxgit.io/proxgit/services/packages/arch"
+	cargo_service "code.proxgit.io/proxgit/services/packages/cargo"
+	container_service "code.proxgit.io/proxgit/services/packages/container"
+	debian_service "code.proxgit.io/proxgit/services/packages/debian"
+	rpm_service "code.proxgit.io/proxgit/services/packages/rpm"
+>>>>>>> master
 )
 
 // CleanupTask executes cleanup rules and cleanup expired package data

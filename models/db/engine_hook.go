@@ -7,9 +7,15 @@ import (
 	"context"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/gtprof"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/gtprof"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"xorm.io/xorm/contexts"
 )

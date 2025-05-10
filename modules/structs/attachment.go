@@ -1,7 +1,11 @@
 // Copyright 2017 The Gitea Authors. All rights reserved.
 // SPDX-License-Identifier: MIT
 
+<<<<<<< HEAD
 package structs // import "code.gitea.io/gitea/modules/structs"
+=======
+package structs // import "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 import (
 	"time"

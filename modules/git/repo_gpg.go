@@ -8,7 +8,11 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/process"
+=======
+	"code.proxgit.io/proxgit/modules/process"
+>>>>>>> master
 )
 
 // LoadPublicKeyContent will load the key from gpg

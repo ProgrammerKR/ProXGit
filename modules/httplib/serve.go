@@ -16,6 +16,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	charsetModule "code.gitea.io/gitea/modules/charset"
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/httpcache"
@@ -23,6 +24,15 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/typesniffer"
 	"code.gitea.io/gitea/modules/util"
+=======
+	charsetModule "code.proxgit.io/proxgit/modules/charset"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/httpcache"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/typesniffer"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/klauspost/compress/gzhttp"
 )

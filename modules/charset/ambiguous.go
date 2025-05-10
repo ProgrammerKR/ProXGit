@@ -9,7 +9,11 @@ import (
 	"strings"
 	"unicode"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 )
 
 // AmbiguousTablesForLocale provides the table of ambiguous characters for this locale.

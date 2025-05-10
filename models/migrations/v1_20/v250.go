@@ -6,7 +6,11 @@ package v1_20 //nolint
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

@@ -6,11 +6,19 @@ package repo
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/routers/api/v1/utils"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+>>>>>>> master
 )
 
 // ListStargazers list a repository's stargazers

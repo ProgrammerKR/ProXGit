@@ -6,9 +6,15 @@ package actions
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	api "code.gitea.io/gitea/modules/structs"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

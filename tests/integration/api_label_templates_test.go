@@ -9,9 +9,15 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	repo_module "code.gitea.io/gitea/modules/repository"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/tests"
+=======
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

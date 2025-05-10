@@ -10,6 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/dump"
 	"code.gitea.io/gitea/modules/json"
@@ -19,6 +20,17 @@ import (
 	"code.gitea.io/gitea/modules/util"
 
 	"gitea.com/go-chi/session"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/dump"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/util"
+
+	"proxgit.com/go-chi/session"
+>>>>>>> master
 	"github.com/mholt/archiver/v3"
 	"github.com/urfave/cli/v2"
 )
@@ -33,7 +45,11 @@ var CmdDump = &cli.Command{
 		&cli.StringFlag{
 			Name:    "file",
 			Aliases: []string{"f"},
+<<<<<<< HEAD
 			Usage:   `Name of the dump file which will be created, default to "gitea-dump-{time}.zip". Supply '-' for stdout. See type for available types.`,
+=======
+			Usage:   `Name of the dump file which will be created, default to "proxgit-dump-{time}.zip". Supply '-' for stdout. See type for available types.`,
+>>>>>>> master
 		},
 		&cli.BoolFlag{
 			Name:    "verbose",
@@ -198,7 +214,11 @@ func runDump(ctx *cli.Context) error {
 			fatal("Path does not exist: %s", tmpDir)
 		}
 
+<<<<<<< HEAD
 		dbDump, err := os.CreateTemp(tmpDir, "gitea-db.sql")
+=======
+		dbDump, err := os.CreateTemp(tmpDir, "proxgit-db.sql")
+>>>>>>> master
 		if err != nil {
 			fatal("Failed to create tmp file: %v", err)
 		}
@@ -220,8 +240,13 @@ func runDump(ctx *cli.Context) error {
 			fatal("Failed to dump database: %v", err)
 		}
 
+<<<<<<< HEAD
 		if err = dumper.AddFile("gitea-db.sql", dbDump.Name()); err != nil {
 			fatal("Failed to include gitea-db.sql: %v", err)
+=======
+		if err = dumper.AddFile("proxgit-db.sql", dbDump.Name()); err != nil {
+			fatal("Failed to include proxgit-db.sql: %v", err)
+>>>>>>> master
 		}
 	}
 

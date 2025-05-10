@@ -7,8 +7,13 @@ import (
 	"path/filepath"
 	"runtime"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // QueueSettings represent the settings for a queue from the ini

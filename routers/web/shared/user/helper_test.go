@@ -6,7 +6,11 @@ package user
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/user"
+=======
+	"code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

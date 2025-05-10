@@ -7,11 +7,19 @@ import (
 	"net/http"
 	"time"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/services/context"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const cacheKeyNodeInfoUsage = "API_NodeInfoUsage"
@@ -61,10 +69,17 @@ func NodeInfo(ctx *context.APIContext) {
 	nodeInfo := &structs.NodeInfo{
 		Version: "2.1",
 		Software: structs.NodeInfoSoftware{
+<<<<<<< HEAD
 			Name:       "gitea",
 			Version:    setting.AppVer,
 			Repository: "https://github.com/go-gitea/gitea.git",
 			Homepage:   "https://gitea.io/",
+=======
+			Name:       "proxgit",
+			Version:    setting.AppVer,
+			Repository: "https://github.com/go-proxgit/proxgit.git",
+			Homepage:   "https://proxgit.io/",
+>>>>>>> master
 		},
 		Protocols: []string{"activitypub"},
 		Services: structs.NodeInfoServices{

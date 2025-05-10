@@ -8,10 +8,17 @@ import (
 	"io"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/proxy"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/system"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/proxy"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/system"
+>>>>>>> master
 
 	"github.com/hashicorp/go-version"
 )

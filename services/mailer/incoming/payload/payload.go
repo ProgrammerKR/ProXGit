@@ -6,8 +6,13 @@ package payload
 import (
 	"context"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/modules/util"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 const replyPayloadVersion1 byte = 1

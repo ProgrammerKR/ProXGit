@@ -11,9 +11,15 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/nosql"
 
 	"gitea.com/lunny/levelqueue"
+=======
+	"code.proxgit.io/proxgit/modules/nosql"
+
+	"proxgit.com/lunny/levelqueue"
+>>>>>>> master
 	"github.com/syndtr/goleveldb/leveldb"
 )
 

@@ -9,11 +9,19 @@ import (
 	"path"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/markup/markdown"
 	"code.gitea.io/gitea/modules/setting"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"gopkg.in/yaml.v3"
 )

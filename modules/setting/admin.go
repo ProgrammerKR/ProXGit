@@ -4,7 +4,11 @@
 package setting
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+>>>>>>> master
 )
 
 // Admin settings

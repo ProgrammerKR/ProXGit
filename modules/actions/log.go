@@ -12,12 +12,21 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/dbfs"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/storage"
 	"code.gitea.io/gitea/modules/zstd"
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
+=======
+	"code.proxgit.io/proxgit/models/dbfs"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/zstd"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+>>>>>>> master
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 

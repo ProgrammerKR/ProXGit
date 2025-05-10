@@ -6,9 +6,15 @@ package organization_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	org_model "code.gitea.io/gitea/models/organization"
 	"code.gitea.io/gitea/models/unittest"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	org_model "code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/unittest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

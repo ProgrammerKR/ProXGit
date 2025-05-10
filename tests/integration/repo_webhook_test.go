@@ -13,6 +13,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
@@ -25,6 +26,20 @@ import (
 	"code.gitea.io/gitea/tests"
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/json"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+	"code.proxgit.io/proxgit/tests"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+>>>>>>> master
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -39,7 +54,11 @@ func TestNewWebHookLink(t *testing.T) {
 		// webhook list page
 		baseurl,
 		// new webhook page
+<<<<<<< HEAD
 		baseurl + "/gitea/new",
+=======
+		baseurl + "/proxgit/new",
+>>>>>>> master
 		// edit webhook page
 		baseurl + "/1",
 	}
@@ -59,7 +78,11 @@ func TestNewWebHookLink(t *testing.T) {
 func testAPICreateWebhookForRepo(t *testing.T, session *TestSession, userName, repoName, url, event string) {
 	token := getTokenForLoggedInUser(t, session, auth_model.AccessTokenScopeAll)
 	req := NewRequestWithJSON(t, "POST", "/api/v1/repos/"+userName+"/"+repoName+"/hooks", api.CreateHookOption{
+<<<<<<< HEAD
 		Type: "gitea",
+=======
+		Type: "proxgit",
+>>>>>>> master
 		Config: api.CreateHookOptionConfig{
 			"content_type": "json",
 			"url":          url,
@@ -86,7 +109,11 @@ func testCreateWebhookForRepo(t *testing.T, session *TestSession, webhookType, u
 func testAPICreateWebhookForOrg(t *testing.T, session *TestSession, userName, url, event string) {
 	token := getTokenForLoggedInUser(t, session, auth_model.AccessTokenScopeAll)
 	req := NewRequestWithJSON(t, "POST", "/api/v1/orgs/"+userName+"/hooks", api.CreateHookOption{
+<<<<<<< HEAD
 		Type: "gitea",
+=======
+		Type: "proxgit",
+>>>>>>> master
 		Config: api.CreateHookOptionConfig{
 			"content_type": "json",
 			"url":          url,
@@ -138,7 +165,11 @@ func Test_WebhookCreate(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -170,7 +201,11 @@ func Test_WebhookDelete(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -203,7 +238,11 @@ func Test_WebhookFork(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user1")
 
@@ -235,7 +274,11 @@ func Test_WebhookIssueComment(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -270,7 +313,11 @@ func Test_WebhookRelease(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -303,7 +350,11 @@ func Test_WebhookPush(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -335,7 +386,11 @@ func Test_WebhookIssue(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -368,7 +423,11 @@ func Test_WebhookPullRequest(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -405,7 +464,11 @@ func Test_WebhookPullRequestComment(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -443,7 +506,11 @@ func Test_WebhookWiki(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -475,7 +542,11 @@ func Test_WebhookRepository(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user1")
 
@@ -507,7 +578,11 @@ func Test_WebhookPackage(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user1")
 
@@ -515,8 +590,13 @@ func Test_WebhookPackage(t *testing.T) {
 
 		// 2. trigger the webhook
 		token := getTokenForLoggedInUser(t, session, auth_model.AccessTokenScopeAll)
+<<<<<<< HEAD
 		url := fmt.Sprintf("/api/packages/%s/generic/%s/%s", "org3", "gitea", "v1.24.0")
 		req := NewRequestWithBody(t, "PUT", url+"/gitea", strings.NewReader("This is a dummy file")).
+=======
+		url := fmt.Sprintf("/api/packages/%s/generic/%s/%s", "org3", "proxgit", "v1.24.0")
+		req := NewRequestWithBody(t, "PUT", url+"/proxgit", strings.NewReader("This is a dummy file")).
+>>>>>>> master
 			AddTokenAuth(token)
 		MakeRequest(t, req, http.StatusCreated)
 
@@ -524,7 +604,11 @@ func Test_WebhookPackage(t *testing.T) {
 		assert.Equal(t, "package", triggeredEvent)
 		assert.Len(t, payloads, 1)
 		assert.EqualValues(t, "created", payloads[0].Action)
+<<<<<<< HEAD
 		assert.Equal(t, "gitea", payloads[0].Package.Name)
+=======
+		assert.Equal(t, "proxgit", payloads[0].Package.Name)
+>>>>>>> master
 		assert.Equal(t, "generic", payloads[0].Package.Type)
 		assert.Equal(t, "org3", payloads[0].Organization.UserName)
 		assert.Equal(t, "v1.24.0", payloads[0].Package.Version)
@@ -549,7 +633,11 @@ func Test_WebhookStatus(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
@@ -594,12 +682,20 @@ func Test_WebhookStatus_NoWrongTrigger(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		session := loginUser(t, "user2")
 
 		// create a push_only webhook from web UI
+<<<<<<< HEAD
 		testCreateWebhookForRepo(t, session, "gitea", "user2", "repo1", provider.URL(), "push_only")
+=======
+		testCreateWebhookForRepo(t, session, "proxgit", "user2", "repo1", provider.URL(), "push_only")
+>>>>>>> master
 
 		// 2. trigger the webhook with a push action
 		testCreateFile(t, session, "user2", "repo1", "master", "test_webhook_push.md", "# a test file for webhook push")
@@ -625,7 +721,11 @@ func Test_WebhookWorkflowJob(t *testing.T) {
 	}, http.StatusOK)
 	defer provider.Close()
 
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// 1. create a new webhook with special webhook for repo1
 		user2 := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 		session := loginUser(t, "user2")
@@ -645,7 +745,11 @@ func Test_WebhookWorkflowJob(t *testing.T) {
 
 		// add workflow file to the repo
 		// init the workflow
+<<<<<<< HEAD
 		wfTreePath := ".gitea/workflows/push.yml"
+=======
+		wfTreePath := ".proxgit/workflows/push.yml"
+>>>>>>> master
 		wfFileContent := `name: Push
 on: push
 jobs:

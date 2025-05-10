@@ -8,6 +8,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -17,6 +18,17 @@ import (
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/gitrepo"
 	"code.gitea.io/gitea/modules/structs"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -39,6 +51,7 @@ func TestGetCommitStatuses(t *testing.T) {
 
 	assert.Equal(t, "ci/awesomeness", statuses[0].Context)
 	assert.Equal(t, structs.CommitStatusPending, statuses[0].State)
+<<<<<<< HEAD
 	assert.Equal(t, "https://try.gitea.io/api/v1/repos/user2/repo1/statuses/1234123412341234123412341234123412341234", statuses[0].APIURL(db.DefaultContext))
 
 	assert.Equal(t, "cov/awesomeness", statuses[1].Context)
@@ -56,6 +69,25 @@ func TestGetCommitStatuses(t *testing.T) {
 	assert.Equal(t, "deploy/awesomeness", statuses[4].Context)
 	assert.Equal(t, structs.CommitStatusError, statuses[4].State)
 	assert.Equal(t, "https://try.gitea.io/api/v1/repos/user2/repo1/statuses/1234123412341234123412341234123412341234", statuses[4].APIURL(db.DefaultContext))
+=======
+	assert.Equal(t, "https://try.proxgit.io/api/v1/repos/user2/repo1/statuses/1234123412341234123412341234123412341234", statuses[0].APIURL(db.DefaultContext))
+
+	assert.Equal(t, "cov/awesomeness", statuses[1].Context)
+	assert.Equal(t, structs.CommitStatusWarning, statuses[1].State)
+	assert.Equal(t, "https://try.proxgit.io/api/v1/repos/user2/repo1/statuses/1234123412341234123412341234123412341234", statuses[1].APIURL(db.DefaultContext))
+
+	assert.Equal(t, "cov/awesomeness", statuses[2].Context)
+	assert.Equal(t, structs.CommitStatusSuccess, statuses[2].State)
+	assert.Equal(t, "https://try.proxgit.io/api/v1/repos/user2/repo1/statuses/1234123412341234123412341234123412341234", statuses[2].APIURL(db.DefaultContext))
+
+	assert.Equal(t, "ci/awesomeness", statuses[3].Context)
+	assert.Equal(t, structs.CommitStatusFailure, statuses[3].State)
+	assert.Equal(t, "https://try.proxgit.io/api/v1/repos/user2/repo1/statuses/1234123412341234123412341234123412341234", statuses[3].APIURL(db.DefaultContext))
+
+	assert.Equal(t, "deploy/awesomeness", statuses[4].Context)
+	assert.Equal(t, structs.CommitStatusError, statuses[4].State)
+	assert.Equal(t, "https://try.proxgit.io/api/v1/repos/user2/repo1/statuses/1234123412341234123412341234123412341234", statuses[4].APIURL(db.DefaultContext))
+>>>>>>> master
 
 	statuses, maxResults, err = db.FindAndCount[git_model.CommitStatus](db.DefaultContext, &git_model.CommitStatusOptions{
 		ListOptions: db.ListOptions{Page: 2, PageSize: 50},

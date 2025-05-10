@@ -8,7 +8,11 @@ import (
 	"errors"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer/internal"
+=======
+	"code.proxgit.io/proxgit/modules/indexer/internal"
+>>>>>>> master
 
 	"github.com/olivere/elastic/v7"
 )

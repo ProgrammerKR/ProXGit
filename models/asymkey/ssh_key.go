@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/perm"
@@ -17,6 +18,15 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/perm"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"golang.org/x/crypto/ssh"
 	"xorm.io/builder"
@@ -362,7 +372,11 @@ func SynchronizePublicKeys(ctx context.Context, usr *user_model.User, s *auth.So
 	log.Trace("synchronizePublicKeys[%s]: Handling Public SSH Key synchronization for user %s", s.Name, usr.Name)
 
 	// Get Public Keys from DB with current LDAP source
+<<<<<<< HEAD
 	var giteaKeys []string
+=======
+	var proxgitKeys []string
+>>>>>>> master
 	keys, err := db.Find[PublicKey](ctx, FindPublicKeyOptions{
 		OwnerID:       usr.ID,
 		LoginSourceID: s.ID,
@@ -372,7 +386,11 @@ func SynchronizePublicKeys(ctx context.Context, usr *user_model.User, s *auth.So
 	}
 
 	for _, v := range keys {
+<<<<<<< HEAD
 		giteaKeys = append(giteaKeys, v.OmitEmail())
+=======
+		proxgitKeys = append(proxgitKeys, v.OmitEmail())
+>>>>>>> master
 	}
 
 	// Process the provided keys to remove duplicates and name part
@@ -388,16 +406,28 @@ func SynchronizePublicKeys(ctx context.Context, usr *user_model.User, s *auth.So
 	}
 
 	// Check if Public Key sync is needed
+<<<<<<< HEAD
 	if util.SliceSortedEqual(giteaKeys, providedKeys) {
 		log.Trace("synchronizePublicKeys[%s]: Public Keys are already in sync for %s (Source:%v/DB:%v)", s.Name, usr.Name, len(providedKeys), len(giteaKeys))
 		return false
 	}
 	log.Trace("synchronizePublicKeys[%s]: Public Key needs update for user %s (Source:%v/DB:%v)", s.Name, usr.Name, len(providedKeys), len(giteaKeys))
+=======
+	if util.SliceSortedEqual(proxgitKeys, providedKeys) {
+		log.Trace("synchronizePublicKeys[%s]: Public Keys are already in sync for %s (Source:%v/DB:%v)", s.Name, usr.Name, len(providedKeys), len(proxgitKeys))
+		return false
+	}
+	log.Trace("synchronizePublicKeys[%s]: Public Key needs update for user %s (Source:%v/DB:%v)", s.Name, usr.Name, len(providedKeys), len(proxgitKeys))
+>>>>>>> master
 
 	// Add new Public SSH Keys that doesn't already exist in DB
 	var newKeys []string
 	for _, key := range providedKeys {
+<<<<<<< HEAD
 		if !util.SliceContainsString(giteaKeys, key) {
+=======
+		if !util.SliceContainsString(proxgitKeys, key) {
+>>>>>>> master
 			newKeys = append(newKeys, key)
 		}
 	}
@@ -406,16 +436,28 @@ func SynchronizePublicKeys(ctx context.Context, usr *user_model.User, s *auth.So
 	}
 
 	// Mark keys from DB that no longer exist in the source for deletion
+<<<<<<< HEAD
 	var giteaKeysToDelete []string
 	for _, giteaKey := range giteaKeys {
 		if !util.SliceContainsString(providedKeys, giteaKey) {
 			log.Trace("synchronizePublicKeys[%s]: Marking Public SSH Key for deletion for user %s: %v", s.Name, usr.Name, giteaKey)
 			giteaKeysToDelete = append(giteaKeysToDelete, giteaKey)
+=======
+	var proxgitKeysToDelete []string
+	for _, proxgitKey := range proxgitKeys {
+		if !util.SliceContainsString(providedKeys, proxgitKey) {
+			log.Trace("synchronizePublicKeys[%s]: Marking Public SSH Key for deletion for user %s: %v", s.Name, usr.Name, proxgitKey)
+			proxgitKeysToDelete = append(proxgitKeysToDelete, proxgitKey)
+>>>>>>> master
 		}
 	}
 
 	// Delete keys from DB that no longer exist in the source
+<<<<<<< HEAD
 	needUpd, err := deleteKeysMarkedForDeletion(ctx, giteaKeysToDelete)
+=======
+	needUpd, err := deleteKeysMarkedForDeletion(ctx, proxgitKeysToDelete)
+>>>>>>> master
 	if err != nil {
 		log.Error("synchronizePublicKeys[%s]: Error deleting Public Keys marked for deletion for user %s: %v", s.Name, usr.Name, err)
 	}

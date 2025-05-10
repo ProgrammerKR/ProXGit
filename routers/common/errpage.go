@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/httpcache"
 	"code.gitea.io/gitea/modules/log"
@@ -15,6 +16,16 @@ import (
 	"code.gitea.io/gitea/modules/web/middleware"
 	"code.gitea.io/gitea/modules/web/routing"
 	"code.gitea.io/gitea/services/context"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/httpcache"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	"code.proxgit.io/proxgit/modules/web/routing"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const tplStatus500 templates.TplName = "status/500"

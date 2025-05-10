@@ -4,7 +4,11 @@
 package web
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // SwaggerV1Json render swagger v1 json

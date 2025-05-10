@@ -14,6 +14,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -45,6 +46,39 @@ import (
 	pull_service "code.gitea.io/gitea/services/pull"
 	repo_service "code.gitea.io/gitea/services/repository"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	pull_model "code.proxgit.io/proxgit/models/pull"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/emoji"
+	"code.proxgit.io/proxgit/modules/fileicon"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	issue_template "code.proxgit.io/proxgit/modules/issue/template"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/utils"
+	shared_user "code.proxgit.io/proxgit/routers/web/shared/user"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	"code.proxgit.io/proxgit/services/automerge"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/context/upload"
+	"code.proxgit.io/proxgit/services/forms"
+	"code.proxgit.io/proxgit/services/gitdiff"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 
 	"github.com/gobwas/glob"
 )
@@ -64,12 +98,21 @@ var pullRequestTemplateCandidates = []string{
 	"pull_request_template.md",
 	"pull_request_template.yaml",
 	"pull_request_template.yml",
+<<<<<<< HEAD
 	".gitea/PULL_REQUEST_TEMPLATE.md",
 	".gitea/PULL_REQUEST_TEMPLATE.yaml",
 	".gitea/PULL_REQUEST_TEMPLATE.yml",
 	".gitea/pull_request_template.md",
 	".gitea/pull_request_template.yaml",
 	".gitea/pull_request_template.yml",
+=======
+	".proxgit/PULL_REQUEST_TEMPLATE.md",
+	".proxgit/PULL_REQUEST_TEMPLATE.yaml",
+	".proxgit/PULL_REQUEST_TEMPLATE.yml",
+	".proxgit/pull_request_template.md",
+	".proxgit/pull_request_template.yaml",
+	".proxgit/pull_request_template.yml",
+>>>>>>> master
 	".github/PULL_REQUEST_TEMPLATE.md",
 	".github/PULL_REQUEST_TEMPLATE.yaml",
 	".github/PULL_REQUEST_TEMPLATE.yml",

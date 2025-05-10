@@ -10,6 +10,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -19,12 +20,27 @@ import (
 	pull_service "code.gitea.io/gitea/services/pull"
 	repo_service "code.gitea.io/gitea/services/repository"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestAPIPullUpdate(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// Create PR to test
 		user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 		org26 := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 26})
@@ -53,7 +69,11 @@ func TestAPIPullUpdate(t *testing.T) {
 }
 
 func TestAPIPullUpdateByRebase(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// Create PR to test
 		user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 		org26 := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 26})

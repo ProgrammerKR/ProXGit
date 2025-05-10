@@ -6,9 +6,15 @@ package auth
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 )
 
 // DeleteSource deletes a AuthSource record in DB.

@@ -7,10 +7,17 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -23,11 +30,16 @@ func TestShadowPassword(t *testing.T) {
 	}{
 		{
 			Provider: "redis",
+<<<<<<< HEAD
 			CfgItem:  "network=tcp,addr=:6379,password=gitea,db=0,pool_size=100,idle_timeout=180",
+=======
+			CfgItem:  "network=tcp,addr=:6379,password=proxgit,db=0,pool_size=100,idle_timeout=180",
+>>>>>>> master
 			Result:   "network=tcp,addr=:6379,password=******,db=0,pool_size=100,idle_timeout=180",
 		},
 		{
 			Provider: "mysql",
+<<<<<<< HEAD
 			CfgItem:  "root:@tcp(localhost:3306)/gitea?charset=utf8",
 			Result:   "root:******@tcp(localhost:3306)/gitea?charset=utf8",
 		},
@@ -35,6 +47,15 @@ func TestShadowPassword(t *testing.T) {
 			Provider: "mysql",
 			CfgItem:  "/gitea?charset=utf8",
 			Result:   "/gitea?charset=utf8",
+=======
+			CfgItem:  "root:@tcp(localhost:3306)/proxgit?charset=utf8",
+			Result:   "root:******@tcp(localhost:3306)/proxgit?charset=utf8",
+		},
+		{
+			Provider: "mysql",
+			CfgItem:  "/proxgit?charset=utf8",
+			Result:   "/proxgit?charset=utf8",
+>>>>>>> master
 		},
 		{
 			Provider: "mysql",

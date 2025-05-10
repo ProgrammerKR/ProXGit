@@ -10,7 +10,11 @@ import (
 	"net/url"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/paginator"
+=======
+	"code.proxgit.io/proxgit/modules/paginator"
+>>>>>>> master
 )
 
 // Pagination provides a pagination via paginator.Paginator and additional configurations for the link params used in rendering

@@ -9,9 +9,15 @@ import (
 	"io"
 	"os"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
 	asymkey_service "code.gitea.io/gitea/services/asymkey"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+>>>>>>> master
 )
 
 // This file contains commit verification functions for refs passed across in hooks

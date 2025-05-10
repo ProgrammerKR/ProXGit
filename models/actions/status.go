@@ -4,9 +4,15 @@
 package actions
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+>>>>>>> master
 )
 
 // Status represents the status of ActionRun, ActionRunJob, ActionTask, or ActionTaskStep

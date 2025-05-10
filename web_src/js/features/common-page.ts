@@ -114,7 +114,11 @@ export function initGlobalInput() {
  */
 export function checkAppUrl() {
   const curUrl = window.location.href;
+<<<<<<< HEAD
   // some users visit "https://domain/gitea" while appUrl is "https://domain/gitea/", there should be no warning
+=======
+  // some users visit "https://domain/proxgit" while appUrl is "https://domain/proxgit/", there should be no warning
+>>>>>>> master
   if (curUrl.startsWith(appUrl) || `${curUrl}/` === appUrl) {
     return;
   }

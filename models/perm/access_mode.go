@@ -7,7 +7,11 @@ import (
 	"fmt"
 	"slices"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // AccessMode specifies the users access mode

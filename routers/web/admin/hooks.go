@@ -6,11 +6,19 @@ package admin
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const (
@@ -34,7 +42,11 @@ func DefaultOrSystemWebhooks(ctx *context.Context) {
 	}
 
 	sys["Title"] = ctx.Tr("admin.systemhooks")
+<<<<<<< HEAD
 	sys["Description"] = ctx.Tr("admin.systemhooks.desc", "https://docs.gitea.com/usage/webhooks")
+=======
+	sys["Description"] = ctx.Tr("admin.systemhooks.desc", "https://docs.proxgit.com/usage/webhooks")
+>>>>>>> master
 	sys["Webhooks"], err = webhook.GetSystemWebhooks(ctx, optional.None[bool]())
 	sys["BaseLink"] = setting.AppSubURL + "/-/admin/hooks"
 	sys["BaseLinkNew"] = setting.AppSubURL + "/-/admin/system-hooks"
@@ -44,7 +56,11 @@ func DefaultOrSystemWebhooks(ctx *context.Context) {
 	}
 
 	def["Title"] = ctx.Tr("admin.defaulthooks")
+<<<<<<< HEAD
 	def["Description"] = ctx.Tr("admin.defaulthooks.desc", "https://docs.gitea.com/usage/webhooks")
+=======
+	def["Description"] = ctx.Tr("admin.defaulthooks.desc", "https://docs.proxgit.com/usage/webhooks")
+>>>>>>> master
 	def["Webhooks"], err = webhook.GetDefaultWebhooks(ctx)
 	def["BaseLink"] = setting.AppSubURL + "/-/admin/hooks"
 	def["BaseLinkNew"] = setting.AppSubURL + "/-/admin/default-hooks"

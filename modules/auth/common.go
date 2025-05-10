@@ -4,8 +4,13 @@
 package auth
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 func UnmarshalGroupTeamMapping(raw string) (map[string]map[string][]string, error) {

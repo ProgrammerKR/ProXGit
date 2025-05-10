@@ -12,6 +12,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/auth/pam"
@@ -28,6 +29,24 @@ import (
 	"code.gitea.io/gitea/services/auth/source/sspi"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/forms"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/auth/pam"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	auth_service "code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/auth/source/ldap"
+	"code.proxgit.io/proxgit/services/auth/source/oauth2"
+	pam_service "code.proxgit.io/proxgit/services/auth/source/pam"
+	"code.proxgit.io/proxgit/services/auth/source/smtp"
+	"code.proxgit.io/proxgit/services/auth/source/sspi"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 )
 
 const (

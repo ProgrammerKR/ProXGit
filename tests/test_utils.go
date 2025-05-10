@@ -12,6 +12,7 @@ import (
 	"path/filepath"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -24,6 +25,20 @@ import (
 	"code.gitea.io/gitea/modules/testlogger"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/routers"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/testlogger"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -31,11 +46,16 @@ import (
 func InitTest(requireGitea bool) {
 	testlogger.Init()
 
+<<<<<<< HEAD
 	giteaRoot := test.SetupGiteaRoot()
+=======
+	proxgitRoot := test.SetupGiteaRoot()
+>>>>>>> master
 
 	// TODO: Speedup tests that rely on the event source ticker, confirm whether there is any bug or failure.
 	// setting.UI.Notification.EventSourceUpdateTime = time.Second
 
+<<<<<<< HEAD
 	setting.AppWorkPath = giteaRoot
 	setting.CustomPath = filepath.Join(setting.AppWorkPath, "custom")
 	if requireGitea {
@@ -56,14 +76,43 @@ func InitTest(requireGitea bool) {
 		giteaConf = "tests/sqlite.ini"
 		_ = os.Setenv("GITEA_CONF", giteaConf)
 		fmt.Printf("Environment variable $GITEA_CONF not set, use default: %s\n", giteaConf)
+=======
+	setting.AppWorkPath = proxgitRoot
+	setting.CustomPath = filepath.Join(setting.AppWorkPath, "custom")
+	if requireGitea {
+		proxgitBinary := "proxgit"
+		if setting.IsWindows {
+			proxgitBinary += ".exe"
+		}
+		setting.AppPath = filepath.Join(proxgitRoot, proxgitBinary)
+		if _, err := os.Stat(setting.AppPath); err != nil {
+			testlogger.Fatalf("Could not find proxgit binary at %s\n", setting.AppPath)
+		}
+	}
+	proxgitConf := os.Getenv("GITEA_CONF")
+	if proxgitConf == "" {
+		// By default, use sqlite.ini for testing, then IDE like GoLand can start the test process with debugger.
+		// It's easier for developers to debug bugs step by step with a debugger.
+		// Notice: when doing "ssh push", Gitea executes sub processes, debugger won't work for the sub processes.
+		proxgitConf = "tests/sqlite.ini"
+		_ = os.Setenv("GITEA_CONF", proxgitConf)
+		fmt.Printf("Environment variable $GITEA_CONF not set, use default: %s\n", proxgitConf)
+>>>>>>> master
 		if !setting.EnableSQLite3 {
 			testlogger.Fatalf(`sqlite3 requires: -tags sqlite,sqlite_unlock_notify` + "\n")
 		}
 	}
+<<<<<<< HEAD
 	if !filepath.IsAbs(giteaConf) {
 		setting.CustomConf = filepath.Join(giteaRoot, giteaConf)
 	} else {
 		setting.CustomConf = giteaConf
+=======
+	if !filepath.IsAbs(proxgitConf) {
+		setting.CustomConf = filepath.Join(proxgitRoot, proxgitConf)
+	} else {
+		setting.CustomConf = proxgitConf
+>>>>>>> master
 	}
 
 	unittest.InitSettingsForTesting()
@@ -185,7 +234,11 @@ func PrepareGitRepoDirectory(t testing.TB) {
 	if !assert.NotEmpty(t, setting.RepoRootPath) {
 		return
 	}
+<<<<<<< HEAD
 	assert.NoError(t, unittest.SyncDirs(filepath.Join(filepath.Dir(setting.AppPath), "tests/gitea-repositories-meta"), setting.RepoRootPath))
+=======
+	assert.NoError(t, unittest.SyncDirs(filepath.Join(filepath.Dir(setting.AppPath), "tests/proxgit-repositories-meta"), setting.RepoRootPath))
+>>>>>>> master
 }
 
 func PrepareArtifactsStorage(t testing.TB) {
@@ -206,7 +259,11 @@ func PrepareLFSStorage(t testing.TB) {
 	// load LFS object fixtures
 	// (LFS storage can be on any of several backends, including remote servers, so init it with the storage API)
 	lfsFixtures, err := storage.NewStorage(setting.LocalStorageType, &setting.Storage{
+<<<<<<< HEAD
 		Path: filepath.Join(filepath.Dir(setting.AppPath), "tests/gitea-lfs-meta"),
+=======
+		Path: filepath.Join(filepath.Dir(setting.AppPath), "tests/proxgit-lfs-meta"),
+>>>>>>> master
 	})
 	assert.NoError(t, err)
 	assert.NoError(t, storage.Clean(storage.LFS))

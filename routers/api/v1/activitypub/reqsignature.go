@@ -13,10 +13,17 @@ import (
 	"net/http"
 	"net/url"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/activitypub"
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/setting"
 	gitea_context "code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/activitypub"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/setting"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 
 	"github.com/42wim/httpsig"
 	ap "github.com/go-ap/activitypub"
@@ -58,7 +65,11 @@ func fetch(iri *url.URL) (b []byte, err error) {
 	return b, err
 }
 
+<<<<<<< HEAD
 func verifyHTTPSignatures(ctx *gitea_context.APIContext) (authenticated bool, err error) {
+=======
+func verifyHTTPSignatures(ctx *proxgit_context.APIContext) (authenticated bool, err error) {
+>>>>>>> master
 	r := ctx.Req
 
 	// 1. Figure out what key we need to verify
@@ -87,8 +98,13 @@ func verifyHTTPSignatures(ctx *gitea_context.APIContext) (authenticated bool, er
 }
 
 // ReqHTTPSignature function
+<<<<<<< HEAD
 func ReqHTTPSignature() func(ctx *gitea_context.APIContext) {
 	return func(ctx *gitea_context.APIContext) {
+=======
+func ReqHTTPSignature() func(ctx *proxgit_context.APIContext) {
+	return func(ctx *proxgit_context.APIContext) {
+>>>>>>> master
 		if authenticated, err := verifyHTTPSignatures(ctx); err != nil {
 			ctx.APIErrorInternal(err)
 		} else if !authenticated {

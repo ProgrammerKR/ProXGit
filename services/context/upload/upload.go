@@ -11,9 +11,15 @@ import (
 	"regexp"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // ErrFileTypeForbidden not allowed file type error

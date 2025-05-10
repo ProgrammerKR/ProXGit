@@ -4,9 +4,15 @@
 package cmd
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	asymkey_service "code.gitea.io/gitea/services/asymkey"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

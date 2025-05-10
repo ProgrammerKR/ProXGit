@@ -6,11 +6,19 @@ package doctor
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	org_model "code.gitea.io/gitea/models/organization"
 	"code.gitea.io/gitea/models/perm"
 	"code.gitea.io/gitea/modules/log"
 	org_service "code.gitea.io/gitea/services/org"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	org_model "code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/perm"
+	"code.proxgit.io/proxgit/modules/log"
+	org_service "code.proxgit.io/proxgit/services/org"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

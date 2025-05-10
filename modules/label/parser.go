@@ -8,7 +8,11 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/options"
+=======
+	"code.proxgit.io/proxgit/modules/options"
+>>>>>>> master
 
 	"gopkg.in/yaml.v3"
 )

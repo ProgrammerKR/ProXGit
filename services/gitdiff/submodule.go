@@ -7,10 +7,17 @@ import (
 	"context"
 	"html/template"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/base"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/htmlutil"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/htmlutil"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 type SubmoduleDiffInfo struct {

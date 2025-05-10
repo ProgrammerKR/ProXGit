@@ -7,6 +7,7 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
@@ -15,6 +16,16 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	issue_service "code.gitea.io/gitea/services/issue"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+>>>>>>> master
 )
 
 // GetIssueCommentReactions list reactions of a comment from an issue

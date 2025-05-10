@@ -20,7 +20,11 @@ import (
 	"strings"
 	"unicode/utf8"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 const (
@@ -138,7 +142,11 @@ func generate() ([]byte, error) {
 		}
 	}
 
+<<<<<<< HEAD
 	// gitea customizations
+=======
+	// proxgit customizations
+>>>>>>> master
 	i, ok := aliasMap["tada"]
 	if ok {
 		data[i].Aliases = append(data[i].Aliases, "hooray")

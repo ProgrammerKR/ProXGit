@@ -1,7 +1,11 @@
 // Copyright 2018 The Gitea Authors. All rights reserved.
 // SPDX-License-Identifier: MIT
 
+<<<<<<< HEAD
 // Package cmd provides subcommands to the gitea binary - such as "web" or
+=======
+// Package cmd provides subcommands to the proxgit binary - such as "web" or
+>>>>>>> master
 // "admin".
 package cmd
 
@@ -15,10 +19,17 @@ import (
 	"strings"
 	"syscall"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

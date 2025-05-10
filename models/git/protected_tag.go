@@ -9,9 +9,15 @@ import (
 	"slices"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"github.com/gobwas/glob"
 )

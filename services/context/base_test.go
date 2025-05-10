@@ -8,7 +8,11 @@ import (
 	"net/http/httptest"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -32,7 +36,11 @@ func TestRedirect(t *testing.T) {
 		b := NewBaseContextForTest(resp, req)
 		resp.Header().Add("Set-Cookie", (&http.Cookie{Name: setting.SessionConfig.CookieName, Value: "dummy"}).String())
 		b.Redirect(c.url)
+<<<<<<< HEAD
 		has := resp.Header().Get("Set-Cookie") == "i_like_gitea=dummy"
+=======
+		has := resp.Header().Get("Set-Cookie") == "i_like_proxgit=dummy"
+>>>>>>> master
 		assert.Equal(t, c.keep, has, "url = %q", c.url)
 	}
 

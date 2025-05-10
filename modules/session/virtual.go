@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 
 	"gitea.com/go-chi/session"
@@ -14,6 +15,15 @@ import (
 	memcache "gitea.com/go-chi/session/memcache"
 	mysql "gitea.com/go-chi/session/mysql"
 	postgres "gitea.com/go-chi/session/postgres"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+
+	"proxgit.com/go-chi/session"
+	couchbase "proxgit.com/go-chi/session/couchbase"
+	memcache "proxgit.com/go-chi/session/memcache"
+	mysql "proxgit.com/go-chi/session/mysql"
+	postgres "proxgit.com/go-chi/session/postgres"
+>>>>>>> master
 )
 
 // VirtualSessionProvider represents a shadowed session provider implementation.

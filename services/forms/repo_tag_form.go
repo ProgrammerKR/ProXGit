@@ -6,10 +6,17 @@ package forms
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/web/middleware"
 	"code.gitea.io/gitea/services/context"
 
 	"gitea.com/go-chi/binding"
+=======
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	"code.proxgit.io/proxgit/services/context"
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 )
 
 // ProtectTagForm form for changing protected tag settings

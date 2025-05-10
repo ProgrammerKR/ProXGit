@@ -9,6 +9,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
@@ -18,6 +19,17 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/timeutil"
 	org_service "code.gitea.io/gitea/services/org"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	org_service "code.proxgit.io/proxgit/services/org"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -85,7 +97,11 @@ func TestPurgeUser(t *testing.T) {
 func TestCreateUser(t *testing.T) {
 	user := &user_model.User{
 		Name:               "GiteaBot",
+<<<<<<< HEAD
 		Email:              "GiteaBot@gitea.io",
+=======
+		Email:              "GiteaBot@proxgit.io",
+>>>>>>> master
 		Passwd:             ";p['////..-++']",
 		IsAdmin:            false,
 		Theme:              setting.UI.DefaultTheme,
@@ -114,7 +130,11 @@ func TestRenameUser(t *testing.T) {
 	})
 
 	t.Run("Non usable username", func(t *testing.T) {
+<<<<<<< HEAD
 		usernames := []string{"--diff", ".well-known", "gitea-actions", "aaa.atom", "aa.png"}
+=======
+		usernames := []string{"--diff", ".well-known", "proxgit-actions", "aaa.atom", "aa.png"}
+>>>>>>> master
 		for _, username := range usernames {
 			assert.Error(t, user_model.IsUsableUsername(username), "non-usable username: %s", username)
 			assert.Error(t, RenameUser(db.DefaultContext, user, username), "non-usable username: %s", username)
@@ -166,8 +186,13 @@ func TestCreateUser_Issue5882(t *testing.T) {
 		user               *user_model.User
 		disableOrgCreation bool
 	}{
+<<<<<<< HEAD
 		{&user_model.User{Name: "GiteaBot", Email: "GiteaBot@gitea.io", Passwd: passwd, MustChangePassword: false}, false},
 		{&user_model.User{Name: "GiteaBot2", Email: "GiteaBot2@gitea.io", Passwd: passwd, MustChangePassword: false}, true},
+=======
+		{&user_model.User{Name: "GiteaBot", Email: "GiteaBot@proxgit.io", Passwd: passwd, MustChangePassword: false}, false},
+		{&user_model.User{Name: "GiteaBot2", Email: "GiteaBot2@proxgit.io", Passwd: passwd, MustChangePassword: false}, true},
+>>>>>>> master
 	}
 
 	setting.Service.DefaultAllowCreateOrganization = true

@@ -12,6 +12,7 @@ import (
 	"sort"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	user_model "code.gitea.io/gitea/models/user"
 	auth_module "code.gitea.io/gitea/modules/auth"
@@ -27,6 +28,23 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/externalaccount"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	user_model "code.proxgit.io/proxgit/models/user"
+	auth_module "code.proxgit.io/proxgit/modules/auth"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/session"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	source_service "code.proxgit.io/proxgit/services/auth/source"
+	"code.proxgit.io/proxgit/services/auth/source/oauth2"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/externalaccount"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
@@ -173,7 +191,11 @@ func SignInOAuthCallback(ctx *context.Context) {
 				if gothUser.RawData == nil {
 					gothUser.RawData = make(map[string]any)
 				}
+<<<<<<< HEAD
 				gothUser.RawData["__giteaAutoRegMissingFields"] = missingFields
+=======
+				gothUser.RawData["__proxgitAutoRegMissingFields"] = missingFields
+>>>>>>> master
 				showLinkingLogin(ctx, gothUser)
 				return
 			}

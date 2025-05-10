@@ -17,6 +17,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
@@ -28,6 +29,19 @@ import (
 	"code.gitea.io/gitea/routers/api/packages/nuget"
 	packageService "code.gitea.io/gitea/services/packages"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	nuget_module "code.proxgit.io/proxgit/modules/packages/nuget"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/routers/api/packages/nuget"
+	packageService "code.proxgit.io/proxgit/services/packages"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -464,7 +478,11 @@ AAAjQmxvYgAAAGm7ENm9SGxMtAFVvPUsPJTF6PbtAAAAAFcVogEJAAAAAQAAAA==`)
 		t.Run("Symbol", func(t *testing.T) {
 			defer tests.PrintCurrentTest(t)()
 
+<<<<<<< HEAD
 			req := NewRequest(t, "GET", fmt.Sprintf("%s/symbols/%s/%sFFFFFFFF/gitea.pdb", url, symbolFilename, symbolID))
+=======
+			req := NewRequest(t, "GET", fmt.Sprintf("%s/symbols/%s/%sFFFFFFFF/proxgit.pdb", url, symbolFilename, symbolID))
+>>>>>>> master
 			MakeRequest(t, req, http.StatusBadRequest)
 
 			req = NewRequest(t, "GET", fmt.Sprintf("%s/symbols/%s/%sFFFFFFFF/%s", url, symbolFilename, "00000000000000000000000000000000", symbolFilename)).
@@ -509,7 +527,11 @@ AAAjQmxvYgAAAGm7ENm9SGxMtAFVvPUsPJTF6PbtAAAAAFcVogEJAAAAAQAAAA==`)
 		}{
 			{"", 0, 0, 4, 4, false},
 			{"", 0, 10, 4, 4, false},
+<<<<<<< HEAD
 			{"gitea", 0, 10, 0, 0, false},
+=======
+			{"proxgit", 0, 10, 0, 0, false},
+>>>>>>> master
 			{"test", 0, 10, 1, 1, false},
 			{"test", 1, 10, 1, 0, false},
 			{"almost.similar", 0, 0, 3, 3, true},

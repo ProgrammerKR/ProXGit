@@ -11,8 +11,13 @@ import (
 	"path/filepath"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // BatchChecker provides a reader for check-attribute content that can be long running

@@ -78,15 +78,26 @@
 							<input readonly="" value="{{$.TokenToSign}}">
 							<div class="help">
 								<p>{{ctx.Locale.Tr "settings.ssh_token_help"}}</p>
+<<<<<<< HEAD
 								<p><code>echo -n '{{$.TokenToSign}}' | ssh-keygen -Y sign -n gitea -f /path_to_PrivateKey_or_RelatedPublicKey</code></p>
 								<details>
 									<summary>Windows PowerShell</summary>
 									<p><code>cmd /c "&lt;NUL set /p=`"{{$.TokenToSign}}`"| ssh-keygen -Y sign -n gitea -f /path_to_PrivateKey_or_RelatedPublicKey"</code></p>
+=======
+								<p><code>echo -n '{{$.TokenToSign}}' | ssh-keygen -Y sign -n proxgit -f /path_to_PrivateKey_or_RelatedPublicKey</code></p>
+								<details>
+									<summary>Windows PowerShell</summary>
+									<p><code>cmd /c "&lt;NUL set /p=`"{{$.TokenToSign}}`"| ssh-keygen -Y sign -n proxgit -f /path_to_PrivateKey_or_RelatedPublicKey"</code></p>
+>>>>>>> master
 								</details>
 								<br>
 								<details>
 									<summary>Windows CMD</summary>
+<<<<<<< HEAD
 									<p><code>set /p={{$.TokenToSign}}| ssh-keygen -Y sign -n gitea -f /path_to_PrivateKey_or_RelatedPublicKey</code></p>
+=======
+									<p><code>set /p={{$.TokenToSign}}| ssh-keygen -Y sign -n proxgit -f /path_to_PrivateKey_or_RelatedPublicKey</code></p>
+>>>>>>> master
 								</details>
 							</div>
 							<br>

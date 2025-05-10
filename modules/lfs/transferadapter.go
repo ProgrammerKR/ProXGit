@@ -9,8 +9,13 @@ import (
 	"io"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // TransferAdapter represents an adapter for downloading/uploading LFS objects.

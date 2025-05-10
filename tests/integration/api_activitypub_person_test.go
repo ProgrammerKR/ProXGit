@@ -9,6 +9,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/activitypub"
@@ -16,6 +17,15 @@ import (
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/routers"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/activitypub"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/routers"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	ap "github.com/go-ap/activitypub"
 	"github.com/stretchr/testify/assert"

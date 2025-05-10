@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
@@ -21,6 +22,20 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/externalaccount"
 	"code.gitea.io/gitea/services/forms"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	auth_service "code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/auth/source/oauth2"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/externalaccount"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 
 	"github.com/markbates/goth"
 )
@@ -64,7 +79,11 @@ func LinkAccount(ctx *context.Context) {
 		return
 	}
 
+<<<<<<< HEAD
 	if missingFields, ok := gothUser.RawData["__giteaAutoRegMissingFields"].([]string); ok {
+=======
+	if missingFields, ok := gothUser.RawData["__proxgitAutoRegMissingFields"].([]string); ok {
+>>>>>>> master
 		ctx.Data["AutoRegistrationFailedPrompt"] = ctx.Tr("auth.oauth_callback_unable_auto_reg", gothUser.Provider, strings.Join(missingFields, ","))
 	}
 

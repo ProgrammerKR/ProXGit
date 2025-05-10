@@ -9,16 +9,27 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/test"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/test"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestRepoActivity(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 
 		// Create PRs (1 merged & 2 proposed)

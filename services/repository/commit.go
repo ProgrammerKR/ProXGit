@@ -7,8 +7,13 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
 	gitea_ctx "code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+	proxgit_ctx "code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 type ContainedLinks struct { // TODO: better name?
@@ -23,7 +28,11 @@ type namedLink struct { // TODO: better name?
 }
 
 // LoadBranchesAndTags creates a new repository branch
+<<<<<<< HEAD
 func LoadBranchesAndTags(ctx context.Context, baseRepo *gitea_ctx.Repository, commitSHA string) (*ContainedLinks, error) {
+=======
+func LoadBranchesAndTags(ctx context.Context, baseRepo *proxgit_ctx.Repository, commitSHA string) (*ContainedLinks, error) {
+>>>>>>> master
 	containedTags, err := baseRepo.GitRepo.ListOccurrences(ctx, "tag", commitSHA)
 	if err != nil {
 		return nil, fmt.Errorf("encountered a problem while querying %s: %w", "tags", err)

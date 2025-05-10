@@ -7,11 +7,19 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/services/contexttest"
 	"code.gitea.io/gitea/services/forms"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/contexttest"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

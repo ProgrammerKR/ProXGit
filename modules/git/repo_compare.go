@@ -18,7 +18,11 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	logger "code.gitea.io/gitea/modules/log"
+=======
+	logger "code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // CompareInfo represents needed information for comparing references.

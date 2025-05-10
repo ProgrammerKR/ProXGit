@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 module code.gitea.io/gitea
+=======
+module code.proxgit.io/proxgit
+>>>>>>> master
 
 go 1.24.2
 
@@ -8,6 +12,7 @@ go 1.24.2
 godebug x509negativeserial=1
 
 require (
+<<<<<<< HEAD
 	code.gitea.io/actions-proto-go v0.4.1
 	code.gitea.io/gitea-vet v0.2.3
 	code.gitea.io/sdk/gitea v0.21.0
@@ -19,6 +24,19 @@ require (
 	gitea.com/go-chi/session v0.0.0-20240316035857-16768d98ec96
 	gitea.com/lunny/dingtalk_webhook v0.0.0-20171025031554-e3534c89ef96
 	gitea.com/lunny/levelqueue v0.4.2-0.20230414023320-3c0159fe0fe4
+=======
+	code.proxgit.io/actions-proto-go v0.4.1
+	code.proxgit.io/proxgit-vet v0.2.3
+	code.proxgit.io/sdk/proxgit v0.21.0
+	codeberg.org/gusted/mcaptcha v0.0.0-20220723083913-4f3072e1d570
+	connectrpc.com/connect v1.18.1
+	proxgit.com/go-chi/binding v0.0.0-20240430071103-39a851e106ed
+	proxgit.com/go-chi/cache v0.2.1
+	proxgit.com/go-chi/captcha v0.0.0-20240315150714-fb487f629098
+	proxgit.com/go-chi/session v0.0.0-20240316035857-16768d98ec96
+	proxgit.com/lunny/dingtalk_webhook v0.0.0-20171025031554-e3534c89ef96
+	proxgit.com/lunny/levelqueue v0.4.2-0.20230414023320-3c0159fe0fe4
+>>>>>>> master
 	github.com/42wim/httpsig v1.2.2
 	github.com/42wim/sshsig v0.0.0-20240818000253-e3a6333df815
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.18.0
@@ -317,15 +335,26 @@ replace github.com/hashicorp/go-version => github.com/6543/go-version v1.3.1
 
 replace github.com/shurcooL/vfsgen => github.com/lunny/vfsgen v0.0.0-20220105142115-2c99e1ffdfa0
 
+<<<<<<< HEAD
 replace github.com/nektos/act => gitea.com/gitea/act v0.261.4
 
 // TODO: the only difference is in `PutObject`: the fork doesn't use `NewVerifyingReader(r, sha256.New(), oid, expectedSize)`, need to figure out why
 replace github.com/charmbracelet/git-lfs-transfer => gitea.com/gitea/git-lfs-transfer v0.2.0
+=======
+replace github.com/nektos/act => proxgit.com/proxgit/act v0.261.4
+
+// TODO: the only difference is in `PutObject`: the fork doesn't use `NewVerifyingReader(r, sha256.New(), oid, expectedSize)`, need to figure out why
+replace github.com/charmbracelet/git-lfs-transfer => proxgit.com/proxgit/git-lfs-transfer v0.2.0
+>>>>>>> master
 
 // TODO: This could be removed after https://github.com/mholt/archiver/pull/396 merged
 replace github.com/mholt/archiver/v3 => github.com/anchore/archiver/v3 v3.5.2
 
+<<<<<<< HEAD
 replace git.sr.ht/~mariusor/go-xsd-duration => gitea.com/gitea/go-xsd-duration v0.0.0-20220703122237-02e73435a078
+=======
+replace git.sr.ht/~mariusor/go-xsd-duration => proxgit.com/proxgit/go-xsd-duration v0.0.0-20220703122237-02e73435a078
+>>>>>>> master
 
 exclude github.com/gofrs/uuid v3.2.0+incompatible
 

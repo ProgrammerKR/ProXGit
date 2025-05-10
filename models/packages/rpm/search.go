@@ -6,8 +6,13 @@ package rpm
 import (
 	"context"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	rpm_module "code.gitea.io/gitea/modules/packages/rpm"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	rpm_module "code.proxgit.io/proxgit/modules/packages/rpm"
+>>>>>>> master
 )
 
 // GetGroups gets all available groups

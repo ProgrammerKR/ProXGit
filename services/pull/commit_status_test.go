@@ -7,8 +7,13 @@ package pull
 import (
 	"testing"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	"code.gitea.io/gitea/modules/structs"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

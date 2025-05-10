@@ -524,6 +524,7 @@ export default defineComponent({
               </button>
               <div class="menu transition action-job-menu" :class="{visible: menuVisible}" v-if="menuVisible" v-cloak>
                 <a class="item" @click="toggleTimeDisplay('seconds')">
+<<<<<<< HEAD
                   <i class="icon"><SvgIcon :name="timeVisible['log-time-seconds'] ? 'octicon-check' : 'gitea-empty-checkbox'"/></i>
                   {{ locale.showLogSeconds }}
                 </a>
@@ -533,16 +534,35 @@ export default defineComponent({
                 </a>
                 <a class="item" @click="toggleFullScreen()">
                   <i class="icon"><SvgIcon :name="isFullScreen ? 'octicon-check' : 'gitea-empty-checkbox'"/></i>
+=======
+                  <i class="icon"><SvgIcon :name="timeVisible['log-time-seconds'] ? 'octicon-check' : 'proxgit-empty-checkbox'"/></i>
+                  {{ locale.showLogSeconds }}
+                </a>
+                <a class="item" @click="toggleTimeDisplay('stamp')">
+                  <i class="icon"><SvgIcon :name="timeVisible['log-time-stamp'] ? 'octicon-check' : 'proxgit-empty-checkbox'"/></i>
+                  {{ locale.showTimeStamps }}
+                </a>
+                <a class="item" @click="toggleFullScreen()">
+                  <i class="icon"><SvgIcon :name="isFullScreen ? 'octicon-check' : 'proxgit-empty-checkbox'"/></i>
+>>>>>>> master
                   {{ locale.showFullScreen }}
                 </a>
 
                 <div class="divider"/>
                 <a class="item" @click="optionAlwaysAutoScroll = !optionAlwaysAutoScroll">
+<<<<<<< HEAD
                   <i class="icon"><SvgIcon :name="optionAlwaysAutoScroll ? 'octicon-check' : 'gitea-empty-checkbox'"/></i>
                   {{ locale.logsAlwaysAutoScroll }}
                 </a>
                 <a class="item" @click="optionAlwaysExpandRunning = !optionAlwaysExpandRunning">
                   <i class="icon"><SvgIcon :name="optionAlwaysExpandRunning ? 'octicon-check' : 'gitea-empty-checkbox'"/></i>
+=======
+                  <i class="icon"><SvgIcon :name="optionAlwaysAutoScroll ? 'octicon-check' : 'proxgit-empty-checkbox'"/></i>
+                  {{ locale.logsAlwaysAutoScroll }}
+                </a>
+                <a class="item" @click="optionAlwaysExpandRunning = !optionAlwaysExpandRunning">
+                  <i class="icon"><SvgIcon :name="optionAlwaysExpandRunning ? 'octicon-check' : 'proxgit-empty-checkbox'"/></i>
+>>>>>>> master
                   {{ locale.logsAlwaysExpandRunning }}
                 </a>
 

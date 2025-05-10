@@ -6,7 +6,11 @@ package doctor
 import (
 	"testing"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

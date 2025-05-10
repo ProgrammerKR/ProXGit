@@ -55,10 +55,17 @@ import (
 	_ "image/jpeg" // for processing jpeg images
 	_ "image/png"  // for processing png images
 
+<<<<<<< HEAD
 	"code.gitea.io/other/package"
 
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/other/package"
+
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
   "xorm.io/the/package"
 
@@ -81,10 +88,17 @@ import (
 	_ "image/jpeg" // for processing jpeg images
 	_ "image/png"  // for processing png images
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 
 	"code.gitea.io/other/package"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+
+	"code.proxgit.io/other/package"
+>>>>>>> master
 	"github.com/issue9/identicon"
 	"github.com/nfnt/resize"
 	"github.com/oliamb/cutter"

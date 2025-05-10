@@ -14,7 +14,11 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type GrepResult struct {
@@ -54,10 +58,17 @@ func GrepSearch(ctx context.Context, repo *Repository, search string, opts GrepO
 	 The output is like this ( "^@" means \x00):
 
 	 HEAD:.air.toml
+<<<<<<< HEAD
 	 6^@bin = "gitea"
 
 	 HEAD:.changelog.yml
 	 2^@repo: go-gitea/gitea
+=======
+	 6^@bin = "proxgit"
+
+	 HEAD:.changelog.yml
+	 2^@repo: go-proxgit/proxgit
+>>>>>>> master
 	*/
 	var results []*GrepResult
 	cmd := NewCommand("grep", "--null", "--break", "--heading", "--line-number", "--full-name")

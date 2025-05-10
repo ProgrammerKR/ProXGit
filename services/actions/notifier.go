@@ -6,6 +6,7 @@ package actions
 import (
 	"context"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	packages_model "code.gitea.io/gitea/models/packages"
 	perm_model "code.gitea.io/gitea/models/perm"
@@ -20,6 +21,22 @@ import (
 	webhook_module "code.gitea.io/gitea/modules/webhook"
 	"code.gitea.io/gitea/services/convert"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	perm_model "code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+	"code.proxgit.io/proxgit/services/convert"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 )
 
 type actionsNotifier struct {

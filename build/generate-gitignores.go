@@ -15,12 +15,20 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 func main() {
 	var (
+<<<<<<< HEAD
 		prefix         = "gitea-gitignore"
+=======
+		prefix         = "proxgit-gitignore"
+>>>>>>> master
 		url            = "https://api.github.com/repos/github/gitignore/tarball"
 		githubApiToken = ""
 		githubUsername = ""

@@ -12,7 +12,11 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"github.com/mholt/archiver/v3"
 	"github.com/stretchr/testify/assert"
@@ -29,8 +33,13 @@ func TestPrepareFileNameAndType(t *testing.T) {
 		)
 	}
 
+<<<<<<< HEAD
 	test("", "", "gitea-dump-1234.zip", "zip")
 	test("", "tar.gz", "gitea-dump-1234.tar.gz", "tar.gz")
+=======
+	test("", "", "proxgit-dump-1234.zip", "zip")
+	test("", "tar.gz", "proxgit-dump-1234.tar.gz", "tar.gz")
+>>>>>>> master
 	test("", "no-such", "", "")
 
 	test("-", "", "-", "zip")

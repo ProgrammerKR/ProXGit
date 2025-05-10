@@ -412,10 +412,17 @@
     ".github": "folder-github",
     "_github": "folder-github",
     "__github__": "folder-github",
+<<<<<<< HEAD
     "gitea": "folder-gitea",
     ".gitea": "folder-gitea",
     "_gitea": "folder-gitea",
     "__gitea__": "folder-gitea",
+=======
+    "proxgit": "folder-proxgit",
+    ".proxgit": "folder-proxgit",
+    "_proxgit": "folder-proxgit",
+    "__proxgit__": "folder-proxgit",
+>>>>>>> master
     "gitlab": "folder-gitlab",
     ".gitlab": "folder-gitlab",
     "_gitlab": "folder-gitlab",
@@ -3493,10 +3500,17 @@
     ".github": "folder-github-open",
     "_github": "folder-github-open",
     "__github__": "folder-github-open",
+<<<<<<< HEAD
     "gitea": "folder-gitea-open",
     ".gitea": "folder-gitea-open",
     "_gitea": "folder-gitea-open",
     "__gitea__": "folder-gitea-open",
+=======
+    "proxgit": "folder-proxgit-open",
+    ".proxgit": "folder-proxgit-open",
+    "_proxgit": "folder-proxgit-open",
+    "__proxgit__": "folder-proxgit-open",
+>>>>>>> master
     "gitlab": "folder-gitlab-open",
     ".gitlab": "folder-gitlab-open",
     "_gitlab": "folder-gitlab-open",

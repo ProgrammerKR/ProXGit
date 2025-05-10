@@ -4,7 +4,11 @@
 package repository
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 )
 
 // PushUpdateOptions defines the push update options

@@ -17,6 +17,7 @@ import (
 	"strings"
 	texttmpl "text/template"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/httplib"
@@ -25,6 +26,16 @@ import (
 	"code.gitea.io/gitea/modules/storage"
 	"code.gitea.io/gitea/modules/typesniffer"
 	sender_service "code.gitea.io/gitea/services/mailer/sender"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/typesniffer"
+	sender_service "code.proxgit.io/proxgit/services/mailer/sender"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 )
@@ -83,7 +94,11 @@ func (b64embedder *mailAttachmentBase64Embedder) Base64InlineImages(ctx context.
 						attachmentSrc := attr.Val
 						dataURI, err := b64embedder.AttachmentSrcToBase64DataURI(ctx, attachmentSrc)
 						if err != nil {
+<<<<<<< HEAD
 							// Not an error, just skip. This is probably an image from outside the gitea instance.
+=======
+							// Not an error, just skip. This is probably an image from outside the proxgit instance.
+>>>>>>> master
 							log.Trace("Unable to embed attachment %q to mail body: %v", attachmentSrc, err)
 						} else {
 							n.Attr[i].Val = dataURI

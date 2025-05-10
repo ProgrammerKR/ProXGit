@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/url"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/gitrepo"
@@ -20,6 +21,19 @@ import (
 	"code.gitea.io/gitea/services/convert"
 	notify_service "code.gitea.io/gitea/services/notify"
 	wiki_service "code.gitea.io/gitea/services/wiki"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	wiki_service "code.proxgit.io/proxgit/services/wiki"
+>>>>>>> master
 )
 
 // NewWikiPage response for wiki create request

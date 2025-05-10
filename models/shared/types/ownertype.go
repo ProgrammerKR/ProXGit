@@ -3,7 +3,11 @@
 
 package types
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/modules/translation"
+=======
+import "code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 
 type OwnerType string
 

@@ -129,7 +129,11 @@ func BenchmarkEntries_GetCommitsInfo(b *testing.B) {
 	}
 
 	benchmarks := []benchmarkType{
+<<<<<<< HEAD
 		{url: "https://github.com/go-gitea/gitea.git", name: "gitea"},
+=======
+		{url: "https://github.com/go-proxgit/proxgit.git", name: "proxgit"},
+>>>>>>> master
 		{url: "https://github.com/ethantkoenig/manyfiles.git", name: "manyfiles"},
 		{url: "https://github.com/moby/moby.git", name: "moby"},
 		{url: "https://github.com/golang/go.git", name: "go"},

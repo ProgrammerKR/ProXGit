@@ -108,7 +108,11 @@ function initRepoSettingsBranches() {
       let matched = false;
       const statusCheck = el.getAttribute('data-status-check');
       for (const pattern of validPatterns) {
+<<<<<<< HEAD
         if (minimatch(statusCheck, pattern, {noext: true})) { // https://github.com/go-gitea/gitea/issues/33121 disable extended glob syntax
+=======
+        if (minimatch(statusCheck, pattern, {noext: true})) { // https://github.com/go-proxgit/proxgit/issues/33121 disable extended glob syntax
+>>>>>>> master
           matched = true;
           break;
         }

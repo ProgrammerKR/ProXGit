@@ -32,30 +32,53 @@ func TestNewSitemap(t *testing.T) {
 		{
 			name: "regular",
 			urls: []URL{
+<<<<<<< HEAD
 				{URL: "https://gitea.io/test1", LastMod: &ts},
 			},
 			want: xml.Header + `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
 				"<url><loc>https://gitea.io/test1</loc><lastmod>2022-04-30T12:33:28Z</lastmod></url>" +
+=======
+				{URL: "https://proxgit.io/test1", LastMod: &ts},
+			},
+			want: xml.Header + `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+				"<url><loc>https://proxgit.io/test1</loc><lastmod>2022-04-30T12:33:28Z</lastmod></url>" +
+>>>>>>> master
 				"</urlset>\n",
 		},
 		{
 			name: "without lastmod",
 			urls: []URL{
+<<<<<<< HEAD
 				{URL: "https://gitea.io/test1"},
 			},
 			want: xml.Header + `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
 				"<url><loc>https://gitea.io/test1</loc></url>" +
+=======
+				{URL: "https://proxgit.io/test1"},
+			},
+			want: xml.Header + `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+				"<url><loc>https://proxgit.io/test1</loc></url>" +
+>>>>>>> master
 				"</urlset>\n",
 		},
 		{
 			name: "multiple",
 			urls: []URL{
+<<<<<<< HEAD
 				{URL: "https://gitea.io/test1", LastMod: &ts},
 				{URL: "https://gitea.io/test2", LastMod: nil},
 			},
 			want: xml.Header + `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
 				"<url><loc>https://gitea.io/test1</loc><lastmod>2022-04-30T12:33:28Z</lastmod></url>" +
 				"<url><loc>https://gitea.io/test2</loc></url>" +
+=======
+				{URL: "https://proxgit.io/test1", LastMod: &ts},
+				{URL: "https://proxgit.io/test2", LastMod: nil},
+			},
+			want: xml.Header + `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+				"<url><loc>https://proxgit.io/test1</loc><lastmod>2022-04-30T12:33:28Z</lastmod></url>" +
+				"<url><loc>https://proxgit.io/test2</loc></url>" +
+>>>>>>> master
 				"</urlset>\n",
 		},
 		{
@@ -108,30 +131,53 @@ func TestNewSitemapIndex(t *testing.T) {
 		{
 			name: "regular",
 			urls: []URL{
+<<<<<<< HEAD
 				{URL: "https://gitea.io/test1", LastMod: &ts},
 			},
 			want: xml.Header + `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
 				"<sitemap><loc>https://gitea.io/test1</loc><lastmod>2022-04-30T12:33:28Z</lastmod></sitemap>" +
+=======
+				{URL: "https://proxgit.io/test1", LastMod: &ts},
+			},
+			want: xml.Header + `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+				"<sitemap><loc>https://proxgit.io/test1</loc><lastmod>2022-04-30T12:33:28Z</lastmod></sitemap>" +
+>>>>>>> master
 				"</sitemapindex>\n",
 		},
 		{
 			name: "without lastmod",
 			urls: []URL{
+<<<<<<< HEAD
 				{URL: "https://gitea.io/test1"},
 			},
 			want: xml.Header + `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
 				"<sitemap><loc>https://gitea.io/test1</loc></sitemap>" +
+=======
+				{URL: "https://proxgit.io/test1"},
+			},
+			want: xml.Header + `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+				"<sitemap><loc>https://proxgit.io/test1</loc></sitemap>" +
+>>>>>>> master
 				"</sitemapindex>\n",
 		},
 		{
 			name: "multiple",
 			urls: []URL{
+<<<<<<< HEAD
 				{URL: "https://gitea.io/test1", LastMod: &ts},
 				{URL: "https://gitea.io/test2", LastMod: nil},
 			},
 			want: xml.Header + `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
 				"<sitemap><loc>https://gitea.io/test1</loc><lastmod>2022-04-30T12:33:28Z</lastmod></sitemap>" +
 				"<sitemap><loc>https://gitea.io/test2</loc></sitemap>" +
+=======
+				{URL: "https://proxgit.io/test1", LastMod: &ts},
+				{URL: "https://proxgit.io/test2", LastMod: nil},
+			},
+			want: xml.Header + `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+				"<sitemap><loc>https://proxgit.io/test1</loc><lastmod>2022-04-30T12:33:28Z</lastmod></sitemap>" +
+				"<sitemap><loc>https://proxgit.io/test2</loc></sitemap>" +
+>>>>>>> master
 				"</sitemapindex>\n",
 		},
 		{

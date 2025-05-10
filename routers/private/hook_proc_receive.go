@@ -7,6 +7,7 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/git"
@@ -19,6 +20,20 @@ import (
 
 // HookProcReceive proc-receive hook - only handles agit Proc-Receive requests at present
 func HookProcReceive(ctx *gitea_context.PrivateContext) {
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/private"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/agit"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+)
+
+// HookProcReceive proc-receive hook - only handles agit Proc-Receive requests at present
+func HookProcReceive(ctx *proxgit_context.PrivateContext) {
+>>>>>>> master
 	opts := web.GetForm(ctx).(*private.HookOptions)
 	if !git.DefaultFeatures().SupportProcReceive {
 		ctx.Status(http.StatusNotFound)

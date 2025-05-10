@@ -6,7 +6,11 @@ package db
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer/internal"
+=======
+	"code.proxgit.io/proxgit/modules/indexer/internal"
+>>>>>>> master
 )
 
 var _ internal.Indexer = &Indexer{}

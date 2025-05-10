@@ -7,11 +7,19 @@ import (
 	"context"
 	"slices"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unit"
 	"code.gitea.io/gitea/modules/log"
 	actions_service "code.gitea.io/gitea/services/actions"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/log"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+>>>>>>> master
 )
 
 // UpdateRepositoryUnits updates a repository's units

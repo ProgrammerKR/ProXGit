@@ -6,8 +6,13 @@ package cmd
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/private"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/private"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

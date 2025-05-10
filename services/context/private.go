@@ -8,10 +8,17 @@ import (
 	"net/http"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/process"
 	"code.gitea.io/gitea/modules/web"
 	web_types "code.gitea.io/gitea/modules/web/types"
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/web"
+	web_types "code.proxgit.io/proxgit/modules/web/types"
+>>>>>>> master
 )
 
 // PrivateContext represents a context for private routes

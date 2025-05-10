@@ -4,7 +4,11 @@
 package optional
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 
 	"gopkg.in/yaml.v3"
 )

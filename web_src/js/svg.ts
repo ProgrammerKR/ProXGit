@@ -1,9 +1,16 @@
 import {defineComponent, h, type PropType} from 'vue';
 import {parseDom, serializeXml} from './utils.ts';
+<<<<<<< HEAD
 import giteaDoubleChevronLeft from '../../public/assets/img/svg/gitea-double-chevron-left.svg';
 import giteaDoubleChevronRight from '../../public/assets/img/svg/gitea-double-chevron-right.svg';
 import giteaEmptyCheckbox from '../../public/assets/img/svg/gitea-empty-checkbox.svg';
 import giteaExclamation from '../../public/assets/img/svg/gitea-exclamation.svg';
+=======
+import proxgitDoubleChevronLeft from '../../public/assets/img/svg/proxgit-double-chevron-left.svg';
+import proxgitDoubleChevronRight from '../../public/assets/img/svg/proxgit-double-chevron-right.svg';
+import proxgitEmptyCheckbox from '../../public/assets/img/svg/proxgit-empty-checkbox.svg';
+import proxgitExclamation from '../../public/assets/img/svg/proxgit-exclamation.svg';
+>>>>>>> master
 import octiconArchive from '../../public/assets/img/svg/octicon-archive.svg';
 import octiconArrowSwitch from '../../public/assets/img/svg/octicon-arrow-switch.svg';
 import octiconBlocked from '../../public/assets/img/svg/octicon-blocked.svg';
@@ -79,10 +86,17 @@ import octiconX from '../../public/assets/img/svg/octicon-x.svg';
 import octiconXCircleFill from '../../public/assets/img/svg/octicon-x-circle-fill.svg';
 
 const svgs = {
+<<<<<<< HEAD
   'gitea-double-chevron-left': giteaDoubleChevronLeft,
   'gitea-double-chevron-right': giteaDoubleChevronRight,
   'gitea-empty-checkbox': giteaEmptyCheckbox,
   'gitea-exclamation': giteaExclamation,
+=======
+  'proxgit-double-chevron-left': proxgitDoubleChevronLeft,
+  'proxgit-double-chevron-right': proxgitDoubleChevronRight,
+  'proxgit-empty-checkbox': proxgitEmptyCheckbox,
+  'proxgit-exclamation': proxgitExclamation,
+>>>>>>> master
   'octicon-archive': octiconArchive,
   'octicon-arrow-switch': octiconArrowSwitch,
   'octicon-blocked': octiconBlocked,

@@ -9,7 +9,11 @@ import (
 	"net/http"
 	"net/url"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/reqctx"
+=======
+	"code.proxgit.io/proxgit/modules/reqctx"
+>>>>>>> master
 )
 
 // Flash represents a one time data transfer between two requests.

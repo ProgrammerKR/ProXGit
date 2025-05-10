@@ -7,7 +7,11 @@ import (
 	"bytes"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 // Level is the level of the logger

@@ -4,8 +4,13 @@
 package actions
 
 import (
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/modules/container"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/modules/container"
+>>>>>>> master
 )
 
 // GetAllRerunJobs get all jobs that need to be rerun when job should be rerun

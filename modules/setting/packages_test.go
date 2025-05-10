@@ -96,7 +96,11 @@ SERVE_DIRECT = true
 [storage]
 STORAGE_TYPE            = minio
 MINIO_ENDPOINT          = s3.my-domain.net
+<<<<<<< HEAD
 MINIO_BUCKET            = gitea
+=======
+MINIO_BUCKET            = proxgit
+>>>>>>> master
 MINIO_LOCATION          = homenet
 MINIO_USE_SSL           = true
 MINIO_ACCESS_KEY_ID     = correct_key
@@ -109,7 +113,11 @@ MINIO_SECRET_ACCESS_KEY = correct_key
 	storage := Packages.Storage
 
 	assert.EqualValues(t, "minio", storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "packages/", storage.MinioConfig.BasePath)
 	assert.True(t, storage.MinioConfig.ServeDirect)
 }
@@ -123,7 +131,11 @@ SERVE_DIRECT = true
 [storage]
 STORAGE_TYPE            = minio
 MINIO_ENDPOINT          = s3.my-domain.net
+<<<<<<< HEAD
 MINIO_BUCKET            = gitea
+=======
+MINIO_BUCKET            = proxgit
+>>>>>>> master
 MINIO_LOCATION          = homenet
 MINIO_USE_SSL           = true
 MINIO_ACCESS_KEY_ID     = correct_key
@@ -136,7 +148,11 @@ MINIO_SECRET_ACCESS_KEY = correct_key
 	storage := Packages.Storage
 
 	assert.EqualValues(t, "minio", storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "packages/", storage.MinioConfig.BasePath)
 	assert.True(t, storage.MinioConfig.ServeDirect)
 }
@@ -151,7 +167,11 @@ SERVE_DIRECT = true
 [storage.my_cfg]
 STORAGE_TYPE            = minio
 MINIO_ENDPOINT          = s3.my-domain.net
+<<<<<<< HEAD
 MINIO_BUCKET            = gitea
+=======
+MINIO_BUCKET            = proxgit
+>>>>>>> master
 MINIO_LOCATION          = homenet
 MINIO_USE_SSL           = true
 MINIO_ACCESS_KEY_ID     = correct_key
@@ -164,7 +184,11 @@ MINIO_SECRET_ACCESS_KEY = correct_key
 	storage := Packages.Storage
 
 	assert.EqualValues(t, "minio", storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "my_packages/", storage.MinioConfig.BasePath)
 	assert.True(t, storage.MinioConfig.ServeDirect)
 }
@@ -179,7 +203,11 @@ SERVE_DIRECT = true
 [storage.my_cfg]
 STORAGE_TYPE            = minio
 MINIO_ENDPOINT          = s3.my-domain.net
+<<<<<<< HEAD
 MINIO_BUCKET            = gitea
+=======
+MINIO_BUCKET            = proxgit
+>>>>>>> master
 MINIO_LOCATION          = homenet
 MINIO_USE_SSL           = true
 MINIO_ACCESS_KEY_ID     = correct_key
@@ -192,7 +220,11 @@ MINIO_SECRET_ACCESS_KEY = correct_key
 	storage := Packages.Storage
 
 	assert.EqualValues(t, "minio", storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", storage.MinioConfig.Bucket)
+>>>>>>> master
 	assert.Equal(t, "my_packages/", storage.MinioConfig.BasePath)
 	assert.True(t, storage.MinioConfig.ServeDirect)
 }

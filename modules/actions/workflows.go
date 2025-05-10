@@ -8,10 +8,17 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
 	api "code.gitea.io/gitea/modules/structs"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 
 	"github.com/gobwas/glob"
 	"github.com/nektos/act/pkg/jobparser"
@@ -40,11 +47,19 @@ func IsWorkflow(path string) bool {
 		return false
 	}
 
+<<<<<<< HEAD
 	return strings.HasPrefix(path, ".gitea/workflows") || strings.HasPrefix(path, ".github/workflows")
 }
 
 func ListWorkflows(commit *git.Commit) (git.Entries, error) {
 	tree, err := commit.SubTree(".gitea/workflows")
+=======
+	return strings.HasPrefix(path, ".proxgit/workflows") || strings.HasPrefix(path, ".github/workflows")
+}
+
+func ListWorkflows(commit *git.Commit) (git.Entries, error) {
+	tree, err := commit.SubTree(".proxgit/workflows")
+>>>>>>> master
 	if _, ok := err.(git.ErrNotExist); ok {
 		tree, err = commit.SubTree(".github/workflows")
 	}

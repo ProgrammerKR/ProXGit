@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/private"
 	"code.gitea.io/gitea/modules/setting"
@@ -17,6 +18,16 @@ import (
 	"code.gitea.io/gitea/services/context"
 
 	"gitea.com/go-chi/binding"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/private"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/services/context"
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 	chi_middleware "github.com/go-chi/chi/v5/middleware"
 )
 
@@ -50,7 +61,11 @@ func bind[T any](_ T) any {
 }
 
 // Routes registers all internal APIs routes to web application.
+<<<<<<< HEAD
 // These APIs will be invoked by internal commands for example `gitea serv` and etc.
+=======
+// These APIs will be invoked by internal commands for example `proxgit serv` and etc.
+>>>>>>> master
 func Routes() *web.Router {
 	r := web.NewRouter()
 	r.Use(context.PrivateContexter())

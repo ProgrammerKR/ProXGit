@@ -8,8 +8,13 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

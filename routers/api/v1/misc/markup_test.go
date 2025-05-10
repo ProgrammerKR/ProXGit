@@ -12,6 +12,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/markup"
@@ -21,6 +22,17 @@ import (
 	"code.gitea.io/gitea/modules/web"
 	context_service "code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/web"
+	context_service "code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

@@ -7,10 +7,17 @@ import (
 	"context"
 	"net/url"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/perm"
 	access_model "code.gitea.io/gitea/models/perm/access"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // ToNotificationThread convert a Notification to api.NotificationThread

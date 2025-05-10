@@ -15,8 +15,13 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/hashicorp/go-version"
 )
@@ -148,8 +153,13 @@ func SetExecutablePath(path string) error {
 func HomeDir() string {
 	if setting.Git.HomePath == "" {
 		// strict check, make sure the git module is initialized correctly.
+<<<<<<< HEAD
 		// attention: when the git module is called in gitea sub-command (serv/hook), the log module might not obviously show messages to users/developers.
 		// for example: if there is gitea git hook code calling git.NewCommand before git.InitXxx, the integration test won't show the real failure reasons.
+=======
+		// attention: when the git module is called in proxgit sub-command (serv/hook), the log module might not obviously show messages to users/developers.
+		// for example: if there is proxgit git hook code calling git.NewCommand before git.InitXxx, the integration test won't show the real failure reasons.
+>>>>>>> master
 		log.Fatal("Unable to init Git's HomeDir, incorrect initialization of the setting and git modules")
 		return ""
 	}

@@ -10,8 +10,13 @@ import (
 	"os"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // GetCommitGraph return a list of commit (GraphItems) from all branches

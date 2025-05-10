@@ -8,7 +8,11 @@ import (
 	"html/template"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type StringUtils struct{}

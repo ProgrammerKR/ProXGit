@@ -8,6 +8,7 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	access_model "code.gitea.io/gitea/models/perm/access"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -21,6 +22,21 @@ import (
 	incoming_payload "code.gitea.io/gitea/services/mailer/incoming/payload"
 	"code.gitea.io/gitea/services/mailer/token"
 	pull_service "code.gitea.io/gitea/services/pull"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	attachment_service "code.proxgit.io/proxgit/services/attachment"
+	"code.proxgit.io/proxgit/services/context/upload"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+	incoming_payload "code.proxgit.io/proxgit/services/mailer/incoming/payload"
+	"code.proxgit.io/proxgit/services/mailer/token"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+>>>>>>> master
 )
 
 type MailHandler interface {

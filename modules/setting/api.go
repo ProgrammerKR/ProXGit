@@ -7,7 +7,11 @@ import (
 	"net/url"
 	"path"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // API settings

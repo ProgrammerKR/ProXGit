@@ -8,9 +8,15 @@ import (
 	"path/filepath"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -28,10 +34,17 @@ func TestMigrateWhiteBlocklist(t *testing.T) {
 	err := IsMigrateURLAllowed("https://gitlab.com/gitlab/gitlab.git", nonAdminUser)
 	assert.Error(t, err)
 
+<<<<<<< HEAD
 	err = IsMigrateURLAllowed("https://github.com/go-gitea/gitea.git", nonAdminUser)
 	assert.NoError(t, err)
 
 	err = IsMigrateURLAllowed("https://gITHUb.com/go-gitea/gitea.git", nonAdminUser)
+=======
+	err = IsMigrateURLAllowed("https://github.com/go-proxgit/proxgit.git", nonAdminUser)
+	assert.NoError(t, err)
+
+	err = IsMigrateURLAllowed("https://gITHUb.com/go-proxgit/proxgit.git", nonAdminUser)
+>>>>>>> master
 	assert.NoError(t, err)
 
 	setting.Migrations.AllowedDomains = ""
@@ -41,15 +54,26 @@ func TestMigrateWhiteBlocklist(t *testing.T) {
 	err = IsMigrateURLAllowed("https://gitlab.com/gitlab/gitlab.git", nonAdminUser)
 	assert.NoError(t, err)
 
+<<<<<<< HEAD
 	err = IsMigrateURLAllowed("https://github.com/go-gitea/gitea.git", nonAdminUser)
 	assert.Error(t, err)
 
 	err = IsMigrateURLAllowed("https://10.0.0.1/go-gitea/gitea.git", nonAdminUser)
+=======
+	err = IsMigrateURLAllowed("https://github.com/go-proxgit/proxgit.git", nonAdminUser)
+	assert.Error(t, err)
+
+	err = IsMigrateURLAllowed("https://10.0.0.1/go-proxgit/proxgit.git", nonAdminUser)
+>>>>>>> master
 	assert.Error(t, err)
 
 	setting.Migrations.AllowLocalNetworks = true
 	assert.NoError(t, Init())
+<<<<<<< HEAD
 	err = IsMigrateURLAllowed("https://10.0.0.1/go-gitea/gitea.git", nonAdminUser)
+=======
+	err = IsMigrateURLAllowed("https://10.0.0.1/go-proxgit/proxgit.git", nonAdminUser)
+>>>>>>> master
 	assert.NoError(t, err)
 
 	old := setting.ImportLocalPaths

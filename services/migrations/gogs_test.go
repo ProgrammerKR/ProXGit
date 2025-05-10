@@ -9,7 +9,11 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	base "code.gitea.io/gitea/modules/migration"
+=======
+	base "code.proxgit.io/proxgit/modules/migration"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

@@ -37,7 +37,11 @@
 
    <h3>With your Consent</h3>
 
+<<<<<<< HEAD
    <p>We share your User Personal Information, if you consent, after letting you know what information will be shared, with whom, and why. For example, if you allow third party applications to access your Account using <a href="https://docs.gitea.com/development/oauth2-provider">OAuth2 providers</a>, we share all information associated with your Account, including private repos and organizations. You may also direct us through your action on Your Gitea Instance to share your User Personal Information, such as when joining an Organization.</p>
+=======
+   <p>We share your User Personal Information, if you consent, after letting you know what information will be shared, with whom, and why. For example, if you allow third party applications to access your Account using <a href="https://docs.proxgit.com/development/oauth2-provider">OAuth2 providers</a>, we share all information associated with your Account, including private repos and organizations. You may also direct us through your action on Your Gitea Instance to share your User Personal Information, such as when joining an Organization.</p>
+>>>>>>> master
 
    <h3>With Service Providers</h3>
 
@@ -144,7 +148,11 @@
 
    <h3>Data Portability</h3>
 
+<<<<<<< HEAD
    <p>As a Your Gitea Instance User, you can always take your data with you. You can clone your repositories to your computer, or you can <a href="https://docs.gitea.com/development/migrations-interfaces">perform migrations using the provided interfaces</a>, for example.</p>
+=======
+   <p>As a Your Gitea Instance User, you can always take your data with you. You can clone your repositories to your computer, or you can <a href="https://docs.proxgit.com/development/migrations-interfaces">perform migrations using the provided interfaces</a>, for example.</p>
+>>>>>>> master
 
    <h3>Data Retention and Deletion of Data</h3>
 
@@ -187,7 +195,11 @@
 
   <h2>Contact</h2>
 
+<<<<<<< HEAD
   <p>If you have any concerns about privacy, please contact us at <a href="mailto:privacy@your-gitea-instance">privacy@your-gitea-instance</a>. We will respond promptly, within 45 days.</p>
+=======
+  <p>If you have any concerns about privacy, please contact us at <a href="mailto:privacy@your-proxgit-instance">privacy@your-proxgit-instance</a>. We will respond promptly, within 45 days.</p>
+>>>>>>> master
 
   <h2>COPYING</h2>
 

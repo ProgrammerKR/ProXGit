@@ -7,12 +7,21 @@ import (
 	"path/filepath"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/setting"
 
 	_ "code.gitea.io/gitea/cmd" // for TestPrimaryKeys
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/setting"
+
+	_ "code.proxgit.io/proxgit/cmd" // for TestPrimaryKeys
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -57,10 +66,17 @@ func TestDeleteOrphanedObjects(t *testing.T) {
 
 func TestPrimaryKeys(t *testing.T) {
 	// Some dbs require that all tables have primary keys, see
+<<<<<<< HEAD
 	//   https://github.com/go-gitea/gitea/issues/21086
 	//   https://github.com/go-gitea/gitea/issues/16802
 	// To avoid creating tables without primary key again, this test will check them.
 	// Import "code.gitea.io/gitea/cmd" to make sure each db.RegisterModel in init functions has been called.
+=======
+	//   https://github.com/go-proxgit/proxgit/issues/21086
+	//   https://github.com/go-proxgit/proxgit/issues/16802
+	// To avoid creating tables without primary key again, this test will check them.
+	// Import "code.proxgit.io/proxgit/cmd" to make sure each db.RegisterModel in init functions has been called.
+>>>>>>> master
 
 	beans, err := db.NamesToBean()
 	require.NoError(t, err)

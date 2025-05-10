@@ -6,6 +6,7 @@ package repo
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unit"
 	"code.gitea.io/gitea/models/unittest"
@@ -14,6 +15,16 @@ import (
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/test"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -59,7 +70,11 @@ func TestRepoAPIURL(t *testing.T) {
 	assert.NoError(t, unittest.PrepareTestDatabase())
 	repo := unittest.AssertExistsAndLoadBean(t, &Repository{ID: 10})
 
+<<<<<<< HEAD
 	assert.Equal(t, "https://try.gitea.io/api/v1/repos/user12/repo10", repo.APIURL())
+=======
+	assert.Equal(t, "https://try.proxgit.io/api/v1/repos/user12/repo10", repo.APIURL())
+>>>>>>> master
 }
 
 func TestWatchRepo(t *testing.T) {
@@ -145,6 +160,7 @@ func TestGetRepositoryByURL(t *testing.T) {
 	}
 
 	t.Run("ValidHttpURL", func(t *testing.T) {
+<<<<<<< HEAD
 		testRepo2(t, "https://try.gitea.io/user2/repo2")
 		testRepo2(t, "https://try.gitea.io/user2/repo2.git")
 	})
@@ -160,6 +176,23 @@ func TestGetRepositoryByURL(t *testing.T) {
 	t.Run("ValidImplicitSshURL", func(t *testing.T) {
 		testRepo2(t, "sshuser@try.gitea.io:user2/repo2")
 		testRepo2(t, "sshuser@try.gitea.io:user2/repo2.git")
+=======
+		testRepo2(t, "https://try.proxgit.io/user2/repo2")
+		testRepo2(t, "https://try.proxgit.io/user2/repo2.git")
+	})
+
+	t.Run("ValidGitSshURL", func(t *testing.T) {
+		testRepo2(t, "git+ssh://sshuser@try.proxgit.io/user2/repo2")
+		testRepo2(t, "git+ssh://sshuser@try.proxgit.io/user2/repo2.git")
+
+		testRepo2(t, "git+ssh://try.proxgit.io/user2/repo2")
+		testRepo2(t, "git+ssh://try.proxgit.io/user2/repo2.git")
+	})
+
+	t.Run("ValidImplicitSshURL", func(t *testing.T) {
+		testRepo2(t, "sshuser@try.proxgit.io:user2/repo2")
+		testRepo2(t, "sshuser@try.proxgit.io:user2/repo2.git")
+>>>>>>> master
 
 		testRelax := func(t *testing.T, url string) {
 			repo, err := GetRepositoryByURLRelax(db.DefaultContext, url)
@@ -168,8 +201,13 @@ func TestGetRepositoryByURL(t *testing.T) {
 			assert.Equal(t, int64(2), repo.OwnerID)
 		}
 		// TODO: it doesn't seem to be common git ssh URL, should we really support this?
+<<<<<<< HEAD
 		testRelax(t, "try.gitea.io:user2/repo2")
 		testRelax(t, "try.gitea.io:user2/repo2.git")
+=======
+		testRelax(t, "try.proxgit.io:user2/repo2")
+		testRelax(t, "try.proxgit.io:user2/repo2.git")
+>>>>>>> master
 	})
 }
 

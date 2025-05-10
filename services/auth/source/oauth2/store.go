@@ -8,10 +8,17 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	session_module "code.gitea.io/gitea/modules/session"
 
 	chiSession "gitea.com/go-chi/session"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	session_module "code.proxgit.io/proxgit/modules/session"
+
+	chiSession "proxgit.com/go-chi/session"
+>>>>>>> master
 	"github.com/gorilla/sessions"
 )
 

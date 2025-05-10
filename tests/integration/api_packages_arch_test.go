@@ -12,6 +12,7 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -19,6 +20,15 @@ import (
 	arch_module "code.gitea.io/gitea/modules/packages/arch"
 	arch_service "code.gitea.io/gitea/services/packages/arch"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	arch_module "code.proxgit.io/proxgit/modules/packages/arch"
+	arch_service "code.proxgit.io/proxgit/services/packages/arch"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/klauspost/compress/zstd"
 	"github.com/stretchr/testify/assert"
@@ -30,7 +40,11 @@ func TestPackageArch(t *testing.T) {
 
 	user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
+<<<<<<< HEAD
 	packageName := "gitea-test"
+=======
+	packageName := "proxgit-test"
+>>>>>>> master
 	packageVersion := "1.4.1-r3"
 
 	createPackage := func(compression, name, version, architecture string) []byte {
@@ -300,8 +314,13 @@ license = MIT`)
 	}
 	t.Run("KeepLastVersion", func(t *testing.T) {
 		defer tests.PrintCurrentTest(t)()
+<<<<<<< HEAD
 		pkgVer1 := createPackage("gz", "gitea-test", "1.0.0", "aarch64")
 		pkgVer2 := createPackage("gz", "gitea-test", "1.0.1", "aarch64")
+=======
+		pkgVer1 := createPackage("gz", "proxgit-test", "1.0.0", "aarch64")
+		pkgVer2 := createPackage("gz", "proxgit-test", "1.0.1", "aarch64")
+>>>>>>> master
 		req := NewRequestWithBody(t, "PUT", rootURL, bytes.NewReader(pkgVer1)).
 			AddBasicAuth(user.Name)
 		MakeRequest(t, req, http.StatusCreated)
@@ -316,12 +335,21 @@ license = MIT`)
 		assert.NoError(t, err)
 		assert.Len(t, content, 2)
 
+<<<<<<< HEAD
 		_, has := content["gitea-test-1.0.0/desc"]
 		assert.False(t, has)
 		_, has = content["gitea-test-1.0.1/desc"]
 		assert.True(t, has)
 
 		req = NewRequest(t, "DELETE", rootURL+"/gitea-test/1.0.1/aarch64").
+=======
+		_, has := content["proxgit-test-1.0.0/desc"]
+		assert.False(t, has)
+		_, has = content["proxgit-test-1.0.1/desc"]
+		assert.True(t, has)
+
+		req = NewRequest(t, "DELETE", rootURL+"/proxgit-test/1.0.1/aarch64").
+>>>>>>> master
 			AddBasicAuth(user.Name)
 		MakeRequest(t, req, http.StatusNoContent)
 
@@ -330,7 +358,11 @@ license = MIT`)
 		content, err = readIndexContent(resp.Body)
 		assert.NoError(t, err)
 		assert.Len(t, content, 2)
+<<<<<<< HEAD
 		_, has = content["gitea-test-1.0.0/desc"]
+=======
+		_, has = content["proxgit-test-1.0.0/desc"]
+>>>>>>> master
 		assert.True(t, has)
 	})
 }

@@ -12,6 +12,7 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/perm"
 	access_model "code.gitea.io/gitea/models/perm/access"
@@ -29,6 +30,25 @@ import (
 	"code.gitea.io/gitea/services/convert"
 	"code.gitea.io/gitea/services/forms"
 	webhook_service "code.gitea.io/gitea/services/webhook"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	"code.proxgit.io/proxgit/services/forms"
+	webhook_service "code.proxgit.io/proxgit/services/webhook"
+>>>>>>> master
 )
 
 const (
@@ -45,7 +65,11 @@ func Webhooks(ctx *context.Context) {
 	ctx.Data["PageIsSettingsHooks"] = true
 	ctx.Data["BaseLink"] = ctx.Repo.RepoLink + "/settings/hooks"
 	ctx.Data["BaseLinkNew"] = ctx.Repo.RepoLink + "/settings/hooks"
+<<<<<<< HEAD
 	ctx.Data["Description"] = ctx.Tr("repo.settings.hooks_desc", "https://docs.gitea.com/usage/webhooks")
+=======
+	ctx.Data["Description"] = ctx.Tr("repo.settings.hooks_desc", "https://docs.proxgit.com/usage/webhooks")
+>>>>>>> master
 
 	ws, err := db.Find[webhook.Webhook](ctx, webhook.ListWebhookOptions{RepoID: ctx.Repo.Repository.ID})
 	if err != nil {
@@ -315,15 +339,26 @@ func editWebhook(ctx *context.Context, params webhookParams) {
 
 // GiteaHooksNewPost response for creating Gitea webhook
 func GiteaHooksNewPost(ctx *context.Context) {
+<<<<<<< HEAD
 	createWebhook(ctx, giteaHookParams(ctx))
+=======
+	createWebhook(ctx, proxgitHookParams(ctx))
+>>>>>>> master
 }
 
 // GiteaHooksEditPost response for editing Gitea webhook
 func GiteaHooksEditPost(ctx *context.Context) {
+<<<<<<< HEAD
 	editWebhook(ctx, giteaHookParams(ctx))
 }
 
 func giteaHookParams(ctx *context.Context) webhookParams {
+=======
+	editWebhook(ctx, proxgitHookParams(ctx))
+}
+
+func proxgitHookParams(ctx *context.Context) webhookParams {
+>>>>>>> master
 	form := web.GetForm(ctx).(*forms.NewWebhookForm)
 
 	contentType := webhook.ContentTypeJSON

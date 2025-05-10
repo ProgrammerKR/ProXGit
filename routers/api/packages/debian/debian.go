@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
 	packages_module "code.gitea.io/gitea/modules/packages"
@@ -21,6 +22,18 @@ import (
 	notify_service "code.gitea.io/gitea/services/notify"
 	packages_service "code.gitea.io/gitea/services/packages"
 	debian_service "code.gitea.io/gitea/services/packages/debian"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	debian_module "code.proxgit.io/proxgit/modules/packages/debian"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/api/packages/helper"
+	"code.proxgit.io/proxgit/services/context"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+	debian_service "code.proxgit.io/proxgit/services/packages/debian"
+>>>>>>> master
 )
 
 func apiError(ctx *context.Context, status int, obj any) {

@@ -1,9 +1,15 @@
 import {sanitizeRepoName, substituteRepoOpenWithUrl} from './repo-common.ts';
 
 test('substituteRepoOpenWithUrl', () => {
+<<<<<<< HEAD
   // For example: "x-github-client://openRepo/https://github.com/go-gitea/gitea"
   expect(substituteRepoOpenWithUrl('proto://a/{url}', 'https://gitea')).toEqual('proto://a/https://gitea');
   expect(substituteRepoOpenWithUrl('proto://a?link={url}', 'https://gitea')).toEqual('proto://a?link=https%3A%2F%2Fgitea');
+=======
+  // For example: "x-github-client://openRepo/https://github.com/go-proxgit/proxgit"
+  expect(substituteRepoOpenWithUrl('proto://a/{url}', 'https://proxgit')).toEqual('proto://a/https://proxgit');
+  expect(substituteRepoOpenWithUrl('proto://a?link={url}', 'https://proxgit')).toEqual('proto://a?link=https%3A%2F%2Fproxgit');
+>>>>>>> master
 });
 
 test('sanitizeRepoName', () => {

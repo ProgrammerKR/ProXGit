@@ -13,7 +13,11 @@ import (
 	"slices"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // Use at most this many bytes to determine Content Type.

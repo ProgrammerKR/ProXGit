@@ -4,7 +4,11 @@
 package actions
 
 import (
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+>>>>>>> master
 )
 
 const (

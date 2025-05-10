@@ -9,8 +9,13 @@ import (
 	"fmt"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

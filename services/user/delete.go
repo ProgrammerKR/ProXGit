@@ -10,6 +10,7 @@ import (
 
 	_ "image/jpeg" // Needed for jpeg support
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	activities_model "code.gitea.io/gitea/models/activities"
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
@@ -23,6 +24,21 @@ import (
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	pull_model "code.proxgit.io/proxgit/models/pull"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

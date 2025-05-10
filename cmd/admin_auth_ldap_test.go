@@ -7,8 +7,13 @@ import (
 	"context"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/services/auth/source/ldap"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/services/auth/source/ldap"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/urfave/cli/v2"
@@ -55,7 +60,11 @@ func TestAddLdapBindDn(t *testing.T) {
 				"--group-search-base-dn", "ou=group,dc=full-domain-bind,dc=org",
 				"--group-member-attribute", "memberUid",
 				"--group-user-attribute", "uid",
+<<<<<<< HEAD
 				"--group-filter", "(|(cn=gitea_users)(cn=admins))",
+=======
+				"--group-filter", "(|(cn=proxgit_users)(cn=admins))",
+>>>>>>> master
 				"--group-team-map", `{"cn=my-group,cn=groups,dc=example,dc=org": {"MyGiteaOrganization": ["MyGiteaTeam1", "MyGiteaTeam2"]}}`,
 				"--group-team-map-removal",
 			},
@@ -89,7 +98,11 @@ func TestAddLdapBindDn(t *testing.T) {
 					GroupDN:               "ou=group,dc=full-domain-bind,dc=org",
 					GroupMemberUID:        "memberUid",
 					UserUID:               "uid",
+<<<<<<< HEAD
 					GroupFilter:           "(|(cn=gitea_users)(cn=admins))",
+=======
+					GroupFilter:           "(|(cn=proxgit_users)(cn=admins))",
+>>>>>>> master
 					GroupTeamMap:          `{"cn=my-group,cn=groups,dc=example,dc=org": {"MyGiteaOrganization": ["MyGiteaTeam1", "MyGiteaTeam2"]}}`,
 					GroupTeamMapRemoval:   true,
 				},
@@ -528,7 +541,11 @@ func TestUpdateLdapBindDn(t *testing.T) {
 				"--group-search-base-dn", "ou=group,dc=full-domain-bind,dc=org",
 				"--group-member-attribute", "memberUid",
 				"--group-user-attribute", "uid",
+<<<<<<< HEAD
 				"--group-filter", "(|(cn=gitea_users)(cn=admins))",
+=======
+				"--group-filter", "(|(cn=proxgit_users)(cn=admins))",
+>>>>>>> master
 				"--group-team-map", `{"cn=my-group,cn=groups,dc=example,dc=org": {"MyGiteaOrganization": ["MyGiteaTeam1", "MyGiteaTeam2"]}}`,
 				"--group-team-map-removal",
 			},
@@ -570,7 +587,11 @@ func TestUpdateLdapBindDn(t *testing.T) {
 					GroupDN:               "ou=group,dc=full-domain-bind,dc=org",
 					GroupMemberUID:        "memberUid",
 					UserUID:               "uid",
+<<<<<<< HEAD
 					GroupFilter:           "(|(cn=gitea_users)(cn=admins))",
+=======
+					GroupFilter:           "(|(cn=proxgit_users)(cn=admins))",
+>>>>>>> master
 					GroupTeamMap:          `{"cn=my-group,cn=groups,dc=example,dc=org": {"MyGiteaOrganization": ["MyGiteaTeam1", "MyGiteaTeam2"]}}`,
 					GroupTeamMapRemoval:   true,
 				},

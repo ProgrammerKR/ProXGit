@@ -3,7 +3,11 @@
 
 package fileicon
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/modules/git"
+=======
+import "code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 
 type EntryInfo struct {
 	FullName      string

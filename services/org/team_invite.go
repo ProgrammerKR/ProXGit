@@ -6,9 +6,15 @@ package org
 import (
 	"context"
 
+<<<<<<< HEAD
 	org_model "code.gitea.io/gitea/models/organization"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/services/mailer"
+=======
+	org_model "code.proxgit.io/proxgit/models/organization"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/services/mailer"
+>>>>>>> master
 )
 
 // CreateTeamInvite make a persistent invite in db and mail it

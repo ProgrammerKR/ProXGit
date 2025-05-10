@@ -15,12 +15,21 @@ import (
 )
 
 const (
+<<<<<<< HEAD
 	packageName      = "gitea"
 	packageVersion   = "1.0.1"
 	description      = "Package Description"
 	projectURL       = "https://gitea.com"
 	repositoryURL    = "https://gitea.com/gitea/gitea"
 	documentationURL = "https://docs.gitea.com"
+=======
+	packageName      = "proxgit"
+	packageVersion   = "1.0.1"
+	description      = "Package Description"
+	projectURL       = "https://proxgit.com"
+	repositoryURL    = "https://proxgit.com/proxgit/proxgit"
+	documentationURL = "https://docs.proxgit.com"
+>>>>>>> master
 )
 
 const pubspecContent = `name: ` + packageName + `

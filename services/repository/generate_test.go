@@ -9,7 +9,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+<<<<<<< HEAD
 var giteaTemplate = []byte(`
+=======
+var proxgitTemplate = []byte(`
+>>>>>>> master
 # Header
 
 # All .go files
@@ -23,7 +27,11 @@ text/*.txt
 `)
 
 func TestGiteaTemplate(t *testing.T) {
+<<<<<<< HEAD
 	gt := GiteaTemplate{Content: giteaTemplate}
+=======
+	gt := GiteaTemplate{Content: proxgitTemplate}
+>>>>>>> master
 	assert.Len(t, gt.Globs(), 3)
 
 	tt := []struct {

@@ -13,6 +13,7 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/log"
@@ -21,6 +22,16 @@ import (
 )
 
 const tplCommentPrefix = `# gitea public key`
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+)
+
+const tplCommentPrefix = `# proxgit public key`
+>>>>>>> master
 
 func checkAuthorizedKeys(ctx context.Context, logger log.Logger, autofix bool) error {
 	if setting.SSH.StartBuiltinServer || !setting.SSH.CreateAuthorizedKeysFile {
@@ -77,9 +88,15 @@ func checkAuthorizedKeys(ctx context.Context, logger log.Logger, autofix bool) e
 			logger.Critical(
 				"authorized_keys file %q is out of date.\nRegenerate it with:\n\t\"%s\"\nor\n\t\"%s\"",
 				fPath,
+<<<<<<< HEAD
 				"gitea admin regenerate keys",
 				"gitea doctor --run authorized-keys --fix")
 			return errors.New(`authorized_keys is out of date and should be regenerated with "gitea admin regenerate keys" or "gitea doctor --run authorized-keys --fix"`)
+=======
+				"proxgit admin regenerate keys",
+				"proxgit doctor --run authorized-keys --fix")
+			return errors.New(`authorized_keys is out of date and should be regenerated with "proxgit admin regenerate keys" or "proxgit doctor --run authorized-keys --fix"`)
+>>>>>>> master
 		}
 		logger.Warn("authorized_keys is out of date. Attempting rewrite...")
 		err = asymkey_service.RewriteAllPublicKeys(ctx)

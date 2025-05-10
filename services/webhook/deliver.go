@@ -19,6 +19,7 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	webhook_model "code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/graceful"
@@ -30,6 +31,19 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/timeutil"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	webhook_model "code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/hostmatcher"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/proxy"
+	"code.proxgit.io/proxgit/modules/queue"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 
 	"github.com/gobwas/glob"
 )

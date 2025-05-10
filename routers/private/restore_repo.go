@@ -7,10 +7,17 @@ import (
 	"io"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/private"
 	myCtx "code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/migrations"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/private"
+	myCtx "code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/migrations"
+>>>>>>> master
 )
 
 // RestoreRepo restore a repository from data

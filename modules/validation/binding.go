@@ -8,11 +8,19 @@ import (
 	"regexp"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/auth"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/util"
 
 	"gitea.com/go-chi/binding"
+=======
+	"code.proxgit.io/proxgit/modules/auth"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/util"
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 	"github.com/gobwas/glob"
 )
 

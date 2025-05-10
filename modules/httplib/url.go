@@ -10,8 +10,13 @@ import (
 	"net/url"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type RequestContextKeyStruct struct{}
@@ -65,10 +70,17 @@ func GuessCurrentHostURL(ctx context.Context) string {
 	// At the moment, if site admin doesn't configure the proxy headers correctly, then Gitea would guess wrong.
 	// There are some cases:
 	// 1. The reverse proxy is configured correctly, it passes "X-Forwarded-Proto/Host" headers. Perfect, Gitea can handle it correctly.
+<<<<<<< HEAD
 	// 2. The reverse proxy is not configured correctly, doesn't pass "X-Forwarded-Proto/Host" headers, eg: only one "proxy_pass http://gitea:3000" in Nginx.
 	// 3. There is no reverse proxy.
 	// Without more information, Gitea is impossible to distinguish between case 2 and case 3, then case 2 would result in
 	// wrong guess like guessed public URL becomes "http://gitea:3000/" behind a "https" reverse proxy, which is not accessible by end users.
+=======
+	// 2. The reverse proxy is not configured correctly, doesn't pass "X-Forwarded-Proto/Host" headers, eg: only one "proxy_pass http://proxgit:3000" in Nginx.
+	// 3. There is no reverse proxy.
+	// Without more information, Gitea is impossible to distinguish between case 2 and case 3, then case 2 would result in
+	// wrong guess like guessed public URL becomes "http://proxgit:3000/" behind a "https" reverse proxy, which is not accessible by end users.
+>>>>>>> master
 	// So we introduced "PUBLIC_URL_DETECTION" option, to control the guessing behavior to satisfy different use cases.
 	req, ok := ctx.Value(RequestContextKey).(*http.Request)
 	if !ok {
@@ -111,7 +123,11 @@ func MakeAbsoluteURL(ctx context.Context, link string) string {
 type urlType int
 
 const (
+<<<<<<< HEAD
 	urlTypeGiteaAbsolute     urlType = iota + 1 // "http://gitea/subpath"
+=======
+	urlTypeGiteaAbsolute     urlType = iota + 1 // "http://proxgit/subpath"
+>>>>>>> master
 	urlTypeGiteaPageRelative                    // "/subpath"
 	urlTypeGiteaSiteRelative                    // "?key=val"
 	urlTypeUnknown                              // "http://other"

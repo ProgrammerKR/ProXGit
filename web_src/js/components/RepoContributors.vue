@@ -179,7 +179,11 @@ export default defineComponent({
           }
           return false;
         });
+<<<<<<< HEAD
         // this line is required. See https://github.com/sahinakkaya/gitea/pull/3#discussion_r1396495722
+=======
+        // this line is required. See https://github.com/sahinakkaya/proxgit/pull/3#discussion_r1396495722
+>>>>>>> master
         // for details.
         user.max_contribution_type += 1;
 

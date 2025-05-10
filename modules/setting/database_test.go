@@ -73,32 +73,55 @@ func Test_getPostgreSQLConnectionString(t *testing.T) {
 			Host:    "/tmp/pg.sock",
 			User:    "testuser",
 			Passwd:  "space space !#$%^^%^```-=?=",
+<<<<<<< HEAD
 			Name:    "gitea",
 			SSLMode: "false",
 			Output:  "postgres://testuser:space%20space%20%21%23$%25%5E%5E%25%5E%60%60%60-=%3F=@:5432/gitea?host=%2Ftmp%2Fpg.sock&sslmode=false",
+=======
+			Name:    "proxgit",
+			SSLMode: "false",
+			Output:  "postgres://testuser:space%20space%20%21%23$%25%5E%5E%25%5E%60%60%60-=%3F=@:5432/proxgit?host=%2Ftmp%2Fpg.sock&sslmode=false",
+>>>>>>> master
 		},
 		{
 			Host:    "/tmp/pg.sock:6432",
 			User:    "testuser",
 			Passwd:  "pass",
+<<<<<<< HEAD
 			Name:    "gitea",
 			SSLMode: "false",
 			Output:  "postgres://testuser:pass@:6432/gitea?host=%2Ftmp%2Fpg.sock&sslmode=false",
+=======
+			Name:    "proxgit",
+			SSLMode: "false",
+			Output:  "postgres://testuser:pass@:6432/proxgit?host=%2Ftmp%2Fpg.sock&sslmode=false",
+>>>>>>> master
 		},
 		{
 			Host:    "localhost",
 			User:    "pgsqlusername",
 			Passwd:  "I love Gitea!",
+<<<<<<< HEAD
 			Name:    "gitea",
 			SSLMode: "true",
 			Output:  "postgres://pgsqlusername:I%20love%20Gitea%21@localhost:5432/gitea?sslmode=true",
+=======
+			Name:    "proxgit",
+			SSLMode: "true",
+			Output:  "postgres://pgsqlusername:I%20love%20Gitea%21@localhost:5432/proxgit?sslmode=true",
+>>>>>>> master
 		},
 		{
 			Host:   "localhost:1234",
 			User:   "user",
 			Passwd: "pass",
+<<<<<<< HEAD
 			Name:   "gitea?param=1",
 			Output: "postgres://user:pass@localhost:1234/gitea?param=1&sslmode=",
+=======
+			Name:   "proxgit?param=1",
+			Output: "postgres://user:pass@localhost:1234/proxgit?param=1&sslmode=",
+>>>>>>> master
 		},
 	}
 

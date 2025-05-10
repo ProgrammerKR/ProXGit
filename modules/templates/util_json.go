@@ -6,7 +6,11 @@ package templates
 import (
 	"bytes"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 type JsonUtils struct{} //nolint:revive

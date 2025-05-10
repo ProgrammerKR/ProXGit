@@ -6,7 +6,11 @@ package timeutil
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // TimeStamp defines a timestamp

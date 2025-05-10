@@ -11,6 +11,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -22,6 +23,19 @@ import (
 	repo_service "code.gitea.io/gitea/services/repository"
 	files_service "code.gitea.io/gitea/services/repository/files"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/test"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -199,7 +213,11 @@ func TestPullView_CodeOwner(t *testing.T) {
 }
 
 func TestPullView_GivenApproveOrRejectReviewOnClosedPR(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		user1Session := loginUser(t, "user1")
 		user2Session := loginUser(t, "user2")
 

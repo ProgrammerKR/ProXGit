@@ -11,9 +11,15 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/test"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/urfave/cli/v2"
@@ -75,12 +81,17 @@ func TestCliCmd(t *testing.T) {
 	}{
 		// main command help
 		{
+<<<<<<< HEAD
 			cmd: "./gitea help",
+=======
+			cmd: "./proxgit help",
+>>>>>>> master
 			exp: "DEFAULT CONFIGURATION:",
 		},
 
 		// parse paths
 		{
+<<<<<<< HEAD
 			cmd: "./gitea test-cmd",
 			exp: makePathOutput(defaultWorkPath, defaultCustomPath, defaultCustomConf),
 		},
@@ -90,21 +101,44 @@ func TestCliCmd(t *testing.T) {
 		},
 		{
 			cmd: "./gitea test-cmd -c /tmp/app.ini",
+=======
+			cmd: "./proxgit test-cmd",
+			exp: makePathOutput(defaultWorkPath, defaultCustomPath, defaultCustomConf),
+		},
+		{
+			cmd: "./proxgit -c /tmp/app.ini test-cmd",
+			exp: makePathOutput(defaultWorkPath, defaultCustomPath, "/tmp/app.ini"),
+		},
+		{
+			cmd: "./proxgit test-cmd -c /tmp/app.ini",
+>>>>>>> master
 			exp: makePathOutput(defaultWorkPath, defaultCustomPath, "/tmp/app.ini"),
 		},
 		{
 			env: map[string]string{"GITEA_WORK_DIR": "/tmp"},
+<<<<<<< HEAD
 			cmd: "./gitea test-cmd",
+=======
+			cmd: "./proxgit test-cmd",
+>>>>>>> master
 			exp: makePathOutput("/tmp", "/tmp/custom", "/tmp/custom/conf/app.ini"),
 		},
 		{
 			env: map[string]string{"GITEA_WORK_DIR": "/tmp"},
+<<<<<<< HEAD
 			cmd: "./gitea test-cmd --work-path /tmp/other",
+=======
+			cmd: "./proxgit test-cmd --work-path /tmp/other",
+>>>>>>> master
 			exp: makePathOutput("/tmp/other", "/tmp/other/custom", "/tmp/other/custom/conf/app.ini"),
 		},
 		{
 			env: map[string]string{"GITEA_WORK_DIR": "/tmp"},
+<<<<<<< HEAD
 			cmd: "./gitea test-cmd --config /tmp/app-other.ini",
+=======
+			cmd: "./proxgit test-cmd --config /tmp/app-other.ini",
+>>>>>>> master
 			exp: makePathOutput("/tmp", "/tmp/custom", "/tmp/app-other.ini"),
 		},
 	}
@@ -129,28 +163,44 @@ func TestCliCmd(t *testing.T) {
 
 func TestCliCmdError(t *testing.T) {
 	app := newTestApp(func(ctx *cli.Context) error { return errors.New("normal error") })
+<<<<<<< HEAD
 	r, err := runTestApp(app, "./gitea", "test-cmd")
+=======
+	r, err := runTestApp(app, "./proxgit", "test-cmd")
+>>>>>>> master
 	assert.Error(t, err)
 	assert.Equal(t, 1, r.ExitCode)
 	assert.Empty(t, r.Stdout)
 	assert.Equal(t, "Command error: normal error\n", r.Stderr)
 
 	app = newTestApp(func(ctx *cli.Context) error { return cli.Exit("exit error", 2) })
+<<<<<<< HEAD
 	r, err = runTestApp(app, "./gitea", "test-cmd")
+=======
+	r, err = runTestApp(app, "./proxgit", "test-cmd")
+>>>>>>> master
 	assert.Error(t, err)
 	assert.Equal(t, 2, r.ExitCode)
 	assert.Empty(t, r.Stdout)
 	assert.Equal(t, "exit error\n", r.Stderr)
 
 	app = newTestApp(func(ctx *cli.Context) error { return nil })
+<<<<<<< HEAD
 	r, err = runTestApp(app, "./gitea", "test-cmd", "--no-such")
+=======
+	r, err = runTestApp(app, "./proxgit", "test-cmd", "--no-such")
+>>>>>>> master
 	assert.Error(t, err)
 	assert.Equal(t, 1, r.ExitCode)
 	assert.Equal(t, "Incorrect Usage: flag provided but not defined: -no-such\n\n", r.Stdout)
 	assert.Empty(t, r.Stderr) // the cli package's strange behavior, the error message is not in stderr ....
 
 	app = newTestApp(func(ctx *cli.Context) error { return nil })
+<<<<<<< HEAD
 	r, err = runTestApp(app, "./gitea", "test-cmd")
+=======
+	r, err = runTestApp(app, "./proxgit", "test-cmd")
+>>>>>>> master
 	assert.NoError(t, err)
 	assert.Equal(t, -1, r.ExitCode) // the cli.OsExiter is not called
 	assert.Empty(t, r.Stdout)

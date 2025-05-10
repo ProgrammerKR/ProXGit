@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	issues_model "code.gitea.io/gitea/models/issues"
 	access_model "code.gitea.io/gitea/models/perm/access"
@@ -31,6 +32,31 @@ import (
 
 // HookPostReceive updates services and users
 func HookPostReceive(ctx *gitea_context.PrivateContext) {
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/cachegroup"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/private"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+)
+
+// HookPostReceive updates services and users
+func HookPostReceive(ctx *proxgit_context.PrivateContext) {
+>>>>>>> master
 	opts := web.GetForm(ctx).(*private.HookOptions)
 
 	// We don't rely on RepoAssignment here because:
@@ -83,7 +109,11 @@ func HookPostReceive(ctx *gitea_context.PrivateContext) {
 				// put the master/main branch first
 				// FIXME: It doesn't always work, since the master/main branch may not be the first batch of updates.
 				//        If the user pushes many branches at once, the Git hook will call the internal API in batches, rather than all at once.
+<<<<<<< HEAD
 				//        See https://github.com/go-gitea/gitea/blob/cb52b17f92e2d2293f7c003649743464492bca48/cmd/hook.go#L27
+=======
+				//        See https://github.com/go-proxgit/proxgit/blob/cb52b17f92e2d2293f7c003649743464492bca48/cmd/hook.go#L27
+>>>>>>> master
 				//        If the user executes `git push origin --all` and pushes more than 30 branches, the master/main may not be the default branch.
 				copy(updates[1:], updates)
 				updates[0] = option
@@ -331,7 +361,11 @@ func loadContextCacheUser(ctx context.Context, id int64) (*user_model.User, erro
 }
 
 // handlePullRequestMerging handle pull request merging, a pull request action should push at least 1 commit
+<<<<<<< HEAD
 func handlePullRequestMerging(ctx *gitea_context.PrivateContext, opts *private.HookOptions, ownerName, repoName string, updates []*repo_module.PushUpdateOptions) {
+=======
+func handlePullRequestMerging(ctx *proxgit_context.PrivateContext, opts *private.HookOptions, ownerName, repoName string, updates []*repo_module.PushUpdateOptions) {
+>>>>>>> master
 	if len(updates) == 0 {
 		ctx.JSON(http.StatusInternalServerError, private.HookPostReceiveResult{
 			Err: fmt.Sprintf("Pushing a merged PR (pr:%d) no commits pushed ", opts.PullRequestID),

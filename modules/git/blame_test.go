@@ -7,7 +7,11 @@ import (
 	"context"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -30,7 +34,11 @@ func TestReadingBlameOutput(t *testing.T) {
 				Sha: "72866af952e98d02a73003501836074b286a78f6",
 				Lines: []string{
 					"# test_repo",
+<<<<<<< HEAD
 					"Test repository for testing migration from github to gitea",
+=======
+					"Test repository for testing migration from github to proxgit",
+>>>>>>> master
 				},
 			},
 			{

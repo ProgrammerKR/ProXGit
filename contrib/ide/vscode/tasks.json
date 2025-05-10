@@ -13,6 +13,7 @@
         "panel": "shared"
       },
       "linux": {
+<<<<<<< HEAD
         "args": ["build", "-o", "gitea", "${workspaceRoot}/main.go" ]
       },
       "osx": {
@@ -20,6 +21,15 @@
       },
       "windows": {
         "args": ["build", "-o", "gitea.exe", "\"${workspaceRoot}\\main.go\""]
+=======
+        "args": ["build", "-o", "proxgit", "${workspaceRoot}/main.go" ]
+      },
+      "osx": {
+        "args": ["build", "-o", "proxgit", "${workspaceRoot}/main.go" ]
+      },
+      "windows": {
+        "args": ["build", "-o", "proxgit.exe", "\"${workspaceRoot}\\main.go\""]
+>>>>>>> master
       },
       "problemMatcher": ["$go"]
     },
@@ -35,6 +45,7 @@
         "panel": "shared"
       },
       "linux": {
+<<<<<<< HEAD
         "args": ["build", "-tags=\"sqlite sqlite_unlock_notify\"", "-o", "gitea", "${workspaceRoot}/main.go"]
       },
       "osx": {
@@ -42,6 +53,15 @@
       },
       "windows": {
         "args": ["build", "-tags=\"sqlite sqlite_unlock_notify\"", "-o", "gitea.exe", "\"${workspaceRoot}\\main.go\""]
+=======
+        "args": ["build", "-tags=\"sqlite sqlite_unlock_notify\"", "-o", "proxgit", "${workspaceRoot}/main.go"]
+      },
+      "osx": {
+        "args": ["build", "-tags=\"sqlite sqlite_unlock_notify\"", "-o", "proxgit", "${workspaceRoot}/main.go"]
+      },
+      "windows": {
+        "args": ["build", "-tags=\"sqlite sqlite_unlock_notify\"", "-o", "proxgit.exe", "\"${workspaceRoot}\\main.go\""]
+>>>>>>> master
       },
       "problemMatcher": ["$go"]
     }

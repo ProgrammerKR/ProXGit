@@ -7,7 +7,11 @@ import (
 	"sort"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 // These flags define which text to prefix to each log entry generated

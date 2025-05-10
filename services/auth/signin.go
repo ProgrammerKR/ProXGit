@@ -7,6 +7,7 @@ import (
 	"context"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
@@ -19,6 +20,20 @@ import (
 	_ "code.gitea.io/gitea/services/auth/source/ldap" // register the ldap source
 	_ "code.gitea.io/gitea/services/auth/source/pam"  // register the pam source
 	_ "code.gitea.io/gitea/services/auth/source/sspi" // register the sspi source
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/services/auth/source/oauth2"
+	"code.proxgit.io/proxgit/services/auth/source/smtp"
+
+	_ "code.proxgit.io/proxgit/services/auth/source/db"   // register the sources (and below)
+	_ "code.proxgit.io/proxgit/services/auth/source/ldap" // register the ldap source
+	_ "code.proxgit.io/proxgit/services/auth/source/pam"  // register the pam source
+	_ "code.proxgit.io/proxgit/services/auth/source/sspi" // register the sspi source
+>>>>>>> master
 )
 
 // UserSignIn validates user name and password.

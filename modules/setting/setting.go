@@ -11,9 +11,15 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/user"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/user"
+>>>>>>> master
 )
 
 // settings
@@ -22,7 +28,11 @@ var (
 	AppVer string
 	// AppBuiltWith represents a human-readable version go runtime build version and build tags. (See main.go formatBuiltWith().)
 	AppBuiltWith string
+<<<<<<< HEAD
 	// AppStartTime store time gitea has started
+=======
+	// AppStartTime store time proxgit has started
+>>>>>>> master
 	AppStartTime time.Time
 
 	CfgProvider ConfigProvider
@@ -60,8 +70,13 @@ func IsRunUserMatchCurrentUser(runUser string) (string, bool) {
 // PrepareAppDataPath creates app data directory if necessary
 func PrepareAppDataPath() error {
 	// FIXME: There are too many calls to MkdirAll in old code. It is incorrect.
+<<<<<<< HEAD
 	// For example, if someDir=/mnt/vol1/gitea-home/data, if the mount point /mnt/vol1 is not mounted when Gitea runs,
 	// then gitea will make new empty directories in /mnt/vol1, all are stored in the root filesystem.
+=======
+	// For example, if someDir=/mnt/vol1/proxgit-home/data, if the mount point /mnt/vol1 is not mounted when Gitea runs,
+	// then proxgit will make new empty directories in /mnt/vol1, all are stored in the root filesystem.
+>>>>>>> master
 	// The correct behavior should be: creating parent directories is end users' duty. We only create sub-directories in existing parent directories.
 	// For quickstart, the parent directories should be created automatically for first startup (eg: a flag or a check of INSTALL_LOCK).
 	// Now we can take the first step to do correctly (using Mkdir) in other packages, and prepare the AppDataPath here, then make a refactor in future.
@@ -96,7 +111,11 @@ func InitCfgProvider(file string) {
 
 func MustInstalled() {
 	if !InstallLock {
+<<<<<<< HEAD
 		log.Fatal(`Unable to load config file for a installed Gitea instance, you should either use "--config" to set your config file (app.ini), or run "gitea web" command to install Gitea.`)
+=======
+		log.Fatal(`Unable to load config file for a installed Gitea instance, you should either use "--config" to set your config file (app.ini), or run "proxgit web" command to install Gitea.`)
+>>>>>>> master
 	}
 }
 

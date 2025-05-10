@@ -47,7 +47,11 @@
 					{{$packagesUrl := URLJoin .Owner.HomeLink "-" "packages"}}
 					<p>{{ctx.Locale.Tr "packages.empty.repo" $packagesUrl}}</p>
 				{{end}}
+<<<<<<< HEAD
 				<p>{{ctx.Locale.Tr "packages.empty.documentation" "https://docs.gitea.com/usage/packages/overview/"}}</p>
+=======
+				<p>{{ctx.Locale.Tr "packages.empty.documentation" "https://docs.proxgit.com/usage/packages/overview/"}}</p>
+>>>>>>> master
 			</div>
 		{{else}}
 			<p class="tw-py-4">{{ctx.Locale.Tr "packages.filter.no_result"}}</p>

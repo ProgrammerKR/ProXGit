@@ -6,7 +6,11 @@ package validation
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"gitea.com/go-chi/binding"
+=======
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 	"github.com/gobwas/glob"
 )
 

@@ -11,8 +11,13 @@ import (
 	"runtime"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // RedirectURL returns the redirect URL of a http response.
@@ -48,6 +53,7 @@ func MockVariableValue[T any](p *T, v ...T) (reset func()) {
 
 // SetupGiteaRoot Sets GITEA_ROOT if it is not already set and returns the value
 func SetupGiteaRoot() string {
+<<<<<<< HEAD
 	giteaRoot := os.Getenv("GITEA_ROOT")
 	if giteaRoot != "" {
 		return giteaRoot
@@ -60,4 +66,18 @@ func SetupGiteaRoot() string {
 	}
 	_ = os.Setenv("GITEA_ROOT", giteaRoot)
 	return giteaRoot
+=======
+	proxgitRoot := os.Getenv("GITEA_ROOT")
+	if proxgitRoot != "" {
+		return proxgitRoot
+	}
+	_, filename, _, _ := runtime.Caller(0)
+	proxgitRoot = filepath.Dir(filepath.Dir(filepath.Dir(filename)))
+	fixturesDir := filepath.Join(proxgitRoot, "models", "fixtures")
+	if exist, _ := util.IsDir(fixturesDir); !exist {
+		panic("fixtures directory not found: " + fixturesDir)
+	}
+	_ = os.Setenv("GITEA_ROOT", proxgitRoot)
+	return proxgitRoot
+>>>>>>> master
 }

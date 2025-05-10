@@ -1,0 +1,6 @@
+@import "./theme-proxgit-light.css" (prefers-color-scheme: light);
+@import "./theme-proxgit-dark.css" (prefers-color-scheme: dark);
+
+proxgit-theme-meta-info {
+  --theme-display-name: "Auto";
+}

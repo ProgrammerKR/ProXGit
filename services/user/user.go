@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
 	packages_model "code.gitea.io/gitea/models/packages"
@@ -27,6 +28,25 @@ import (
 	"code.gitea.io/gitea/services/packages"
 	container_service "code.gitea.io/gitea/services/packages/container"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	system_model "code.proxgit.io/proxgit/models/system"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/eventsource"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/agit"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	org_service "code.proxgit.io/proxgit/services/org"
+	"code.proxgit.io/proxgit/services/packages"
+	container_service "code.proxgit.io/proxgit/services/packages/container"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 // RenameUser renames a user

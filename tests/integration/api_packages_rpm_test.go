@@ -15,6 +15,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/models/unittest"
@@ -23,6 +24,16 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	rpm_module "code.proxgit.io/proxgit/modules/packages/rpm"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 	"github.com/sassoftware/go-rpmutils"
@@ -33,7 +44,11 @@ import (
 func TestPackageRpm(t *testing.T) {
 	defer tests.PrepareTestEnv(t)()
 
+<<<<<<< HEAD
 	packageName := "gitea-test"
+=======
+	packageName := "proxgit-test"
+>>>>>>> master
 	packageVersion := "1.0.2-1"
 	packageArchitecture := "x86_64"
 
@@ -92,7 +107,11 @@ Mu0UFYgZ/bYnuvn/vz4wtCz8qMwsHUvP0PX3tbYFUctAPdrY6tiiDtcCddDECahx7SuVNP5dpmb5
 				req := NewRequest(t, "GET", groupURL+".repo")
 				resp := MakeRequest(t, req, http.StatusOK)
 
+<<<<<<< HEAD
 				expected := fmt.Sprintf(`[gitea-%s]
+=======
+				expected := fmt.Sprintf(`[proxgit-%s]
+>>>>>>> master
 name=%s
 baseurl=%s
 enabled=1
@@ -326,7 +345,11 @@ gpgkey=%sapi/packages/%s/rpm/repository.key`,
 					assert.Equal(t, "YES", p.Checksum.Pkgid)
 					assert.Equal(t, "sha256", p.Checksum.Type)
 					assert.Equal(t, "f1d5d2ffcbe4a7568e98b864f40d923ecca084e9b9bcd5977ed6521c46d3fa4c", p.Checksum.Checksum)
+<<<<<<< HEAD
 					assert.Equal(t, "https://gitea.io", p.URL)
+=======
+					assert.Equal(t, "https://proxgit.io", p.URL)
+>>>>>>> master
 					assert.EqualValues(t, len(content), p.Size.Package)
 					assert.EqualValues(t, 13, p.Size.Installed)
 					assert.EqualValues(t, 272, p.Size.Archive)
@@ -411,7 +434,11 @@ gpgkey=%sapi/packages/%s/rpm/repository.key`,
 					assert.Equal(t, packageArchitecture, p.Architecture)
 					assert.Len(t, p.Changelogs, 1)
 					c := p.Changelogs[0]
+<<<<<<< HEAD
 					assert.Equal(t, "KN4CK3R <dummy@gitea.io>", c.Author)
+=======
+					assert.Equal(t, "KN4CK3R <dummy@proxgit.io>", c.Author)
+>>>>>>> master
 					assert.EqualValues(t, 1678276800, c.Date)
 					assert.Equal(t, "- Changelog message.", c.Text)
 				})

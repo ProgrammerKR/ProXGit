@@ -9,10 +9,17 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	webhook_model "code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/git"
 	api "code.gitea.io/gitea/modules/structs"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	webhook_model "code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 )
 
 type (

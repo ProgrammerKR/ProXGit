@@ -8,14 +8,23 @@ import (
 	"os"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )
 
 // cmdHelp is our own help subcommand with more information
+<<<<<<< HEAD
 // Keep in mind that the "./gitea help"(subcommand) is different from "./gitea --help"(flag), the flag doesn't parse the config or output "DEFAULT CONFIGURATION:" information
+=======
+// Keep in mind that the "./proxgit help"(subcommand) is different from "./proxgit --help"(flag), the flag doesn't parse the config or output "DEFAULT CONFIGURATION:" information
+>>>>>>> master
 func cmdHelp() *cli.Command {
 	c := &cli.Command{
 		Name:      "help",
@@ -53,7 +62,11 @@ func appGlobalFlags() []cli.Flag {
 		cli.HelpFlag,
 
 		// shared configuration flags, they are for global and for each sub-command at the same time
+<<<<<<< HEAD
 		// eg: such command is valid: "./gitea --config /tmp/app.ini web --config /tmp/app.ini", while it's discouraged indeed
+=======
+		// eg: such command is valid: "./proxgit --config /tmp/app.ini web --config /tmp/app.ini", while it's discouraged indeed
+>>>>>>> master
 		// keep in mind that the short flags like "-C", "-c" and "-w" are globally polluted, they can't be used for sub-commands anymore.
 		&cli.StringFlag{
 			Name:    "custom-path",
@@ -120,7 +133,11 @@ type AppVersion struct {
 func NewMainApp(appVer AppVersion) *cli.App {
 	app := cli.NewApp()
 	app.Name = "Gitea"
+<<<<<<< HEAD
 	app.HelpName = "gitea"
+=======
+	app.HelpName = "proxgit"
+>>>>>>> master
 	app.Usage = "A painless self-hosted Git service"
 	app.Description = `Gitea program contains "web" and other subcommands. If no subcommand is given, it starts the web server by default. Use "web" subcommand for more web server arguments, use other subcommands for other purposes.`
 	app.Version = appVer.Version + appVer.Extra

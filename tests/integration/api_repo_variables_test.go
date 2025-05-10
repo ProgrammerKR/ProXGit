@@ -8,12 +8,21 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 )
 
 func TestAPIRepoVariables(t *testing.T) {
@@ -62,7 +71,11 @@ func TestAPIRepoVariables(t *testing.T) {
 				ExpectedStatus: http.StatusBadRequest,
 			},
 			{
+<<<<<<< HEAD
 				Name:           "gitea_var",
+=======
+				Name:           "proxgit_var",
+>>>>>>> master
 				ExpectedStatus: http.StatusBadRequest,
 			},
 		}

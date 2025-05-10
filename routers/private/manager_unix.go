@@ -8,8 +8,13 @@ package private
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // Restart causes the server to perform a graceful restart

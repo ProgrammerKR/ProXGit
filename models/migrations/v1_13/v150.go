@@ -4,8 +4,13 @@
 package v1_13 //nolint
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

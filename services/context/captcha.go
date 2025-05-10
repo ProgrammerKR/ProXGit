@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/cache"
 	"code.gitea.io/gitea/modules/hcaptcha"
 	"code.gitea.io/gitea/modules/log"
@@ -17,6 +18,18 @@ import (
 	"code.gitea.io/gitea/modules/turnstile"
 
 	"gitea.com/go-chi/captcha"
+=======
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/hcaptcha"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/mcaptcha"
+	"code.proxgit.io/proxgit/modules/recaptcha"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/turnstile"
+
+	"proxgit.com/go-chi/captcha"
+>>>>>>> master
 )
 
 var (

@@ -8,11 +8,19 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	conan_model "code.gitea.io/gitea/models/packages/conan"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/json"
 	conan_module "code.gitea.io/gitea/modules/packages/conan"
 	"code.gitea.io/gitea/services/context"
+=======
+	conan_model "code.proxgit.io/proxgit/models/packages/conan"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/json"
+	conan_module "code.proxgit.io/proxgit/modules/packages/conan"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // SearchResult contains the found recipe names

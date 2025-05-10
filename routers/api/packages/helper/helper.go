@@ -9,10 +9,17 @@ import (
 	"net/http"
 	"net/url"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/services/context"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // LogAndProcessError logs an error and calls a custom callback with the processed error message.

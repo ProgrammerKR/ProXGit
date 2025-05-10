@@ -1,0 +1,15 @@
+#!/bin/bash
+
+###############################################################
+# This script sets defaults for proxgit to run in the container #
+###############################################################
+
+# It assumes that you place this script as proxgit in /usr/local/bin
+#
+# And place the original in /usr/lib/proxgit with working files in /data/proxgit
+GITEA="/app/proxgit/proxgit"
+WORK_DIR="/data/proxgit"
+CUSTOM_PATH="/data/proxgit"
+
+# Provide docker defaults
+GITEA_WORK_DIR="${GITEA_WORK_DIR:-$WORK_DIR}" GITEA_CUSTOM="${GITEA_CUSTOM:-$CUSTOM_PATH}" exec -a "$0" "$GITEA" $CONF_ARG "$@"

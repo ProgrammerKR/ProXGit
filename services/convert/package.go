@@ -6,10 +6,17 @@ package convert
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/packages"
 	access_model "code.gitea.io/gitea/models/perm/access"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/models/packages"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // ToPackage convert a packages.PackageDescriptor to api.Package

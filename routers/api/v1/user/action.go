@@ -7,6 +7,7 @@ import (
 	"errors"
 	"net/http"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	api "code.gitea.io/gitea/modules/structs"
@@ -16,6 +17,17 @@ import (
 	actions_service "code.gitea.io/gitea/services/actions"
 	"code.gitea.io/gitea/services/context"
 	secret_service "code.gitea.io/gitea/services/secrets"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+	"code.proxgit.io/proxgit/services/context"
+	secret_service "code.proxgit.io/proxgit/services/secrets"
+>>>>>>> master
 )
 
 // create or update one secret of the user scope

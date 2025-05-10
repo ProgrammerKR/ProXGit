@@ -8,10 +8,17 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	webhook_model "code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/json"
 	api "code.gitea.io/gitea/modules/structs"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	webhook_model "code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/json"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 )
 
 // payloadConvertor defines the interface to convert system payload to webhook payload
@@ -55,9 +62,15 @@ func newPayload[T any](rc payloadConvertor[T], data []byte, event webhook_module
 		// however I couldn't find in notifier.go such a payload with an HookEvent***Comment event
 
 		// History (most recent first):
+<<<<<<< HEAD
 		//  - refactored in https://github.com/go-gitea/gitea/pull/12310
 		//  - assertion added in https://github.com/go-gitea/gitea/pull/12046
 		//  - issue raised in https://github.com/go-gitea/gitea/issues/11940#issuecomment-645713996
+=======
+		//  - refactored in https://github.com/go-proxgit/proxgit/pull/12310
+		//  - assertion added in https://github.com/go-proxgit/proxgit/pull/12046
+		//  - issue raised in https://github.com/go-proxgit/proxgit/issues/11940#issuecomment-645713996
+>>>>>>> master
 		//    > That's because for HookEventPullRequestComment event, some places use IssueCommentPayload and others use PullRequestPayload
 
 		// In modules/actions/workflows.go:183 the type assertion is always payload.(*api.IssueCommentPayload)

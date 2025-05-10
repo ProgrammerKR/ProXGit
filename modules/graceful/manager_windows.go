@@ -12,15 +12,24 @@ import (
 	"strconv"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"golang.org/x/sys/windows/svc"
 	"golang.org/x/sys/windows/svc/debug"
 )
 
 // WindowsServiceName is the name of the Windows service
+<<<<<<< HEAD
 var WindowsServiceName = "gitea"
+=======
+var WindowsServiceName = "proxgit"
+>>>>>>> master
 
 const (
 	hammerCode       = 128

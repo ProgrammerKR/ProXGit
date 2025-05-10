@@ -6,7 +6,11 @@ package internal
 import (
 	"math"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 )
 
 // ParsePaginator parses a db.Paginator into a skip and limit

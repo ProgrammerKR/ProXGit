@@ -9,9 +9,15 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/storage"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // BlobHash256Key is the key to address a blob content
@@ -42,7 +48,11 @@ func (s *ContentStore) GetServeDirectURL(key BlobHash256Key, filename string, re
 }
 
 // FIXME: Workaround to be removed in v1.20
+<<<<<<< HEAD
 // https://github.com/go-gitea/gitea/issues/19586
+=======
+// https://github.com/go-proxgit/proxgit/issues/19586
+>>>>>>> master
 func (s *ContentStore) Has(key BlobHash256Key) error {
 	_, err := s.store.Stat(KeyToRelativePath(key))
 	return err

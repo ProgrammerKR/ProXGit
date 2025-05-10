@@ -6,10 +6,17 @@ package files
 import (
 	"context"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/structs"
 	asymkey_service "code.gitea.io/gitea/services/asymkey"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/structs"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+>>>>>>> master
 )
 
 // CountDivergingCommits determines how many commits a branch is ahead or behind the repository's base branch

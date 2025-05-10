@@ -6,8 +6,13 @@ package common
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/services/lfs"
+=======
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/lfs"
+>>>>>>> master
 )
 
 const RouterMockPointCommonLFS = "common-lfs"

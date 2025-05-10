@@ -7,6 +7,7 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	activities_model "code.gitea.io/gitea/models/activities"
 	admin_model "code.gitea.io/gitea/models/admin"
@@ -28,6 +29,29 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/storage"
 	asymkey_service "code.gitea.io/gitea/services/asymkey"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	admin_model "code.proxgit.io/proxgit/models/admin"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/organization"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	project_model "code.proxgit.io/proxgit/models/project"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	secret_model "code.proxgit.io/proxgit/models/secret"
+	system_model "code.proxgit.io/proxgit/models/system"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/models/webhook"
+	actions_module "code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/storage"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

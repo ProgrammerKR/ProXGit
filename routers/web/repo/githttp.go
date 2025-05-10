@@ -18,6 +18,7 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/perm"
@@ -31,6 +32,21 @@ import (
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/services/context"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/services/context"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 
 	"github.com/go-chi/cors"
 )
@@ -302,7 +318,11 @@ var (
 
 func dummyInfoRefs(ctx *context.Context) {
 	infoRefsOnce.Do(func() {
+<<<<<<< HEAD
 		tmpDir, cleanup, err := setting.AppDataTempDir("git-repo-content").MkdirTempRandom("gitea-info-refs-cache")
+=======
+		tmpDir, cleanup, err := setting.AppDataTempDir("git-repo-content").MkdirTempRandom("proxgit-info-refs-cache")
+>>>>>>> master
 		if err != nil {
 			log.Error("Failed to create temp dir for git-receive-pack cache: %v", err)
 			return

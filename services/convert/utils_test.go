@@ -25,7 +25,11 @@ func TestToGitServiceType(t *testing.T) {
 	}, {
 		typ: "github", enum: 2,
 	}, {
+<<<<<<< HEAD
 		typ: "gitea", enum: 3,
+=======
+		typ: "proxgit", enum: 3,
+>>>>>>> master
 	}, {
 		typ: "gitlab", enum: 4,
 	}, {

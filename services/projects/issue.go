@@ -7,11 +7,19 @@ import (
 	"context"
 	"errors"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	project_model "code.gitea.io/gitea/models/project"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	project_model "code.proxgit.io/proxgit/models/project"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 )
 
 // MoveIssuesOnProjectColumn moves or keeps issues in a column and sorts them inside that column

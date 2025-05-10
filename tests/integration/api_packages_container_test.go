@@ -14,6 +14,7 @@ import (
 	"sync"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
@@ -26,6 +27,20 @@ import (
 	"code.gitea.io/gitea/modules/test"
 	package_service "code.gitea.io/gitea/services/packages"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	container_model "code.proxgit.io/proxgit/models/packages/container"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	container_module "code.proxgit.io/proxgit/modules/packages/container"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	package_service "code.proxgit.io/proxgit/services/packages"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	oci "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/stretchr/testify/assert"
@@ -357,7 +372,11 @@ func TestPackageContainer(t *testing.T) {
 				defer tests.PrintCurrentTest(t)()
 
 				privateBlobDigest := "sha256:6ccce4863b70f258d691f59609d31b4502e1ba5199942d3bc5d35d17a4ce771d"
+<<<<<<< HEAD
 				req := NewRequestWithBody(t, "POST", fmt.Sprintf("%sv2/%s/%s/blobs/uploads?digest=%s", setting.AppURL, privateUser.Name, image, privateBlobDigest), strings.NewReader("gitea")).
+=======
+				req := NewRequestWithBody(t, "POST", fmt.Sprintf("%sv2/%s/%s/blobs/uploads?digest=%s", setting.AppURL, privateUser.Name, image, privateBlobDigest), strings.NewReader("proxgit")).
+>>>>>>> master
 					AddBasicAuth(privateUser.Name)
 				MakeRequest(t, req, http.StatusCreated)
 
@@ -725,7 +744,11 @@ func TestPackageContainer(t *testing.T) {
 		})
 	}
 
+<<<<<<< HEAD
 	// https://github.com/go-gitea/gitea/issues/19586
+=======
+	// https://github.com/go-proxgit/proxgit/issues/19586
+>>>>>>> master
 	t.Run("ParallelUpload", func(t *testing.T) {
 		defer tests.PrintCurrentTest(t)()
 

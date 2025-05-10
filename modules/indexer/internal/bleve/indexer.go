@@ -7,8 +7,13 @@ import (
 	"context"
 	"errors"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer/internal"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/indexer/internal"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/blevesearch/bleve/v2"
 	"github.com/blevesearch/bleve/v2/mapping"

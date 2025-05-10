@@ -20,6 +20,7 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	alpine_model "code.gitea.io/gitea/models/packages/alpine"
 	user_model "code.gitea.io/gitea/models/user"
@@ -29,6 +30,17 @@ import (
 	alpine_module "code.gitea.io/gitea/modules/packages/alpine"
 	"code.gitea.io/gitea/modules/util"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	alpine_model "code.proxgit.io/proxgit/models/packages/alpine"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/json"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	alpine_module "code.proxgit.io/proxgit/modules/packages/alpine"
+	"code.proxgit.io/proxgit/modules/util"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 )
 
 const (

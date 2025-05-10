@@ -7,7 +7,11 @@ import (
 	"fmt"
 	"sync/atomic"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	xormlog "xorm.io/xorm/log"
 )

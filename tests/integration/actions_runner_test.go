@@ -10,6 +10,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/setting"
 
@@ -17,6 +18,15 @@ import (
 	"code.gitea.io/actions-proto-go/ping/v1/pingv1connect"
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
 	"code.gitea.io/actions-proto-go/runner/v1/runnerv1connect"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/setting"
+
+	pingv1 "code.proxgit.io/actions-proto-go/ping/v1"
+	"code.proxgit.io/actions-proto-go/ping/v1/pingv1connect"
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+	"code.proxgit.io/actions-proto-go/runner/v1/runnerv1connect"
+>>>>>>> master
 	"connectrpc.com/connect"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/types/known/timestamppb"

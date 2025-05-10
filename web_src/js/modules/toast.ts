@@ -24,12 +24,20 @@ const levels: ToastLevels = {
     duration: 2500,
   },
   warning: {
+<<<<<<< HEAD
     icon: 'gitea-exclamation',
+=======
+    icon: 'proxgit-exclamation',
+>>>>>>> master
     background: 'var(--color-orange)',
     duration: -1, // requires dismissal to hide
   },
   error: {
+<<<<<<< HEAD
     icon: 'gitea-exclamation',
+=======
+    icon: 'proxgit-exclamation',
+>>>>>>> master
     background: 'var(--color-red)',
     duration: -1, // requires dismissal to hide
   },

@@ -7,6 +7,7 @@ import (
 	"context"
 	"time"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/system"
 	user_model "code.gitea.io/gitea/models/user"
@@ -18,6 +19,19 @@ import (
 	repo_service "code.gitea.io/gitea/services/repository"
 	archiver_service "code.gitea.io/gitea/services/repository/archiver"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/system"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	issue_indexer "code.proxgit.io/proxgit/modules/indexer/issues"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/updatechecker"
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	archiver_service "code.proxgit.io/proxgit/services/repository/archiver"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 func registerDeleteInactiveUsers() {
@@ -150,7 +164,11 @@ func registerUpdateGiteaChecker() {
 			RunAtStart: false,
 			Schedule:   "@every 168h",
 		},
+<<<<<<< HEAD
 		HTTPEndpoint: "https://dl.gitea.com/gitea/version.json",
+=======
+		HTTPEndpoint: "https://dl.proxgit.com/proxgit/version.json",
+>>>>>>> master
 	}, func(ctx context.Context, _ *user_model.User, config Config) error {
 		updateCheckerConfig := config.(*UpdateCheckerConfig)
 		return updatechecker.GiteaUpdateChecker(updateCheckerConfig.HTTPEndpoint)

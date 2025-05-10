@@ -1,6 +1,11 @@
 # This site is running a Gitea instance.
 # Gitea related security problems could be reported to Gitea community.
 # Site related security problems should be reported to this site's admin.
+<<<<<<< HEAD
 Contact: https://github.com/go-gitea/gitea/blob/main/SECURITY.md
 Policy: https://github.com/go-gitea/gitea/blob/main/SECURITY.md
+=======
+Contact: https://github.com/go-proxgit/proxgit/blob/main/SECURITY.md
+Policy: https://github.com/go-proxgit/proxgit/blob/main/SECURITY.md
+>>>>>>> master
 Preferred-Languages: en

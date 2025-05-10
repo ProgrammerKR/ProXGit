@@ -6,9 +6,15 @@ package fileicon_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/fileicon"
 	"code.gitea.io/gitea/modules/git"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/fileicon"
+	"code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

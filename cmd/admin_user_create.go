@@ -9,12 +9,21 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
 	pwd "code.gitea.io/gitea/modules/auth/password"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+	pwd "code.proxgit.io/proxgit/modules/auth/password"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )
@@ -70,7 +79,11 @@ var microcmdUserCreate = &cli.Command{
 		&cli.StringFlag{
 			Name:  "access-token-name",
 			Usage: `Name of the generated access token`,
+<<<<<<< HEAD
 			Value: "gitea-admin",
+=======
+			Value: "proxgit-admin",
+>>>>>>> master
 		},
 		&cli.StringFlag{
 			Name:  "access-token-scopes",

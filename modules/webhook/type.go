@@ -101,7 +101,11 @@ type HookType = string
 
 // Types of webhooks
 const (
+<<<<<<< HEAD
 	GITEA      HookType = "gitea"
+=======
+	GITEA      HookType = "proxgit"
+>>>>>>> master
 	GOGS       HookType = "gogs"
 	SLACK      HookType = "slack"
 	DISCORD    HookType = "discord"

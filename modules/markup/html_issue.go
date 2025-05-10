@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/references"
@@ -14,6 +15,15 @@ import (
 	"code.gitea.io/gitea/modules/templates/vars"
 	"code.gitea.io/gitea/modules/translation"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/references"
+	"code.proxgit.io/proxgit/modules/regexplru"
+	"code.proxgit.io/proxgit/modules/templates/vars"
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

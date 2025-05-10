@@ -7,6 +7,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/gitrepo"
 	api "code.gitea.io/gitea/modules/structs"
@@ -15,6 +16,16 @@ import (
 	"code.gitea.io/gitea/services/contexttest"
 
 	_ "code.gitea.io/gitea/models/actions"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/contexttest"
+
+	_ "code.proxgit.io/proxgit/models/actions"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -29,10 +40,17 @@ func getExpectedReadmeContentsResponse() *api.ContentsResponse {
 	sha := "4b4851ad51df6a7d9f25c979345979eaeb5b349f"
 	encoding := "base64"
 	content := "IyByZXBvMQoKRGVzY3JpcHRpb24gZm9yIHJlcG8x"
+<<<<<<< HEAD
 	selfURL := "https://try.gitea.io/api/v1/repos/user2/repo1/contents/" + treePath + "?ref=master"
 	htmlURL := "https://try.gitea.io/user2/repo1/src/branch/master/" + treePath
 	gitURL := "https://try.gitea.io/api/v1/repos/user2/repo1/git/blobs/" + sha
 	downloadURL := "https://try.gitea.io/user2/repo1/raw/branch/master/" + treePath
+=======
+	selfURL := "https://try.proxgit.io/api/v1/repos/user2/repo1/contents/" + treePath + "?ref=master"
+	htmlURL := "https://try.proxgit.io/user2/repo1/src/branch/master/" + treePath
+	gitURL := "https://try.proxgit.io/api/v1/repos/user2/repo1/git/blobs/" + sha
+	downloadURL := "https://try.proxgit.io/user2/repo1/raw/branch/master/" + treePath
+>>>>>>> master
 	return &api.ContentsResponse{
 		Name:              treePath,
 		Path:              treePath,
@@ -200,7 +218,11 @@ func TestGetBlobBySHA(t *testing.T) {
 	expectedGBR := &api.GitBlobResponse{
 		Content:  util.ToPointer("dHJlZSAyYTJmMWQ0NjcwNzI4YTJlMTAwNDllMzQ1YmQ3YTI3NjQ2OGJlYWI2CmF1dGhvciB1c2VyMSA8YWRkcmVzczFAZXhhbXBsZS5jb20+IDE0ODk5NTY0NzkgLTA0MDAKY29tbWl0dGVyIEV0aGFuIEtvZW5pZyA8ZXRoYW50a29lbmlnQGdtYWlsLmNvbT4gMTQ4OTk1NjQ3OSAtMDQwMAoKSW5pdGlhbCBjb21taXQK"),
 		Encoding: util.ToPointer("base64"),
+<<<<<<< HEAD
 		URL:      "https://try.gitea.io/api/v1/repos/user2/repo1/git/blobs/65f1bf27bc3bf70f64657658635e66094edbcb4d",
+=======
+		URL:      "https://try.proxgit.io/api/v1/repos/user2/repo1/git/blobs/65f1bf27bc3bf70f64657658635e66094edbcb4d",
+>>>>>>> master
 		SHA:      "65f1bf27bc3bf70f64657658635e66094edbcb4d",
 		Size:     180,
 	}

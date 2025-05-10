@@ -12,9 +12,15 @@ import (
 	"slices"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"github.com/mholt/archiver/v3"
 )
@@ -25,10 +31,17 @@ var SupportedOutputTypes = []string{"zip", "tar", "tar.sz", "tar.gz", "tar.xz", 
 func PrepareFileNameAndType(argFile, argType string) (outFileName, outType string) {
 	if argFile == "" && argType == "" {
 		outType = SupportedOutputTypes[0]
+<<<<<<< HEAD
 		outFileName = fmt.Sprintf("gitea-dump-%d.%s", timeutil.TimeStampNow(), outType)
 	} else if argFile == "" {
 		outType = argType
 		outFileName = fmt.Sprintf("gitea-dump-%d.%s", timeutil.TimeStampNow(), outType)
+=======
+		outFileName = fmt.Sprintf("proxgit-dump-%d.%s", timeutil.TimeStampNow(), outType)
+	} else if argFile == "" {
+		outType = argType
+		outFileName = fmt.Sprintf("proxgit-dump-%d.%s", timeutil.TimeStampNow(), outType)
+>>>>>>> master
 	} else if argType == "" {
 		if filepath.Ext(outFileName) == "" {
 			outType = SupportedOutputTypes[0]

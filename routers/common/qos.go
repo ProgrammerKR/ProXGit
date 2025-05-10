@@ -9,12 +9,21 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/modules/web/middleware"
 	giteacontext "code.gitea.io/gitea/services/context"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	proxgitcontext "code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 
 	"github.com/bohde/codel"
 	"github.com/go-chi/chi/v5"
@@ -133,7 +142,11 @@ func renderServiceUnavailable(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+<<<<<<< HEAD
 	tmplCtx := giteacontext.TemplateContext{}
+=======
+	tmplCtx := proxgitcontext.TemplateContext{}
+>>>>>>> master
 	tmplCtx["Locale"] = middleware.Locale(w, req)
 	ctxData := middleware.GetContextData(req.Context())
 	err := templates.HTMLRenderer().HTML(w, http.StatusServiceUnavailable, tplStatus503, ctxData, tmplCtx)

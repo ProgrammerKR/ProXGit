@@ -7,11 +7,19 @@ import (
 	"errors"
 	"fmt"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/auth/password"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/setting"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/auth/password"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

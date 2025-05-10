@@ -12,9 +12,15 @@ import (
 	"runtime"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/process"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // RegisterRenderers registers all supported third part renderers according settings
@@ -86,7 +92,11 @@ func (p *Renderer) Render(ctx *markup.RenderContext, input io.Reader, output io.
 
 	if p.IsInputFile {
 		// write to temp file
+<<<<<<< HEAD
 		f, cleanup, err := setting.AppDataTempDir("git-repo-content").CreateTempFileRandom("gitea_input")
+=======
+		f, cleanup, err := setting.AppDataTempDir("git-repo-content").CreateTempFileRandom("proxgit_input")
+>>>>>>> master
 		if err != nil {
 			return fmt.Errorf("%s create temp file when rendering %s failed: %w", p.Name(), p.Command, err)
 		}

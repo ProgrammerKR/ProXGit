@@ -9,9 +9,15 @@ import (
 	"html/template"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/highlight"
 	"code.gitea.io/gitea/modules/indexer/code/internal"
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/highlight"
+	"code.proxgit.io/proxgit/modules/indexer/code/internal"
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 )
 
 // Result a search result to display

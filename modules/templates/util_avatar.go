@@ -9,6 +9,7 @@ import (
 	"html/template"
 	"strconv"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/avatars"
 	"code.gitea.io/gitea/models/organization"
@@ -16,6 +17,15 @@ import (
 	user_model "code.gitea.io/gitea/models/user"
 	gitea_html "code.gitea.io/gitea/modules/htmlutil"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/avatars"
+	"code.proxgit.io/proxgit/models/organization"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	proxgit_html "code.proxgit.io/proxgit/modules/htmlutil"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 type AvatarUtils struct {
@@ -40,7 +50,11 @@ func AvatarHTML(src string, size int, class, name string) template.HTML {
 
 // Avatar renders user avatars. args: user, size (int), class (string)
 func (au *AvatarUtils) Avatar(item any, others ...any) template.HTML {
+<<<<<<< HEAD
 	size, class := gitea_html.ParseSizeAndClass(avatars.DefaultAvatarPixelSize, avatars.DefaultAvatarClass, others...)
+=======
+	size, class := proxgit_html.ParseSizeAndClass(avatars.DefaultAvatarPixelSize, avatars.DefaultAvatarClass, others...)
+>>>>>>> master
 
 	switch t := item.(type) {
 	case *user_model.User:
@@ -71,7 +85,11 @@ func (au *AvatarUtils) AvatarByAction(action *activities_model.Action, others ..
 
 // AvatarByEmail renders avatars by email address. args: email, name, size (int), class (string)
 func (au *AvatarUtils) AvatarByEmail(email, name string, others ...any) template.HTML {
+<<<<<<< HEAD
 	size, class := gitea_html.ParseSizeAndClass(avatars.DefaultAvatarPixelSize, avatars.DefaultAvatarClass, others...)
+=======
+	size, class := proxgit_html.ParseSizeAndClass(avatars.DefaultAvatarPixelSize, avatars.DefaultAvatarClass, others...)
+>>>>>>> master
 	src := avatars.GenerateEmailAvatarFastLink(au.ctx, email, size*setting.Avatar.RenderedSizeFactor)
 
 	if src != "" {

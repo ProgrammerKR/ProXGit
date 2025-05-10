@@ -11,6 +11,7 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/renderhelper"
 	"code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/httplib"
@@ -19,6 +20,16 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/renderhelper"
+	"code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // RenderMarkup renders markup text for the /markup and /markdown endpoints
@@ -27,8 +38,13 @@ func RenderMarkup(ctx *context.Base, ctxRepo *context.Repository, mode, text, ur
 	// filePath is the path of the file to render if the end user is trying to preview a repo file (mode == "file")
 	// filePath will be used as RenderContext.RelativePath
 
+<<<<<<< HEAD
 	// for example, when previewing file "/gitea/owner/repo/src/branch/features/feat-123/doc/CHANGE.md", then filePath is "doc/CHANGE.md"
 	// and the urlPathContext is "/gitea/owner/repo/src/branch/features/feat-123/doc"
+=======
+	// for example, when previewing file "/proxgit/owner/repo/src/branch/features/feat-123/doc/CHANGE.md", then filePath is "doc/CHANGE.md"
+	// and the urlPathContext is "/proxgit/owner/repo/src/branch/features/feat-123/doc"
+>>>>>>> master
 
 	if mode == "" || mode == "markdown" {
 		// raw markdown doesn't need any special handling

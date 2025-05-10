@@ -9,8 +9,13 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git/foreachref"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/git/foreachref"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // TagPrefix tags prefix path on the repository

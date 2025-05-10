@@ -9,6 +9,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	org_model "code.gitea.io/gitea/models/organization"
@@ -20,6 +21,19 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	org_model "code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/perm"
+	unit_model "code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -33,7 +47,11 @@ func TestAPIOrgCreateRename(t *testing.T) {
 		UserName:    "user1_org",
 		FullName:    "User1's organization",
 		Description: "This organization created by user1",
+<<<<<<< HEAD
 		Website:     "https://try.gitea.io",
+=======
+		Website:     "https://try.proxgit.io",
+>>>>>>> master
 		Location:    "Shanghai",
 		Visibility:  "limited",
 	}
@@ -141,7 +159,11 @@ func TestAPIOrgGeneral(t *testing.T) {
 		org := api.EditOrgOption{
 			FullName:    "Org3 organization new full name",
 			Description: "A new description",
+<<<<<<< HEAD
 			Website:     "https://try.gitea.io/new",
+=======
+			Website:     "https://try.proxgit.io/new",
+>>>>>>> master
 			Location:    "Beijing",
 			Visibility:  "private",
 		}
@@ -163,7 +185,11 @@ func TestAPIOrgGeneral(t *testing.T) {
 		org := api.EditOrgOption{
 			FullName:    "Org3 organization new full name",
 			Description: "A new description",
+<<<<<<< HEAD
 			Website:     "https://try.gitea.io/new",
+=======
+			Website:     "https://try.proxgit.io/new",
+>>>>>>> master
 			Location:    "Beijing",
 			Visibility:  "badvisibility",
 		}

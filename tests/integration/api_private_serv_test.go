@@ -8,9 +8,15 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/perm"
 	"code.gitea.io/gitea/modules/private"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/perm"
+	"code.proxgit.io/proxgit/modules/private"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

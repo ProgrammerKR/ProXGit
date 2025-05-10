@@ -6,6 +6,7 @@ package explore
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	code_indexer "code.gitea.io/gitea/modules/indexer/code"
@@ -13,6 +14,15 @@ import (
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/routers/common"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	code_indexer "code.proxgit.io/proxgit/modules/indexer/code"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const (

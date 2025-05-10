@@ -6,7 +6,11 @@ package private
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // Email structure holds a data for sending general emails

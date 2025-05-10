@@ -12,7 +12,11 @@ import (
 )
 
 const (
+<<<<<<< HEAD
 	packageName    = "gitea.com/go-gitea/gitea"
+=======
+	packageName    = "proxgit.com/go-proxgit/proxgit"
+>>>>>>> master
 	packageVersion = "v0.0.1"
 )
 
@@ -56,7 +60,11 @@ func TestParsePackage(t *testing.T) {
 		assert.NoError(t, err)
 		assert.Equal(t, packageName, p.Name)
 		assert.Equal(t, packageVersion, p.Version)
+<<<<<<< HEAD
 		assert.Equal(t, "module gitea.com/go-gitea/gitea", p.GoMod)
+=======
+		assert.Equal(t, "module proxgit.com/go-proxgit/proxgit", p.GoMod)
+>>>>>>> master
 	})
 
 	t.Run("Valid", func(t *testing.T) {

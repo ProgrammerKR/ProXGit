@@ -17,6 +17,7 @@ import (
 	"time"
 	"unicode"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	git_model "code.gitea.io/gitea/models/git"
 	"code.gitea.io/gitea/models/perm"
@@ -31,6 +32,22 @@ import (
 	repo_module "code.gitea.io/gitea/modules/repository"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/services/lfs"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	git_model "code.proxgit.io/proxgit/models/git"
+	"code.proxgit.io/proxgit/models/perm"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/lfstransfer"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/pprof"
+	"code.proxgit.io/proxgit/modules/private"
+	"code.proxgit.io/proxgit/modules/process"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/lfs"
+>>>>>>> master
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/kballard/go-shellquote"
@@ -239,7 +256,11 @@ func runServ(c *cli.Context) error {
 		if git.DefaultFeatures().SupportProcReceive {
 			// for AGit Flow
 			if cmd == "ssh_info" {
+<<<<<<< HEAD
 				fmt.Print(`{"type":"gitea","version":1}`)
+=======
+				fmt.Print(`{"type":"proxgit","version":1}`)
+>>>>>>> master
 				return nil
 			}
 		}
@@ -377,7 +398,11 @@ func runServ(c *cli.Context) error {
 		repo_module.EnvKeyID+"="+strconv.FormatInt(results.KeyID, 10),
 		repo_module.EnvAppURL+"="+setting.AppURL,
 	)
+<<<<<<< HEAD
 	// to avoid breaking, here only use the minimal environment variables for the "gitea serv" command.
+=======
+	// to avoid breaking, here only use the minimal environment variables for the "proxgit serv" command.
+>>>>>>> master
 	// it could be re-considered whether to use the same git.CommonGitCmdEnvs() as "git" command later.
 	gitcmd.Env = append(gitcmd.Env, git.CommonCmdServEnvs()...)
 

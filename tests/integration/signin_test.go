@@ -9,6 +9,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
@@ -19,6 +20,18 @@ import (
 	"code.gitea.io/gitea/routers"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/markbates/goth"
 	"github.com/stretchr/testify/assert"

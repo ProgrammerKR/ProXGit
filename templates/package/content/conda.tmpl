@@ -16,7 +16,11 @@ default_channels:
 				<div class="markup"><pre class="code-block"><code>conda install{{if $channel}} -c {{$channel}}{{end}} {{.PackageDescriptor.PackageProperties.GetByName "conda.name"}}={{.PackageDescriptor.Version.Version}}</code></pre></div>
 			</div>
 			<div class="field">
+<<<<<<< HEAD
 				<label>{{ctx.Locale.Tr "packages.registry.documentation" "Conda" "https://docs.gitea.com/usage/packages/conda/"}}</label>
+=======
+				<label>{{ctx.Locale.Tr "packages.registry.documentation" "Conda" "https://docs.proxgit.com/usage/packages/conda/"}}</label>
+>>>>>>> master
 			</div>
 		</div>
 	</div>

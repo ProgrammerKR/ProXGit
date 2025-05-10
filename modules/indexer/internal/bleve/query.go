@@ -4,7 +4,11 @@
 package bleve
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 
 	"github.com/blevesearch/bleve/v2"
 	"github.com/blevesearch/bleve/v2/search/query"

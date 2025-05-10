@@ -7,7 +7,11 @@ import (
 	"regexp"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -31,12 +35,21 @@ type testResult struct {
 
 func TestConvertFullHTMLReferencesToShortRefs(t *testing.T) {
 	re := regexp.MustCompile(`(\s|^|\(|\[)` +
+<<<<<<< HEAD
 		regexp.QuoteMeta("https://ourgitea.com/git/") +
 		`([0-9a-zA-Z-_\.]+/[0-9a-zA-Z-_\.]+)/` +
 		`((?:issues)|(?:pulls))/([0-9]+)(?:\s|$|\)|\]|[:;,.?!]\s|[:;,.?!]$)`)
 	test := `this is a https://ourgitea.com/git/owner/repo/issues/123456789, foo
 https://ourgitea.com/git/owner/repo/pulls/123456789
   And https://ourgitea.com/git/owner/repo/pulls/123
+=======
+		regexp.QuoteMeta("https://ourproxgit.com/git/") +
+		`([0-9a-zA-Z-_\.]+/[0-9a-zA-Z-_\.]+)/` +
+		`((?:issues)|(?:pulls))/([0-9]+)(?:\s|$|\)|\]|[:;,.?!]\s|[:;,.?!]$)`)
+	test := `this is a https://ourproxgit.com/git/owner/repo/issues/123456789, foo
+https://ourproxgit.com/git/owner/repo/pulls/123456789
+  And https://ourproxgit.com/git/owner/repo/pulls/123
+>>>>>>> master
 `
 	expect := `this is a owner/repo#123456789, foo
 owner/repo!123456789
@@ -106,7 +119,11 @@ func TestFindAllIssueReferences(t *testing.T) {
 			},
 		},
 		{
+<<<<<<< HEAD
 			"This [four](http://gitea.com:3000/org3/repo4/issues/203) yes.",
+=======
+			"This [four](http://proxgit.com:3000/org3/repo4/issues/203) yes.",
+>>>>>>> master
 			[]testResult{
 				{203, "org3", "repo4", "203", false, XRefActionNone, nil, nil, ""},
 			},
@@ -116,17 +133,29 @@ func TestFindAllIssueReferences(t *testing.T) {
 			[]testResult{},
 		},
 		{
+<<<<<<< HEAD
 			"This http://gitea.com:3000/user4/repo5/201 no, bad URL.",
 			[]testResult{},
 		},
 		{
 			"This http://gitea.com:3000/user4/repo5/pulls/202 yes.",
+=======
+			"This http://proxgit.com:3000/user4/repo5/201 no, bad URL.",
+			[]testResult{},
+		},
+		{
+			"This http://proxgit.com:3000/user4/repo5/pulls/202 yes.",
+>>>>>>> master
 			[]testResult{
 				{202, "user4", "repo5", "202", true, XRefActionNone, nil, nil, ""},
 			},
 		},
 		{
+<<<<<<< HEAD
 			"This http://gitea.com:3000/user4/repo5/pulls/202 yes. http://gitea.com:3000/user4/repo5/pulls/203 no",
+=======
+			"This http://proxgit.com:3000/user4/repo5/pulls/202 yes. http://proxgit.com:3000/user4/repo5/pulls/203 no",
+>>>>>>> master
 			[]testResult{
 				{202, "user4", "repo5", "202", true, XRefActionNone, nil, nil, ""},
 				{203, "user4", "repo5", "203", true, XRefActionNone, nil, nil, ""},
@@ -264,7 +293,11 @@ func TestFindAllIssueReferences(t *testing.T) {
 func testFixtures(t *testing.T, fixtures []testFixture, context string) {
 	// Save original value for other tests that may rely on it
 	prevURL := setting.AppURL
+<<<<<<< HEAD
 	setting.AppURL = "https://gitea.com:3000/"
+=======
+	setting.AppURL = "https://proxgit.com:3000/"
+>>>>>>> master
 
 	for _, fixture := range fixtures {
 		expraw := make([]*rawReference, len(fixture.expected))
@@ -316,6 +349,7 @@ func TestFindRenderizableCommitCrossReference(t *testing.T) {
 			Expected: nil,
 		},
 		{
+<<<<<<< HEAD
 			Input:    "go-gitea/gitea@test",
 			Expected: nil,
 		},
@@ -328,20 +362,42 @@ func TestFindRenderizableCommitCrossReference(t *testing.T) {
 			Expected: &RenderizableReference{
 				Owner:       "go-gitea",
 				Name:        "gitea",
+=======
+			Input:    "go-proxgit/proxgit@test",
+			Expected: nil,
+		},
+		{
+			Input:    "go-proxgit/proxgit@ab1234",
+			Expected: nil,
+		},
+		{
+			Input: "go-proxgit/proxgit@abcd1234",
+			Expected: &RenderizableReference{
+				Owner:       "go-proxgit",
+				Name:        "proxgit",
+>>>>>>> master
 				CommitSha:   "abcd1234",
 				RefLocation: &RefSpan{Start: 0, End: 23},
 			},
 		},
 		{
+<<<<<<< HEAD
 			Input: "go-gitea/gitea@abcd1234abcd1234abcd1234abcd1234abcd1234",
 			Expected: &RenderizableReference{
 				Owner:       "go-gitea",
 				Name:        "gitea",
+=======
+			Input: "go-proxgit/proxgit@abcd1234abcd1234abcd1234abcd1234abcd1234",
+			Expected: &RenderizableReference{
+				Owner:       "go-proxgit",
+				Name:        "proxgit",
+>>>>>>> master
 				CommitSha:   "abcd1234abcd1234abcd1234abcd1234abcd1234",
 				RefLocation: &RefSpan{Start: 0, End: 55},
 			},
 		},
 		{
+<<<<<<< HEAD
 			Input:    "go-gitea/gitea@abcd1234abcd1234abcd1234abcd1234abcd12341234512345123451234512345", // longer than 64 characters
 			Expected: nil,
 		},
@@ -350,6 +406,16 @@ func TestFindRenderizableCommitCrossReference(t *testing.T) {
 			Expected: &RenderizableReference{
 				Owner:       "go-gitea",
 				Name:        "gitea",
+=======
+			Input:    "go-proxgit/proxgit@abcd1234abcd1234abcd1234abcd1234abcd12341234512345123451234512345", // longer than 64 characters
+			Expected: nil,
+		},
+		{
+			Input: "test go-proxgit/proxgit@abcd1234 test",
+			Expected: &RenderizableReference{
+				Owner:       "go-proxgit",
+				Name:        "proxgit",
+>>>>>>> master
 				CommitSha:   "abcd1234",
 				RefLocation: &RefSpan{Start: 5, End: 28},
 			},
@@ -373,6 +439,7 @@ func TestRegExp_mentionPattern(t *testing.T) {
 		{"@xxx-DiN0-z-A..uru..s-xxx", "@xxx-DiN0-z-A..uru..s-xxx"},
 		{"   @lol   ", "@lol"},
 		{" @Te-st", "@Te-st"},
+<<<<<<< HEAD
 		{"(@gitea)", "@gitea"},
 		{"[@gitea]", "@gitea"},
 		{"@gitea! this", "@gitea"},
@@ -391,6 +458,26 @@ func TestRegExp_mentionPattern(t *testing.T) {
 		{"@gitea,", "@gitea"},
 		{"@gitea;", "@gitea"},
 		{"@gitea/team1;", "@gitea/team1"},
+=======
+		{"(@proxgit)", "@proxgit"},
+		{"[@proxgit]", "@proxgit"},
+		{"@proxgit! this", "@proxgit"},
+		{"@proxgit? this", "@proxgit"},
+		{"@proxgit. this", "@proxgit"},
+		{"@proxgit, this", "@proxgit"},
+		{"@proxgit; this", "@proxgit"},
+		{"@proxgit!\nthis", "@proxgit"},
+		{"\n@proxgit?\nthis", "@proxgit"},
+		{"\t@proxgit.\nthis", "@proxgit"},
+		{"@proxgit,\nthis", "@proxgit"},
+		{"@proxgit;\nthis", "@proxgit"},
+		{"@proxgit!", "@proxgit"},
+		{"@proxgit?", "@proxgit"},
+		{"@proxgit.", "@proxgit"},
+		{"@proxgit,", "@proxgit"},
+		{"@proxgit;", "@proxgit"},
+		{"@proxgit/team1;", "@proxgit/team1"},
+>>>>>>> master
 		{"@user's idea", "@user"},
 	}
 	falseTestCases := []string{
@@ -400,6 +487,7 @@ func TestRegExp_mentionPattern(t *testing.T) {
 		"",
 		"ABC",
 		"@.ABC",
+<<<<<<< HEAD
 		"/home/gitea/@gitea",
 		"\"@gitea\"",
 		"@@gitea",
@@ -408,6 +496,16 @@ func TestRegExp_mentionPattern(t *testing.T) {
 		"@gitea,this",
 		"@gitea;this",
 		"@gitea/team1/more",
+=======
+		"/home/proxgit/@proxgit",
+		"\"@proxgit\"",
+		"@@proxgit",
+		"@proxgit!this",
+		"@proxgit?this",
+		"@proxgit,this",
+		"@proxgit;this",
+		"@proxgit/team1/more",
+>>>>>>> master
 	}
 
 	for _, testCase := range trueTestCases {
@@ -475,7 +573,11 @@ func TestRegExp_issueAlphanumericPattern(t *testing.T) {
 		"ABC",
 		"GG-",
 		"rm-1",
+<<<<<<< HEAD
 		"/home/gitea/ABC-1234",
+=======
+		"/home/proxgit/ABC-1234",
+>>>>>>> master
 		"MY-STRING-ABC-123",
 	}
 

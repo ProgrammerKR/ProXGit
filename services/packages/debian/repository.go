@@ -14,6 +14,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	debian_model "code.gitea.io/gitea/models/packages/debian"
 	user_model "code.gitea.io/gitea/models/user"
@@ -22,6 +23,16 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	debian_model "code.proxgit.io/proxgit/models/packages/debian"
+	user_model "code.proxgit.io/proxgit/models/user"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	debian_module "code.proxgit.io/proxgit/modules/packages/debian"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 	"github.com/ProtonMail/go-crypto/openpgp/armor"

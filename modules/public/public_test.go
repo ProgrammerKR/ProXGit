@@ -6,7 +6,11 @@ package public
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

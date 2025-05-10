@@ -8,8 +8,13 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // ErrUserRedirectNotExist represents a "UserRedirectNotExist" kind of error.

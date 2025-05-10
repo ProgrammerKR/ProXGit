@@ -4,8 +4,13 @@
 package oauth2
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 // Source holds configuration for the OAuth2 login source.

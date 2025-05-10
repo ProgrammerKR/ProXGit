@@ -8,7 +8,11 @@ import (
 	"database/sql/driver"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/lib/pq"
 	"xorm.io/xorm/dialects"

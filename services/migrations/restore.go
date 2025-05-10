@@ -10,7 +10,11 @@ import (
 	"path/filepath"
 	"strconv"
 
+<<<<<<< HEAD
 	base "code.gitea.io/gitea/modules/migration"
+=======
+	base "code.proxgit.io/proxgit/modules/migration"
+>>>>>>> master
 
 	"gopkg.in/yaml.v3"
 )

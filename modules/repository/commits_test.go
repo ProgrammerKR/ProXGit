@@ -8,11 +8,19 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -57,7 +65,11 @@ func TestPushCommits_ToAPIPayloadCommits(t *testing.T) {
 
 	assert.Equal(t, "69554a6", payloadCommits[0].ID)
 	assert.Equal(t, "not signed commit", payloadCommits[0].Message)
+<<<<<<< HEAD
 	assert.Equal(t, "https://try.gitea.io/user2/repo16/commit/69554a6", payloadCommits[0].URL)
+=======
+	assert.Equal(t, "https://try.proxgit.io/user2/repo16/commit/69554a6", payloadCommits[0].URL)
+>>>>>>> master
 	assert.Equal(t, "User2", payloadCommits[0].Committer.Name)
 	assert.Equal(t, "user2", payloadCommits[0].Committer.UserName)
 	assert.Equal(t, "User2", payloadCommits[0].Author.Name)
@@ -68,7 +80,11 @@ func TestPushCommits_ToAPIPayloadCommits(t *testing.T) {
 
 	assert.Equal(t, "27566bd", payloadCommits[1].ID)
 	assert.Equal(t, "good signed commit (with not yet validated email)", payloadCommits[1].Message)
+<<<<<<< HEAD
 	assert.Equal(t, "https://try.gitea.io/user2/repo16/commit/27566bd", payloadCommits[1].URL)
+=======
+	assert.Equal(t, "https://try.proxgit.io/user2/repo16/commit/27566bd", payloadCommits[1].URL)
+>>>>>>> master
 	assert.Equal(t, "User2", payloadCommits[1].Committer.Name)
 	assert.Equal(t, "user2", payloadCommits[1].Committer.UserName)
 	assert.Equal(t, "User2", payloadCommits[1].Author.Name)
@@ -79,7 +95,11 @@ func TestPushCommits_ToAPIPayloadCommits(t *testing.T) {
 
 	assert.Equal(t, "5099b81", payloadCommits[2].ID)
 	assert.Equal(t, "good signed commit", payloadCommits[2].Message)
+<<<<<<< HEAD
 	assert.Equal(t, "https://try.gitea.io/user2/repo16/commit/5099b81", payloadCommits[2].URL)
+=======
+	assert.Equal(t, "https://try.proxgit.io/user2/repo16/commit/5099b81", payloadCommits[2].URL)
+>>>>>>> master
 	assert.Equal(t, "User2", payloadCommits[2].Committer.Name)
 	assert.Equal(t, "user2", payloadCommits[2].Committer.UserName)
 	assert.Equal(t, "User2", payloadCommits[2].Author.Name)
@@ -90,7 +110,11 @@ func TestPushCommits_ToAPIPayloadCommits(t *testing.T) {
 
 	assert.Equal(t, "69554a6", headCommit.ID)
 	assert.Equal(t, "not signed commit", headCommit.Message)
+<<<<<<< HEAD
 	assert.Equal(t, "https://try.gitea.io/user2/repo16/commit/69554a6", headCommit.URL)
+=======
+	assert.Equal(t, "https://try.proxgit.io/user2/repo16/commit/69554a6", headCommit.URL)
+>>>>>>> master
 	assert.Equal(t, "User2", headCommit.Committer.Name)
 	assert.Equal(t, "user2", headCommit.Committer.UserName)
 	assert.Equal(t, "User2", headCommit.Author.Name)

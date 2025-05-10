@@ -6,8 +6,13 @@ package markdown
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/htmlutil"
 	"code.gitea.io/gitea/modules/svg"
+=======
+	"code.proxgit.io/proxgit/modules/htmlutil"
+	"code.proxgit.io/proxgit/modules/svg"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 	east "github.com/yuin/goldmark/extension/ast"

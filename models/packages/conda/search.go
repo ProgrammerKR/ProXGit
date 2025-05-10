@@ -7,9 +7,15 @@ import (
 	"context"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	conda_module "code.gitea.io/gitea/modules/packages/conda"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	conda_module "code.proxgit.io/proxgit/modules/packages/conda"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

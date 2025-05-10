@@ -9,12 +9,21 @@ import (
 	"net/http"
 	"reflect"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	issue_service "code.gitea.io/gitea/services/issue"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+>>>>>>> master
 )
 
 // ListIssueLabels list all the labels of an issue

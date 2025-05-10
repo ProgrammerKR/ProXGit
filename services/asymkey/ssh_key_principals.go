@@ -7,9 +7,15 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/perm"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/perm"
+>>>>>>> master
 )
 
 // AddPrincipalKey adds new principal to database and authorized_principals file.

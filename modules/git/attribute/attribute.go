@@ -6,7 +6,11 @@ package attribute
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/optional"
+=======
+	"code.proxgit.io/proxgit/modules/optional"
+>>>>>>> master
 )
 
 type Attribute string

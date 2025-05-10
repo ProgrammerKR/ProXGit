@@ -7,10 +7,17 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	system_model "code.gitea.io/gitea/models/system"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
 	base "code.gitea.io/gitea/modules/migration"
+=======
+	system_model "code.proxgit.io/proxgit/models/system"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	base "code.proxgit.io/proxgit/modules/migration"
+>>>>>>> master
 )
 
 // WarnAndNotice will log the provided message and send a repository notice

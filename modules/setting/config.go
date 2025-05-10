@@ -6,8 +6,13 @@ package setting
 import (
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting/config"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting/config"
+>>>>>>> master
 )
 
 type PictureStruct struct {

@@ -22,6 +22,7 @@ func TestSanitizeCredentialURLs(t *testing.T) {
 		expected string
 	}{
 		{
+<<<<<<< HEAD
 			"https://github.com/go-gitea/test_repo.git",
 			"https://github.com/go-gitea/test_repo.git",
 		},
@@ -32,6 +33,18 @@ func TestSanitizeCredentialURLs(t *testing.T) {
 		{
 			"https://user:password@github.com/go-gitea/test_repo.git",
 			"https://" + userPlaceholder + "@github.com/go-gitea/test_repo.git",
+=======
+			"https://github.com/go-proxgit/test_repo.git",
+			"https://github.com/go-proxgit/test_repo.git",
+		},
+		{
+			"https://mytoken@github.com/go-proxgit/test_repo.git",
+			"https://" + userPlaceholder + "@github.com/go-proxgit/test_repo.git",
+		},
+		{
+			"https://user:password@github.com/go-proxgit/test_repo.git",
+			"https://" + userPlaceholder + "@github.com/go-proxgit/test_repo.git",
+>>>>>>> master
 		},
 		{
 			"ftp://x@",

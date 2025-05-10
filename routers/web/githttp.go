@@ -4,9 +4,15 @@
 package web
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/routers/web/repo"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/web/repo"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func addOwnerRepoGitHTTPRouters(m *web.Router) {

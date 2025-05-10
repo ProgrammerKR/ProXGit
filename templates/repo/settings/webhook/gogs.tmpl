@@ -1,5 +1,9 @@
 {{if eq .HookType "gogs"}}
+<<<<<<< HEAD
 	<p>{{ctx.Locale.Tr "repo.settings.add_web_hook_desc" "https://docs.gitea.com/usage/webhooks" (ctx.Locale.Tr "repo.settings.web_hook_name_gogs")}}</p>
+=======
+	<p>{{ctx.Locale.Tr "repo.settings.add_web_hook_desc" "https://docs.proxgit.com/usage/webhooks" (ctx.Locale.Tr "repo.settings.web_hook_name_gogs")}}</p>
+>>>>>>> master
 	<form class="ui form" action="{{.BaseLink}}/gogs/{{or .Webhook.ID "new"}}" method="post">
 		{{template "base/disable_form_autofill"}}
 		{{.CsrfTokenHtml}}

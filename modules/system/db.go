@@ -6,9 +6,15 @@ package system
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/system"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/system"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // DBStore can be used to store app state items in local filesystem

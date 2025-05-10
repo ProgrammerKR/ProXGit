@@ -10,6 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/assetfs"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/options"
@@ -17,6 +18,15 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/assetfs"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/options"
+	"code.proxgit.io/proxgit/modules/public"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/gobwas/glob"
 	"github.com/urfave/cli/v2"

@@ -6,8 +6,13 @@ package markdown_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/markup/markdown"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+>>>>>>> master
 )
 
 func BenchmarkSpecializedMarkdown(b *testing.B) {

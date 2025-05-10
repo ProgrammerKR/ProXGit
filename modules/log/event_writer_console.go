@@ -6,7 +6,11 @@ package log
 import (
 	"os"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type WriterConsoleOption struct {

@@ -12,6 +12,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	auth_model "code.gitea.io/gitea/models/auth"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -22,6 +23,18 @@ import (
 	"code.gitea.io/gitea/modules/test"
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/test"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+>>>>>>> master
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
@@ -35,12 +48,20 @@ func TestDownloadTaskLogs(t *testing.T) {
 		zstdEnabled bool
 	}{
 		{
+<<<<<<< HEAD
 			treePath: ".gitea/workflows/download-task-logs-zstd.yml",
+=======
+			treePath: ".proxgit/workflows/download-task-logs-zstd.yml",
+>>>>>>> master
 			fileContent: `name: download-task-logs-zstd
 on:
   push:
     paths:
+<<<<<<< HEAD
       - '.gitea/workflows/download-task-logs-zstd.yml'
+=======
+      - '.proxgit/workflows/download-task-logs-zstd.yml'
+>>>>>>> master
 jobs:
     job1:
       runs-on: ubuntu-latest
@@ -90,12 +111,20 @@ jobs:
 			zstdEnabled: true,
 		},
 		{
+<<<<<<< HEAD
 			treePath: ".gitea/workflows/download-task-logs-no-zstd.yml",
+=======
+			treePath: ".proxgit/workflows/download-task-logs-no-zstd.yml",
+>>>>>>> master
 			fileContent: `name: download-task-logs-no-zstd
 on:
   push:
     paths:
+<<<<<<< HEAD
       - '.gitea/workflows/download-task-logs-no-zstd.yml'
+=======
+      - '.proxgit/workflows/download-task-logs-no-zstd.yml'
+>>>>>>> master
 jobs:
     job1:
       runs-on: ubuntu-latest

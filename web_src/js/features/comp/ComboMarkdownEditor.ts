@@ -60,8 +60,13 @@ type ComboMarkdownEditorOptions = {
   easyMDEOptions?: EasyMDE.Options,
 };
 
+<<<<<<< HEAD
 type ComboMarkdownEditorTextarea = HTMLTextAreaElement & {_giteaComboMarkdownEditor: any};
 type ComboMarkdownEditorContainer = HTMLElement & {_giteaComboMarkdownEditor?: any};
+=======
+type ComboMarkdownEditorTextarea = HTMLTextAreaElement & {_proxgitComboMarkdownEditor: any};
+type ComboMarkdownEditorContainer = HTMLElement & {_proxgitComboMarkdownEditor?: any};
+>>>>>>> master
 
 export class ComboMarkdownEditor {
   static EventEditorContentChanged = EventEditorContentChanged;
@@ -91,8 +96,13 @@ export class ComboMarkdownEditor {
   previewContext: string;
 
   constructor(container: ComboMarkdownEditorContainer, options:ComboMarkdownEditorOptions = {}) {
+<<<<<<< HEAD
     if (container._giteaComboMarkdownEditor) throw new Error('ComboMarkdownEditor already initialized');
     container._giteaComboMarkdownEditor = this;
+=======
+    if (container._proxgitComboMarkdownEditor) throw new Error('ComboMarkdownEditor already initialized');
+    container._proxgitComboMarkdownEditor = this;
+>>>>>>> master
     this.options = options;
     this.container = container;
   }
@@ -124,7 +134,11 @@ export class ComboMarkdownEditor {
 
   setupTextarea() {
     this.textarea = this.container.querySelector('.markdown-text-editor');
+<<<<<<< HEAD
     this.textarea._giteaComboMarkdownEditor = this;
+=======
+    this.textarea._proxgitComboMarkdownEditor = this;
+>>>>>>> master
     this.textarea.id = `_combo_markdown_editor_${String(elementIdCounter++)}`;
     this.textarea.addEventListener('input', () => triggerEditorContentChanged(this.container));
     this.applyEditorHeights(this.textarea, this.options.editorHeights);
@@ -286,9 +300,15 @@ export class ComboMarkdownEditor {
   prepareEasyMDEToolbarActions() {
     this.easyMDEToolbarDefault = [
       'bold', 'italic', 'strikethrough', '|', 'heading-1', 'heading-2', 'heading-3',
+<<<<<<< HEAD
       'heading-bigger', 'heading-smaller', '|', 'code', 'quote', '|', 'gitea-checkbox-empty',
       'gitea-checkbox-checked', '|', 'unordered-list', 'ordered-list', '|', 'link', 'image',
       'table', 'horizontal-rule', '|', 'gitea-switch-to-textarea',
+=======
+      'heading-bigger', 'heading-smaller', '|', 'code', 'quote', '|', 'proxgit-checkbox-empty',
+      'proxgit-checkbox-checked', '|', 'unordered-list', 'ordered-list', '|', 'link', 'image',
+      'table', 'horizontal-rule', '|', 'proxgit-switch-to-textarea',
+>>>>>>> master
     ];
   }
 
@@ -414,7 +434,11 @@ export class ComboMarkdownEditor {
 export function getComboMarkdownEditor(el: any) {
   if (!el) return null;
   if (el.length) el = el[0];
+<<<<<<< HEAD
   return el._giteaComboMarkdownEditor;
+=======
+  return el._proxgitComboMarkdownEditor;
+>>>>>>> master
 }
 
 export async function initComboMarkdownEditor(container: HTMLElement, options:ComboMarkdownEditorOptions = {}) {

@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"net/url"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/cache"
@@ -34,6 +35,33 @@ import (
 	"code.gitea.io/gitea/modules/packages/swift"
 	"code.gitea.io/gitea/modules/packages/vagrant"
 	"code.gitea.io/gitea/modules/util"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/packages/alpine"
+	"code.proxgit.io/proxgit/modules/packages/arch"
+	"code.proxgit.io/proxgit/modules/packages/cargo"
+	"code.proxgit.io/proxgit/modules/packages/chef"
+	"code.proxgit.io/proxgit/modules/packages/composer"
+	"code.proxgit.io/proxgit/modules/packages/conan"
+	"code.proxgit.io/proxgit/modules/packages/conda"
+	"code.proxgit.io/proxgit/modules/packages/container"
+	"code.proxgit.io/proxgit/modules/packages/cran"
+	"code.proxgit.io/proxgit/modules/packages/debian"
+	"code.proxgit.io/proxgit/modules/packages/helm"
+	"code.proxgit.io/proxgit/modules/packages/maven"
+	"code.proxgit.io/proxgit/modules/packages/npm"
+	"code.proxgit.io/proxgit/modules/packages/nuget"
+	"code.proxgit.io/proxgit/modules/packages/pub"
+	"code.proxgit.io/proxgit/modules/packages/pypi"
+	"code.proxgit.io/proxgit/modules/packages/rpm"
+	"code.proxgit.io/proxgit/modules/packages/rubygems"
+	"code.proxgit.io/proxgit/modules/packages/swift"
+	"code.proxgit.io/proxgit/modules/packages/vagrant"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/hashicorp/go-version"
 )

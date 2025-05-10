@@ -6,10 +6,17 @@ package doctor
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/migrations"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/services/versioned_migration"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/migrations"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/services/versioned_migration"
+>>>>>>> master
 )
 
 func checkDBVersion(ctx context.Context, logger log.Logger, autofix bool) error {

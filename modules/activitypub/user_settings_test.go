@@ -6,11 +6,19 @@ package activitypub
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 
 	_ "code.gitea.io/gitea/models" // https://forum.gitea.com/t/testfixtures-could-not-clean-table-access-no-such-table-access/4137/4
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+
+	_ "code.proxgit.io/proxgit/models" // https://forum.proxgit.com/t/testfixtures-could-not-clean-table-access-no-such-table-access/4137/4
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

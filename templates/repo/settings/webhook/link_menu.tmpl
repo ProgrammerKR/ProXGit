@@ -3,9 +3,15 @@
 	{{$size = .Size}}
 {{end}}
 <div class="menu">
+<<<<<<< HEAD
 	<a class="item" href="{{.BaseLinkNew}}/gitea/new">
 		{{template "shared/webhook/icon" (dict "HookType" "gitea" "Size" $size)}}
 		{{ctx.Locale.Tr "repo.settings.web_hook_name_gitea"}}
+=======
+	<a class="item" href="{{.BaseLinkNew}}/proxgit/new">
+		{{template "shared/webhook/icon" (dict "HookType" "proxgit" "Size" $size)}}
+		{{ctx.Locale.Tr "repo.settings.web_hook_name_proxgit"}}
+>>>>>>> master
 	</a>
 	<a class="item" href="{{.BaseLinkNew}}/gogs/new">
 		{{template "shared/webhook/icon" (dict "HookType" "gogs" "Size" $size)}}

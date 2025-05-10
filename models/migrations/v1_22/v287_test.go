@@ -7,7 +7,11 @@ import (
 	"strconv"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

@@ -7,6 +7,7 @@ import (
 	"errors"
 	"fmt"
 
+<<<<<<< HEAD
 	issue_model "code.gitea.io/gitea/models/issues"
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
@@ -15,6 +16,16 @@ import (
 	"code.gitea.io/gitea/modules/reqctx"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/pull"
+=======
+	issue_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/pull"
+>>>>>>> master
 )
 
 // MergeUpstream merges the base repository's default branch into the fork repository's current branch.

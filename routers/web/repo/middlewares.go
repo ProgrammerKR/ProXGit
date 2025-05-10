@@ -6,10 +6,17 @@ package repo
 import (
 	"strconv"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/services/context"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/services/context"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 // SetEditorconfigIfExists set editor config as render variable

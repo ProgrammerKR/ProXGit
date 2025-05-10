@@ -9,8 +9,13 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/modules/validation"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/validation"
+>>>>>>> master
 
 	"github.com/hashicorp/go-version"
 	"gopkg.in/yaml.v3"

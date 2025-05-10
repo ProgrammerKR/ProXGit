@@ -11,10 +11,17 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/routers/web/shared/user"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/web/shared/user"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

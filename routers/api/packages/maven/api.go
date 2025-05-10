@@ -7,7 +7,11 @@ import (
 	"encoding/xml"
 	"strings"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+>>>>>>> master
 )
 
 // MetadataResponse https://maven.apache.org/ref/3.2.5/maven-repository-metadata/repository-metadata.html

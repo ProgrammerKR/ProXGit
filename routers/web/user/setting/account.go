@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"time"
 
+<<<<<<< HEAD
 	org_model "code.gitea.io/gitea/models/organization"
 	packages_model "code.gitea.io/gitea/models/packages"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -27,6 +28,26 @@ import (
 	"code.gitea.io/gitea/services/forms"
 	"code.gitea.io/gitea/services/mailer"
 	"code.gitea.io/gitea/services/user"
+=======
+	org_model "code.proxgit.io/proxgit/models/organization"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/auth/password"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/auth/source/db"
+	"code.proxgit.io/proxgit/services/auth/source/smtp"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	"code.proxgit.io/proxgit/services/mailer"
+	"code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 const (

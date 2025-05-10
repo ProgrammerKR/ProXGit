@@ -3,7 +3,11 @@
 
 package swagger
 
+<<<<<<< HEAD
 import api "code.gitea.io/gitea/modules/structs"
+=======
+import api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 // GeneralRepoSettings
 // swagger:response GeneralRepoSettings

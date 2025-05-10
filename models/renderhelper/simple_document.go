@@ -6,7 +6,11 @@ package renderhelper
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+>>>>>>> master
 )
 
 type SimpleDocument struct {

@@ -6,10 +6,17 @@ package container
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/services/auth"
 	"code.gitea.io/gitea/services/packages"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 )
 
 var _ auth.Method = &Auth{}

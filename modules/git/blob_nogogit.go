@@ -10,7 +10,11 @@ import (
 	"bytes"
 	"io"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // Blob represents a Git object.

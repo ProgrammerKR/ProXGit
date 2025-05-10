@@ -10,7 +10,11 @@ import (
 	"runtime"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // syncGitConfig only modifies gitconfig, won't change global variables (otherwise there will be data-race problem)
@@ -32,14 +36,22 @@ func syncGitConfig() (err error) {
 	// If these values are not really used, then they can be set (overwritten) directly without considering about existence.
 	for configKey, defaultValue := range map[string]string{
 		"user.name":  "Gitea",
+<<<<<<< HEAD
 		"user.email": "gitea@fake.local",
+=======
+		"user.email": "proxgit@fake.local",
+>>>>>>> master
 	} {
 		if err := configSetNonExist(configKey, defaultValue); err != nil {
 			return err
 		}
 	}
 
+<<<<<<< HEAD
 	// Set git some configurations - these must be set to these values for gitea to work correctly
+=======
+	// Set git some configurations - these must be set to these values for proxgit to work correctly
+>>>>>>> master
 	if err := configSet("core.quotePath", "false"); err != nil {
 		return err
 	}
@@ -77,7 +89,11 @@ func syncGitConfig() (err error) {
 	// However, some docker users and samba users find it difficult to configure their systems correctly,
 	// so that Gitea's git repositories are owned by the Gitea user.
 	// (Possibly Windows Service users - but ownership in this case should really be set correctly on the filesystem.)
+<<<<<<< HEAD
 	// See issue: https://github.com/go-gitea/gitea/issues/19455
+=======
+	// See issue: https://github.com/go-proxgit/proxgit/issues/19455
+>>>>>>> master
 	// As Gitea now always use its internal git config file, and access to the git repositories is managed through Gitea,
 	// it is now safe to set "safe.directory=*" for internal usage only.
 	// Although this setting is only supported by some new git versions, it is also tolerated by earlier versions

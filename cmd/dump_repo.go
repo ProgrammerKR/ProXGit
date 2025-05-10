@@ -10,6 +10,7 @@ import (
 	"os"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
 	base "code.gitea.io/gitea/modules/migration"
@@ -18,6 +19,16 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/convert"
 	"code.gitea.io/gitea/services/migrations"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	base "code.proxgit.io/proxgit/modules/migration"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/convert"
+	"code.proxgit.io/proxgit/services/migrations"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )
@@ -25,14 +36,22 @@ import (
 // CmdDumpRepository represents the available dump repository sub-command.
 var CmdDumpRepository = &cli.Command{
 	Name:        "dump-repo",
+<<<<<<< HEAD
 	Usage:       "Dump the repository from git/github/gitea/gitlab",
+=======
+	Usage:       "Dump the repository from git/github/proxgit/gitlab",
+>>>>>>> master
 	Description: "This is a command for dumping the repository data.",
 	Action:      runDumpRepository,
 	Flags: []cli.Flag{
 		&cli.StringFlag{
 			Name:  "git_service",
 			Value: "",
+<<<<<<< HEAD
 			Usage: "Git service, git, github, gitea, gitlab. If clone_addr could be recognized, this could be ignored.",
+=======
+			Usage: "Git service, git, github, proxgit, gitlab. If clone_addr could be recognized, this could be ignored.",
+>>>>>>> master
 		},
 		&cli.StringFlag{
 			Name:    "repo_dir",
@@ -43,7 +62,11 @@ var CmdDumpRepository = &cli.Command{
 		&cli.StringFlag{
 			Name:  "clone_addr",
 			Value: "",
+<<<<<<< HEAD
 			Usage: "The URL will be clone, currently could be a git/github/gitea/gitlab http/https URL",
+=======
+			Usage: "The URL will be clone, currently could be a git/github/proxgit/gitlab http/https URL",
+>>>>>>> master
 		},
 		&cli.StringFlag{
 			Name:  "auth_username",
@@ -108,8 +131,13 @@ func runDumpRepository(ctx *cli.Context) error {
 		serviceStr = "github"
 	} else if strings.HasPrefix(strings.ToLower(cloneAddr), "https://gitlab.com/") {
 		serviceStr = "gitlab"
+<<<<<<< HEAD
 	} else if strings.HasPrefix(strings.ToLower(cloneAddr), "https://gitea.com/") {
 		serviceStr = "gitea"
+=======
+	} else if strings.HasPrefix(strings.ToLower(cloneAddr), "https://proxgit.com/") {
+		serviceStr = "proxgit"
+>>>>>>> master
 	}
 	if serviceStr == "" {
 		return errors.New("git_service missed or clone_addr cannot be recognized")

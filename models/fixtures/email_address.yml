@@ -281,8 +281,13 @@
 -
   id: 36
   uid: 36
+<<<<<<< HEAD
   email: abcde@gitea.com
   lower_email: abcde@gitea.com
+=======
+  email: abcde@proxgit.com
+  lower_email: abcde@proxgit.com
+>>>>>>> master
   is_activated: true
   is_primary: false
 

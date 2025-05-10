@@ -10,7 +10,11 @@ import (
 	"fmt"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // Signature represents the Author, Committer or Tagger information.

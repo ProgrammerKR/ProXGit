@@ -6,7 +6,11 @@ package v1_17 //nolint
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+>>>>>>> master
 )
 
 func TestMain(m *testing.M) {

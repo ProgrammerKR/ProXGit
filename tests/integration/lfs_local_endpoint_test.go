@@ -9,8 +9,13 @@ import (
 	"path/filepath"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/lfs"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

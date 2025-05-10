@@ -61,7 +61,11 @@ export default {
       },
     },
 
+<<<<<<< HEAD
     // disabled because of https://github.com/go-gitea/gitea/issues/21355
+=======
+    // disabled because of https://github.com/go-proxgit/proxgit/issues/21355
+>>>>>>> master
     // {
     //   name: 'firefox',
     //   use: {

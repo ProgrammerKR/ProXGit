@@ -12,7 +12,11 @@ import (
 	"strconv"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // Shutdown calls the internal shutdown function
@@ -107,7 +111,11 @@ func RemoveLogger(ctx context.Context, logger, writer string) ResponseExtra {
 	return requestJSONClientMsg(req, "Removed")
 }
 
+<<<<<<< HEAD
 // Processes return the current processes from this gitea instance
+=======
+// Processes return the current processes from this proxgit instance
+>>>>>>> master
 func Processes(ctx context.Context, out io.Writer, flat, noSystem, stacktraces, json bool, cancel string) ResponseExtra {
 	reqURL := setting.LocalURL + fmt.Sprintf("api/internal/manager/processes?flat=%t&no-system=%t&stacktraces=%t&json=%t&cancel-pid=%s", flat, noSystem, stacktraces, json, url.QueryEscape(cancel))
 

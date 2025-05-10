@@ -10,9 +10,15 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/markup/common"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup/common"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/ast"
@@ -24,8 +30,13 @@ import (
 )
 
 var (
+<<<<<<< HEAD
 	giteaHostInit sync.Once
 	giteaHost     *url.URL
+=======
+	proxgitHostInit sync.Once
+	proxgitHost     *url.URL
+>>>>>>> master
 )
 
 type stripRenderer struct {
@@ -190,6 +201,7 @@ func StripMarkdownBytes(rawBytes []byte) ([]byte, []string) {
 
 // getGiteaHostName returns a normalized string with the local host name, with no scheme or port information
 func getGiteaHost() *url.URL {
+<<<<<<< HEAD
 	giteaHostInit.Do(func() {
 		var err error
 		if giteaHost, err = url.Parse(setting.AppURL); err != nil {
@@ -197,4 +209,13 @@ func getGiteaHost() *url.URL {
 		}
 	})
 	return giteaHost
+=======
+	proxgitHostInit.Do(func() {
+		var err error
+		if proxgitHost, err = url.Parse(setting.AppURL); err != nil {
+			proxgitHost = &url.URL{}
+		}
+	})
+	return proxgitHost
+>>>>>>> master
 }

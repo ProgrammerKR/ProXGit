@@ -4,8 +4,13 @@
 package setting
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/nosql"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/nosql"
+>>>>>>> master
 )
 
 // GlobalLock represents configuration of global lock

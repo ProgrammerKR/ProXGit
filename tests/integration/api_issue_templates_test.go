@@ -8,10 +8,17 @@ import (
 	"net/url"
 	"testing"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -31,17 +38,28 @@ func TestAPIIssueTemplateList(t *testing.T) {
 		assert.Empty(t, issueTemplates)
 
 		// one correct issue template and some incorrect issue templates
+<<<<<<< HEAD
 		err := createOrReplaceFileInBranch(user, repo, ".gitea/ISSUE_TEMPLATE/tmpl-ok.md", repo.DefaultBranch, `----
+=======
+		err := createOrReplaceFileInBranch(user, repo, ".proxgit/ISSUE_TEMPLATE/tmpl-ok.md", repo.DefaultBranch, `----
+>>>>>>> master
 name: foo
 about: bar
 ----
 `)
 		assert.NoError(t, err)
 
+<<<<<<< HEAD
 		err = createOrReplaceFileInBranch(user, repo, ".gitea/ISSUE_TEMPLATE/tmpl-err1.yml", repo.DefaultBranch, `name: '`)
 		assert.NoError(t, err)
 
 		err = createOrReplaceFileInBranch(user, repo, ".gitea/ISSUE_TEMPLATE/tmpl-err2.yml", repo.DefaultBranch, `other: `)
+=======
+		err = createOrReplaceFileInBranch(user, repo, ".proxgit/ISSUE_TEMPLATE/tmpl-err1.yml", repo.DefaultBranch, `name: '`)
+		assert.NoError(t, err)
+
+		err = createOrReplaceFileInBranch(user, repo, ".proxgit/ISSUE_TEMPLATE/tmpl-err2.yml", repo.DefaultBranch, `other: `)
+>>>>>>> master
 		assert.NoError(t, err)
 
 		req = NewRequest(t, "GET", "/api/v1/repos/user2/repo1/issue_templates")

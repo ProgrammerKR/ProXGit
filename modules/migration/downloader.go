@@ -7,7 +7,11 @@ package migration
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // Downloader downloads the site repo information

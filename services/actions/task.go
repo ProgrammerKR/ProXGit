@@ -8,12 +8,21 @@ import (
 	"errors"
 	"fmt"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	secret_model "code.gitea.io/gitea/models/secret"
 	notify_service "code.gitea.io/gitea/services/notify"
 
 	runnerv1 "code.gitea.io/actions-proto-go/runner/v1"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	secret_model "code.proxgit.io/proxgit/models/secret"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+
+	runnerv1 "code.proxgit.io/actions-proto-go/runner/v1"
+>>>>>>> master
 	"google.golang.org/protobuf/types/known/structpb"
 )
 
@@ -104,14 +113,22 @@ func PickTask(ctx context.Context, runner *actions_model.ActionRunner) (*runnerv
 }
 
 func generateTaskContext(t *actions_model.ActionTask) (*structpb.Struct, error) {
+<<<<<<< HEAD
 	giteaRuntimeToken, err := CreateAuthorizationToken(t.ID, t.Job.RunID, t.JobID)
+=======
+	proxgitRuntimeToken, err := CreateAuthorizationToken(t.ID, t.Job.RunID, t.JobID)
+>>>>>>> master
 	if err != nil {
 		return nil, err
 	}
 
 	gitCtx := GenerateGiteaContext(t.Job.Run, t.Job)
 	gitCtx["token"] = t.Token
+<<<<<<< HEAD
 	gitCtx["gitea_runtime_token"] = giteaRuntimeToken
+=======
+	gitCtx["proxgit_runtime_token"] = proxgitRuntimeToken
+>>>>>>> master
 
 	return structpb.NewStruct(gitCtx)
 }

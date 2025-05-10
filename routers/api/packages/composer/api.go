@@ -8,8 +8,13 @@ import (
 	"net/url"
 	"time"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	composer_module "code.gitea.io/gitea/modules/packages/composer"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	composer_module "code.proxgit.io/proxgit/modules/packages/composer"
+>>>>>>> master
 )
 
 // ServiceIndexResponse contains registry endpoints

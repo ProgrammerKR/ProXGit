@@ -18,6 +18,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	auth_model "code.gitea.io/gitea/models/auth"
 	git_model "code.gitea.io/gitea/models/git"
@@ -32,6 +33,22 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/storage"
 	"code.gitea.io/gitea/services/context"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	git_model "code.proxgit.io/proxgit/models/git"
+	perm_model "code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/json"
+	lfs_module "code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 
 	"github.com/golang-jwt/jwt/v5"
 )
@@ -466,7 +483,11 @@ func buildObjectResponse(rc *requestContext, pointer lfs_module.Pointer, downloa
 				u, err := storage.LFS.URL(pointer.RelativePath(), pointer.Oid, nil)
 				if u != nil && err == nil {
 					// Presigned url does not need the Authorization header
+<<<<<<< HEAD
 					// https://github.com/go-gitea/gitea/issues/21525
+=======
+					// https://github.com/go-proxgit/proxgit/issues/21525
+>>>>>>> master
 					delete(header, "Authorization")
 					link = &lfs_module.Link{Href: u.String(), Header: header}
 				}
@@ -611,6 +632,10 @@ func parseToken(ctx stdCtx.Context, authorization string, target *repo_model.Rep
 }
 
 func requireAuth(ctx *context.Context) {
+<<<<<<< HEAD
 	ctx.Resp.Header().Set("WWW-Authenticate", `Basic realm="gitea-lfs"`)
+=======
+	ctx.Resp.Header().Set("WWW-Authenticate", `Basic realm="proxgit-lfs"`)
+>>>>>>> master
 	writeStatus(ctx, http.StatusUnauthorized)
 }

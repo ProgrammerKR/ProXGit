@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	system_model "code.gitea.io/gitea/models/system"
 	"code.gitea.io/gitea/modules/cache"
 	"code.gitea.io/gitea/modules/git"
@@ -23,6 +24,21 @@ import (
 	"code.gitea.io/gitea/services/mailer"
 
 	"gitea.com/go-chi/session"
+=======
+	system_model "code.proxgit.io/proxgit/models/system"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/setting/config"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/mailer"
+
+	"proxgit.com/go-chi/session"
+>>>>>>> master
 )
 
 const (

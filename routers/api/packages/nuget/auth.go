@@ -6,11 +6,19 @@ package nuget
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/services/auth"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/services/auth"
+>>>>>>> master
 )
 
 var _ auth.Method = &Auth{}

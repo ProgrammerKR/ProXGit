@@ -8,6 +8,7 @@ import (
 	"io"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/markup/markdown"
 	"code.gitea.io/gitea/modules/setting"
@@ -15,6 +16,15 @@ import (
 
 func newFuzzRenderContext() *markup.RenderContext {
 	return markup.NewTestRenderContext("https://example.com/go-gitea/gitea", map[string]string{"user": "go-gitea", "repo": "gitea"})
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+)
+
+func newFuzzRenderContext() *markup.RenderContext {
+	return markup.NewTestRenderContext("https://example.com/go-proxgit/proxgit", map[string]string{"user": "go-proxgit", "repo": "proxgit"})
+>>>>>>> master
 }
 
 func FuzzMarkdownRenderRaw(f *testing.F) {

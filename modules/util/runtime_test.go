@@ -12,7 +12,11 @@ import (
 
 func TestCallerFuncName(t *testing.T) {
 	s := CallerFuncName(1)
+<<<<<<< HEAD
 	assert.Equal(t, "code.gitea.io/gitea/modules/util.TestCallerFuncName", s)
+=======
+	assert.Equal(t, "code.proxgit.io/proxgit/modules/util.TestCallerFuncName", s)
+>>>>>>> master
 }
 
 func BenchmarkCallerFuncName(b *testing.B) {

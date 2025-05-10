@@ -14,7 +14,11 @@ const exampleDiff = `diff --git a/README.md b/README.md
 --- a/README.md
 +++ b/README.md
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release
@@ -164,7 +168,11 @@ func ExampleCutDiffAroundLine() {
 --- a/README.md
 +++ b/README.md
 @@ -1,3 +1,6 @@
+<<<<<<< HEAD
  # gitea-github-migrator
+=======
+ # proxgit-github-migrator
+>>>>>>> master
 +
 + Build Status
 - Latest Release

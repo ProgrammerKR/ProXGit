@@ -7,9 +7,15 @@ import (
 	"net/http"
 	"strconv"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/services/context"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func UpdatePreferences(ctx *context.Context) {

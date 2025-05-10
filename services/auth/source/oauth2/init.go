@@ -9,11 +9,19 @@ import (
 	"net/http"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/optional"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/google/uuid"
 	"github.com/gorilla/sessions"
@@ -23,10 +31,17 @@ import (
 var gothRWMutex = sync.RWMutex{}
 
 // UsersStoreKey is the key for the store
+<<<<<<< HEAD
 const UsersStoreKey = "gitea-oauth2-sessions"
 
 // ProviderHeaderKey is the HTTP header key
 const ProviderHeaderKey = "gitea-oauth2-provider"
+=======
+const UsersStoreKey = "proxgit-oauth2-sessions"
+
+// ProviderHeaderKey is the HTTP header key
+const ProviderHeaderKey = "proxgit-oauth2-provider"
+>>>>>>> master
 
 // Init initializes the oauth source
 func Init(ctx context.Context) error {

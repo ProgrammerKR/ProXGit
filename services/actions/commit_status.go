@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"path"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -19,6 +20,18 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
 	commitstatus_service "code.gitea.io/gitea/services/repository/commitstatus"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	user_model "code.proxgit.io/proxgit/models/user"
+	actions_module "code.proxgit.io/proxgit/modules/actions"
+	git "code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+	commitstatus_service "code.proxgit.io/proxgit/services/repository/commitstatus"
+>>>>>>> master
 
 	"github.com/nektos/act/pkg/jobparser"
 )

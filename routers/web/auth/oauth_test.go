@@ -6,11 +6,19 @@ package auth
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/services/oauth2_provider"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/services/oauth2_provider"
+>>>>>>> master
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/stretchr/testify/assert"

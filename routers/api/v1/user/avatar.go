@@ -7,10 +7,17 @@ import (
 	"encoding/base64"
 	"net/http"
 
+<<<<<<< HEAD
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/services/context"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 // UpdateAvatar updates the Avatar of an User

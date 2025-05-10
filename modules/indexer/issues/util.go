@@ -8,12 +8,21 @@ import (
 	"errors"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issue_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/indexer/issues/internal"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/queue"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issue_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/queue"
+>>>>>>> master
 )
 
 // getIssueIndexerData returns the indexer data of an issue and a bool value indicating whether the issue exists.

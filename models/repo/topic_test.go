@@ -6,9 +6,15 @@ package repo_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -48,10 +54,17 @@ func TestAddTopic(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Len(t, topics, repo2NrOfTopics)
 
+<<<<<<< HEAD
 	assert.NoError(t, repo_model.SaveTopics(db.DefaultContext, 2, "golang", "gitea"))
 	repo2NrOfTopics = 2
 	totalNrOfTopics++
 	topic, err := repo_model.GetTopicByName(db.DefaultContext, "gitea")
+=======
+	assert.NoError(t, repo_model.SaveTopics(db.DefaultContext, 2, "golang", "proxgit"))
+	repo2NrOfTopics = 2
+	totalNrOfTopics++
+	topic, err := repo_model.GetTopicByName(db.DefaultContext, "proxgit")
+>>>>>>> master
 	assert.NoError(t, err)
 	assert.Equal(t, 1, topic.RepoCount)
 

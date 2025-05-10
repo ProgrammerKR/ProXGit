@@ -4,8 +4,13 @@
 package admin
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func RedirectToDefaultSetting(ctx *context.Context) {

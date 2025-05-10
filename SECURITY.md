@@ -4,11 +4,19 @@ The Gitea maintainers take security seriously.
 
 If you discover a security issue, please bring it to their attention right away!
 
+<<<<<<< HEAD
 Previous vulnerabilities are listed at https://about.gitea.com/security.
 
 ## Reporting a Vulnerability
 
 Please **DO NOT** file a public issue, instead send your report privately to `security@gitea.io`.
+=======
+Previous vulnerabilities are listed at https://about.proxgit.com/security.
+
+## Reporting a Vulnerability
+
+Please **DO NOT** file a public issue, instead send your report privately to `security@proxgit.io`.
+>>>>>>> master
 
 ## Protecting Security Information
 
@@ -24,7 +32,11 @@ Key Size: 4096/4096
 Fingerprint: 3DE0 3D1E 144A 7F06 9359 99DC AAFD 2381 6FCD 2D5B
 ```
 
+<<<<<<< HEAD
 UserID: Gitea Security <security@gitea.io>
+=======
+UserID: Gitea Security <security@proxgit.io>
+>>>>>>> master
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----

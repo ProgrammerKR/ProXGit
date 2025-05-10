@@ -13,10 +13,17 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 //  _____          __  .__                 .__                  .___
@@ -37,7 +44,11 @@ import (
 // There is a dependence on the database within RegeneratePublicKeys however most of these functions probably belong in a module
 
 const (
+<<<<<<< HEAD
 	tplCommentPrefix = `# gitea public key`
+=======
+	tplCommentPrefix = `# proxgit public key`
+>>>>>>> master
 	tplPublicKey     = tplCommentPrefix + "\n" + `command=%s,no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,no-user-rc,restrict %s` + "\n"
 )
 

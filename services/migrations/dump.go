@@ -16,6 +16,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
@@ -23,6 +24,15 @@ import (
 	"code.gitea.io/gitea/modules/repository"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/structs"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	base "code.proxgit.io/proxgit/modules/migration"
+	"code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/google/uuid"
 	"gopkg.in/yaml.v3"
@@ -48,7 +58,11 @@ type RepositoryDumper struct {
 	prHeadCache map[string]string
 }
 
+<<<<<<< HEAD
 // NewRepositoryDumper creates an gitea Uploader
+=======
+// NewRepositoryDumper creates an proxgit Uploader
+>>>>>>> master
 func NewRepositoryDumper(ctx context.Context, baseDir, repoOwner, repoName string, opts base.MigrateOptions) (*RepositoryDumper, error) {
 	baseDir = filepath.Join(baseDir, repoOwner, repoName)
 	if err := os.MkdirAll(baseDir, os.ModePerm); err != nil {

@@ -6,7 +6,11 @@ package setting
 import (
 	"net/url"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // Proxy settings

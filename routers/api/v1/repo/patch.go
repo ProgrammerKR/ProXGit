@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"time"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/git"
@@ -15,6 +16,16 @@ import (
 	"code.gitea.io/gitea/services/context"
 	pull_service "code.gitea.io/gitea/services/pull"
 	"code.gitea.io/gitea/services/repository/files"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	"code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 )
 
 // ApplyDiffPatch handles API call for applying a patch

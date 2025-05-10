@@ -9,8 +9,13 @@ import (
 	"net/http/httptest"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -41,5 +46,9 @@ func testRepoMigrate(t testing.TB, session *TestSession, cloneAddr, repoName str
 func TestRepoMigrate(t *testing.T) {
 	defer tests.PrepareTestEnv(t)()
 	session := loginUser(t, "user2")
+<<<<<<< HEAD
 	testRepoMigrate(t, session, "https://github.com/go-gitea/test_repo.git", "git")
+=======
+	testRepoMigrate(t, session, "https://github.com/go-proxgit/test_repo.git", "git")
+>>>>>>> master
 }

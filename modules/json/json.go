@@ -142,7 +142,11 @@ func Valid(data []byte) bool {
 	return json.Valid(data)
 }
 
+<<<<<<< HEAD
 // UnmarshalHandleDoubleEncode - due to a bug in xorm (see https://gitea.com/xorm/xorm/pulls/1957) - it's
+=======
+// UnmarshalHandleDoubleEncode - due to a bug in xorm (see https://proxgit.com/xorm/xorm/pulls/1957) - it's
+>>>>>>> master
 // possible that a Blob may be double encoded or gain an unwanted prefix of 0xff 0xfe.
 func UnmarshalHandleDoubleEncode(bs []byte, v any) error {
 	if len(bs) == 0 {

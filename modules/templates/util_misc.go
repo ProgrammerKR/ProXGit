@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/git"
@@ -20,6 +21,16 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/repository"
 	"code.gitea.io/gitea/modules/svg"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	giturl "code.proxgit.io/proxgit/modules/git/url"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/svg"
+>>>>>>> master
 
 	"github.com/editorconfig/editorconfig-core-go/v2"
 )
@@ -133,7 +144,11 @@ func migrationIcon(hostname string) string {
 	case "github.com":
 		return "octicon-mark-github"
 	default:
+<<<<<<< HEAD
 		return "gitea-git"
+=======
+		return "proxgit-git"
+>>>>>>> master
 	}
 }
 

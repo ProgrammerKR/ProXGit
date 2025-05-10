@@ -6,9 +6,15 @@ package markdown
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/markup/internal"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/internal"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 	east "github.com/yuin/goldmark/extension/ast"
@@ -96,7 +102,11 @@ func (g *ASTTransformer) Transform(node *ast.Document, reader text.Reader, pc pa
 	}
 }
 
+<<<<<<< HEAD
 // NewHTMLRenderer creates a HTMLRenderer to render in the gitea form.
+=======
+// NewHTMLRenderer creates a HTMLRenderer to render in the proxgit form.
+>>>>>>> master
 func NewHTMLRenderer(renderInternal *internal.RenderInternal, opts ...html.Option) renderer.NodeRenderer {
 	r := &HTMLRenderer{
 		renderInternal: renderInternal,
@@ -109,7 +119,11 @@ func NewHTMLRenderer(renderInternal *internal.RenderInternal, opts ...html.Optio
 }
 
 // HTMLRenderer is a renderer.NodeRenderer implementation that
+<<<<<<< HEAD
 // renders gitea specific features.
+=======
+// renders proxgit specific features.
+>>>>>>> master
 type HTMLRenderer struct {
 	html.Config
 	renderInternal *internal.RenderInternal

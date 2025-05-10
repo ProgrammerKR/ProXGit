@@ -7,7 +7,11 @@ import (
 	"fmt"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/generate"
+=======
+	"code.proxgit.io/proxgit/modules/generate"
+>>>>>>> master
 )
 
 // LFS represents the server-side configuration for Git LFS.

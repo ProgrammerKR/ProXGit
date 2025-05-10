@@ -13,6 +13,7 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/renderhelper"
 	"code.gitea.io/gitea/modules/base"
 	"code.gitea.io/gitea/modules/charset"
@@ -22,6 +23,17 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/renderhelper"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/charset"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // locate a README for a tree in one of the supported paths.
@@ -41,11 +53,19 @@ func findReadmeFileInEntries(ctx *context.Context, entries []*git.TreeEntry, try
 	extCount := len(exts)
 	readmeFiles := make([]*git.TreeEntry, extCount+1)
 
+<<<<<<< HEAD
 	docsEntries := make([]*git.TreeEntry, 3) // (one of docs/, .gitea/ or .github/)
 	for _, entry := range entries {
 		if tryWellKnownDirs && entry.IsDir() {
 			// as a special case for the top-level repo introduction README,
 			// fall back to subfolders, looking for e.g. docs/README.md, .gitea/README.zh-CN.txt, .github/README.txt, ...
+=======
+	docsEntries := make([]*git.TreeEntry, 3) // (one of docs/, .proxgit/ or .github/)
+	for _, entry := range entries {
+		if tryWellKnownDirs && entry.IsDir() {
+			// as a special case for the top-level repo introduction README,
+			// fall back to subfolders, looking for e.g. docs/README.md, .proxgit/README.zh-CN.txt, .github/README.txt, ...
+>>>>>>> master
 			// (note that docsEntries is ignored unless we are at the root)
 			lowerName := strings.ToLower(entry.Name())
 			switch lowerName {
@@ -53,8 +73,13 @@ func findReadmeFileInEntries(ctx *context.Context, entries []*git.TreeEntry, try
 				if entry.Name() == "docs" || docsEntries[0] == nil {
 					docsEntries[0] = entry
 				}
+<<<<<<< HEAD
 			case ".gitea":
 				if entry.Name() == ".gitea" || docsEntries[1] == nil {
+=======
+			case ".proxgit":
+				if entry.Name() == ".proxgit" || docsEntries[1] == nil {
+>>>>>>> master
 					docsEntries[1] = entry
 				}
 			case ".github":

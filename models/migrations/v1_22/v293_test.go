@@ -6,9 +6,15 @@ package v1_22 //nolint
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/migrations/base"
 	"code.gitea.io/gitea/models/project"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/migrations/base"
+	"code.proxgit.io/proxgit/models/project"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

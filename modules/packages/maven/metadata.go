@@ -7,8 +7,13 @@ import (
 	"encoding/xml"
 	"io"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/modules/validation"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/validation"
+>>>>>>> master
 
 	"golang.org/x/net/html/charset"
 )

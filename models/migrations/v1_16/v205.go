@@ -4,7 +4,11 @@
 package v1_16 //nolint
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+>>>>>>> master
 
 	"xorm.io/xorm"
 	"xorm.io/xorm/schemas"

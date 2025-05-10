@@ -4,7 +4,11 @@
 package auth
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

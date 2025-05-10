@@ -9,7 +9,11 @@ import (
 	"fmt"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // ResourceIndex represents a resource index which could be used as issue/release and others

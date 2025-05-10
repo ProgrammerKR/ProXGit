@@ -8,7 +8,11 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 )
 
 // UserAssignmentWeb returns a middleware to handle context-user assignment for web routes

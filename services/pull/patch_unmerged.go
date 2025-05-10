@@ -13,8 +13,13 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // lsFileLine is a Quadruplet struct (+error) representing a partially parsed line from ls-files

@@ -11,6 +11,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -20,6 +21,17 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/routers/web"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/routers/web"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	gzipp "github.com/klauspost/compress/gzip"
 	"github.com/stretchr/testify/assert"

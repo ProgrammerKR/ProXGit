@@ -51,13 +51,21 @@ Mu0UFYgZ/bYnuvn/vz4wtCz8qMwsHUvP0PX3tbYFUctAPdrY6tiiDtcCddDECahx7SuVNP5dpmb5
 	assert.NotNil(t, p)
 	assert.NoError(t, err)
 
+<<<<<<< HEAD
 	assert.Equal(t, "gitea-test", p.Name)
+=======
+	assert.Equal(t, "proxgit-test", p.Name)
+>>>>>>> master
 	assert.Equal(t, "1.0.2-1", p.Version)
 	assert.NotNil(t, p.VersionMetadata)
 	assert.NotNil(t, p.FileMetadata)
 
 	assert.Equal(t, "MIT", p.VersionMetadata.License)
+<<<<<<< HEAD
 	assert.Equal(t, "https://gitea.io", p.VersionMetadata.ProjectURL)
+=======
+	assert.Equal(t, "https://proxgit.io", p.VersionMetadata.ProjectURL)
+>>>>>>> master
 	assert.Equal(t, "RPM package summary", p.VersionMetadata.Summary)
 	assert.Equal(t, "RPM package description", p.VersionMetadata.Description)
 
@@ -67,7 +75,11 @@ Mu0UFYgZ/bYnuvn/vz4wtCz8qMwsHUvP0PX3tbYFUctAPdrY6tiiDtcCddDECahx7SuVNP5dpmb5
 	assert.Equal(t, "1", p.FileMetadata.Release)
 	assert.Empty(t, p.FileMetadata.Vendor)
 	assert.Equal(t, "KN4CK3R", p.FileMetadata.Packager)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea-test-1.0.2-1.src.rpm", p.FileMetadata.SourceRpm)
+=======
+	assert.Equal(t, "proxgit-test-1.0.2-1.src.rpm", p.FileMetadata.SourceRpm)
+>>>>>>> master
 	assert.Equal(t, "e44b1687d04b", p.FileMetadata.BuildHost)
 	assert.EqualValues(t, 1678225964, p.FileMetadata.BuildTime)
 	assert.EqualValues(t, 1678225964, p.FileMetadata.FileTime)
@@ -80,14 +92,22 @@ Mu0UFYgZ/bYnuvn/vz4wtCz8qMwsHUvP0PX3tbYFUctAPdrY6tiiDtcCddDECahx7SuVNP5dpmb5
 		t,
 		[]*Entry{
 			{
+<<<<<<< HEAD
 				Name:    "gitea-test",
+=======
+				Name:    "proxgit-test",
+>>>>>>> master
 				Flags:   "EQ",
 				Version: "1.0.2",
 				Epoch:   "0",
 				Release: "1",
 			},
 			{
+<<<<<<< HEAD
 				Name:    "gitea-test(x86-64)",
+=======
+				Name:    "proxgit-test(x86-64)",
+>>>>>>> master
 				Flags:   "EQ",
 				Version: "1.0.2",
 				Epoch:   "0",
@@ -153,7 +173,11 @@ Mu0UFYgZ/bYnuvn/vz4wtCz8qMwsHUvP0PX3tbYFUctAPdrY6tiiDtcCddDECahx7SuVNP5dpmb5
 		t,
 		[]*Changelog{
 			{
+<<<<<<< HEAD
 				Author: "KN4CK3R <dummy@gitea.io>",
+=======
+				Author: "KN4CK3R <dummy@proxgit.io>",
+>>>>>>> master
 				Date:   1678276800,
 				Text:   "- Changelog message.",
 			},

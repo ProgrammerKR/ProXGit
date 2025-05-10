@@ -82,7 +82,11 @@ function updateEditor(monaco: Monaco, editor: IStandaloneCodeEditor, filename: s
   // https://github.com/microsoft/monaco-editor/discussions/3751
 }
 
+<<<<<<< HEAD
 // export editor for customization - https://github.com/go-gitea/gitea/issues/10409
+=======
+// export editor for customization - https://github.com/go-proxgit/proxgit/issues/10409
+>>>>>>> master
 function exportEditor(editor: IStandaloneCodeEditor): void {
   if (!window.codeEditors) window.codeEditors = [];
   if (!window.codeEditors.includes(editor)) window.codeEditors.push(editor);
@@ -94,7 +98,11 @@ function updateTheme(monaco: Monaco): void {
   const styles = window.getComputedStyle(document.documentElement);
   const getColor = (name: string) => tinycolor(styles.getPropertyValue(name).trim()).toString('hex6');
 
+<<<<<<< HEAD
   monaco.editor.defineTheme('gitea', {
+=======
+  monaco.editor.defineTheme('proxgit', {
+>>>>>>> master
     base: isDarkTheme() ? 'vs-dark' : 'vs',
     inherit: true,
     rules: [
@@ -147,7 +155,11 @@ export async function createMonaco(textarea: HTMLTextAreaElement, filename: stri
 
   const editor = monaco.editor.create(container, {
     model,
+<<<<<<< HEAD
     theme: 'gitea',
+=======
+    theme: 'proxgit',
+>>>>>>> master
     ...other,
   });
 

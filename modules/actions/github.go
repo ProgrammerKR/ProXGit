@@ -4,7 +4,11 @@
 package actions
 
 import (
+<<<<<<< HEAD
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 )
 
 const (

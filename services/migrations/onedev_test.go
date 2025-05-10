@@ -9,31 +9,51 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	base "code.gitea.io/gitea/modules/migration"
+=======
+	base "code.proxgit.io/proxgit/modules/migration"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestOneDevDownloadRepo(t *testing.T) {
+<<<<<<< HEAD
 	resp, err := http.Get("https://code.onedev.io/projects/go-gitea-test_repo")
+=======
+	resp, err := http.Get("https://code.onedev.io/projects/go-proxgit-test_repo")
+>>>>>>> master
 	if err != nil || resp.StatusCode != http.StatusOK {
 		t.Skipf("Can't access test repo, skipping %s", t.Name())
 	}
 
 	u, _ := url.Parse("https://code.onedev.io")
 	ctx := t.Context()
+<<<<<<< HEAD
 	downloader := NewOneDevDownloader(ctx, u, "", "", "go-gitea-test_repo")
+=======
+	downloader := NewOneDevDownloader(ctx, u, "", "", "go-proxgit-test_repo")
+>>>>>>> master
 	if err != nil {
 		t.Fatalf("NewOneDevDownloader is nil: %v", err)
 	}
 	repo, err := downloader.GetRepoInfo(ctx)
 	assert.NoError(t, err)
 	assertRepositoryEqual(t, &base.Repository{
+<<<<<<< HEAD
 		Name:        "go-gitea-test_repo",
 		Owner:       "",
 		Description: "Test repository for testing migration from OneDev to gitea",
 		CloneURL:    "https://code.onedev.io/go-gitea-test_repo",
 		OriginalURL: "https://code.onedev.io/projects/go-gitea-test_repo",
+=======
+		Name:        "go-proxgit-test_repo",
+		Owner:       "",
+		Description: "Test repository for testing migration from OneDev to proxgit",
+		CloneURL:    "https://code.onedev.io/go-proxgit-test_repo",
+		OriginalURL: "https://code.onedev.io/projects/go-proxgit-test_repo",
+>>>>>>> master
 	}, repo)
 
 	milestones, err := downloader.GetMilestones(ctx)
@@ -124,12 +144,20 @@ func TestOneDevDownloadRepo(t *testing.T) {
 			Head: base.PullRequestBranch{
 				Ref:      "branch-for-a-pull",
 				SHA:      "343deffe3526b9bc84e873743ff7f6e6d8b827c0",
+<<<<<<< HEAD
 				RepoName: "go-gitea-test_repo",
+=======
+				RepoName: "go-proxgit-test_repo",
+>>>>>>> master
 			},
 			Base: base.PullRequestBranch{
 				Ref:      "master",
 				SHA:      "f32b0a9dfd09a60f616f29158f772cedd89942d2",
+<<<<<<< HEAD
 				RepoName: "go-gitea-test_repo",
+=======
+				RepoName: "go-proxgit-test_repo",
+>>>>>>> master
 			},
 			ForeignIndex: 186,
 			Context:      onedevIssueContext{IsPullRequest: true},

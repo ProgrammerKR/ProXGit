@@ -9,20 +9,33 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
 
 const (
+<<<<<<< HEAD
 	name        = "gitea/composer-package"
+=======
+	name        = "proxgit/composer-package"
+>>>>>>> master
 	description = "Package Description"
 	readme      = "Package Readme"
 	comments    = "Package Comment"
 	packageType = "composer-plugin"
 	author      = "Gitea Authors"
+<<<<<<< HEAD
 	email       = "no.reply@gitea.io"
 	homepage    = "https://gitea.io"
+=======
+	email       = "no.reply@proxgit.io"
+	homepage    = "https://proxgit.io"
+>>>>>>> master
 	license     = "MIT"
 )
 
@@ -112,7 +125,11 @@ func TestParsePackage(t *testing.T) {
 	})
 
 	t.Run("InvalidPackageVersion", func(t *testing.T) {
+<<<<<<< HEAD
 		data := createArchive(map[string]string{"composer.json": `{"name": "gitea/composer-package", "version": "1.a.3"}`})
+=======
+		data := createArchive(map[string]string{"composer.json": `{"name": "proxgit/composer-package", "version": "1.a.3"}`})
+>>>>>>> master
 
 		cp, err := ParsePackage(bytes.NewReader(data), int64(len(data)))
 		assert.Nil(t, cp)
@@ -120,7 +137,11 @@ func TestParsePackage(t *testing.T) {
 	})
 
 	t.Run("InvalidReadmePath", func(t *testing.T) {
+<<<<<<< HEAD
 		data := createArchive(map[string]string{"composer.json": `{"name": "gitea/composer-package", "readme": "sub/README.md"}`})
+=======
+		data := createArchive(map[string]string{"composer.json": `{"name": "proxgit/composer-package", "readme": "sub/README.md"}`})
+>>>>>>> master
 
 		cp, err := ParsePackage(bytes.NewReader(data), int64(len(data)))
 		assert.NoError(t, err)

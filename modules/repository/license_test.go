@@ -68,7 +68,11 @@ func Test_fillLicensePlaceholder(t *testing.T) {
 			name: "owner",
 			args: args{
 				name:   "regular",
+<<<<<<< HEAD
 				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+=======
+				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@proxgit.io", Repo: "proxgit"},
+>>>>>>> master
 				origin: `
 <name of author>
 <owner>
@@ -99,35 +103,56 @@ Gitea
 			name: "email",
 			args: args{
 				name:   "regular",
+<<<<<<< HEAD
 				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+=======
+				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@proxgit.io", Repo: "proxgit"},
+>>>>>>> master
 				origin: `
 [EMAIL]
 `,
 			},
 			want: `
+<<<<<<< HEAD
 teabot@gitea.io
+=======
+teabot@proxgit.io
+>>>>>>> master
 `,
 		},
 		{
 			name: "repo",
 			args: args{
 				name:   "regular",
+<<<<<<< HEAD
 				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+=======
+				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@proxgit.io", Repo: "proxgit"},
+>>>>>>> master
 				origin: `
 <program>
 <one line to give the program's name and a brief idea of what it does.>
 `,
 			},
 			want: `
+<<<<<<< HEAD
 gitea
 gitea
+=======
+proxgit
+proxgit
+>>>>>>> master
 `,
 		},
 		{
 			name: "year",
 			args: args{
 				name:   "regular",
+<<<<<<< HEAD
 				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+=======
+				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@proxgit.io", Repo: "proxgit"},
+>>>>>>> master
 				origin: `
 <year>
 [YEAR]
@@ -150,7 +175,11 @@ gitea
 			name: "0BSD",
 			args: args{
 				name:   "0BSD",
+<<<<<<< HEAD
 				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@gitea.io", Repo: "gitea"},
+=======
+				values: &LicenseValues{Year: "2023", Owner: "Gitea", Email: "teabot@proxgit.io", Repo: "proxgit"},
+>>>>>>> master
 				origin: `
 Copyright (C) YEAR by AUTHOR EMAIL
 
@@ -160,7 +189,11 @@ Copyright (C) YEAR by AUTHOR EMAIL
 `,
 			},
 			want: `
+<<<<<<< HEAD
 Copyright (C) 2023 by Gitea teabot@gitea.io
+=======
+Copyright (C) 2023 by Gitea teabot@proxgit.io
+>>>>>>> master
 
 ...
 

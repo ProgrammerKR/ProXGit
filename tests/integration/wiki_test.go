@@ -11,9 +11,15 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"

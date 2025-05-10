@@ -9,10 +9,17 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/tests"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

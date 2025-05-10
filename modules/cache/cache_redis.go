@@ -8,10 +8,17 @@ import (
 	"strconv"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/nosql"
 
 	"gitea.com/go-chi/cache" //nolint:depguard
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/nosql"
+
+	"proxgit.com/go-chi/cache" //nolint:depguard
+>>>>>>> master
 	"github.com/redis/go-redis/v9"
 )
 

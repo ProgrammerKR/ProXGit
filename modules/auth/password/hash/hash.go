@@ -10,7 +10,11 @@ import (
 	"strings"
 	"sync/atomic"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // This package takes care of hashing passwords, verifying passwords, defining
@@ -105,7 +109,11 @@ func Register[T PasswordSaltHasher](name string, newFn func(config string) T) er
 	return nil
 }
 
+<<<<<<< HEAD
 // In early versions of gitea the password hash algorithm field of a user could be
+=======
+// In early versions of proxgit the password hash algorithm field of a user could be
+>>>>>>> master
 // empty. At that point the default was `pbkdf2` without configuration values
 //
 // Please note this is not the same as the DefaultAlgorithm which is used

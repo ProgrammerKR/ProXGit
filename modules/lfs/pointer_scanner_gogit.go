@@ -9,7 +9,11 @@ import (
 	"context"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 
 	"github.com/go-git/go-git/v5/plumbing/object"
 )

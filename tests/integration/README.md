@@ -74,7 +74,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_PID=Standard" -e "SA_PASSWORD=MwantsaSec
 ```
 Start tests based on the database container
 ```
+<<<<<<< HEAD
 TEST_MSSQL_HOST=localhost:1433 TEST_MSSQL_DBNAME=gitea_test TEST_MSSQL_USERNAME=sa TEST_MSSQL_PASSWORD=MwantsaSecurePassword1 make test-mssql
+=======
+TEST_MSSQL_HOST=localhost:1433 TEST_MSSQL_DBNAME=proxgit_test TEST_MSSQL_USERNAME=sa TEST_MSSQL_PASSWORD=MwantsaSecurePassword1 make test-mssql
+>>>>>>> master
 ```
 
 ## Running individual tests

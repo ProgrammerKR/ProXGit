@@ -12,6 +12,7 @@ import (
 	"path"
 	"strconv"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
@@ -23,6 +24,19 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	repo_service "code.gitea.io/gitea/services/repository"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/json"
+	cargo_module "code.proxgit.io/proxgit/modules/packages/cargo"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 )
 
 const (

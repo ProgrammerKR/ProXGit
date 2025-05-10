@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #compdef ${PROG:=gitea}
+=======
+#compdef ${PROG:=proxgit}
+>>>>>>> master
 
 
 # Heavily inspired by https://github.com/urfave/cli
@@ -24,7 +28,11 @@ _cli_zsh_autocomplete() {
 }
 
 if [ -z $PROG ] ; then
+<<<<<<< HEAD
   compdef _cli_zsh_autocomplete gitea
+=======
+  compdef _cli_zsh_autocomplete proxgit
+>>>>>>> master
 else
   compdef _cli_zsh_autocomplete $(basename $PROG)
 fi

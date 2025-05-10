@@ -8,9 +8,15 @@ import (
 	"os"
 	"unicode"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/blevesearch/bleve/v2"
 	unicode_tokenizer "github.com/blevesearch/bleve/v2/analysis/tokenizer/unicode"

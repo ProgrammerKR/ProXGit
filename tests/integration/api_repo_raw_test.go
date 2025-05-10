@@ -7,10 +7,17 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -30,11 +37,19 @@ func TestAPIReposRaw(t *testing.T) {
 		req := NewRequestf(t, "GET", "/api/v1/repos/%s/repo1/raw/%s/README.md", user.Name, ref).
 			AddTokenAuth(token)
 		resp := MakeRequest(t, req, http.StatusOK)
+<<<<<<< HEAD
 		assert.Equal(t, "file", resp.Header().Get("x-gitea-object-type"))
+=======
+		assert.Equal(t, "file", resp.Header().Get("x-proxgit-object-type"))
+>>>>>>> master
 	}
 	// Test default branch
 	req := NewRequestf(t, "GET", "/api/v1/repos/%s/repo1/raw/README.md", user.Name).
 		AddTokenAuth(token)
 	resp := MakeRequest(t, req, http.StatusOK)
+<<<<<<< HEAD
 	assert.Equal(t, "file", resp.Header().Get("x-gitea-object-type"))
+=======
+	assert.Equal(t, "file", resp.Header().Get("x-proxgit-object-type"))
+>>>>>>> master
 }

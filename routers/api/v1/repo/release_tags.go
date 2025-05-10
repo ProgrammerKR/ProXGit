@@ -6,10 +6,17 @@ package repo
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	release_service "code.gitea.io/gitea/services/release"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	release_service "code.proxgit.io/proxgit/services/release"
+>>>>>>> master
 )
 
 // GetReleaseByTag get a single release of a repository by tag name

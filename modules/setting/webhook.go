@@ -6,7 +6,11 @@ package setting
 import (
 	"net/url"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // Webhook settings
@@ -35,7 +39,11 @@ func loadWebhookFrom(rootCfg ConfigProvider) {
 	Webhook.DeliverTimeout = sec.Key("DELIVER_TIMEOUT").MustInt(5)
 	Webhook.SkipTLSVerify = sec.Key("SKIP_TLS_VERIFY").MustBool()
 	Webhook.AllowedHostList = sec.Key("ALLOWED_HOST_LIST").MustString("")
+<<<<<<< HEAD
 	Webhook.Types = []string{"gitea", "gogs", "slack", "discord", "dingtalk", "telegram", "msteams", "feishu", "matrix", "wechatwork", "packagist"}
+=======
+	Webhook.Types = []string{"proxgit", "gogs", "slack", "discord", "dingtalk", "telegram", "msteams", "feishu", "matrix", "wechatwork", "packagist"}
+>>>>>>> master
 	Webhook.PagingNum = sec.Key("PAGING_NUM").MustInt(10)
 	Webhook.ProxyURL = sec.Key("PROXY_URL").MustString("")
 	if Webhook.ProxyURL != "" {

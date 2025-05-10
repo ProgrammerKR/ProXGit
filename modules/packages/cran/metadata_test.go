@@ -15,11 +15,19 @@ import (
 )
 
 const (
+<<<<<<< HEAD
 	packageName    = "gitea"
 	packageVersion = "1.0.1"
 	author         = "KN4CK3R"
 	description    = "Package Description"
 	projectURL     = "https://gitea.io"
+=======
+	packageName    = "proxgit"
+	packageVersion = "1.0.1"
+	author         = "KN4CK3R"
+	description    = "Package Description"
+	projectURL     = "https://proxgit.io"
+>>>>>>> master
 	license        = "GPL (>= 2)"
 )
 

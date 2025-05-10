@@ -11,11 +11,19 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/translation"
 	"code.gitea.io/gitea/tests"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"
@@ -38,7 +46,11 @@ func TestCreateBranch(t *testing.T) {
 	onGiteaRun(t, testCreateBranches)
 }
 
+<<<<<<< HEAD
 func testCreateBranches(t *testing.T, giteaURL *url.URL) {
+=======
+func testCreateBranches(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 	tests := []struct {
 		OldRefSubURL   string
 		NewBranch      string

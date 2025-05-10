@@ -6,7 +6,11 @@ package webhook
 import (
 	"testing"
 
+<<<<<<< HEAD
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

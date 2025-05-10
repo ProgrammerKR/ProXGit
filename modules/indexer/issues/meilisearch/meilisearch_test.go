@@ -10,8 +10,13 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer/issues/internal"
 	"code.gitea.io/gitea/modules/indexer/issues/internal/tests"
+=======
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal"
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal/tests"
+>>>>>>> master
 
 	"github.com/meilisearch/meilisearch-go"
 	"github.com/stretchr/testify/assert"

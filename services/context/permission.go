@@ -6,9 +6,15 @@ package context
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unit"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+>>>>>>> master
 )
 
 // RequireRepoAdmin returns a middleware for requiring repository admin permission

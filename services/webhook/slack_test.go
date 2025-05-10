@@ -6,10 +6,17 @@ package webhook
 import (
 	"testing"
 
+<<<<<<< HEAD
 	webhook_model "code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/json"
 	api "code.gitea.io/gitea/modules/structs"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	webhook_model "code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/json"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -61,13 +68,21 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.Issue(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Issue opened: <http://localhost:3000/test/repo/issues/2|#2 crash> by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Issue opened: <http://localhost:3000/test/repo/issues/2|#2 crash> by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 
 		p.Action = api.HookIssueClosed
 		pl, err = sc.Issue(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Issue closed: <http://localhost:3000/test/repo/issues/2|#2 crash> by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Issue closed: <http://localhost:3000/test/repo/issues/2|#2 crash> by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 
 	t.Run("IssueComment", func(t *testing.T) {
@@ -76,7 +91,11 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.IssueComment(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] New comment on issue <http://localhost:3000/test/repo/issues/2|#2 crash> by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] New comment on issue <http://localhost:3000/test/repo/issues/2|#2 crash> by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 
 	t.Run("PullRequest", func(t *testing.T) {
@@ -85,7 +104,11 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.PullRequest(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Pull request opened: <http://localhost:3000/test/repo/pulls/12|#12 Fix bug> by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Pull request opened: <http://localhost:3000/test/repo/pulls/12|#12 Fix bug> by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 
 	t.Run("PullRequestComment", func(t *testing.T) {
@@ -94,7 +117,11 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.IssueComment(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] New comment on pull request <http://localhost:3000/test/repo/pulls/12|#12 Fix bug> by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] New comment on pull request <http://localhost:3000/test/repo/pulls/12|#12 Fix bug> by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 
 	t.Run("Review", func(t *testing.T) {
@@ -104,7 +131,11 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.Review(p, webhook_module.HookEventPullRequestReviewApproved)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Pull request review approved: [#12 Fix bug](http://localhost:3000/test/repo/pulls/12) by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Pull request review approved: [#12 Fix bug](http://localhost:3000/test/repo/pulls/12) by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 
 	t.Run("Repository", func(t *testing.T) {
@@ -113,7 +144,11 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.Repository(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Repository created by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Repository created by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 
 	t.Run("Package", func(t *testing.T) {
@@ -122,7 +157,11 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.Package(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "Package created: <http://localhost:3000/user1/-/packages/container/GiteaContainer/latest|GiteaContainer:latest> by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "Package created: <http://localhost:3000/user1/-/packages/container/GiteaContainer/latest|GiteaContainer:latest> by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 
 	t.Run("Wiki", func(t *testing.T) {
@@ -132,19 +171,31 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.Wiki(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] New wiki page '<http://localhost:3000/test/repo/wiki/index|index>' (Wiki change comment) by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] New wiki page '<http://localhost:3000/test/repo/wiki/index|index>' (Wiki change comment) by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 
 		p.Action = api.HookWikiEdited
 		pl, err = sc.Wiki(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Wiki page '<http://localhost:3000/test/repo/wiki/index|index>' edited (Wiki change comment) by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Wiki page '<http://localhost:3000/test/repo/wiki/index|index>' edited (Wiki change comment) by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 
 		p.Action = api.HookWikiDeleted
 		pl, err = sc.Wiki(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Wiki page '<http://localhost:3000/test/repo/wiki/index|index>' deleted by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Wiki page '<http://localhost:3000/test/repo/wiki/index|index>' deleted by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 
 	t.Run("Release", func(t *testing.T) {
@@ -153,7 +204,11 @@ func TestSlackPayload(t *testing.T) {
 		pl, err := sc.Release(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Release created: <http://localhost:3000/test/repo/releases/tag/v1.0|v1.0> by <https://try.gitea.io/user1|user1>", pl.Text)
+=======
+		assert.Equal(t, "[<http://localhost:3000/test/repo|test/repo>] Release created: <http://localhost:3000/test/repo/releases/tag/v1.0|v1.0> by <https://try.proxgit.io/user1|user1>", pl.Text)
+>>>>>>> master
 	})
 }
 
@@ -197,6 +252,7 @@ func TestIsValidSlackChannel(t *testing.T) {
 		channelName string
 		expected    bool
 	}{
+<<<<<<< HEAD
 		{"gitea", true},
 		{"#gitea", true},
 		{"  ", false},
@@ -204,6 +260,15 @@ func TestIsValidSlackChannel(t *testing.T) {
 		{" #", false},
 		{"gitea   ", false},
 		{"  gitea", false},
+=======
+		{"proxgit", true},
+		{"#proxgit", true},
+		{"  ", false},
+		{"#", false},
+		{" #", false},
+		{"proxgit   ", false},
+		{"  proxgit", false},
+>>>>>>> master
 	}
 
 	for _, v := range tt {

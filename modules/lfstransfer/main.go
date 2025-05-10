@@ -8,7 +8,11 @@ import (
 	"fmt"
 	"os"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/lfstransfer/backend"
+=======
+	"code.proxgit.io/proxgit/modules/lfstransfer/backend"
+>>>>>>> master
 
 	"github.com/charmbracelet/git-lfs-transfer/transfer"
 )
@@ -16,7 +20,11 @@ import (
 func Main(ctx context.Context, repo, verb, token string) error {
 	logger := newLogger()
 	pktline := transfer.NewPktline(os.Stdin, os.Stdout, logger)
+<<<<<<< HEAD
 	giteaBackend, err := backend.New(ctx, repo, verb, token, logger)
+=======
+	proxgitBackend, err := backend.New(ctx, repo, verb, token, logger)
+>>>>>>> master
 	if err != nil {
 		return err
 	}
@@ -29,7 +37,11 @@ func Main(ctx context.Context, repo, verb, token string) error {
 	if err := pktline.WriteFlush(); err != nil {
 		logger.Log("error flushing capabilities:", err)
 	}
+<<<<<<< HEAD
 	p := transfer.NewProcessor(pktline, giteaBackend, logger)
+=======
+	p := transfer.NewProcessor(pktline, proxgitBackend, logger)
+>>>>>>> master
 	defer logger.Log("done processing commands")
 	switch verb {
 	case "upload":

@@ -12,6 +12,7 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/renderhelper"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -20,6 +21,16 @@ import (
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/context"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/renderhelper"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 
 	"github.com/gorilla/feeds"
 )
@@ -62,7 +73,11 @@ func renderCommentMarkdown(ctx *context.Context, act *activities_model.Action, c
 	return rendered
 }
 
+<<<<<<< HEAD
 // feedActionsToFeedItems convert gitea's Action feed to feeds Item
+=======
+// feedActionsToFeedItems convert proxgit's Action feed to feeds Item
+>>>>>>> master
 func feedActionsToFeedItems(ctx *context.Context, actions activities_model.ActionList) (items []*feeds.Item, err error) {
 	renderUtils := templates.NewRenderUtils(ctx)
 	for _, act := range actions {
@@ -272,7 +287,11 @@ func GetFeedType(name string, req *http.Request) (showFeed bool, feedType string
 	return false, ""
 }
 
+<<<<<<< HEAD
 // feedActionsToFeedItems convert gitea's Repo's Releases to feeds Item
+=======
+// feedActionsToFeedItems convert proxgit's Repo's Releases to feeds Item
+>>>>>>> master
 func releasesToFeedItems(ctx *context.Context, releases []*repo_model.Release) (items []*feeds.Item, err error) {
 	for _, rel := range releases {
 		err := rel.LoadAttributes(ctx)

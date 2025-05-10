@@ -6,8 +6,13 @@ package convert
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // ToWikiCommit convert a git commit into a WikiCommit

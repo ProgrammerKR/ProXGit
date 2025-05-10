@@ -8,10 +8,17 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 
 	pingv1 "code.gitea.io/actions-proto-go/ping/v1"
 	"code.gitea.io/actions-proto-go/ping/v1/pingv1connect"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+
+	pingv1 "code.proxgit.io/actions-proto-go/ping/v1"
+	"code.proxgit.io/actions-proto-go/ping/v1/pingv1connect"
+>>>>>>> master
 	"connectrpc.com/connect"
 )
 

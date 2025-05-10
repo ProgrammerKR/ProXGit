@@ -10,9 +10,15 @@ import (
 	"strconv"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 
 	_ "gitea.com/go-chi/cache/memcache" //nolint:depguard // memcache plugin for cache, it is required for config "ADAPTER=memcache"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+
+	_ "proxgit.com/go-chi/cache/memcache" //nolint:depguard // memcache plugin for cache, it is required for config "ADAPTER=memcache"
+>>>>>>> master
 )
 
 var defaultCache StringCache
@@ -41,7 +47,11 @@ func Init() error {
 const (
 	testCacheKey = "DefaultCache.TestKey"
 	// SlowCacheThreshold marks cache tests as slow
+<<<<<<< HEAD
 	// set to 30ms per discussion: https://github.com/go-gitea/gitea/issues/33190
+=======
+	// set to 30ms per discussion: https://github.com/go-proxgit/proxgit/issues/33190
+>>>>>>> master
 	// TODO: Replace with metrics histogram
 	SlowCacheThreshold = 30 * time.Millisecond
 )

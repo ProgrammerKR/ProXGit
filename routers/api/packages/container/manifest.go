@@ -11,6 +11,7 @@ import (
 	"os"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
 	container_model "code.gitea.io/gitea/models/packages/container"
@@ -22,6 +23,19 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	notify_service "code.gitea.io/gitea/services/notify"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	container_model "code.proxgit.io/proxgit/models/packages/container"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	container_module "code.proxgit.io/proxgit/modules/packages/container"
+	"code.proxgit.io/proxgit/modules/util"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 
 	digest "github.com/opencontainers/go-digest"
 	oci "github.com/opencontainers/image-spec/specs-go/v1"
@@ -454,7 +468,11 @@ func createManifestBlob(ctx context.Context, mci *manifestCreationInfo, pv *pack
 		return nil, false, "", err
 	}
 	// FIXME: Workaround to be removed in v1.20
+<<<<<<< HEAD
 	// https://github.com/go-gitea/gitea/issues/19586
+=======
+	// https://github.com/go-proxgit/proxgit/issues/19586
+>>>>>>> master
 	if exists {
 		err = packages_module.NewContentStore().Has(packages_module.BlobHash256Key(pb.HashSHA256))
 		if err != nil && (errors.Is(err, util.ErrNotExist) || errors.Is(err, os.ErrNotExist)) {

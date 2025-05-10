@@ -3,7 +3,11 @@
 
 package internal
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/modules/timeutil"
+=======
+import "code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 type FileUpdate struct {
 	Filename string

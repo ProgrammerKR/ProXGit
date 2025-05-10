@@ -6,7 +6,11 @@ package bleve
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer/issues/internal/tests"
+=======
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal/tests"
+>>>>>>> master
 )
 
 func TestBleveIndexer(t *testing.T) {

@@ -7,8 +7,13 @@ import (
 	"context"
 	"errors"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // ProjectIssue saves relation from issue to a project

@@ -16,7 +16,11 @@ else
 
 DIST := dist
 DIST_DIRS := $(DIST)/binaries $(DIST)/release
+<<<<<<< HEAD
 IMPORT := code.gitea.io/gitea
+=======
+IMPORT := code.proxgit.io/proxgit
+>>>>>>> master
 
 GO ?= go
 SHASUM ?= shasum -a 256
@@ -38,7 +42,11 @@ GOVULNCHECK_PACKAGE ?= golang.org/x/vuln/cmd/govulncheck@v1
 ACTIONLINT_PACKAGE ?= github.com/rhysd/actionlint/cmd/actionlint@v1
 GOPLS_PACKAGE ?= golang.org/x/tools/gopls@v0.17.1
 
+<<<<<<< HEAD
 DOCKER_IMAGE ?= gitea/gitea
+=======
+DOCKER_IMAGE ?= proxgit/proxgit
+>>>>>>> master
 DOCKER_TAG ?= latest
 DOCKER_REF := $(DOCKER_IMAGE):$(DOCKER_TAG)
 
@@ -56,10 +64,17 @@ else ifeq ($(patsubst Windows%,Windows,$(OS)),Windows)
 endif
 ifeq ($(IS_WINDOWS),yes)
 	GOFLAGS := -v -buildmode=exe
+<<<<<<< HEAD
 	EXECUTABLE ?= gitea.exe
 else
 	GOFLAGS := -v
 	EXECUTABLE ?= gitea
+=======
+	EXECUTABLE ?= proxgit.exe
+else
+	GOFLAGS := -v
+	EXECUTABLE ?= proxgit
+>>>>>>> master
 endif
 
 ifeq ($(shell sed --version 2>/dev/null | grep -q GNU && echo gnu),gnu)
@@ -112,8 +127,13 @@ LDFLAGS := $(LDFLAGS) -X "main.MakeVersion=$(MAKE_VERSION)" -X "main.Version=$(G
 
 LINUX_ARCHS ?= linux/amd64,linux/386,linux/arm-5,linux/arm-6,linux/arm64,linux/riscv64
 
+<<<<<<< HEAD
 GO_TEST_PACKAGES ?= $(filter-out $(shell $(GO) list code.gitea.io/gitea/models/migrations/...) code.gitea.io/gitea/tests/integration/migration-test code.gitea.io/gitea/tests code.gitea.io/gitea/tests/integration code.gitea.io/gitea/tests/e2e,$(shell $(GO) list ./... | grep -v /vendor/))
 MIGRATE_TEST_PACKAGES ?= $(shell $(GO) list code.gitea.io/gitea/models/migrations/...)
+=======
+GO_TEST_PACKAGES ?= $(filter-out $(shell $(GO) list code.proxgit.io/proxgit/models/migrations/...) code.proxgit.io/proxgit/tests/integration/migration-test code.proxgit.io/proxgit/tests code.proxgit.io/proxgit/tests/integration code.proxgit.io/proxgit/tests/e2e,$(shell $(GO) list ./... | grep -v /vendor/))
+MIGRATE_TEST_PACKAGES ?= $(shell $(GO) list code.proxgit.io/proxgit/models/migrations/...)
+>>>>>>> master
 
 WEBPACK_SOURCES := $(shell find web_src/js web_src/css -type f)
 WEBPACK_CONFIGS := webpack.config.js tailwind.config.js
@@ -165,6 +185,7 @@ endif
 
 SWAGGER_SPEC := templates/swagger/v1_json.tmpl
 SWAGGER_SPEC_INPUT := templates/swagger/v1_input.json
+<<<<<<< HEAD
 SWAGGER_EXCLUDE := code.gitea.io/sdk
 
 TEST_MYSQL_HOST ?= mysql:3306
@@ -173,12 +194,26 @@ TEST_MYSQL_USERNAME ?= root
 TEST_MYSQL_PASSWORD ?=
 TEST_PGSQL_HOST ?= pgsql:5432
 TEST_PGSQL_DBNAME ?= testgitea
+=======
+SWAGGER_EXCLUDE := code.proxgit.io/sdk
+
+TEST_MYSQL_HOST ?= mysql:3306
+TEST_MYSQL_DBNAME ?= testproxgit
+TEST_MYSQL_USERNAME ?= root
+TEST_MYSQL_PASSWORD ?=
+TEST_PGSQL_HOST ?= pgsql:5432
+TEST_PGSQL_DBNAME ?= testproxgit
+>>>>>>> master
 TEST_PGSQL_USERNAME ?= postgres
 TEST_PGSQL_PASSWORD ?= postgres
 TEST_PGSQL_SCHEMA ?= gtestschema
 TEST_MINIO_ENDPOINT ?= minio:9000
 TEST_MSSQL_HOST ?= mssql:1433
+<<<<<<< HEAD
 TEST_MSSQL_DBNAME ?= gitea
+=======
+TEST_MSSQL_DBNAME ?= proxgit
+>>>>>>> master
 TEST_MSSQL_USERNAME ?= sa
 TEST_MSSQL_PASSWORD ?= MwantsaSecurePassword1
 
@@ -229,16 +264,27 @@ clean: ## delete backend and integration files
 	rm -rf $(EXECUTABLE) $(DIST) $(BINDATA_DEST) $(BINDATA_HASH) \
 		integrations*.test \
 		e2e*.test \
+<<<<<<< HEAD
 		tests/integration/gitea-integration-* \
 		tests/integration/indexers-* \
 		tests/mysql.ini tests/pgsql.ini tests/mssql.ini man/ \
 		tests/e2e/gitea-e2e-*/ \
+=======
+		tests/integration/proxgit-integration-* \
+		tests/integration/indexers-* \
+		tests/mysql.ini tests/pgsql.ini tests/mssql.ini man/ \
+		tests/e2e/proxgit-e2e-*/ \
+>>>>>>> master
 		tests/e2e/indexers-*/ \
 		tests/e2e/reports/ tests/e2e/test-artifacts/ tests/e2e/test-snapshots/
 
 .PHONY: fmt
 fmt: ## format the Go code
+<<<<<<< HEAD
 	@GOFUMPT_PACKAGE=$(GOFUMPT_PACKAGE) $(GO) run build/code-batch-process.go gitea-fmt -w '{file-list}'
+=======
+	@GOFUMPT_PACKAGE=$(GOFUMPT_PACKAGE) $(GO) run build/code-batch-process.go proxgit-fmt -w '{file-list}'
+>>>>>>> master
 	$(eval TEMPLATES := $(shell find templates -type f -name '*.tmpl'))
 	@# strip whitespace after '{{' or '(' and before '}}' or ')' unless there is only
 	@# whitespace before it
@@ -310,10 +356,17 @@ lint-frontend: lint-js lint-css ## lint frontend files
 lint-frontend-fix: lint-js-fix lint-css-fix ## lint frontend files and fix issues
 
 .PHONY: lint-backend
+<<<<<<< HEAD
 lint-backend: lint-go lint-go-gitea-vet lint-go-gopls lint-editorconfig ## lint backend files
 
 .PHONY: lint-backend-fix
 lint-backend-fix: lint-go-fix lint-go-gitea-vet lint-editorconfig ## lint backend files and fix issues
+=======
+lint-backend: lint-go lint-go-proxgit-vet lint-go-gopls lint-editorconfig ## lint backend files
+
+.PHONY: lint-backend-fix
+lint-backend-fix: lint-go-fix lint-go-proxgit-vet lint-editorconfig ## lint backend files and fix issues
+>>>>>>> master
 
 .PHONY: lint-js
 lint-js: node_modules ## lint js files
@@ -364,11 +417,19 @@ lint-go-windows:
 	@GOOS= GOARCH= $(GO) install $(GOLANGCI_LINT_PACKAGE)
 	golangci-lint run
 
+<<<<<<< HEAD
 .PHONY: lint-go-gitea-vet
 lint-go-gitea-vet: ## lint go files with gitea-vet
 	@echo "Running gitea-vet..."
 	@GOOS= GOARCH= $(GO) build code.gitea.io/gitea-vet
 	@$(GO) vet -vettool=gitea-vet ./...
+=======
+.PHONY: lint-go-proxgit-vet
+lint-go-proxgit-vet: ## lint go files with proxgit-vet
+	@echo "Running proxgit-vet..."
+	@GOOS= GOARCH= $(GO) build code.proxgit.io/proxgit-vet
+	@$(GO) vet -vettool=proxgit-vet ./...
+>>>>>>> master
 
 .PHONY: lint-go-gopls
 lint-go-gopls: ## lint go files with gopls
@@ -626,6 +687,7 @@ integration-test-coverage-sqlite: integrations.cover.sqlite.test generate-ini-sq
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/sqlite.ini ./integrations.cover.sqlite.test -test.coverprofile=integration.coverage.out
 
 integrations.mysql.test: git-check $(GO_SOURCES)
+<<<<<<< HEAD
 	$(GO) test $(GOTESTFLAGS) -c code.gitea.io/gitea/tests/integration -o integrations.mysql.test
 
 integrations.pgsql.test: git-check $(GO_SOURCES)
@@ -646,21 +708,55 @@ integrations.cover.sqlite.test: git-check $(GO_SOURCES)
 .PHONY: migrations.mysql.test
 migrations.mysql.test: $(GO_SOURCES) generate-ini-mysql
 	$(GO) test $(GOTESTFLAGS) -c code.gitea.io/gitea/tests/integration/migration-test -o migrations.mysql.test
+=======
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration -o integrations.mysql.test
+
+integrations.pgsql.test: git-check $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration -o integrations.pgsql.test
+
+integrations.mssql.test: git-check $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration -o integrations.mssql.test
+
+integrations.sqlite.test: git-check $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration -o integrations.sqlite.test -tags '$(TEST_TAGS)'
+
+integrations.cover.test: git-check $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration -coverpkg $(shell echo $(GO_TEST_PACKAGES) | tr ' ' ',') -o integrations.cover.test
+
+integrations.cover.sqlite.test: git-check $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration -coverpkg $(shell echo $(GO_TEST_PACKAGES) | tr ' ' ',') -o integrations.cover.sqlite.test -tags '$(TEST_TAGS)'
+
+.PHONY: migrations.mysql.test
+migrations.mysql.test: $(GO_SOURCES) generate-ini-mysql
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration/migration-test -o migrations.mysql.test
+>>>>>>> master
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/mysql.ini ./migrations.mysql.test
 
 .PHONY: migrations.pgsql.test
 migrations.pgsql.test: $(GO_SOURCES) generate-ini-pgsql
+<<<<<<< HEAD
 	$(GO) test $(GOTESTFLAGS) -c code.gitea.io/gitea/tests/integration/migration-test -o migrations.pgsql.test
+=======
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration/migration-test -o migrations.pgsql.test
+>>>>>>> master
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/pgsql.ini ./migrations.pgsql.test
 
 .PHONY: migrations.mssql.test
 migrations.mssql.test: $(GO_SOURCES) generate-ini-mssql
+<<<<<<< HEAD
 	$(GO) test $(GOTESTFLAGS) -c code.gitea.io/gitea/tests/integration/migration-test -o migrations.mssql.test
+=======
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration/migration-test -o migrations.mssql.test
+>>>>>>> master
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/mssql.ini ./migrations.mssql.test
 
 .PHONY: migrations.sqlite.test
 migrations.sqlite.test: $(GO_SOURCES) generate-ini-sqlite
+<<<<<<< HEAD
 	$(GO) test $(GOTESTFLAGS) -c code.gitea.io/gitea/tests/integration/migration-test -o migrations.sqlite.test -tags '$(TEST_TAGS)'
+=======
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/integration/migration-test -o migrations.sqlite.test -tags '$(TEST_TAGS)'
+>>>>>>> master
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/sqlite.ini ./migrations.sqlite.test
 
 .PHONY: migrations.individual.mysql.test
@@ -669,7 +765,11 @@ migrations.individual.mysql.test: $(GO_SOURCES)
 
 .PHONY: migrations.individual.sqlite.test\#%
 migrations.individual.sqlite.test\#%: $(GO_SOURCES) generate-ini-sqlite
+<<<<<<< HEAD
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/sqlite.ini $(GO) test $(GOTESTFLAGS) -tags '$(TEST_TAGS)' code.gitea.io/gitea/models/migrations/$*
+=======
+	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/sqlite.ini $(GO) test $(GOTESTFLAGS) -tags '$(TEST_TAGS)' code.proxgit.io/proxgit/models/migrations/$*
+>>>>>>> master
 
 .PHONY: migrations.individual.pgsql.test
 migrations.individual.pgsql.test: $(GO_SOURCES)
@@ -677,7 +777,11 @@ migrations.individual.pgsql.test: $(GO_SOURCES)
 
 .PHONY: migrations.individual.pgsql.test\#%
 migrations.individual.pgsql.test\#%: $(GO_SOURCES) generate-ini-pgsql
+<<<<<<< HEAD
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/pgsql.ini $(GO) test $(GOTESTFLAGS) -tags '$(TEST_TAGS)' code.gitea.io/gitea/models/migrations/$*
+=======
+	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/pgsql.ini $(GO) test $(GOTESTFLAGS) -tags '$(TEST_TAGS)' code.proxgit.io/proxgit/models/migrations/$*
+>>>>>>> master
 
 .PHONY: migrations.individual.mssql.test
 migrations.individual.mssql.test: $(GO_SOURCES) generate-ini-mssql
@@ -685,7 +789,11 @@ migrations.individual.mssql.test: $(GO_SOURCES) generate-ini-mssql
 
 .PHONY: migrations.individual.mssql.test\#%
 migrations.individual.mssql.test\#%: $(GO_SOURCES) generate-ini-mssql
+<<<<<<< HEAD
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/mssql.ini $(GO) test $(GOTESTFLAGS) -tags '$(TEST_TAGS)' code.gitea.io/gitea/models/migrations/$*
+=======
+	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/mssql.ini $(GO) test $(GOTESTFLAGS) -tags '$(TEST_TAGS)' code.proxgit.io/proxgit/models/migrations/$*
+>>>>>>> master
 
 .PHONY: migrations.individual.sqlite.test
 migrations.individual.sqlite.test: $(GO_SOURCES) generate-ini-sqlite
@@ -693,6 +801,7 @@ migrations.individual.sqlite.test: $(GO_SOURCES) generate-ini-sqlite
 
 .PHONY: migrations.individual.sqlite.test\#%
 migrations.individual.sqlite.test\#%: $(GO_SOURCES) generate-ini-sqlite
+<<<<<<< HEAD
 	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/sqlite.ini $(GO) test $(GOTESTFLAGS) -tags '$(TEST_TAGS)' code.gitea.io/gitea/models/migrations/$*
 
 e2e.mysql.test: $(GO_SOURCES)
@@ -706,6 +815,21 @@ e2e.mssql.test: $(GO_SOURCES)
 
 e2e.sqlite.test: $(GO_SOURCES)
 	$(GO) test $(GOTESTFLAGS) -c code.gitea.io/gitea/tests/e2e -o e2e.sqlite.test -tags '$(TEST_TAGS)'
+=======
+	GITEA_ROOT="$(CURDIR)" GITEA_CONF=tests/sqlite.ini $(GO) test $(GOTESTFLAGS) -tags '$(TEST_TAGS)' code.proxgit.io/proxgit/models/migrations/$*
+
+e2e.mysql.test: $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/e2e -o e2e.mysql.test
+
+e2e.pgsql.test: $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/e2e -o e2e.pgsql.test
+
+e2e.mssql.test: $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/e2e -o e2e.mssql.test
+
+e2e.sqlite.test: $(GO_SOURCES)
+	$(GO) test $(GOTESTFLAGS) -c code.proxgit.io/proxgit/tests/e2e -o e2e.sqlite.test -tags '$(TEST_TAGS)'
+>>>>>>> master
 
 .PHONY: check
 check: test
@@ -750,13 +874,20 @@ $(DIST_DIRS):
 
 .PHONY: release-windows
 release-windows: | $(DIST_DIRS)
+<<<<<<< HEAD
 	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -buildmode exe -dest $(DIST)/binaries -tags 'osusergo $(TAGS)' -ldflags '-s -w -linkmode external -extldflags "-static" $(LDFLAGS)' -targets 'windows/*' -out gitea-$(VERSION) .
 ifeq (,$(findstring gogit,$(TAGS)))
 	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -buildmode exe -dest $(DIST)/binaries -tags 'osusergo gogit $(TAGS)' -ldflags '-s -w -linkmode external -extldflags "-static" $(LDFLAGS)' -targets 'windows/*' -out gitea-$(VERSION)-gogit .
+=======
+	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -buildmode exe -dest $(DIST)/binaries -tags 'osusergo $(TAGS)' -ldflags '-s -w -linkmode external -extldflags "-static" $(LDFLAGS)' -targets 'windows/*' -out proxgit-$(VERSION) .
+ifeq (,$(findstring gogit,$(TAGS)))
+	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -buildmode exe -dest $(DIST)/binaries -tags 'osusergo gogit $(TAGS)' -ldflags '-s -w -linkmode external -extldflags "-static" $(LDFLAGS)' -targets 'windows/*' -out proxgit-$(VERSION)-gogit .
+>>>>>>> master
 endif
 
 .PHONY: release-linux
 release-linux: | $(DIST_DIRS)
+<<<<<<< HEAD
 	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -dest $(DIST)/binaries -tags 'netgo osusergo $(TAGS)' -ldflags '-s -w -linkmode external -extldflags "-static" $(LDFLAGS)' -targets '$(LINUX_ARCHS)' -out gitea-$(VERSION) .
 
 .PHONY: release-darwin
@@ -766,6 +897,17 @@ release-darwin: | $(DIST_DIRS)
 .PHONY: release-freebsd
 release-freebsd: | $(DIST_DIRS)
 	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -dest $(DIST)/binaries -tags 'netgo osusergo $(TAGS)' -ldflags '-s -w $(LDFLAGS)' -targets 'freebsd/amd64' -out gitea-$(VERSION) .
+=======
+	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -dest $(DIST)/binaries -tags 'netgo osusergo $(TAGS)' -ldflags '-s -w -linkmode external -extldflags "-static" $(LDFLAGS)' -targets '$(LINUX_ARCHS)' -out proxgit-$(VERSION) .
+
+.PHONY: release-darwin
+release-darwin: | $(DIST_DIRS)
+	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -dest $(DIST)/binaries -tags 'netgo osusergo $(TAGS)' -ldflags '-s -w $(LDFLAGS)' -targets 'darwin-10.12/amd64,darwin-10.12/arm64' -out proxgit-$(VERSION) .
+
+.PHONY: release-freebsd
+release-freebsd: | $(DIST_DIRS)
+	CGO_CFLAGS="$(CGO_CFLAGS)" $(GO) run $(XGO_PACKAGE) -go $(XGO_VERSION) -dest $(DIST)/binaries -tags 'netgo osusergo $(TAGS)' -ldflags '-s -w $(LDFLAGS)' -targets 'freebsd/amd64' -out proxgit-$(VERSION) .
+>>>>>>> master
 
 .PHONY: release-copy
 release-copy: | $(DIST_DIRS)
@@ -785,8 +927,13 @@ release-sources: | $(DIST_DIRS)
 # bsdtar needs a ^ to prevent matching subdirectories
 	$(eval EXCL := --exclude=$(shell tar --help | grep -q bsdtar && echo "^")./)
 # use transform to a add a release-folder prefix; in bsdtar the transform parameter equivalent is -s
+<<<<<<< HEAD
 	$(eval TRANSFORM := $(shell tar --help | grep -q bsdtar && echo "-s '/^./gitea-src-$(VERSION)/'" || echo "--transform 's|^./|gitea-src-$(VERSION)/|'"))
 	tar $(addprefix $(EXCL),$(TAR_EXCLUDES)) $(TRANSFORM) -czf $(DIST)/release/gitea-src-$(VERSION).tar.gz .
+=======
+	$(eval TRANSFORM := $(shell tar --help | grep -q bsdtar && echo "-s '/^./proxgit-src-$(VERSION)/'" || echo "--transform 's|^./|proxgit-src-$(VERSION)/|'"))
+	tar $(addprefix $(EXCL),$(TAR_EXCLUDES)) $(TRANSFORM) -czf $(DIST)/release/proxgit-src-$(VERSION).tar.gz .
+>>>>>>> master
 	rm -f $(STORED_VERSION_FILE)
 
 .PHONY: deps
@@ -884,8 +1031,13 @@ lockfile-check:
 .PHONY: update-translations
 update-translations:
 	mkdir -p ./translations
+<<<<<<< HEAD
 	cd ./translations && curl -L https://crowdin.com/download/project/gitea.zip > gitea.zip && unzip gitea.zip
 	rm ./translations/gitea.zip
+=======
+	cd ./translations && curl -L https://crowdin.com/download/project/proxgit.zip > proxgit.zip && unzip proxgit.zip
+	rm ./translations/proxgit.zip
+>>>>>>> master
 	$(SED_INPLACE) -e 's/="/=/g' -e 's/"$$//g' ./translations/*.ini
 	$(SED_INPLACE) -e 's/\\"/"/g' ./translations/*.ini
 	mv ./translations/*.ini ./options/locale/
@@ -902,10 +1054,17 @@ generate-images: | node_modules
 
 .PHONY: generate-manpage
 generate-manpage: ## generate manpage
+<<<<<<< HEAD
 	@[ -f gitea ] || make backend
 	@mkdir -p man/man1/ man/man5
 	@./gitea docs --man > man/man1/gitea.1
 	@gzip -9 man/man1/gitea.1 && echo man/man1/gitea.1.gz created
+=======
+	@[ -f proxgit ] || make backend
+	@mkdir -p man/man1/ man/man5
+	@./proxgit docs --man > man/man1/proxgit.1
+	@gzip -9 man/man1/proxgit.1 && echo man/man1/proxgit.1.gz created
+>>>>>>> master
 	@#TODO A small script that formats config-cheat-sheet.en-us.md nicely for use as a config man page
 
 .PHONY: docker

@@ -4,8 +4,13 @@
 package swagger
 
 import (
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // User

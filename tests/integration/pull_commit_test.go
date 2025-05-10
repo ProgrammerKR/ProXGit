@@ -7,8 +7,13 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	pull_service "code.gitea.io/gitea/services/pull"
 	"code.gitea.io/gitea/tests"
+=======
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

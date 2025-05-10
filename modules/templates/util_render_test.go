@@ -10,6 +10,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/git"
@@ -18,6 +19,16 @@ import (
 	"code.gitea.io/gitea/modules/reqctx"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/translation"
+=======
+	"code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -50,7 +61,11 @@ mail@domain.com
 var testMetas = map[string]string{
 	"user":                         "user13",
 	"repo":                         "repo11",
+<<<<<<< HEAD
 	"repoPath":                     "../../tests/gitea-repositories-meta/user13/repo11.git/",
+=======
+	"repoPath":                     "../../tests/proxgit-repositories-meta/user13/repo11.git/",
+>>>>>>> master
 	"markdownNewLineHardBreak":     "true",
 	"markupAllowShortIssuePattern": "true",
 }

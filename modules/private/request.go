@@ -8,8 +8,13 @@ import (
 	"io"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 // ResponseText is used to get the response as text, instead of parsing it as JSON.
@@ -44,7 +49,11 @@ func (re responseError) Error() string {
 	return fmt.Sprintf("internal API error response, status=%d, err=%s", re.statusCode, re.errorString)
 }
 
+<<<<<<< HEAD
 // requestJSONResp sends a request to the gitea server and then parses the response.
+=======
+// requestJSONResp sends a request to the proxgit server and then parses the response.
+>>>>>>> master
 // If the status code is not 2xx, or any error occurs, the ResponseExtra.Error field is guaranteed to be non-nil,
 // and the ResponseExtra.UserMsg field will be set to a message for the end user.
 // Caller should check the ResponseExtra.HasError() first to see whether the request fails.
@@ -56,7 +65,11 @@ func requestJSONResp[T any](req *httplib.Request, res *T) (ret *T, extra Respons
 	resp, err := req.Response()
 	if err != nil {
 		extra.UserMsg = "Internal Server Connection Error"
+<<<<<<< HEAD
 		extra.Error = fmt.Errorf("unable to contact gitea %q: %w", req.GoString(), err)
+=======
+		extra.Error = fmt.Errorf("unable to contact proxgit %q: %w", req.GoString(), err)
+>>>>>>> master
 		return nil, extra
 	}
 	defer resp.Body.Close()
@@ -116,7 +129,11 @@ func requestJSONResp[T any](req *httplib.Request, res *T) (ret *T, extra Respons
 	return res, extra
 }
 
+<<<<<<< HEAD
 // requestJSONClientMsg sends a request to the gitea server, server only responds text message status=200 with "success" body
+=======
+// requestJSONClientMsg sends a request to the proxgit server, server only responds text message status=200 with "success" body
+>>>>>>> master
 // If the request succeeds (200), the argument clientSuccessMsg will be used as ResponseExtra.UserMsg.
 func requestJSONClientMsg(req *httplib.Request, clientSuccessMsg string) ResponseExtra {
 	_, extra := requestJSONResp(req, &ResponseText{})

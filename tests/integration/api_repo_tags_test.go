@@ -8,12 +8,21 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -42,7 +51,11 @@ func TestAPIRepoTags(t *testing.T) {
 	assert.Equal(t, setting.AppURL+"user2/repo1/archive/v1.1.zip", tags[0].ZipballURL)
 	assert.Equal(t, setting.AppURL+"user2/repo1/archive/v1.1.tar.gz", tags[0].TarballURL)
 
+<<<<<<< HEAD
 	newTag := createNewTagUsingAPI(t, token, user.Name, repoName, "gitea/22", "", "nice!\nand some text")
+=======
+	newTag := createNewTagUsingAPI(t, token, user.Name, repoName, "proxgit/22", "", "nice!\nand some text")
+>>>>>>> master
 	resp = MakeRequest(t, req, http.StatusOK)
 	DecodeJSON(t, resp, &tags)
 	assert.Len(t, tags, 2)

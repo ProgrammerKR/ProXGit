@@ -9,9 +9,15 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	testModule "code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	testModule "code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -88,8 +94,13 @@ func TestRender_IssueIndexPattern(t *testing.T) {
 	test("test!1234")
 	test("!1234test")
 	test(" test !1234test")
+<<<<<<< HEAD
 	test("/home/gitea/#1234")
 	test("/home/gitea/!1234")
+=======
+	test("/home/proxgit/#1234")
+	test("/home/proxgit/!1234")
+>>>>>>> master
 
 	// should not render issue mention without leading space
 	test("test#54321 issue")
@@ -298,7 +309,11 @@ func TestRender_AutoLink(t *testing.T) {
 	test(tmp, "<a href=\""+tmp+"\" class=\"commit\"><code>d8a994ef24 (diff-2)</code></a>")
 
 	// render other commit URLs
+<<<<<<< HEAD
 	tmp = "https://external-link.gitea.io/go-gitea/gitea/commit/d8a994ef243349f321568f9e36d5c3f444b99cae#diff-2"
+=======
+	tmp = "https://external-link.proxgit.io/go-proxgit/proxgit/commit/d8a994ef243349f321568f9e36d5c3f444b99cae#diff-2"
+>>>>>>> master
 	test(tmp, "<a href=\""+tmp+"\" class=\"commit\"><code>d8a994ef24 (diff-2)</code></a>")
 }
 

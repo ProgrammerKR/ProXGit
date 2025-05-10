@@ -7,11 +7,19 @@ import (
 	"net/http"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/eventsource"
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/routers/web/auth"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/eventsource"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/routers/web/auth"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // Events listens for events

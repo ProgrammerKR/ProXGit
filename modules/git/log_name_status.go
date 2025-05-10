@@ -13,7 +13,11 @@ import (
 	"sort"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+>>>>>>> master
 
 	"github.com/djherbis/buffer"
 	"github.com/djherbis/nio/v3"

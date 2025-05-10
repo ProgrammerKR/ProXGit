@@ -8,7 +8,11 @@ import (
 	"sync"
 	"unicode"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+>>>>>>> master
 )
 
 // The Badge layout: |offset|label|message|

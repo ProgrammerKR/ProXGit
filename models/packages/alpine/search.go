@@ -6,8 +6,13 @@ package alpine
 import (
 	"context"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	alpine_module "code.gitea.io/gitea/modules/packages/alpine"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	alpine_module "code.proxgit.io/proxgit/modules/packages/alpine"
+>>>>>>> master
 )
 
 // GetBranches gets all available branches

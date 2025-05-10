@@ -7,6 +7,7 @@ import (
 	"context"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models"
 	git_model "code.gitea.io/gitea/models/git"
 	user_model "code.gitea.io/gitea/models/user"
@@ -19,6 +20,20 @@ import (
 	packages_cleanup_service "code.gitea.io/gitea/services/packages/cleanup"
 	repo_service "code.gitea.io/gitea/services/repository"
 	archiver_service "code.gitea.io/gitea/services/repository/archiver"
+=======
+	"code.proxgit.io/proxgit/models"
+	git_model "code.proxgit.io/proxgit/models/git"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/migrations"
+	mirror_service "code.proxgit.io/proxgit/services/mirror"
+	packages_cleanup_service "code.proxgit.io/proxgit/services/packages/cleanup"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	archiver_service "code.proxgit.io/proxgit/services/repository/archiver"
+>>>>>>> master
 )
 
 func registerUpdateMirrorTask() {

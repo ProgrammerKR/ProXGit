@@ -7,7 +7,11 @@ import (
 	"encoding/hex"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"golang.org/x/crypto/scrypt"
 )

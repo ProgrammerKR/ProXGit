@@ -16,6 +16,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -32,6 +33,24 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	secret_service "code.gitea.io/gitea/services/secrets"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	secret_model "code.proxgit.io/proxgit/models/secret"
+	"code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/shared"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	actions_service "code.proxgit.io/proxgit/services/actions"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	secret_service "code.proxgit.io/proxgit/services/secrets"
+>>>>>>> master
 
 	"github.com/nektos/act/pkg/model"
 )

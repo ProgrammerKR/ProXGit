@@ -8,8 +8,13 @@ import (
 	"net/http/httptest"
 	"testing"
 
+<<<<<<< HEAD
 	pingv1 "code.gitea.io/actions-proto-go/ping/v1"
 	"code.gitea.io/actions-proto-go/ping/v1/pingv1connect"
+=======
+	pingv1 "code.proxgit.io/actions-proto-go/ping/v1"
+	"code.proxgit.io/actions-proto-go/ping/v1/pingv1connect"
+>>>>>>> master
 	"connectrpc.com/connect"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

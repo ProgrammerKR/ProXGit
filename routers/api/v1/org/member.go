@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/url"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/organization"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
@@ -16,6 +17,17 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	org_service "code.gitea.io/gitea/services/org"
+=======
+	"code.proxgit.io/proxgit/models/organization"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/routers/api/v1/user"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	org_service "code.proxgit.io/proxgit/services/org"
+>>>>>>> master
 )
 
 // listMembers list an organization's members

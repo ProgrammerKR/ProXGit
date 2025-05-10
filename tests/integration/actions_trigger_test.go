@@ -12,6 +12,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
@@ -36,6 +37,32 @@ import (
 	repo_service "code.gitea.io/gitea/services/repository"
 	commitstatus_service "code.gitea.io/gitea/services/repository/commitstatus"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/perm"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	actions_module "code.proxgit.io/proxgit/modules/actions"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	release_service "code.proxgit.io/proxgit/services/release"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	commitstatus_service "code.proxgit.io/proxgit/services/repository/commitstatus"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -77,7 +104,11 @@ func TestPullRequestTargetEvent(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/pr.yml",
+=======
+					TreePath:  ".proxgit/workflows/pr.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   pull_request_target:
@@ -243,7 +274,11 @@ func TestSkipCI(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/pr.yml",
+=======
+					TreePath:  ".proxgit/workflows/pr.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   push:
@@ -372,7 +407,11 @@ func TestCreateDeleteRefEvent(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/createdelete.yml",
+=======
+					TreePath:  ".proxgit/workflows/createdelete.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   [create,delete]
@@ -494,7 +533,11 @@ func TestPullRequestCommitStatusEvent(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/pr.yml",
+=======
+					TreePath:  ".proxgit/workflows/pr.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   pull_request:
@@ -718,7 +761,11 @@ func TestWorkflowDispatchPublicApi(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/dispatch.yml",
+=======
+					TreePath:  ".proxgit/workflows/dispatch.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   workflow_dispatch
@@ -798,7 +845,11 @@ func TestWorkflowDispatchPublicApiWithInputs(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/dispatch.yml",
+=======
+					TreePath:  ".proxgit/workflows/dispatch.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -889,7 +940,11 @@ func TestWorkflowDispatchPublicApiJSON(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/dispatch.yml",
+=======
+					TreePath:  ".proxgit/workflows/dispatch.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -975,7 +1030,11 @@ func TestWorkflowDispatchPublicApiWithInputsJSON(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/dispatch.yml",
+=======
+					TreePath:  ".proxgit/workflows/dispatch.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -1069,7 +1128,11 @@ func TestWorkflowDispatchPublicApiWithInputsNonDefaultBranchJSON(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/dispatch.yml",
+=======
+					TreePath:  ".proxgit/workflows/dispatch.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   workflow_dispatch
@@ -1105,7 +1168,11 @@ jobs:
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "update",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/dispatch.yml",
+=======
+					TreePath:  ".proxgit/workflows/dispatch.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -1206,7 +1273,11 @@ func TestWorkflowApi(t *testing.T) {
 			Files: []*files_service.ChangeRepoFile{
 				{
 					Operation: "create",
+<<<<<<< HEAD
 					TreePath:  ".gitea/workflows/dispatch.yml",
+=======
+					TreePath:  ".proxgit/workflows/dispatch.yml",
+>>>>>>> master
 					ContentReader: strings.NewReader(`name: test
 on:
   workflow_dispatch: { inputs: { myinput: { default: def }, myinput2: { default: def2 }, myinput3: { type: boolean, default: false } } }
@@ -1243,8 +1314,13 @@ jobs:
 		json.NewDecoder(resp.Body).Decode(workflows)
 		assert.Len(t, workflows.Workflows, 1)
 		assert.Equal(t, "dispatch.yml", workflows.Workflows[0].Name)
+<<<<<<< HEAD
 		assert.Equal(t, ".gitea/workflows/dispatch.yml", workflows.Workflows[0].Path)
 		assert.Equal(t, ".gitea/workflows/dispatch.yml", workflows.Workflows[0].Path)
+=======
+		assert.Equal(t, ".proxgit/workflows/dispatch.yml", workflows.Workflows[0].Path)
+		assert.Equal(t, ".proxgit/workflows/dispatch.yml", workflows.Workflows[0].Path)
+>>>>>>> master
 		assert.Equal(t, "active", workflows.Workflows[0].State)
 
 		// Use a hardcoded api path
@@ -1386,7 +1462,11 @@ func TestClosePullRequestWithPath(t *testing.T) {
 		user2APICtx := NewAPITestContext(t, baseRepo.OwnerName, baseRepo.Name, auth_model.AccessTokenScopeWriteRepository)
 
 		// init the workflow
+<<<<<<< HEAD
 		wfTreePath := ".gitea/workflows/pull.yml"
+=======
+		wfTreePath := ".proxgit/workflows/pull.yml"
+>>>>>>> master
 		wfFileContent := `name: Pull Request
 on:
   pull_request:

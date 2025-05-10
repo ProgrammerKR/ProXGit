@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/setting"
@@ -14,6 +15,15 @@ import (
 	shared_user "code.gitea.io/gitea/routers/web/shared/user"
 	user_setting "code.gitea.io/gitea/routers/web/user/setting"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	shared_user "code.proxgit.io/proxgit/routers/web/shared/user"
+	user_setting "code.proxgit.io/proxgit/routers/web/user/setting"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 const (

@@ -6,8 +6,13 @@ package internal
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer/internal"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/indexer/internal"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 const filenameMatchNumberOfLines = 7 // Copied from GitHub search

@@ -4,13 +4,21 @@
 package v1_13 //nolint
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )
 
 func RecalculateStars(x *xorm.Engine) (err error) {
+<<<<<<< HEAD
 	// because of issue https://github.com/go-gitea/gitea/issues/11949,
+=======
+	// because of issue https://github.com/go-proxgit/proxgit/issues/11949,
+>>>>>>> master
 	// recalculate Stars number for all users to fully fix it.
 
 	type User struct {

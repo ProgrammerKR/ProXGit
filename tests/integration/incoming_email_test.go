@@ -12,6 +12,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/models/unittest"
@@ -22,6 +23,18 @@ import (
 	sender_service "code.gitea.io/gitea/services/mailer/sender"
 	token_service "code.gitea.io/gitea/services/mailer/token"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/mailer/incoming"
+	incoming_payload "code.proxgit.io/proxgit/services/mailer/incoming/payload"
+	sender_service "code.proxgit.io/proxgit/services/mailer/sender"
+	token_service "code.proxgit.io/proxgit/services/mailer/token"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

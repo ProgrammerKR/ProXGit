@@ -8,8 +8,13 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup/common"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/markup/common"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

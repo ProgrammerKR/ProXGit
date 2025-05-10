@@ -6,8 +6,13 @@ package db
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 )
 
 // Source is a password authentication service

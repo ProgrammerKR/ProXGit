@@ -4,6 +4,7 @@
 		<div class="ui form">
 			<div class="field">
 				<label>{{svg "octicon-terminal"}} {{ctx.Locale.Tr "packages.conan.registry"}}</label>
+<<<<<<< HEAD
 				<div class="markup"><pre class="code-block"><code>conan remote add gitea <origin-url data-url="{{AppSubUrl}}/api/packages/{{.PackageDescriptor.Owner.Name}}/conan"></origin-url></code></pre></div>
 			</div>
 			<div class="field">
@@ -12,6 +13,16 @@
 			</div>
 			<div class="field">
 				<label>{{ctx.Locale.Tr "packages.registry.documentation" "Conan" "https://docs.gitea.com/usage/packages/conan/"}}</label>
+=======
+				<div class="markup"><pre class="code-block"><code>conan remote add proxgit <origin-url data-url="{{AppSubUrl}}/api/packages/{{.PackageDescriptor.Owner.Name}}/conan"></origin-url></code></pre></div>
+			</div>
+			<div class="field">
+				<label>{{svg "octicon-terminal"}} {{ctx.Locale.Tr "packages.conan.install"}}</label>
+				<div class="markup"><pre class="code-block"><code>conan install --remote=proxgit {{.PackageDescriptor.Package.Name}}/{{.PackageDescriptor.Version.Version}}</code></pre></div>
+			</div>
+			<div class="field">
+				<label>{{ctx.Locale.Tr "packages.registry.documentation" "Conan" "https://docs.proxgit.com/usage/packages/conan/"}}</label>
+>>>>>>> master
 			</div>
 		</div>
 	</div>

@@ -8,7 +8,11 @@ package gitrepo
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 )
 
 // WalkReferences walks all the references from the repository

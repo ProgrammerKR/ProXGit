@@ -14,6 +14,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/git"
@@ -36,6 +37,30 @@ import (
 )
 
 const giteaObjectTypeHeader = "X-Gitea-Object-Type"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/httpcache"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/lfs"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/services/context"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	archiver_service "code.proxgit.io/proxgit/services/repository/archiver"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+)
+
+const proxgitObjectTypeHeader = "X-Gitea-Object-Type"
+>>>>>>> master
 
 // GetRawFile get a file by path on a repository
 func GetRawFile(ctx *context.APIContext) {
@@ -83,7 +108,11 @@ func GetRawFile(ctx *context.APIContext) {
 		return
 	}
 
+<<<<<<< HEAD
 	ctx.RespHeader().Set(giteaObjectTypeHeader, string(files_service.GetObjectTypeFromTreeEntry(entry)))
+=======
+	ctx.RespHeader().Set(proxgitObjectTypeHeader, string(files_service.GetObjectTypeFromTreeEntry(entry)))
+>>>>>>> master
 
 	if err := common.ServeBlob(ctx.Base, ctx.Repo.Repository, ctx.Repo.TreePath, blob, lastModified); err != nil {
 		ctx.APIErrorInternal(err)
@@ -136,7 +165,11 @@ func GetRawFileOrLFS(ctx *context.APIContext) {
 		return
 	}
 
+<<<<<<< HEAD
 	ctx.RespHeader().Set(giteaObjectTypeHeader, string(files_service.GetObjectTypeFromTreeEntry(entry)))
+=======
+	ctx.RespHeader().Set(proxgitObjectTypeHeader, string(files_service.GetObjectTypeFromTreeEntry(entry)))
+>>>>>>> master
 
 	// LFS Pointer files are at most 1024 bytes - so any blob greater than 1024 bytes cannot be an LFS file
 	if blob.Size() > 1024 {

@@ -12,9 +12,15 @@ import (
 	"regexp"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/modules/validation"
 	"code.gitea.io/gitea/modules/zstd"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/validation"
+	"code.proxgit.io/proxgit/modules/zstd"
+>>>>>>> master
 
 	"github.com/blakesmith/ar"
 	"github.com/ulikunitz/xz"

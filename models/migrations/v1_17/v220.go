@@ -4,8 +4,13 @@
 package v1_17 //nolint
 
 import (
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	container_module "code.gitea.io/gitea/modules/packages/container"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	container_module "code.proxgit.io/proxgit/modules/packages/container"
+>>>>>>> master
 
 	"xorm.io/xorm"
 	"xorm.io/xorm/schemas"

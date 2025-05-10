@@ -6,9 +6,15 @@ package session
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 
 	"gitea.com/go-chi/session"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+
+	"proxgit.com/go-chi/session"
+>>>>>>> master
 )
 
 // Store represents a session store

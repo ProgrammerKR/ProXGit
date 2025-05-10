@@ -8,8 +8,13 @@ import (
 	"slices"
 	"testing"
 
+<<<<<<< HEAD
 	unit_model "code.gitea.io/gitea/models/unit"
 	"code.gitea.io/gitea/tests"
+=======
+	unit_model "code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 )
 
 func TestOrgProjectAccess(t *testing.T) {

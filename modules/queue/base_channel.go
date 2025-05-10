@@ -9,7 +9,11 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+>>>>>>> master
 )
 
 var errChannelClosed = errors.New("channel is closed")

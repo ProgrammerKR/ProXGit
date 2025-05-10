@@ -10,7 +10,11 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/indexer/issues/internal/tests"
+=======
+	"code.proxgit.io/proxgit/modules/indexer/issues/internal/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/require"
 )

@@ -9,7 +9,11 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 // ErrInvalidReceiveHook FIXME
@@ -41,7 +45,11 @@ type CreateHookOptionConfig map[string]string
 // CreateHookOption options when create a hook
 type CreateHookOption struct {
 	// required: true
+<<<<<<< HEAD
 	// enum: dingtalk,discord,gitea,gogs,msteams,slack,telegram,feishu,wechatwork,packagist
+=======
+	// enum: dingtalk,discord,proxgit,gogs,msteams,slack,telegram,feishu,wechatwork,packagist
+>>>>>>> master
 	Type string `json:"type" binding:"Required"`
 	// required: true
 	Config              CreateHookOptionConfig `json:"config" binding:"Required"`

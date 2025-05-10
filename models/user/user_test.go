@@ -10,6 +10,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
@@ -21,6 +22,19 @@ import (
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/auth/password/hash"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -238,7 +252,11 @@ func TestDisplayName(t *testing.T) {
 func TestCreateUserInvalidEmail(t *testing.T) {
 	user := &user_model.User{
 		Name:               "GiteaBot",
+<<<<<<< HEAD
 		Email:              "GiteaBot@gitea.io\r\n",
+=======
+		Email:              "GiteaBot@proxgit.io\r\n",
+>>>>>>> master
 		Passwd:             ";p['////..-++']",
 		IsAdmin:            false,
 		Theme:              setting.UI.DefaultTheme,

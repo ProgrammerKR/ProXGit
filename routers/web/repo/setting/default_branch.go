@@ -6,12 +6,21 @@ package setting
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/routers/web/repo"
 	"code.gitea.io/gitea/services/context"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/routers/web/repo"
+	"code.proxgit.io/proxgit/services/context"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 // SetDefaultBranchPost set default branch

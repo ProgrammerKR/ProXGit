@@ -2,9 +2,15 @@
 
 This changelog goes through the changes that have been made in each release
 without substantial changes to our git log; to see the highlights of what has
+<<<<<<< HEAD
 been added to each release, please refer to the [blog](https://blog.gitea.com).
 
 ## [1.23.6](https://github.com/go-gitea/gitea/releases/tag/v1.23.6) - 2025-03-24
+=======
+been added to each release, please refer to the [blog](https://blog.proxgit.com).
+
+## [1.23.6](https://github.com/go-proxgit/proxgit/releases/tag/v1.23.6) - 2025-03-24
+>>>>>>> master
 
 * SECURITY
   * Fix LFS URL (#33840) (#33843)
@@ -26,7 +32,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Try to fix ACME (3rd) (#33807) (#33808)
   * Fix incorrect code search indexer options (#33992) #33999
 
+<<<<<<< HEAD
 ## [1.23.5](https://github.com/go-gitea/gitea/releases/tag/v1.23.5) - 2025-03-04
+=======
+## [1.23.5](https://github.com/go-proxgit/proxgit/releases/tag/v1.23.5) - 2025-03-04
+>>>>>>> master
 
 * SECURITY
   * Bump x/oauth2 & x/crypto (#33704) (#33727)
@@ -48,7 +58,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Adjust appearence of commit status webhook (#33778) #33789
   * Upgrade golang net from 0.35.0 -> 0.36.0 (#33795) #33796
 
+<<<<<<< HEAD
 ## [1.23.4](https://github.com/go-gitea/gitea/releases/tag/v1.23.4) - 2025-02-16
+=======
+## [1.23.4](https://github.com/go-proxgit/proxgit/releases/tag/v1.23.4) - 2025-02-16
+>>>>>>> master
 
 * SECURITY
   * Enhance routers for the Actions variable operations (#33547) (#33553)
@@ -69,14 +83,22 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Make actions URL in commit status webhooks absolute (#33620) #33632
   * Add missing locale (#33641) #33642
 
+<<<<<<< HEAD
 ## [1.23.3](https://github.com/go-gitea/gitea/releases/tag/v1.23.3) - 2025-02-06
+=======
+## [1.23.3](https://github.com/go-proxgit/proxgit/releases/tag/v1.23.3) - 2025-02-06
+>>>>>>> master
 
 * Security
   * Build Gitea with Golang v1.23.6 to fix security bugs
 * BUGFIXES
   * Fix a bug caused by status webhook template #33512
 
+<<<<<<< HEAD
 ## [1.23.2](https://github.com/go-gitea/gitea/releases/tag/1.23.2) - 2025-02-04
+=======
+## [1.23.2](https://github.com/go-proxgit/proxgit/releases/tag/1.23.2) - 2025-02-04
+>>>>>>> master
 
 * BREAKING
   * Add tests for webhook and fix some webhook bugs (#33396) (#33442)
@@ -122,7 +144,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Update katex to latest version (#33361)
   * Update go tool dependencies (#32916) (#33355)
 
+<<<<<<< HEAD
 ## [1.23.1](https://github.com/go-gitea/gitea/releases/tag/v1.23.1) - 2025-01-09
+=======
+## [1.23.1](https://github.com/go-proxgit/proxgit/releases/tag/v1.23.1) - 2025-01-09
+>>>>>>> master
 
 * ENHANCEMENTS
   * Move repo size to sidebar (#33155) (#33182)
@@ -136,7 +162,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Fix sync fork for consistency (#33147) #33192
   * Fix editor markdown not incrementing in a numbered list (#33187) #33193
 
+<<<<<<< HEAD
 ## [1.23.0](https://github.com/go-gitea/gitea/releases/tag/v1.23.0) - 2025-01-08
+=======
+## [1.23.0](https://github.com/go-proxgit/proxgit/releases/tag/v1.23.0) - 2025-01-08
+>>>>>>> master
 
 * BREAKING
   * Rename config option `[camo].Allways` to `[camo].Always` (#32097)
@@ -448,7 +478,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Do not display `attestation-manifest` and use short sha256 instead of full sha256 (#32851)
   * Upgrade htmx to 2.0.4 (#32834)
   * Improve JSX/TSX support in code editor (#32833)
+<<<<<<< HEAD
   * Add User-Agent for gitea's self-implemented lfs client. (#32832)
+=======
+  * Add User-Agent for proxgit's self-implemented lfs client. (#32832)
+>>>>>>> master
   * Use errors.New to replace fmt.Errorf with no parameters (#32800)
   * Add "n commits" link to contributors in contributors graph page (#32799)
   * Update dependencies, tweak eslint (#32719)
@@ -529,7 +563,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Use -s -w ldflags for release artifacts (#33041) #33042
   * Remove aws go sdk package dependency (#33029) #33047
 
+<<<<<<< HEAD
 ## [1.22.6](https://github.com/go-gitea/gitea/releases/tag/v1.22.6) - 2024-12-12
+=======
+## [1.22.6](https://github.com/go-proxgit/proxgit/releases/tag/v1.22.6) - 2024-12-12
+>>>>>>> master
 
 * SECURITY
   * Fix misuse of PublicKeyCallback(#32810)
@@ -539,7 +577,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
 * TESTING
   * Avoid MacOS keychain dialog in integration tests (#32813) (#32816)
 
+<<<<<<< HEAD
 ## [1.22.5](https://github.com/go-gitea/gitea/releases/tag/v1.22.5) - 2024-12-11
+=======
+## [1.22.5](https://github.com/go-proxgit/proxgit/releases/tag/v1.22.5) - 2024-12-11
+>>>>>>> master
 
 * SECURITY
   * Upgrade crypto library (#32791)
@@ -559,7 +601,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
 * MISC
   * Don't create action when syncing mirror pull refs (#32659) (#32664)
 
+<<<<<<< HEAD
 ## [1.22.4](https://github.com/go-gitea/gitea/releases/tag/v1.22.4) - 2024-11-14
+=======
+## [1.22.4](https://github.com/go-proxgit/proxgit/releases/tag/v1.22.4) - 2024-11-14
+>>>>>>> master
 
 * SECURITY
   * Fix basic auth with webauthn (#32531) (#32536)
@@ -616,7 +662,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Update github.com/go-enry/go-enry to v2.9.1 (#32295) (#32296)
   * Warn users when they try to use a non-root-url to sign in/up (#32272) (#32273)
 
+<<<<<<< HEAD
 ## [1.22.3](https://github.com/go-gitea/gitea/releases/tag/v1.22.3) - 2024-10-08
+=======
+## [1.22.3](https://github.com/go-proxgit/proxgit/releases/tag/v1.22.3) - 2024-10-08
+>>>>>>> master
 
 * SECURITY
   * Fix bug when a token is given public only (#32204) (#32218)
@@ -657,7 +707,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Lazy load avatar images (#32051) (#32063)
   * Upgrade cache to v0.2.1 (#32003) (#32009)
 
+<<<<<<< HEAD
 ## [1.22.2](https://github.com/go-gitea/gitea/releases/tag/v1.22.2) - 2024-08-28
+=======
+## [1.22.2](https://github.com/go-proxgit/proxgit/releases/tag/v1.22.2) - 2024-08-28
+>>>>>>> master
 
 * Security
   * Replace v-html with v-text in search inputbox (#31966) (#31973)
@@ -713,7 +767,11 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Upgrade micromatch to 4.0.8 (#31944)
   * Update webpack to 5.94.0 (#31941)
 
+<<<<<<< HEAD
 ## [1.22.1](https://github.com/go-gitea/gitea/releases/tag/v1.22.1) - 2024-07-04
+=======
+## [1.22.1](https://github.com/go-proxgit/proxgit/releases/tag/v1.22.1) - 2024-07-04
+>>>>>>> master
 
 * SECURITY
   * Add replacement module for `mholt/archiver` (#31267) (#31270)
@@ -786,9 +844,15 @@ been added to each release, please refer to the [blog](https://blog.gitea.com).
   * Fix DashboardRepoList margin (#31121) (#31128)
   * Update pip related commands for docker (#31106) (#31111)
 
+<<<<<<< HEAD
 ## [1.22.0](https://github.com/go-gitea/gitea/releases/tag/v1.22.0) - 2024-05-27
 
 This release stands as a monumental milestone in our development journey with a record-breaking incorporation of [1528](https://github.com/go-gitea/gitea/pulls?q=is%3Apr+milestone%3A1.22.0+is%3Amerged) pull requests. It marks the most extensive update in Gitea's history, showcasing a plethora of new features and infrastructure improvements.
+=======
+## [1.22.0](https://github.com/go-proxgit/proxgit/releases/tag/v1.22.0) - 2024-05-27
+
+This release stands as a monumental milestone in our development journey with a record-breaking incorporation of [1528](https://github.com/go-proxgit/proxgit/pulls?q=is%3Apr+milestone%3A1.22.0+is%3Amerged) pull requests. It marks the most extensive update in Gitea's history, showcasing a plethora of new features and infrastructure improvements.
+>>>>>>> master
 
 Noteworthy advancements in this release include the introduction of `HTMX` and `Tailwind`, signaling a strategic shift as we gradually phase out `jquery` and `Fomantic UI`. These changes reflect our commitment to embracing modern technologies and enhancing the user experience.
 
@@ -805,7 +869,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Use restricted sanitizer for repository description (#28141)
   * Support storage base path as prefix (#27827)
   * Enhanced auth token / remember me (#27606)
+<<<<<<< HEAD
   * Rename the default themes to `gitea-light`, `gitea-dark`, `gitea-auto` (#27419)
+=======
+  * Rename the default themes to `proxgit-light`, `proxgit-dark`, `proxgit-auto` (#27419)
+>>>>>>> master
     * If you didn't see the new themes, please remove the `[ui].THEMES` config option from `app.ini`
   * Require MySQL 8.0, PostgreSQL 12, MSSQL 2012 (#27337)
 * FEATURES
@@ -838,7 +906,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Add support for sha256 repositories (#23894)
   * Add admin API route for managing user's badges (#23106)
 * ENHANCEMENTS
+<<<<<<< HEAD
   * Make gitea webhooks openproject compatible (#28435) (#31081)
+=======
+  * Make proxgit webhooks openproject compatible (#28435) (#31081)
+>>>>>>> master
   * Support using label names when changing issue labels (#30943) (#30958)
   * Fix various problems around project board view (#30696) (#30902)
   * Improve context popup rendering (#30824) (#30829)
@@ -952,7 +1024,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Some performance optimization on the dashboard and issues page (#29010)
   * Add combined index for issue_user.uid and issue_id (#28080)
 
+<<<<<<< HEAD
 ## [1.21.11](https://github.com/go-gitea/gitea/releases/tag/v1.21.11) - 2024-04-07
+=======
+## [1.21.11](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.11) - 2024-04-07
+>>>>>>> master
 
 * SECURITY
   * Use go1.21.9 to include Golang security fix
@@ -965,7 +1041,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Include encoding in signature payload (#30174) (#30181)
   * Move from `max( id )` to `max( index )` for latest commit statuses (#30076) (#30155)
   * Load attachments for code comments (#30124) (#30126)
+<<<<<<< HEAD
   * Fix gitea doctor will remove repo-avatar files when executing command storage-archives (#30094) (#30120)
+=======
+  * Fix proxgit doctor will remove repo-avatar files when executing command storage-archives (#30094) (#30120)
+>>>>>>> master
   * Fix possible data race on tests (#30093) (#30108)
   * Fix duplicate migrated milestones (#30102) (#30105)
   * Fix panic for fixBrokenRepoUnits16961 (#30068) (#30100)
@@ -988,7 +1068,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Update katex to 0.16.10 (#30089)
   * Upgrade go-sqlite to v1.14.22 (#30462)
 
+<<<<<<< HEAD
 ## [1.21.10](https://github.com/go-gitea/gitea/releases/tag/v1.21.10) - 2024-03-25
+=======
+## [1.21.10](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.10) - 2024-03-25
+>>>>>>> master
 
 * BUGFIXES
   * Fix Add/Remove WIP on pull request title failure (#29999) (#30066)
@@ -998,7 +1082,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Remove duplicate option in admin screen and now-unused translation keys (#28492) (#30024)
   * Fix manual merge form and 404 page templates (#30000)
 
+<<<<<<< HEAD
 ## [1.21.9](https://github.com/go-gitea/gitea/releases/tag/v1.21.9) - 2024-03-21
+=======
+## [1.21.9](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.9) - 2024-03-21
+>>>>>>> master
 
 * PERFORMANCE
   * Only do counting when count_only=true for repo dashboard (#29884) (#29905)
@@ -1031,7 +1119,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Performance improvements for pull request list page (#29900) (#29972)
   * Fix bugs in rerunning jobs (#29983) (#29955)
 
+<<<<<<< HEAD
 ## [1.21.8](https://github.com/go-gitea/gitea/releases/tag/v1.21.8) - 2024-03-12
+=======
+## [1.21.8](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.8) - 2024-03-12
+>>>>>>> master
 
 * SECURITY
   * Only use supported sort orders for "/explore/users" page (#29430) (#29443)
@@ -1076,7 +1168,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fixing the issue when status checks per rule matches multiple actions (#29631) (#29655)
   * Improve contrast on blame timestamp, fix double border (#29482) (#29485)
 
+<<<<<<< HEAD
 ## [1.21.7](https://github.com/go-gitea/gitea/releases/tag/v1.21.7) - 2024-02-26
+=======
+## [1.21.7](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.7) - 2024-02-26
+>>>>>>> master
 
 * ENHANCEMENTS
   * Users with `read` permission of pull requests can be assigned too (#27263) (#29372)
@@ -1091,7 +1187,11 @@ Key highlights of this release encompass significant changes categorized under `
 * MISC
   * Enforce maxlength in frontend (#29389) (#29396)
 
+<<<<<<< HEAD
 ## [1.21.6](https://github.com/go-gitea/gitea/releases/tag/v1.21.6) - 2024-02-22
+=======
+## [1.21.6](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.6) - 2024-02-22
+>>>>>>> master
 
 * SECURITY
   * Fix XSS vulnerabilities (#29336)
@@ -1130,12 +1230,20 @@ Key highlights of this release encompass significant changes categorized under `
   * Dont load Review if Comment is CommentTypeReviewRequest (#28551) (#29160)
   * Refactor parseSignatureFromCommitLine (#29054) (#29108)
   * Avoid showing unnecessary JS errors when there are elements with different origin on the page (#29081) (#29089)
+<<<<<<< HEAD
   * Fix gitea-origin-url with default ports (#29085) (#29088)
+=======
+  * Fix proxgit-origin-url with default ports (#29085) (#29088)
+>>>>>>> master
   * Fix orgmode link resolving (#29024) (#29076)
   * Fix Elasticsearh Request Entity Too Large #28117 (#29062) (#29075)
   * Do not render empty comments (#29039) (#29049)
   * Avoid sending update/delete release notice when it is draft (#29008) (#29025)
+<<<<<<< HEAD
   * Fix gitea-action user avatar broken on edited menu (#29190) (#29307)
+=======
+  * Fix proxgit-action user avatar broken on edited menu (#29190) (#29307)
+>>>>>>> master
   * Disallow merge when required checked are missing (#29143) (#29268)
   * Fix incorrect link to swift doc and swift package-registry login command (#29096) (#29103)
   * Convert visibility to number (#29226) (#29244)
@@ -1144,7 +1252,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix typos in the documentation (#29048) (#29056)
   * Explained where create issue/PR template (#29035)
 
+<<<<<<< HEAD
 ## [1.21.5](https://github.com/go-gitea/gitea/releases/tag/v1.21.5) - 2024-01-31
+=======
+## [1.21.5](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.5) - 2024-01-31
+>>>>>>> master
 
 * SECURITY
   * Prevent anonymous container access if `RequireSignInView` is enabled (#28877) (#28882)
@@ -1177,7 +1289,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Warn that `DISABLE_QUERY_AUTH_TOKEN` is false only if it's explicitly defined (#28783) (#28868)
   * Remove duplicated checkinit on git module (#28824) (#28831)
 
+<<<<<<< HEAD
 ## [1.21.4](https://github.com/go-gitea/gitea/releases/tag/v1.21.4) - 2024-01-16
+=======
+## [1.21.4](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.4) - 2024-01-16
+>>>>>>> master
 
 * SECURITY
   * Update github.com/cloudflare/circl (#28789) (#28790)
@@ -1185,7 +1301,11 @@ Key highlights of this release encompass significant changes categorized under `
 * BUGFIXES
   * Use refname:strip-2 instead of refname:short when syncing tags (#28797) (#28811)
   * Fix links in issue card (#28806) (#28807)
+<<<<<<< HEAD
   * Fix nil pointer panic when exec some gitea cli command (#28791) (#28795)
+=======
+  * Fix nil pointer panic when exec some proxgit cli command (#28791) (#28795)
+>>>>>>> master
   * Require token for GET subscription endpoint (#28765) (#28778)
   * Fix button size in "attached header right" (#28770) (#28774)
   * Fix `convert.ToTeams` on empty input (#28426) (#28767)
@@ -1231,7 +1351,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Concatenate error in `checkIfPRContentChanged` (#28731) (#28737)
   * Improve 1.21 document for Database Preparation (#28643) (#28644)
 
+<<<<<<< HEAD
 ## [1.21.3](https://github.com/go-gitea/gitea/releases/tag/v1.21.3) - 2023-12-21
+=======
+## [1.21.3](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.3) - 2023-12-21
+>>>>>>> master
 
 * SECURITY
   * Update golang.org/x/crypto (#28519)
@@ -1259,7 +1383,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix Chinese translation of config cheat sheet[API] (#28472) (#28473)
   * Retry SSH key verification with additional CRLF if it failed (#28392) (#28464)
 
+<<<<<<< HEAD
 ## [1.21.2](https://github.com/go-gitea/gitea/releases/tag/v1.21.2) - 2023-12-12
+=======
+## [1.21.2](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.2) - 2023-12-12
+>>>>>>> master
 
 * SECURITY
   * Rebuild with recently released golang version
@@ -1298,7 +1426,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Use full width for project boards (#28225) (#28245)
   * Enable system users search via the API (#28013) (#28018)
 
+<<<<<<< HEAD
 ## [1.21.1](https://github.com/go-gitea/gitea/releases/tag/v1.21.1) - 2023-11-26
+=======
+## [1.21.1](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.1) - 2023-11-26
+>>>>>>> master
 
 * SECURITY
   * Fix comment permissions (#28213) (#28216)
@@ -1325,7 +1457,11 @@ Key highlights of this release encompass significant changes categorized under `
 * MISC
   * Use full width for PR comparison (#28182) (#28186)
 
+<<<<<<< HEAD
 ## [1.21.0](https://github.com/go-gitea/gitea/releases/tag/v1.21.0) - 2023-11-14
+=======
+## [1.21.0](https://github.com/go-proxgit/proxgit/releases/tag/v1.21.0) - 2023-11-14
+>>>>>>> master
 
 * BREAKING
   * Restrict certificate type for builtin SSH server (#26789)
@@ -1464,7 +1600,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Remove IsWarning in  tmpl (#26120)
   * Fix loading `LFS_JWT_SECRET` from wrong section (#26109)
   * Fixing redirection issue for logged-in users (#26105)
+<<<<<<< HEAD
   * Improve "gitea doctor" sub-command and fix "help" commands (#26072)
+=======
+  * Improve "proxgit doctor" sub-command and fix "help" commands (#26072)
+>>>>>>> master
   * Fix the truncate and alignment problem for some admin tables (#26042)
   * Update minimum password length requirements (#25946)
   * Do not "guess" the file encoding/BOM when using API to upload files (#25828)
@@ -1749,7 +1889,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Change default size of issue/pr attachments and repo file (#27946) (#28017)
   * Remove `known issue` section in Gitea Actions Doc (#27930) (#27938)
   * Remove outdated paragraphs when comparing Gitea Actions to GitHub Actions (#27119)
+<<<<<<< HEAD
   * Update brew installation documentation since gitea moved to brew core package (#27070)
+=======
+  * Update brew installation documentation since proxgit moved to brew core package (#27070)
+>>>>>>> master
   * Actions are no longer experimental, so enable them by default (#27054)
   * Add a documentation note for Windows Service (#26938)
   * Add sparse url in cargo package guide (#26937)
@@ -1773,7 +1917,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Replace deprecated `elliptic.Marshal` (#26800)
   * Add elapsed time on debug for slow git commands (#25642)
 
+<<<<<<< HEAD
 ## [1.20.5](https://github.com/go-gitea/gitea/releases/tag/v1.20.5) - 2023-10-03
+=======
+## [1.20.5](https://github.com/go-proxgit/proxgit/releases/tag/v1.20.5) - 2023-10-03
+>>>>>>> master
 
 * ENHANCEMENTS
   * Fix z-index on markdown completion (#27237) (#27242 & #27238)
@@ -1800,7 +1948,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Add logs for data broken of comment review (#27326) (#27344)
   * Load reviewer before sending notification (#27063) (#27064)
 
+<<<<<<< HEAD
 ## [1.20.4](https://github.com/go-gitea/gitea/releases/tag/v1.20.4) - 2023-09-08
+=======
+## [1.20.4](https://github.com/go-proxgit/proxgit/releases/tag/v1.20.4) - 2023-09-08
+>>>>>>> master
 
 * SECURITY
   * Check blocklist for emails when adding them to account (#26812) (#26831)
@@ -1828,7 +1980,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix being unable to use a repo that prohibits accepting PRs as a PR source. (#26785) (#26790)
   * Fix Page Not Found error (#26768)
 
+<<<<<<< HEAD
 ## [1.20.3](https://github.com/go-gitea/gitea/releases/tag/v1.20.3) - 2023-08-20
+=======
+## [1.20.3](https://github.com/go-proxgit/proxgit/releases/tag/v1.20.3) - 2023-08-20
+>>>>>>> master
 
 * BREAKING
   * Fix the wrong derive path (#26271) (#26318)
@@ -1888,7 +2044,11 @@ Key highlights of this release encompass significant changes categorized under `
   * [docs] Add missing backtick in quickstart.zh-cn.md (#26349) (#26357)
   * Upgrade x/net to 0.13.0 (#26301)
 
+<<<<<<< HEAD
 ## [1.20.2](https://github.com/go-gitea/gitea/releases/tag/v1.20.2) - 2023-07-29
+=======
+## [1.20.2](https://github.com/go-proxgit/proxgit/releases/tag/v1.20.2) - 2023-07-29
+>>>>>>> master
 
 * ENHANCEMENTS
   * Calculate MAX_WORKERS default value by CPU number (#26177) (#26183)
@@ -1916,7 +2076,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix wrong workflow status when rerun a job in an already finished workflow (#26119) (#26124)
   * Fix duplicated url prefix on issue context menu (#26066) (#26067)
 
+<<<<<<< HEAD
 ## [1.20.1](https://github.com/go-gitea/gitea/releases/tag/v1.20.1) - 2023-07-22
+=======
+## [1.20.1](https://github.com/go-proxgit/proxgit/releases/tag/v1.20.1) - 2023-07-22
+>>>>>>> master
 
 * SECURITY
   * Disallow dangerous URL schemes (#25960) (#25964)
@@ -1944,7 +2108,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Add shutting down notice (#25920) (#25922)
   * Fix incorrect milestone count when provide a keyword (#25880) (#25904)
 
+<<<<<<< HEAD
 ## [1.20.0](https://github.com/go-gitea/gitea/releases/tag/v1.20.0) - 2023-07-16
+=======
+## [1.20.0](https://github.com/go-proxgit/proxgit/releases/tag/v1.20.0) - 2023-07-16
+>>>>>>> master
 
 * BREAKING
   * Fix WORK_DIR for docker (root) image (#25738) (#25811)
@@ -2322,7 +2490,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Remove unnecessary and incorrect `find('.menu').toggle()` (#22987)
   * Improve GetBoards and getDefaultBoard (#22981)
   * Improve squash merge commit author and co-author with private emails (#22977)
+<<<<<<< HEAD
   * Add --quiet option to gitea dump (#22969)
+=======
+  * Add --quiet option to proxgit dump (#22969)
+>>>>>>> master
   * Add pagination for dashboard and user activity feeds (#22937)
   * Handle files starting with colons in WalkGitLog (#22935)
   * Add "Reviewed by you" filter for pull requests (#22927)
@@ -2513,11 +2685,19 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix strange UI behavior of cancelling dismiss review modal (#25172)
   * Update js dependencies (#25137) (#25151)
   * Fix swagger documentation for multiple files API endpoint (#25110)
+<<<<<<< HEAD
   * Fix link to customizing-gitea (#25056)
   * Add Link to Stars and Forks Page to Repo List (#24931)
   * Improve confusable character string (#24911)
   * Fix install page context, make the install page tests really test (#24858)
   * Add gitea manager reload-templates command (#24843)
+=======
+  * Fix link to customizing-proxgit (#25056)
+  * Add Link to Stars and Forks Page to Repo List (#24931)
+  * Improve confusable character string (#24911)
+  * Fix install page context, make the install page tests really test (#24858)
+  * Add proxgit manager reload-templates command (#24843)
+>>>>>>> master
   * Create pull request for base after editing file, if not enabled on fork (#24841)
   * Fix video width overflow in markdown, and other changes to match img (#24834)
   * Support Copy Link for video attachments (#24833)
@@ -2558,7 +2738,11 @@ Key highlights of this release encompass significant changes categorized under `
   * More detailed branch delete message (#22696)
   * Add tooltips to `Hide comment type` settings where necessary (#21306)
 
+<<<<<<< HEAD
 ## [1.19.4](https://github.com/go-gitea/gitea/releases/tag/v1.19.4) - 2023-07-04
+=======
+## [1.19.4](https://github.com/go-proxgit/proxgit/releases/tag/v1.19.4) - 2023-07-04
+>>>>>>> master
 
 * SECURITY
   * Fix open redirect check for more cases (#25143) (#25155)
@@ -2606,7 +2790,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Improve decryption failure message (#24573) (#24575)
   * Makefile: Use portable !, not GNUish -not, with find(1). (#24565) (#24572)
 
+<<<<<<< HEAD
 ## [1.19.3](https://github.com/go-gitea/gitea/releases/tag/1.19.3) - 2023-05-03
+=======
+## [1.19.3](https://github.com/go-proxgit/proxgit/releases/tag/1.19.3) - 2023-05-03
+>>>>>>> master
 
 * SECURITY
   * Use golang 1.20.4 to fix CVE-2023-24539, CVE-2023-24540, and CVE-2023-29400
@@ -2619,7 +2807,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix incorrect CurrentUser check for docker rootless (#24435)
   * Getting the tag list does not require being signed in (#24413) (#24416)
 
+<<<<<<< HEAD
 ## [1.19.2](https://github.com/go-gitea/gitea/releases/tag/1.19.2) - 2023-04-26
+=======
+## [1.19.2](https://github.com/go-proxgit/proxgit/releases/tag/1.19.2) - 2023-04-26
+>>>>>>> master
 
 * SECURITY
   * Require repo scope for PATs for private repos and basic authentication (#24362) (#24364)
@@ -2666,7 +2858,11 @@ Key highlights of this release encompass significant changes categorized under `
 * BUILD
   * Support converting varchar to nvarchar for mssql database (#24105) (#24168)
 
+<<<<<<< HEAD
 ## [1.19.1](https://github.com/go-gitea/gitea/releases/tag/v1.19.1) - 2023-04-12
+=======
+## [1.19.1](https://github.com/go-proxgit/proxgit/releases/tag/v1.19.1) - 2023-04-12
+>>>>>>> master
 
 * BREAKING
   * Rename actions unit to `repo.actions` and add docs for it (#23733) (#23881)
@@ -2755,7 +2951,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Make minio package support legacy MD5 checksum (#23768) (#23770)
   * Improve template error reporting (#23396) (#23600)
 
+<<<<<<< HEAD
 ## [1.19.0](https://github.com/go-gitea/gitea/releases/tag/v1.19.0) - 2023-03-19
+=======
+## [1.19.0](https://github.com/go-proxgit/proxgit/releases/tag/v1.19.0) - 2023-03-19
+>>>>>>> master
 
 * BREAKING
   * Add loading yaml label template files (#22976) (#23232)
@@ -3022,7 +3222,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix incorrect checkbox behaviors in the dashboard repolist's filter (#23147) (#23205)
   * Properly flush unique queues on startup (#23154) (#23201)
   * Pass `--global` when calling `git config --get`, for consistency with `git config --set` (#23157) (#23199)
+<<<<<<< HEAD
   * Make `gitea serv` respect git binary home (#23138) (#23197)
+=======
+  * Make `proxgit serv` respect git binary home (#23138) (#23197)
+>>>>>>> master
   * Change button text for commenting and closing an issue at the same time (#23135) (#23182)
   * Fix DBConsistency checks on MSSQL (#23132) (#23134)
   * Show empty repos in Admin Repository Management page (#23114) (#23130)
@@ -3079,9 +3283,15 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix webpack license warning (#21815)
 * DOCS
   * Update documentation for the new YAML label file format  (#23020) (#23341)
+<<<<<<< HEAD
   * Update hacking-on-gitea-zh_cn documentation (#23315) (#23323)
   * Add basic documentation for labels, including scoped labels (#23304) (#23309)
   * Re-add accidentally removed `hacking-on-gitea.zh-cn.md` (#23297) (#23305)
+=======
+  * Update hacking-on-proxgit-zh_cn documentation (#23315) (#23323)
+  * Add basic documentation for labels, including scoped labels (#23304) (#23309)
+  * Re-add accidentally removed `hacking-on-proxgit.zh-cn.md` (#23297) (#23305)
+>>>>>>> master
   * Fix secrets overview page missing from docs sidebar (#23143) (#23145)
   * Add some guidelines for refactoring (#22880)
   * Explain that the no-access team unit does not affect public repositories (#22661)
@@ -3105,7 +3315,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Update chroma to v2.4.0 (#22000)
   * Hide collapse icon in diff with no lines (#21094)
 
+<<<<<<< HEAD
 ## [1.18.5](https://github.com/go-gitea/gitea/releases/tag/v1.18.5) - 2023-02-21
+=======
+## [1.18.5](https://github.com/go-proxgit/proxgit/releases/tag/v1.18.5) - 2023-02-21
+>>>>>>> master
 
 * ENHANCEMENTS
   * Hide 2FA status from other members in organization members list (#22999) (#23023)
@@ -3118,7 +3332,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Display attachments of review comment when comment content is blank (#23035) (#23046)
   * Return empty url for submodule tree entries (#23043) (#23048)
 
+<<<<<<< HEAD
 ## [1.18.4](https://github.com/go-gitea/gitea/releases/tag/1.18.4) - 2023-02-20
+=======
+## [1.18.4](https://github.com/go-proxgit/proxgit/releases/tag/1.18.4) - 2023-02-20
+>>>>>>> master
 
 * SECURITY
   * Provide the ability to set password hash algorithm parameters (#22942) (#22943)
@@ -3155,7 +3373,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Use proxy for pull mirror (#22771) (#22772)
   * Use `--index-url` in PyPi description (#22620) (#22636)
 
+<<<<<<< HEAD
 ## [1.18.3](https://github.com/go-gitea/gitea/releases/tag/v1.18.3) - 2023-01-23
+=======
+## [1.18.3](https://github.com/go-proxgit/proxgit/releases/tag/v1.18.3) - 2023-01-23
+>>>>>>> master
 
 * SECURITY
   * Prevent multiple `To` recipients (#22566) (#22569)
@@ -3163,7 +3385,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Truncate commit summary on repo files table. (#22551) (#22552)
   * Mute all links in issue timeline (#22534)
 
+<<<<<<< HEAD
 ## [1.18.2](https://github.com/go-gitea/gitea/releases/tag/v1.18.2) - 2023-01-19
+=======
+## [1.18.2](https://github.com/go-proxgit/proxgit/releases/tag/v1.18.2) - 2023-01-19
+>>>>>>> master
 
 * BUGFIXES
   * Fix issue not auto-closing when it includes a reference to a branch (#22514) (#22521)
@@ -3174,7 +3400,11 @@ Key highlights of this release encompass significant changes categorized under `
 * BUILD
   * cgo cross-compile for freebsd (#22397) (#22519)
 
+<<<<<<< HEAD
 ## [1.18.1](https://github.com/go-gitea/gitea/releases/tag/v1.18.1) - 2023-01-17
+=======
+## [1.18.1](https://github.com/go-proxgit/proxgit/releases/tag/v1.18.1) - 2023-01-17
+>>>>>>> master
 
 * API
   * Add `sync_on_commit` option for push mirrors api (#22271) (#22292)
@@ -3215,7 +3445,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Restore previous official review when an official review is deleted (#22449) (#22460)
   * Log STDERR of external renderer when it fails (#22442) (#22444)
 
+<<<<<<< HEAD
 ## [1.18.0](https://github.com/go-gitea/gitea/releases/tag/v1.18.0) - 2022-12-29
+=======
+## [1.18.0](https://github.com/go-proxgit/proxgit/releases/tag/v1.18.0) - 2022-12-29
+>>>>>>> master
 
 * SECURITY
   * Remove ReverseProxy authentication from the API (#22219) (#22251)
@@ -3321,7 +3555,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Show language name on hover (#20923)
   * Show instructions for all generic package files (#20917)
   * Refactor AssertExistsAndLoadBean to use generics (#20797)
+<<<<<<< HEAD
   * Move the official website link at the footer of gitea (#20777)
+=======
+  * Move the official website link at the footer of proxgit (#20777)
+>>>>>>> master
   * Add support for full name in reverse proxy auth (#20776)
   * Remove useless JS operation for relative time tooltips (#20756)
   * Replace some icons with SVG (#20741)
@@ -3411,7 +3649,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Update JS dependencies, adjust eslint (#20659)
   * Add more linters to improve code readability (#19989)
 
+<<<<<<< HEAD
 ## [1.17.4](https://github.com/go-gitea/gitea/releases/tag/v1.17.4) - 2022-12-21
+=======
+## [1.17.4](https://github.com/go-proxgit/proxgit/releases/tag/v1.17.4) - 2022-12-21
+>>>>>>> master
 
 * SECURITY
   * Do not allow Ghost access to limited visible user/org (#21849) (#21875)
@@ -3437,7 +3679,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Upgrade golang.org/x/crypto (#21792) (#21794)
   * Init git module before database migration (#21764) (#21766)
   * Set last login when activating account (#21731) (#21754)
+<<<<<<< HEAD
   * Add HEAD fix to gitea doctor (#21352) (#21751)
+=======
+  * Add HEAD fix to proxgit doctor (#21352) (#21751)
+>>>>>>> master
   * Fix UI language switching bug (#21597) (#21748)
   * Remove semver compatible flag and change pypi to an array of test cases (#21708) (#21729)
   * Allow local package identifiers for PyPI packages (#21690) (#21726)
@@ -3465,7 +3711,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix warn in database structs sync (#22111)
   * Allow for resolution of NPM registry paths that match upstream (#21568) (#21723)
 
+<<<<<<< HEAD
 ## [1.17.3](https://github.com/go-gitea/gitea/releases/tag/v1.17.3) - 2022-10-15
+=======
+## [1.17.3](https://github.com/go-proxgit/proxgit/releases/tag/v1.17.3) - 2022-10-15
+>>>>>>> master
 
 * SECURITY
   * Sanitize and Escape refs in git backend (#21464) (#21463)
@@ -3501,7 +3751,11 @@ Key highlights of this release encompass significant changes categorized under `
 * BUILD
   * Use Go 1.19 fmt for Gitea 1.17, sync emoji data (#21239)
 
+<<<<<<< HEAD
 ## [1.17.2](https://github.com/go-gitea/gitea/releases/tag/v1.17.2) - 2022-09-06
+=======
+## [1.17.2](https://github.com/go-proxgit/proxgit/releases/tag/v1.17.2) - 2022-09-06
+>>>>>>> master
 
 * SECURITY
   * Double check CloneURL is acceptable (#20869) (#20892)
@@ -3519,7 +3773,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Ensure delete user deletes all comments (#21067) (#21068)
   * Delete unreferenced packages when deleting a package version (#20977) (#21060)
   * Redirect if user does not exist on admin pages (#20981) (#21059)
+<<<<<<< HEAD
   * Set uploadpack.allowFilter etc on gitea serv to enable partial clones with ssh (#20902) (#21058)
+=======
+  * Set uploadpack.allowFilter etc on proxgit serv to enable partial clones with ssh (#20902) (#21058)
+>>>>>>> master
   * Fix 500 on time in timeline API (#21052) (#21057)
   * Fill the specified ref in webhook test payload (#20961) (#21055)
   * Add another index for Action table on postgres (#21033) (#21054)
@@ -3545,7 +3803,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix the mode of custom dir to 0700 in docker-rootless (#20861) (#20867)
   * Fix UI mis-align for PR commit history (#20845) (#20859)
 
+<<<<<<< HEAD
 ## [1.17.1](https://github.com/go-gitea/gitea/releases/tag/1.17.1) - 2022-08-17
+=======
+## [1.17.1](https://github.com/go-proxgit/proxgit/releases/tag/1.17.1) - 2022-08-17
+>>>>>>> master
 
 * SECURITY
   * Correctly escape within tribute.js (#20831) (#20832)
@@ -3584,7 +3846,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix owners cannot create organization repos bug (#20841) (#20854)
   * Prevent 500 is head repo does not have PullRequest unit in IsUserAllowedToUpdate (#20839) (#20848)
 
+<<<<<<< HEAD
 ## [1.17.0](https://github.com/go-gitea/gitea/releases/tag/v1.17.0) - 2022-07-30
+=======
+## [1.17.0](https://github.com/go-proxgit/proxgit/releases/tag/v1.17.0) - 2022-07-30
+>>>>>>> master
 
 * BREAKING
   * Require go1.18 for Gitea 1.17 (#19918)
@@ -3593,7 +3859,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Refactor git module, make Gitea use internal git config (#19732)
   * Remove `RequireHighlightJS` field, update plantuml example. (#19615)
   * Increase minimal required git version to 2.0 (#19577)
+<<<<<<< HEAD
   * Add a directory prefix `gitea-src-VERSION` to release-tar-file (#19396)
+=======
+  * Add a directory prefix `proxgit-src-VERSION` to release-tar-file (#19396)
+>>>>>>> master
   * Use "main" as default branch name (#19354)
   * Make cron task no notice on success (#19221)
   * Add pam account authorization check (#19040)
@@ -3765,7 +4035,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Limit max-height of CodeMirror editors for issue comment and wiki (#18271)
   * Validate migration files (#18203)
   * Format with gofumpt (#18184)
+<<<<<<< HEAD
   * Allow custom default merge message with .gitea/default_merge_message/<merge_style>_TEMPLATE.md (#18177)
+=======
+  * Allow custom default merge message with .proxgit/default_merge_message/<merge_style>_TEMPLATE.md (#18177)
+>>>>>>> master
   * Prettify number of issues (#17760)
   * Add a "admin user generate-access-token" subcommand (#17722)
   * Custom regexp external issues (#17624)
@@ -3855,7 +4129,11 @@ Key highlights of this release encompass significant changes categorized under `
 * TESTING
   * Allow postgres integration tests to run over unix pipe (#19875)
   * Prevent intermittent NPE in queue tests (#19301)
+<<<<<<< HEAD
   * Add test for importing pull requests in gitea uploader for migrations (#18752)
+=======
+  * Add test for importing pull requests in proxgit uploader for migrations (#18752)
+>>>>>>> master
   * Remove redundant comparison in repo dump/restore (#18660)
   * More repo dump/restore tests, including pull requests  (#18621)
   * Add test coverage for original author conversion during migrations (#18506)
@@ -3868,7 +4146,11 @@ Key highlights of this release encompass significant changes categorized under `
 * DOCS
   * Update documents (git/fomantic/db, etc) (#19868)
   * Update the ROOT documentation and error messages (#19832)
+<<<<<<< HEAD
   * Update document to use FHS `/usr/local/bin/gitea` instead of `/app/...` for Docker (#19794)
+=======
+  * Update document to use FHS `/usr/local/bin/proxgit` instead of `/app/...` for Docker (#19794)
+>>>>>>> master
   * Update documentation to disable duration settings with -1 instead of 0 (#19647)
   * Add warning to set SENDMAIL_ARGS to --  (#19102)
   * Update nginx reverse proxy docs (#18922)
@@ -3892,7 +4174,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Prevent showing webauthn error for every time visiting `/user/settings/security` (#18385)
   * Use correct translation key for errors (#18342)
 
+<<<<<<< HEAD
 ## [1.16.9](https://github.com/go-gitea/gitea/releases/tag/v1.16.9) - 2022-07-12
+=======
+## [1.16.9](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.9) - 2022-07-12
+>>>>>>> master
 
 * SECURITY
   * Add write check for creating Commit status (#20332) (#20334)
@@ -3917,7 +4203,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Fix doctor pq: syntax error at or near "." quote user table name (#19765) (#19770)
   * Fix bug with assigneees (#19757)
 
+<<<<<<< HEAD
 ## [1.16.8](https://github.com/go-gitea/gitea/releases/tag/v1.16.8) - 2022-05-16
+=======
+## [1.16.8](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.8) - 2022-05-16
+>>>>>>> master
 
 * ENHANCEMENTS
   * Add doctor check/fix for bogus action rows (#19656) (#19669)
@@ -3934,7 +4224,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Ignore DNS error when doing migration allow/block check (#19566) (#19567)
   * Fix issue overview for teams (#19652) (#19653)
 
+<<<<<<< HEAD
 ## [1.16.7](https://github.com/go-gitea/gitea/releases/tag/v1.16.7) - 2022-05-02
+=======
+## [1.16.7](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.7) - 2022-05-02
+>>>>>>> master
 
 * SECURITY
   * Escape git fetch remote (#19487) (#19490)
@@ -3957,7 +4251,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Set correct PR status on 3way on conflict checking (#19457) (#19458)
   * Mark TemplateLoading error as "UnprocessableEntity" (#19445) (#19446)
 
+<<<<<<< HEAD
 ## [1.16.6](https://github.com/go-gitea/gitea/releases/tag/v1.16.6) - 2022-04-20
+=======
+## [1.16.6](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.6) - 2022-04-20
+>>>>>>> master
 
 * ENHANCEMENTS
   * Only request write when necessary (#18657) (#19422)
@@ -3992,7 +4290,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Performance improvement for add team user when org has more than 1000 repositories (#19227) (#19289)
   * Check go and nodejs version by go.mod and package.json (#19197) (#19254)
 
+<<<<<<< HEAD
 ## [1.16.5](https://github.com/go-gitea/gitea/releases/tag/v1.16.5) - 2022-03-23
+=======
+## [1.16.5](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.5) - 2022-03-23
+>>>>>>> master
 
 * BREAKING
   * Bump to build with go1.18 (#19120 et al) (#19127)
@@ -4023,7 +4325,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Update json-iterator to allow compilation with go1.18 (#18644) (#19100)
   * Update golang.org/x/crypto (#19097) (#19098)
 
+<<<<<<< HEAD
 ## [1.16.4](https://github.com/go-gitea/gitea/releases/tag/v1.16.4) - 2022-03-14
+=======
+## [1.16.4](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.4) - 2022-03-14
+>>>>>>> master
 
 * SECURITY
   * Restrict email address validation (#17688) (#19085)
@@ -4045,7 +4351,11 @@ Key highlights of this release encompass significant changes categorized under `
 * MISC
   * Fix potential assignee query for repo (#18994) (#18999)
 
+<<<<<<< HEAD
 ## [1.16.3](https://github.com/go-gitea/gitea/releases/tag/v1.16.3) - 2022-03-02
+=======
+## [1.16.3](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.3) - 2022-03-02
+>>>>>>> master
 
 * SECURITY
   * Git backend ignore replace objects (#18979) (#18980)
@@ -4074,7 +4384,11 @@ Key highlights of this release encompass significant changes categorized under `
 * MISC
   * Don't update email for organisation (#18905) (#18906)
 
+<<<<<<< HEAD
 ## [1.16.2](https://github.com/go-gitea/gitea/releases/tag/v1.16.2) - 2022-02-24
+=======
+## [1.16.2](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.2) - 2022-02-24
+>>>>>>> master
 
 * ENHANCEMENTS
   * Show fullname on issue edits and gpg/ssh signing info (#18828)
@@ -4122,7 +4436,11 @@ Key highlights of this release encompass significant changes categorized under `
   * C preprocessor colors improvement (#18671) (#18696)
   * Fix the missing i18n key for update checker (#18646) (#18665)
 
+<<<<<<< HEAD
 ## [1.16.1](https://github.com/go-gitea/gitea/releases/tag/v1.16.1) - 2022-02-06
+=======
+## [1.16.1](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.1) - 2022-02-06
+>>>>>>> master
 
 * SECURITY
   * Update JS dependencies, fix lint (#18389) (#18540)
@@ -4147,11 +4465,19 @@ Key highlights of this release encompass significant changes categorized under `
   * Use "read" value for General Access (#18496) (#18500)
   * Prevent NPE on partial match of compare URL and allow short SHA1 compare URLs (#18472) (#18473)
 * BUILD
+<<<<<<< HEAD
   * Make docker gitea/gitea:v1.16-dev etc refer to the latest build on that branch (#18551) (#18569)
 * DOCS
   * Update 1.16.0 changelog to set #17846 as breaking (#18533) (#18534)
 
 ## [1.16.0](https://github.com/go-gitea/gitea/releases/tag/v1.16.0) - 2022-01-30
+=======
+  * Make docker proxgit/proxgit:v1.16-dev etc refer to the latest build on that branch (#18551) (#18569)
+* DOCS
+  * Update 1.16.0 changelog to set #17846 as breaking (#18533) (#18534)
+
+## [1.16.0](https://github.com/go-proxgit/proxgit/releases/tag/v1.16.0) - 2022-01-30
+>>>>>>> master
 
 * BREAKING
   * Remove golang vendored directory (#18277)
@@ -4197,7 +4523,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Add support for corporate WeChat webhooks (#15910)
   * Add a simple way to rename branch like gh (#15870)
   * Add bundle download for repository (#14538)
+<<<<<<< HEAD
   * Add agit flow support in gitea (#14295)
+=======
+  * Add agit flow support in proxgit (#14295)
+>>>>>>> master
 * API
   * Add MirrorUpdated field to Repository API type (#18267)
   * Adjust Fork API to allow setting a custom repository name (#18066)
@@ -4287,7 +4617,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Frontend refactor, PascalCase to camelCase, remove unused code (#17365)
   * Hide command line merge instructions when user can't push (#17339)
   * Move session to models/login (#17338)
+<<<<<<< HEAD
   * Sync gitea app path for git hooks and authorized keys when starting (#17335)
+=======
+  * Sync proxgit app path for git hooks and authorized keys when starting (#17335)
+>>>>>>> master
   * Make the Mirror Queue a queue (#17326)
   * Add "Copy branch name" button to pull request page (#17323)
   * Fix repository summary on mobile (#17322)
@@ -4403,7 +4737,11 @@ Key highlights of this release encompass significant changes categorized under `
   * Allow admin to associate missing LFS objects for repositories (#18143)
   * When attempting to subscribe other user to issue report why access denied (#18091)
   * Add option to convert CRLF to LF line endings for sendmail (#18075)
+<<<<<<< HEAD
   * Only create pprof files for gitea serv if explicitly asked for (#18068)
+=======
+  * Only create pprof files for proxgit serv if explicitly asked for (#18068)
+>>>>>>> master
   * Abort merge if head has been updated before pressing merge (#18032)
   * Improve TestPatch to use git read-tree -m and implement git-merge-one-file functionality (#18004)
   * Use JSON module instead of stdlib json (#18003)

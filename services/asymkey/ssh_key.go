@@ -6,9 +6,15 @@ package asymkey
 import (
 	"context"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 )
 
 // DeletePublicKey deletes SSH key information both in database and authorized_keys file.

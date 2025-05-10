@@ -8,7 +8,11 @@ package main
 // Golang has the ability to load OS's timezone data from most UNIX systems (https://github.com/golang/go/blob/master/src/time/zoneinfo_unix.go)
 // Even if the timezone data is missing, users could install the related packages to get it.
 // But on Windows, although `zoneinfo_windows.go` tries to load the timezone data from Windows registry,
+<<<<<<< HEAD
 // some users still suffer from the issue that the timezone data is missing: https://github.com/go-gitea/gitea/issues/33235
+=======
+// some users still suffer from the issue that the timezone data is missing: https://github.com/go-proxgit/proxgit/issues/33235
+>>>>>>> master
 // So we import the tzdata package to make sure the timezone data is included in the binary.
 //
 // For non-Windows package builders, they could still use the "TAGS=timetzdata" to include the tzdata package in the binary.

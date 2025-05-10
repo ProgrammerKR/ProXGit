@@ -6,8 +6,13 @@ package packages
 import (
 	"io"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util/filebuffer"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util/filebuffer"
+>>>>>>> master
 )
 
 // HashedSizeReader provide methods to read, sum hashes and a Size method

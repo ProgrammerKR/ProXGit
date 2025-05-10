@@ -4,7 +4,11 @@
 
 package paginator
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/modules/util"
+=======
+import "code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 /*
 In template:

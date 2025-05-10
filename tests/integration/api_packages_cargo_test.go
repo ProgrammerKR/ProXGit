@@ -12,6 +12,7 @@ import (
 	neturl "net/url"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -24,6 +25,20 @@ import (
 	cargo_router "code.gitea.io/gitea/routers/api/packages/cargo"
 	cargo_service "code.gitea.io/gitea/services/packages/cargo"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/json"
+	cargo_module "code.proxgit.io/proxgit/modules/packages/cargo"
+	"code.proxgit.io/proxgit/modules/setting"
+	cargo_router "code.proxgit.io/proxgit/routers/api/packages/cargo"
+	cargo_service "code.proxgit.io/proxgit/services/packages/cargo"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -39,7 +54,11 @@ func testPackageCargo(t *testing.T, _ *neturl.URL) {
 	packageVersion := "1.0.3"
 	packageDescription := "Package Description"
 	packageAuthor := "KN4CK3R"
+<<<<<<< HEAD
 	packageHomepage := "https://gitea.io/"
+=======
+	packageHomepage := "https://proxgit.io/"
+>>>>>>> master
 	packageLicense := "MIT"
 
 	createPackage := func(name, version string) io.Reader {
@@ -52,7 +71,11 @@ func testPackageCargo(t *testing.T, _ *neturl.URL) {
       {
          "name":"dep",
          "version_req":"1.0",
+<<<<<<< HEAD
          "registry": "https://gitea.io/user/_cargo-index",
+=======
+         "registry": "https://proxgit.io/user/_cargo-index",
+>>>>>>> master
          "kind": "normal",
          "default_features": true
       }
@@ -229,7 +252,11 @@ func testPackageCargo(t *testing.T, _ *neturl.URL) {
 						assert.False(t, dep.Optional)
 						assert.Nil(t, dep.Target)
 						assert.NotNil(t, dep.Registry)
+<<<<<<< HEAD
 						assert.Equal(t, "https://gitea.io/user/_cargo-index", *dep.Registry)
+=======
+						assert.Equal(t, "https://proxgit.io/user/_cargo-index", *dep.Registry)
+>>>>>>> master
 						assert.Nil(t, dep.Package)
 					})
 
@@ -268,7 +295,11 @@ func testPackageCargo(t *testing.T, _ *neturl.URL) {
 						assert.False(t, dep.Optional)
 						assert.Nil(t, dep.Target)
 						assert.NotNil(t, dep.Registry)
+<<<<<<< HEAD
 						assert.Equal(t, "https://gitea.io/user/_cargo-index", *dep.Registry)
+=======
+						assert.Equal(t, "https://proxgit.io/user/_cargo-index", *dep.Registry)
+>>>>>>> master
 						assert.Nil(t, dep.Package)
 					})
 				})

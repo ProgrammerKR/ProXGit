@@ -72,7 +72,11 @@ func Test_RepoArchiveStorage(t *testing.T) {
 [storage]
 STORAGE_TYPE            = minio
 MINIO_ENDPOINT          = s3.my-domain.net
+<<<<<<< HEAD
 MINIO_BUCKET            = gitea
+=======
+MINIO_BUCKET            = proxgit
+>>>>>>> master
 MINIO_LOCATION          = homenet
 MINIO_USE_SSL           = true
 MINIO_ACCESS_KEY_ID     = correct_key
@@ -85,7 +89,11 @@ MINIO_SECRET_ACCESS_KEY = correct_key
 	storage := RepoArchive.Storage
 
 	assert.EqualValues(t, "minio", storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", storage.MinioConfig.Bucket)
+>>>>>>> master
 
 	iniStr = `
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -94,7 +102,11 @@ STORAGE_TYPE = s3
 [storage.s3]
 STORAGE_TYPE            = minio
 MINIO_ENDPOINT          = s3.my-domain.net
+<<<<<<< HEAD
 MINIO_BUCKET            = gitea
+=======
+MINIO_BUCKET            = proxgit
+>>>>>>> master
 MINIO_LOCATION          = homenet
 MINIO_USE_SSL           = true
 MINIO_ACCESS_KEY_ID     = correct_key
@@ -107,5 +119,9 @@ MINIO_SECRET_ACCESS_KEY = correct_key
 	storage = RepoArchive.Storage
 
 	assert.EqualValues(t, "minio", storage.Type)
+<<<<<<< HEAD
 	assert.Equal(t, "gitea", storage.MinioConfig.Bucket)
+=======
+	assert.Equal(t, "proxgit", storage.MinioConfig.Bucket)
+>>>>>>> master
 }

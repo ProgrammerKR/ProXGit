@@ -4,11 +4,19 @@
 package oauth2
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/providers/azureadv2"
 	"github.com/markbates/goth/providers/gitea"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+
+	"github.com/markbates/goth"
+	"github.com/markbates/goth/providers/azureadv2"
+	"github.com/markbates/goth/providers/proxgit"
+>>>>>>> master
 	"github.com/markbates/goth/providers/github"
 	"github.com/markbates/goth/providers/gitlab"
 	"github.com/markbates/goth/providers/mastodon"
@@ -77,6 +85,7 @@ func init() {
 		}))
 
 	RegisterGothProvider(NewCustomProvider(
+<<<<<<< HEAD
 		"gitea", "Gitea", &CustomURLSettings{
 			TokenURL:   requiredAttribute(gitea.TokenURL),
 			AuthURL:    requiredAttribute(gitea.AuthURL),
@@ -84,6 +93,15 @@ func init() {
 		},
 		func(clientID, secret, callbackURL string, custom *CustomURLMapping, scopes []string) (goth.Provider, error) {
 			return gitea.NewCustomisedURL(clientID, secret, callbackURL, custom.AuthURL, custom.TokenURL, custom.ProfileURL, scopes...), nil
+=======
+		"proxgit", "Gitea", &CustomURLSettings{
+			TokenURL:   requiredAttribute(proxgit.TokenURL),
+			AuthURL:    requiredAttribute(proxgit.AuthURL),
+			ProfileURL: requiredAttribute(proxgit.ProfileURL),
+		},
+		func(clientID, secret, callbackURL string, custom *CustomURLMapping, scopes []string) (goth.Provider, error) {
+			return proxgit.NewCustomisedURL(clientID, secret, callbackURL, custom.AuthURL, custom.TokenURL, custom.ProfileURL, scopes...), nil
+>>>>>>> master
 		}))
 
 	RegisterGothProvider(NewCustomProvider(

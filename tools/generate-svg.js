@@ -98,7 +98,11 @@ async function main() {
   await Promise.all([
     ...processAssetsSvgFiles('node_modules/@primer/octicons/build/svg/*-16.svg', {prefix: 'octicon'}),
     ...processAssetsSvgFiles('web_src/svg/*.svg'),
+<<<<<<< HEAD
     ...processAssetsSvgFiles('public/assets/img/gitea.svg', {fullName: 'gitea-gitea'}),
+=======
+    ...processAssetsSvgFiles('public/assets/img/proxgit.svg', {fullName: 'proxgit-proxgit'}),
+>>>>>>> master
     processMaterialFileIcons(),
   ]);
 }

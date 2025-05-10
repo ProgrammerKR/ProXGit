@@ -6,10 +6,17 @@ package access
 import (
 	"testing"
 
+<<<<<<< HEAD
 	perm_model "code.gitea.io/gitea/models/perm"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unit"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	perm_model "code.proxgit.io/proxgit/models/perm"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

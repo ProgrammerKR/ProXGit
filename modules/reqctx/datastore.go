@@ -8,7 +8,11 @@ import (
 	"io"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/process"
+=======
+	"code.proxgit.io/proxgit/modules/process"
+>>>>>>> master
 )
 
 type ContextDataProvider interface {

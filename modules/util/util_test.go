@@ -21,18 +21,32 @@ func TestURLJoin(t *testing.T) {
 		return test{Expected: expected, Base: base, Elements: elements}
 	}
 	for _, test := range []test{
+<<<<<<< HEAD
 		newTest("https://try.gitea.io/a/b/c",
 			"https://try.gitea.io", "a/b", "c"),
 		newTest("https://try.gitea.io/a/b/c",
 			"https://try.gitea.io/", "/a/b/", "/c/"),
 		newTest("https://try.gitea.io/a/c",
 			"https://try.gitea.io/", "/a/./b/", "../c/"),
+=======
+		newTest("https://try.proxgit.io/a/b/c",
+			"https://try.proxgit.io", "a/b", "c"),
+		newTest("https://try.proxgit.io/a/b/c",
+			"https://try.proxgit.io/", "/a/b/", "/c/"),
+		newTest("https://try.proxgit.io/a/c",
+			"https://try.proxgit.io/", "/a/./b/", "../c/"),
+>>>>>>> master
 		newTest("a/b/c",
 			"a", "b/c/"),
 		newTest("a/b/d",
 			"a/", "b/c/", "/../d/"),
+<<<<<<< HEAD
 		newTest("https://try.gitea.io/a/b/c#d",
 			"https://try.gitea.io", "a/b", "c#d"),
+=======
+		newTest("https://try.proxgit.io/a/b/c#d",
+			"https://try.proxgit.io", "a/b", "c#d"),
+>>>>>>> master
 		newTest("/a/b/d",
 			"/a/", "b/c/", "/../d/"),
 		newTest("/a/b/c",

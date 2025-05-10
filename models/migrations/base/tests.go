@@ -12,12 +12,21 @@ import (
 	"runtime"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/tempdir"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/testlogger"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/tempdir"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/testlogger"
+>>>>>>> master
 
 	"github.com/stretchr/testify/require"
 	"xorm.io/xorm"
@@ -34,7 +43,11 @@ func PrepareTestEnv(t *testing.T, skip int, syncModels ...any) (*xorm.Engine, fu
 	ourSkip := 2
 	ourSkip += skip
 	deferFn := testlogger.PrintCurrentTest(t, ourSkip)
+<<<<<<< HEAD
 	require.NoError(t, unittest.SyncDirs(filepath.Join(filepath.Dir(setting.AppPath), "tests/gitea-repositories-meta"), setting.RepoRootPath))
+=======
+	require.NoError(t, unittest.SyncDirs(filepath.Join(filepath.Dir(setting.AppPath), "tests/proxgit-repositories-meta"), setting.RepoRootPath))
+>>>>>>> master
 
 	if err := deleteDB(); err != nil {
 		t.Fatalf("unable to reset database: %v", err)
@@ -93,6 +106,7 @@ func PrepareTestEnv(t *testing.T, skip int, syncModels ...any) (*xorm.Engine, fu
 func MainTest(m *testing.M) {
 	testlogger.Init()
 
+<<<<<<< HEAD
 	giteaRoot := test.SetupGiteaRoot()
 	giteaBinary := "gitea"
 	if runtime.GOOS == "windows" {
@@ -116,6 +130,31 @@ func MainTest(m *testing.M) {
 	}
 
 	tmpDataPath, cleanup, err := tempdir.OsTempDir("gitea-test").MkdirTempRandom("data")
+=======
+	proxgitRoot := test.SetupGiteaRoot()
+	proxgitBinary := "proxgit"
+	if runtime.GOOS == "windows" {
+		proxgitBinary += ".exe"
+	}
+	setting.AppPath = filepath.Join(proxgitRoot, proxgitBinary)
+	if _, err := os.Stat(setting.AppPath); err != nil {
+		testlogger.Fatalf("Could not find proxgit binary at %s\n", setting.AppPath)
+	}
+
+	proxgitConf := os.Getenv("GITEA_CONF")
+	if proxgitConf == "" {
+		proxgitConf = filepath.Join(filepath.Dir(setting.AppPath), "tests/sqlite.ini")
+		fmt.Printf("Environment variable $GITEA_CONF not set - defaulting to %s\n", proxgitConf)
+	}
+
+	if !filepath.IsAbs(proxgitConf) {
+		setting.CustomConf = filepath.Join(proxgitRoot, proxgitConf)
+	} else {
+		setting.CustomConf = proxgitConf
+	}
+
+	tmpDataPath, cleanup, err := tempdir.OsTempDir("proxgit-test").MkdirTempRandom("data")
+>>>>>>> master
 	if err != nil {
 		testlogger.Fatalf("Unable to create temporary data path %v\n", err)
 	}

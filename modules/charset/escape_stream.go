@@ -10,7 +10,11 @@ import (
 	"unicode"
 	"unicode/utf8"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 )

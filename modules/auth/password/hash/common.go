@@ -6,7 +6,11 @@ package hash
 import (
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 func parseIntParam(value, param, algorithmName, config string, previousErr error) (int, error) {

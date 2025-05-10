@@ -22,10 +22,17 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/nosql"
 
 	"gitea.com/go-chi/session"
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/nosql"
+
+	"proxgit.com/go-chi/session"
+>>>>>>> master
 	"github.com/redis/go-redis/v9"
 )
 

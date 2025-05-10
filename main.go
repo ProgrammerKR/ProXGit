@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/cmd"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
@@ -20,6 +21,18 @@ import (
 	_ "code.gitea.io/gitea/modules/markup/csv"
 	_ "code.gitea.io/gitea/modules/markup/markdown"
 	_ "code.gitea.io/gitea/modules/markup/orgmode"
+=======
+	"code.proxgit.io/proxgit/cmd"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+
+	// register supported doc types
+	_ "code.proxgit.io/proxgit/modules/markup/asciicast"
+	_ "code.proxgit.io/proxgit/modules/markup/console"
+	_ "code.proxgit.io/proxgit/modules/markup/csv"
+	_ "code.proxgit.io/proxgit/modules/markup/markdown"
+	_ "code.proxgit.io/proxgit/modules/markup/orgmode"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )

@@ -7,11 +7,19 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/web/middleware"
 )
 
 const CookieNameFlash = "gitea_flash"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+)
+
+const CookieNameFlash = "proxgit_flash"
+>>>>>>> master
 
 func removeSessionCookieHeader(w http.ResponseWriter) {
 	cookies := w.Header()["Set-Cookie"]

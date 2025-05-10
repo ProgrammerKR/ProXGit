@@ -52,10 +52,17 @@ async function initRepoWikiFormEditor() {
       previewRender: (_content, previewTarget) => previewTarget.innerHTML, // disable builtin preview render
       toolbar: ['bold', 'italic', 'strikethrough', '|',
         'heading-1', 'heading-2', 'heading-3', 'heading-bigger', 'heading-smaller', '|',
+<<<<<<< HEAD
         'gitea-code-inline', 'code', 'quote', '|', 'gitea-checkbox-empty', 'gitea-checkbox-checked', '|',
         'unordered-list', 'ordered-list', '|',
         'link', 'image', 'table', 'horizontal-rule', '|',
         'preview', 'fullscreen', 'side-by-side', '|', 'gitea-switch-to-textarea',
+=======
+        'proxgit-code-inline', 'code', 'quote', '|', 'proxgit-checkbox-empty', 'proxgit-checkbox-checked', '|',
+        'unordered-list', 'ordered-list', '|',
+        'link', 'image', 'table', 'horizontal-rule', '|',
+        'preview', 'fullscreen', 'side-by-side', '|', 'proxgit-switch-to-textarea',
+>>>>>>> master
       ] as any, // to use custom toolbar buttons
     },
   });

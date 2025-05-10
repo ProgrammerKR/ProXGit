@@ -9,8 +9,13 @@ import (
 	"net/url"
 	"strings"
 
+<<<<<<< HEAD
 	giturl "code.gitea.io/gitea/modules/git/url"
 	"code.gitea.io/gitea/modules/util"
+=======
+	giturl "code.proxgit.io/proxgit/modules/git/url"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // GetRemoteAddress returns remote url of git repository in the repoPath with special remote name
@@ -81,7 +86,11 @@ func (err *ErrInvalidCloneAddr) Unwrap() error {
 
 // IsRemoteNotExistError checks the prefix of the error message to see whether a remote does not exist.
 func IsRemoteNotExistError(err error) bool {
+<<<<<<< HEAD
 	// see: https://github.com/go-gitea/gitea/issues/32889#issuecomment-2571848216
+=======
+	// see: https://github.com/go-proxgit/proxgit/issues/32889#issuecomment-2571848216
+>>>>>>> master
 	// Should not add space in the end, sometimes git will add a `:`
 	prefix1 := "exit status 128 - fatal: No such remote" // git < 2.30
 	prefix2 := "exit status 2 - error: No such remote"   // git >= 2.30

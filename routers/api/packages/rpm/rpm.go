@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/modules/json"
@@ -23,6 +24,20 @@ import (
 	notify_service "code.gitea.io/gitea/services/notify"
 	packages_service "code.gitea.io/gitea/services/packages"
 	rpm_service "code.gitea.io/gitea/services/packages/rpm"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/modules/json"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	rpm_module "code.proxgit.io/proxgit/modules/packages/rpm"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/api/packages/helper"
+	"code.proxgit.io/proxgit/services/context"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+	rpm_service "code.proxgit.io/proxgit/services/packages/rpm"
+>>>>>>> master
 )
 
 func apiError(ctx *context.Context, status int, obj any) {
@@ -42,7 +57,11 @@ func GetRepositoryConfig(ctx *context.Context) {
 
 	url := fmt.Sprintf("%sapi/packages/%s/rpm", setting.AppURL, ctx.Package.Owner.Name)
 
+<<<<<<< HEAD
 	ctx.PlainText(http.StatusOK, `[gitea-`+strings.Join(append([]string{ctx.Package.Owner.LowerName}, groupParts...), "-")+`]
+=======
+	ctx.PlainText(http.StatusOK, `[proxgit-`+strings.Join(append([]string{ctx.Package.Owner.LowerName}, groupParts...), "-")+`]
+>>>>>>> master
 name=`+strings.Join(append([]string{ctx.Package.Owner.Name, setting.AppName}, groupParts...), " - ")+`
 baseurl=`+strings.Join(append([]string{url}, groupParts...), "/")+`
 enabled=1

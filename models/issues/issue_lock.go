@@ -6,8 +6,13 @@ package issues
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 )
 
 // IssueLockOptions defines options for locking and/or unlocking an issue/PR

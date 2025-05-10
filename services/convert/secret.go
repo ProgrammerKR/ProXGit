@@ -4,8 +4,13 @@
 package convert
 
 import (
+<<<<<<< HEAD
 	secret_model "code.gitea.io/gitea/models/secret"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	secret_model "code.proxgit.io/proxgit/models/secret"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // ToSecret converts Secret to API format

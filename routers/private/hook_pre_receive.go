@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 
+<<<<<<< HEAD
 	asymkey_model "code.gitea.io/gitea/models/asymkey"
 	git_model "code.gitea.io/gitea/models/git"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -27,6 +28,26 @@ import (
 
 type preReceiveContext struct {
 	*gitea_context.PrivateContext
+=======
+	asymkey_model "code.proxgit.io/proxgit/models/asymkey"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	perm_model "code.proxgit.io/proxgit/models/perm"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	"code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/private"
+	"code.proxgit.io/proxgit/modules/web"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+)
+
+type preReceiveContext struct {
+	*proxgit_context.PrivateContext
+>>>>>>> master
 
 	// loadedPusher indicates that where the following information are loaded
 	loadedPusher        bool
@@ -103,7 +124,11 @@ func (ctx *preReceiveContext) AssertCreatePullRequest() bool {
 }
 
 // HookPreReceive checks whether a individual commit is acceptable
+<<<<<<< HEAD
 func HookPreReceive(ctx *gitea_context.PrivateContext) {
+=======
+func HookPreReceive(ctx *proxgit_context.PrivateContext) {
+>>>>>>> master
 	opts := web.GetForm(ctx).(*private.HookOptions)
 
 	ourCtx := &preReceiveContext{

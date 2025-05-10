@@ -1303,7 +1303,11 @@
   lower_name: limited_org36
   name: limited_org36
   full_name: Limited Org 36
+<<<<<<< HEAD
   email: abcde@gitea.com
+=======
+  email: abcde@proxgit.com
+>>>>>>> master
   keep_email_private: false
   email_notifications_preference: enabled
   passwd: ZogKvWdyEx:password
@@ -1322,7 +1326,11 @@
   allow_create_organization: true
   prohibit_login: false
   avatar: ""
+<<<<<<< HEAD
   avatar_email: abcde@gitea.com
+=======
+  avatar_email: abcde@proxgit.com
+>>>>>>> master
   use_custom_avatar: true
   num_followers: 0
   num_following: 0

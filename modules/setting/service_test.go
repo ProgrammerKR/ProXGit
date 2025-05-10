@@ -6,8 +6,13 @@ package setting
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/test"
+=======
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+>>>>>>> master
 
 	"github.com/gobwas/glob"
 	"github.com/stretchr/testify/assert"

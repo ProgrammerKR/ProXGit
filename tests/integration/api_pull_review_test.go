@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -19,6 +20,19 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	issue_service "code.gitea.io/gitea/services/issue"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/json"
+	api "code.proxgit.io/proxgit/modules/structs"
+	issue_service "code.proxgit.io/proxgit/services/issue"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -363,7 +377,11 @@ func TestAPIPullReviewRequest(t *testing.T) {
 }
 
 func TestAPIPullReviewStayDismissed(t *testing.T) {
+<<<<<<< HEAD
 	// This test against issue https://github.com/go-gitea/gitea/issues/28542
+=======
+	// This test against issue https://github.com/go-proxgit/proxgit/issues/28542
+>>>>>>> master
 	// where old reviews surface after a review request got dismissed.
 	defer tests.PrepareTestEnv(t)()
 	pullIssue := unittest.AssertExistsAndLoadBean(t, &issues_model.Issue{ID: 3})

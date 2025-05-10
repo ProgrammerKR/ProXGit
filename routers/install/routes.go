@@ -8,12 +8,21 @@ import (
 	"html"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/public"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/routers/common"
 	"code.gitea.io/gitea/routers/web/healthcheck"
 	"code.gitea.io/gitea/services/forms"
+=======
+	"code.proxgit.io/proxgit/modules/public"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/common"
+	"code.proxgit.io/proxgit/routers/web/healthcheck"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 )
 
 // Routes registers the installation routes

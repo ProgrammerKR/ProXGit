@@ -8,11 +8,19 @@ import (
 	"reflect"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/modules/validation"
 
 	"gitea.com/go-chi/binding"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/validation"
+
+	"proxgit.com/go-chi/binding"
+>>>>>>> master
 )
 
 // Form form binding interface

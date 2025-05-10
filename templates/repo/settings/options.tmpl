@@ -72,6 +72,7 @@
 				{{else}}
 					{{if $newMirrorsEntirelyEnabled}}
 						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs"}}
+<<<<<<< HEAD
 						<a target="_blank" rel="noopener noreferrer" href="https://docs.gitea.com/usage/repo-mirror#pushing-to-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a><br><br>
 						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.pull_mirror_instructions"}}
 						<a target="_blank" rel="noopener noreferrer" href="https://docs.gitea.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_pull_section"}}</a><br>
@@ -79,11 +80,24 @@
 						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_pull_mirror.instructions"}}
 						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.more_information_if_disabled"}}
 						<a target="_blank" rel="noopener noreferrer" href="https://docs.gitea.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a><br>
+=======
+						<a target="_blank" rel="noopener noreferrer" href="https://docs.proxgit.com/usage/repo-mirror#pushing-to-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a><br><br>
+						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.pull_mirror_instructions"}}
+						<a target="_blank" rel="noopener noreferrer" href="https://docs.proxgit.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_pull_section"}}</a><br>
+					{{else if $onlyNewPushMirrorsEnabled}}
+						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_pull_mirror.instructions"}}
+						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.more_information_if_disabled"}}
+						<a target="_blank" rel="noopener noreferrer" href="https://docs.proxgit.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a><br>
+>>>>>>> master
 					{{else if $onlyNewPullMirrorsEnabled}}
 						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_push_mirror.instructions"}}
 						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_push_mirror.pull_mirror_warning"}}
 						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.more_information_if_disabled"}}
+<<<<<<< HEAD
 						<a target="_blank" rel="noopener noreferrer" href="https://docs.gitea.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a><br><br>
+=======
+						<a target="_blank" rel="noopener noreferrer" href="https://docs.proxgit.com/usage/repo-mirror#pulling-from-a-remote-repository">{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.doc_link_title"}}</a><br><br>
+>>>>>>> master
 						{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.disabled_push_mirror.info"}}
 						{{if $existingPushMirror}}
 							{{ctx.Locale.Tr "repo.settings.mirror_settings.docs.can_still_use"}}

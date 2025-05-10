@@ -7,9 +7,15 @@ import (
 	"slices"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/base"
 	"code.gitea.io/gitea/modules/references"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/references"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"

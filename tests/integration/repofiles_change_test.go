@@ -11,6 +11,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/git"
@@ -19,6 +20,16 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/services/contexttest"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/services/contexttest"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

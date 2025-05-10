@@ -111,7 +111,11 @@ share the following fields:
 
 * Group Name Filter (optional)
   * An LDAP filter declaring how to find valid groups in the above DN.
+<<<<<<< HEAD
   * Example: (|(cn=gitea_users)(cn=admins))
+=======
+  * Example: (|(cn=proxgit_users)(cn=admins))
+>>>>>>> master
 
 * User Attribute in Group (optional)
   * The user attribute that is used to reference a user in the group object.

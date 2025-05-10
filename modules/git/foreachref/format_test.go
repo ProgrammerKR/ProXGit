@@ -6,7 +6,11 @@ package foreachref_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git/foreachref"
+=======
+	"code.proxgit.io/proxgit/modules/git/foreachref"
+>>>>>>> master
 
 	"github.com/stretchr/testify/require"
 )

@@ -6,8 +6,13 @@ package common
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 )
 
 func ParseDeadlineDateToEndOfDay(date string) (timeutil.TimeStamp, error) {

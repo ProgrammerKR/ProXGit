@@ -9,12 +9,21 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/markup/markdown"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/markdown"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -55,7 +64,11 @@ func TestRender_Images(t *testing.T) {
 
 	url := "../../.images/src/02/train.jpg"
 	title := "Train"
+<<<<<<< HEAD
 	href := "https://gitea.io"
+=======
+	href := "https://proxgit.io"
+>>>>>>> master
 	result := util.URLJoin(FullURL, url)
 	// hint: With Markdown v2.5.2, there is a new syntax: [link](URL){:target="_blank"} , but we do not support it now
 
@@ -317,8 +330,13 @@ func TestRenderSiblingImages_Issue12925(t *testing.T) {
 }
 
 func TestRenderEmojiInLinks_Issue12331(t *testing.T) {
+<<<<<<< HEAD
 	testcase := `[Link with emoji :moon: in text](https://gitea.io)`
 	expected := `<p><a href="https://gitea.io" rel="nofollow">Link with emoji <span class="emoji" aria-label="waxing gibbous moon">🌔</span> in text</a></p>
+=======
+	testcase := `[Link with emoji :moon: in text](https://proxgit.io)`
+	expected := `<p><a href="https://proxgit.io" rel="nofollow">Link with emoji <span class="emoji" aria-label="waxing gibbous moon">🌔</span> in text</a></p>
+>>>>>>> master
 `
 	res, err := markdown.RenderString(markup.NewTestRenderContext(), testcase)
 	assert.NoError(t, err)

@@ -9,11 +9,19 @@ import (
 	"os"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/cache"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/cache"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 type status string
@@ -89,7 +97,11 @@ func Check(w http.ResponseWriter, r *http.Request) {
 	_, _ = w.Write(data)
 }
 
+<<<<<<< HEAD
 // database checks gitea database status
+=======
+// database checks proxgit database status
+>>>>>>> master
 func checkDatabase(ctx context.Context, checks checks) status {
 	st := componentStatus{}
 	if err := db.GetEngine(ctx).Ping(); err != nil {
@@ -119,7 +131,11 @@ func checkDatabase(ctx context.Context, checks checks) status {
 	return st.Status
 }
 
+<<<<<<< HEAD
 // cache checks gitea cache status
+=======
+// cache checks proxgit cache status
+>>>>>>> master
 func checkCache(checks checks) status {
 	st := componentStatus{}
 	if err := cache.GetCache().Ping(); err != nil {

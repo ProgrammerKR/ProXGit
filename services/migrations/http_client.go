@@ -7,9 +7,15 @@ import (
 	"crypto/tls"
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/hostmatcher"
 	"code.gitea.io/gitea/modules/proxy"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/hostmatcher"
+	"code.proxgit.io/proxgit/modules/proxy"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 // NewMigrationHTTPClient returns a HTTP client for migration

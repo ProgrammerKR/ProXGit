@@ -8,9 +8,15 @@ import (
 	"strconv"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -42,7 +48,11 @@ func TestAdminViewUser(t *testing.T) {
 func TestAdminEditUser(t *testing.T) {
 	defer tests.PrepareTestEnv(t)()
 
+<<<<<<< HEAD
 	testSuccessfullEdit(t, user_model.User{ID: 2, Name: "newusername", LoginName: "otherlogin", Email: "new@e-mail.gitea"})
+=======
+	testSuccessfullEdit(t, user_model.User{ID: 2, Name: "newusername", LoginName: "otherlogin", Email: "new@e-mail.proxgit"})
+>>>>>>> master
 }
 
 func testSuccessfullEdit(t *testing.T, formData user_model.User) {

@@ -8,8 +8,13 @@ import (
 	"errors"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/auth/password/pwn"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/auth/password/pwn"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 var ErrIsPwned = errors.New("password has been pwned")

@@ -11,7 +11,11 @@ import (
 	"text/template"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/kballard/go-shellquote"
 )

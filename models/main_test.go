@@ -6,6 +6,7 @@ package models
 import (
 	"testing"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/organization"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -14,6 +15,16 @@ import (
 
 	_ "code.gitea.io/gitea/models/actions"
 	_ "code.gitea.io/gitea/models/system"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/organization"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+
+	_ "code.proxgit.io/proxgit/models/actions"
+	_ "code.proxgit.io/proxgit/models/system"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

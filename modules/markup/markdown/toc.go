@@ -6,7 +6,11 @@ package markdown
 import (
 	"net/url"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 )

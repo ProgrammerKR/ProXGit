@@ -8,7 +8,11 @@ import (
 	"strings"
 	"unicode/utf8"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // ErrNameReserved represents a "reserved name" error.

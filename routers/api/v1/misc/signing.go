@@ -6,8 +6,13 @@ package misc
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	asymkey_service "code.gitea.io/gitea/services/asymkey"
 	"code.gitea.io/gitea/services/context"
+=======
+	asymkey_service "code.proxgit.io/proxgit/services/asymkey"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // SigningKey returns the public key of the default signing key if it exists

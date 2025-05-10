@@ -6,7 +6,11 @@ package common
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/httplib"
+=======
+	"code.proxgit.io/proxgit/modules/httplib"
+>>>>>>> master
 )
 
 // FetchRedirectDelegate helps the "fetch" requests to redirect to the correct location

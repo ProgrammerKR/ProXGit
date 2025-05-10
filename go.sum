@@ -1,11 +1,20 @@
 cloud.google.com/go/compute/metadata v0.6.0 h1:A6hENjEsCDtC1k8byVsgwvVcioamEHvZ4j01OwKxG9I=
 cloud.google.com/go/compute/metadata v0.6.0/go.mod h1:FjyFAW1MW0C203CEOMDTu3Dk1FlqW3Rga40jzHL4hfg=
+<<<<<<< HEAD
 code.gitea.io/actions-proto-go v0.4.1 h1:l0EYhjsgpUe/1VABo2eK7zcoNX2W44WOnb0MSLrKfls=
 code.gitea.io/actions-proto-go v0.4.1/go.mod h1:mn7Wkqz6JbnTOHQpot3yDeHx+O5C9EGhMEE+htvHBas=
 code.gitea.io/gitea-vet v0.2.3 h1:gdFmm6WOTM65rE8FUBTRzeQZYzXePKSSB1+r574hWwI=
 code.gitea.io/gitea-vet v0.2.3/go.mod h1:zcNbT/aJEmivCAhfmkHOlT645KNOf9W2KnkLgFjGGfE=
 code.gitea.io/sdk/gitea v0.21.0 h1:69n6oz6kEVHRo1+APQQyizkhrZrLsTLXey9142pfkD4=
 code.gitea.io/sdk/gitea v0.21.0/go.mod h1:tnBjVhuKJCn8ibdyyhvUyxrR1Ca2KHEoTWoukNhXQPA=
+=======
+code.proxgit.io/actions-proto-go v0.4.1 h1:l0EYhjsgpUe/1VABo2eK7zcoNX2W44WOnb0MSLrKfls=
+code.proxgit.io/actions-proto-go v0.4.1/go.mod h1:mn7Wkqz6JbnTOHQpot3yDeHx+O5C9EGhMEE+htvHBas=
+code.proxgit.io/proxgit-vet v0.2.3 h1:gdFmm6WOTM65rE8FUBTRzeQZYzXePKSSB1+r574hWwI=
+code.proxgit.io/proxgit-vet v0.2.3/go.mod h1:zcNbT/aJEmivCAhfmkHOlT645KNOf9W2KnkLgFjGGfE=
+code.proxgit.io/sdk/proxgit v0.21.0 h1:69n6oz6kEVHRo1+APQQyizkhrZrLsTLXey9142pfkD4=
+code.proxgit.io/sdk/proxgit v0.21.0/go.mod h1:tnBjVhuKJCn8ibdyyhvUyxrR1Ca2KHEoTWoukNhXQPA=
+>>>>>>> master
 codeberg.org/gusted/mcaptcha v0.0.0-20220723083913-4f3072e1d570 h1:TXbikPqa7YRtfU9vS6QJBg77pUvbEb6StRdZO8t1bEY=
 codeberg.org/gusted/mcaptcha v0.0.0-20220723083913-4f3072e1d570/go.mod h1:IIAjsijsd8q1isWX8MACefDEgTQslQ4stk2AeeTt3kM=
 connectrpc.com/connect v1.18.1 h1:PAg7CjSAGvscaf6YZKUefjoih5Z/qYkyaTrBW8xvYPw=
@@ -14,6 +23,7 @@ dario.cat/mergo v1.0.1 h1:Ra4+bf83h2ztPIQYNP99R6m+Y7KfnARDfID+a+vLl4s=
 dario.cat/mergo v1.0.1/go.mod h1:uNxQE+84aUszobStD9th8a29P2fMDhsBdgRYvZOxGmk=
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
 filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
+<<<<<<< HEAD
 gitea.com/gitea/act v0.261.4 h1:Tf9eLlvsYFtKcpuxlMvf9yT3g4Hshb2Beqw6C1STuH8=
 gitea.com/gitea/act v0.261.4/go.mod h1:Pg5C9kQY1CEA3QjthjhlrqOC/QOT5NyWNjOjRHw23Ok=
 gitea.com/gitea/git-lfs-transfer v0.2.0 h1:baHaNoBSRaeq/xKayEXwiDQtlIjps4Ac/Ll4KqLMB40=
@@ -34,6 +44,28 @@ gitea.com/lunny/levelqueue v0.4.2-0.20230414023320-3c0159fe0fe4 h1:IFT+hup2xejHq
 gitea.com/lunny/levelqueue v0.4.2-0.20230414023320-3c0159fe0fe4/go.mod h1:HBqmLbz56JWpfEGG0prskAV97ATNRoj5LDmPicD22hU=
 gitea.com/xorm/sqlfiddle v0.0.0-20180821085327-62ce714f951a h1:lSA0F4e9A2NcQSqGqTOXqu2aRi/XEQxDCBwM8yJtE6s=
 gitea.com/xorm/sqlfiddle v0.0.0-20180821085327-62ce714f951a/go.mod h1:EXuID2Zs0pAQhH8yz+DNjUbjppKQzKFAn28TMYPB6IU=
+=======
+proxgit.com/proxgit/act v0.261.4 h1:Tf9eLlvsYFtKcpuxlMvf9yT3g4Hshb2Beqw6C1STuH8=
+proxgit.com/proxgit/act v0.261.4/go.mod h1:Pg5C9kQY1CEA3QjthjhlrqOC/QOT5NyWNjOjRHw23Ok=
+proxgit.com/proxgit/git-lfs-transfer v0.2.0 h1:baHaNoBSRaeq/xKayEXwiDQtlIjps4Ac/Ll4KqLMB40=
+proxgit.com/proxgit/git-lfs-transfer v0.2.0/go.mod h1:UrXUCm3xLQkq15fu7qlXHUMlrhdlXHoi13KH2Dfiits=
+proxgit.com/proxgit/go-xsd-duration v0.0.0-20220703122237-02e73435a078 h1:BAFmdZpRW7zMQZQDClaCWobRj9uL1MR3MzpCVJvc5s4=
+proxgit.com/proxgit/go-xsd-duration v0.0.0-20220703122237-02e73435a078/go.mod h1:g/V2Hjas6Z1UHUp4yIx6bATpNzJ7DYtD0FG3+xARWxs=
+proxgit.com/go-chi/binding v0.0.0-20240430071103-39a851e106ed h1:EZZBtilMLSZNWtHHcgq2mt6NSGhJSZBuduAlinMEmso=
+proxgit.com/go-chi/binding v0.0.0-20240430071103-39a851e106ed/go.mod h1:E3i3cgB04dDx0v3CytCgRTTn9Z/9x891aet3r456RVw=
+proxgit.com/go-chi/cache v0.2.1 h1:bfAPkvXlbcZxPCpcmDVCWoHgiBSBmZN/QosnZvEC0+g=
+proxgit.com/go-chi/cache v0.2.1/go.mod h1:Qic0HZ8hOHW62ETGbonpwz8WYypj9NieU9659wFUJ8Q=
+proxgit.com/go-chi/captcha v0.0.0-20240315150714-fb487f629098 h1:p2ki+WK0cIeNQuqjR98IP2KZQKRzJJiV7aTeMAFwaWo=
+proxgit.com/go-chi/captcha v0.0.0-20240315150714-fb487f629098/go.mod h1:LjzIOHlRemuUyO7WR12fmm18VZIlCAaOt9L3yKw40pk=
+proxgit.com/go-chi/session v0.0.0-20240316035857-16768d98ec96 h1:IFDiMBObsP6CZIRaDLd54SR6zPYAffPXiXck5Xslu0Q=
+proxgit.com/go-chi/session v0.0.0-20240316035857-16768d98ec96/go.mod h1:0iEpFKnwO5dG0aF98O4eq6FMsAiXkNBaDIlUOlq4BtM=
+proxgit.com/lunny/dingtalk_webhook v0.0.0-20171025031554-e3534c89ef96 h1:+wWBi6Qfruqu7xJgjOIrKVQGiLUZdpKYCZewJ4clqhw=
+proxgit.com/lunny/dingtalk_webhook v0.0.0-20171025031554-e3534c89ef96/go.mod h1:VyMQP6ue6MKHM8UsOXfNfuMKD0oSAWZdXVcpHIN2yaY=
+proxgit.com/lunny/levelqueue v0.4.2-0.20230414023320-3c0159fe0fe4 h1:IFT+hup2xejHqdhS7keYWioqfmxdnfblFDTGoOwcZ+o=
+proxgit.com/lunny/levelqueue v0.4.2-0.20230414023320-3c0159fe0fe4/go.mod h1:HBqmLbz56JWpfEGG0prskAV97ATNRoj5LDmPicD22hU=
+proxgit.com/xorm/sqlfiddle v0.0.0-20180821085327-62ce714f951a h1:lSA0F4e9A2NcQSqGqTOXqu2aRi/XEQxDCBwM8yJtE6s=
+proxgit.com/xorm/sqlfiddle v0.0.0-20180821085327-62ce714f951a/go.mod h1:EXuID2Zs0pAQhH8yz+DNjUbjppKQzKFAn28TMYPB6IU=
+>>>>>>> master
 github.com/42wim/httpsig v1.2.2 h1:ofAYoHUNs/MJOLqQ8hIxeyz2QxOz8qdSVvp3PX/oPgA=
 github.com/42wim/httpsig v1.2.2/go.mod h1:P/UYo7ytNBFwc+dg35IubuAUIs8zj5zzFIgUCEl55WY=
 github.com/42wim/sshsig v0.0.0-20240818000253-e3a6333df815 h1:5EoemV++kUK2Sw98yWP/RWyduvP7IaBgWWHe+4BWcSw=

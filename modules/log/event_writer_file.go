@@ -6,8 +6,13 @@ package log
 import (
 	"io"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/modules/util/rotatingfilewriter"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/util/rotatingfilewriter"
+>>>>>>> master
 )
 
 type WriterFileOption struct {

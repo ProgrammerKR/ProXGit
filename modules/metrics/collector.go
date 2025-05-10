@@ -6,17 +6,30 @@ package metrics
 import (
 	"runtime"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/prometheus/client_golang/prometheus"
 )
 
+<<<<<<< HEAD
 const namespace = "gitea_"
 
 // Collector implements the prometheus.Collector interface and
 // exposes gitea metrics for prometheus
+=======
+const namespace = "proxgit_"
+
+// Collector implements the prometheus.Collector interface and
+// exposes proxgit metrics for prometheus
+>>>>>>> master
 type Collector struct {
 	Accesses           *prometheus.Desc
 	Attachments        *prometheus.Desc

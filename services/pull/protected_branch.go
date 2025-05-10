@@ -6,9 +6,15 @@ package pull
 import (
 	"context"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/gitrepo"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+>>>>>>> master
 )
 
 func CreateOrUpdateProtectedBranch(ctx context.Context, repo *repo_model.Repository,

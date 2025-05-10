@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"time"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/git"
@@ -16,6 +17,16 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	ctx "code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/gitdiff"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/util"
+	ctx "code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/gitdiff"
+>>>>>>> master
 )
 
 // ToCommitUser convert a git.Signature to an api.CommitUser

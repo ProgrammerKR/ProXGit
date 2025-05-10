@@ -6,7 +6,11 @@ package asymkey
 import (
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 // ErrKeyUnableVerify represents a "KeyUnableVerify" kind of error.

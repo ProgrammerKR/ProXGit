@@ -7,7 +7,11 @@ import (
 	"bytes"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+>>>>>>> master
 
 	"github.com/microcosm-cc/bluemonday/css"
 	"github.com/yuin/goldmark/ast"

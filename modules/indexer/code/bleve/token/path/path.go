@@ -12,7 +12,11 @@ import (
 )
 
 const (
+<<<<<<< HEAD
 	Name = "gitea/path"
+=======
+	Name = "proxgit/path"
+>>>>>>> master
 )
 
 type TokenFilter struct{}

@@ -7,6 +7,7 @@ package mailer
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/queue"
@@ -14,6 +15,15 @@ import (
 	"code.gitea.io/gitea/modules/templates"
 	sender_service "code.gitea.io/gitea/services/mailer/sender"
 	notify_service "code.gitea.io/gitea/services/notify"
+=======
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/queue"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	sender_service "code.proxgit.io/proxgit/services/mailer/sender"
+	notify_service "code.proxgit.io/proxgit/services/notify"
+>>>>>>> master
 )
 
 var mailQueue *queue.WorkerPoolQueue[*sender_service.Message]

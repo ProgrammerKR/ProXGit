@@ -10,7 +10,11 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 )
 
 func wrapNewlines(w io.Writer, prefix, value []byte) (sum int64, err error) {

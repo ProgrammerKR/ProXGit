@@ -6,9 +6,15 @@ package repo_test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -75,7 +81,11 @@ func TestAttachment_DownloadURL(t *testing.T) {
 		UUID: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
 		ID:   1,
 	}
+<<<<<<< HEAD
 	assert.Equal(t, "https://try.gitea.io/attachments/a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11", attach.DownloadURL())
+=======
+	assert.Equal(t, "https://try.proxgit.io/attachments/a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11", attach.DownloadURL())
+>>>>>>> master
 }
 
 func TestUpdateAttachment(t *testing.T) {

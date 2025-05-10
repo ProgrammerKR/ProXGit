@@ -17,10 +17,17 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/storage"
+=======
+	"code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/storage"
+>>>>>>> master
 )
 
 func saveUploadChunkBase(st storage.ObjectStorage, ctx *ArtifactContext,

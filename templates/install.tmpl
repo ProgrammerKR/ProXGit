@@ -8,7 +8,11 @@
 			<div class="ui attached segment">
 				{{template "base/alert" .}}
 
+<<<<<<< HEAD
 				<p>{{ctx.Locale.Tr "install.docker_helper" "https://docs.gitea.com/installation/install-with-docker"}}</p>
+=======
+				<p>{{ctx.Locale.Tr "install.docker_helper" "https://docs.proxgit.com/installation/install-with-docker"}}</p>
+>>>>>>> master
 
 				<form class="ui form" action="{{AppSubUrl}}/" method="post">
 					<!-- Database Settings -->
@@ -124,7 +128,11 @@
 					</div>
 					<div class="inline required field">
 						<label for="domain">{{ctx.Locale.Tr "install.domain"}}</label>
+<<<<<<< HEAD
 						<input id="domain" name="domain" value="{{.domain}}" placeholder="demo.gitea.com" required>
+=======
+						<input id="domain" name="domain" value="{{.domain}}" placeholder="demo.proxgit.com" required>
+>>>>>>> master
 						<span class="help">{{ctx.Locale.Tr "install.domain_helper"}}</span>
 					</div>
 					<div class="inline field">
@@ -139,7 +147,11 @@
 					</div>
 					<div class="inline required field">
 						<label for="app_url">{{ctx.Locale.Tr "install.app_url"}}</label>
+<<<<<<< HEAD
 						<input id="app_url" name="app_url" value="{{.app_url}}" placeholder="https://demo.gitea.com" required>
+=======
+						<input id="app_url" name="app_url" value="{{.app_url}}" placeholder="https://demo.proxgit.com" required>
+>>>>>>> master
 						<span class="help">{{ctx.Locale.Tr "install.app_url_helper"}}</span>
 					</div>
 					<div class="inline required field">

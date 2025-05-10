@@ -12,6 +12,7 @@ import (
 	"slices"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	project_model "code.gitea.io/gitea/models/project"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -23,6 +24,19 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/timeutil"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	project_model "code.proxgit.io/proxgit/models/project"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/container"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"xorm.io/builder"
 )
@@ -556,9 +570,15 @@ func FindIssuesSuggestionByKeyword(ctx context.Context, repoID int64, keyword st
 	}
 
 	// It seems that GitHub searches both title and content (maybe sorting by the search engine's ranking system?)
+<<<<<<< HEAD
 	// The first PR (https://github.com/go-gitea/gitea/pull/32327) uses "search indexer" to search "name(title) +  content"
 	// But it seems that searching "content" (especially LIKE by DB engine) generates worse (unusable) results.
 	// So now (https://github.com/go-gitea/gitea/pull/33538) it only searches "name(title)", leave the improvements to the future.
+=======
+	// The first PR (https://github.com/go-proxgit/proxgit/pull/32327) uses "search indexer" to search "name(title) +  content"
+	// But it seems that searching "content" (especially LIKE by DB engine) generates worse (unusable) results.
+	// So now (https://github.com/go-proxgit/proxgit/pull/33538) it only searches "name(title)", leave the improvements to the future.
+>>>>>>> master
 	cond = cond.And(db.BuildCaseInsensitiveLike("`name`", keyword))
 
 	issues := make([]*Issue, 0, pageSize)

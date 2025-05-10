@@ -14,6 +14,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	db_install "code.gitea.io/gitea/models/db/install"
 	system_model "code.gitea.io/gitea/models/system"
@@ -38,6 +39,32 @@ import (
 	"code.gitea.io/gitea/services/versioned_migration"
 
 	"gitea.com/go-chi/session"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	db_install "code.proxgit.io/proxgit/models/db/install"
+	system_model "code.proxgit.io/proxgit/models/system"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/auth/password/hash"
+	"code.proxgit.io/proxgit/modules/generate"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/timeutil"
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/modules/user"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	"code.proxgit.io/proxgit/routers/common"
+	auth_service "code.proxgit.io/proxgit/services/auth"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	"code.proxgit.io/proxgit/services/versioned_migration"
+
+	"proxgit.com/go-chi/session"
+>>>>>>> master
 )
 
 const (
@@ -178,7 +205,11 @@ func checkDatabase(ctx *context.Context, form *forms.InstallForm) bool {
 	if err = db.InitEngine(ctx); err != nil {
 		if strings.Contains(err.Error(), `Unknown database type: sqlite3`) {
 			ctx.Data["Err_DbType"] = true
+<<<<<<< HEAD
 			ctx.RenderWithErr(ctx.Tr("install.sqlite3_not_available", "https://docs.gitea.com/installation/install-from-binary"), tplInstall, form)
+=======
+			ctx.RenderWithErr(ctx.Tr("install.sqlite3_not_available", "https://docs.proxgit.com/installation/install-from-binary"), tplInstall, form)
+>>>>>>> master
 		} else {
 			ctx.Data["Err_DbSetting"] = true
 			ctx.RenderWithErr(ctx.Tr("install.invalid_db_setting", err), tplInstall, form)

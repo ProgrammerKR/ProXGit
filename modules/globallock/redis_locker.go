@@ -10,13 +10,21 @@ import (
 	"sync/atomic"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/nosql"
+=======
+	"code.proxgit.io/proxgit/modules/nosql"
+>>>>>>> master
 
 	"github.com/go-redsync/redsync/v4"
 	"github.com/go-redsync/redsync/v4/redis/goredis/v9"
 )
 
+<<<<<<< HEAD
 const redisLockKeyPrefix = "gitea:globallock:"
+=======
+const redisLockKeyPrefix = "proxgit:globallock:"
+>>>>>>> master
 
 // redisLockExpiry is the default expiry time for a lock.
 // Define it as a variable to make it possible to change it in tests.

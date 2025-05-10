@@ -14,8 +14,13 @@ import (
 	_ "image/gif"  // for processing gif images
 	_ "image/jpeg" // for processing jpeg images
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/avatar/identicon"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/avatar/identicon"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"golang.org/x/image/draw"
 

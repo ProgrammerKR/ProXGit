@@ -11,6 +11,7 @@ import (
 	neturl "net/url"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -20,6 +21,17 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/routers/api/packages/composer"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	composer_module "code.proxgit.io/proxgit/modules/packages/composer"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/routers/api/packages/composer"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -29,7 +41,11 @@ func TestPackageComposer(t *testing.T) {
 
 	user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
+<<<<<<< HEAD
 	vendorName := "gitea"
+=======
+	vendorName := "proxgit"
+>>>>>>> master
 	projectName := "composer-package"
 	packageName := vendorName + "/" + projectName
 	packageVersion := "1.0.3"
@@ -159,11 +175,19 @@ func TestPackageComposer(t *testing.T) {
 			{"", "", 0, 0, 1, 1},
 			{"", "", 1, 1, 1, 1},
 			{"test", "", 1, 0, 0, 0},
+<<<<<<< HEAD
 			{"gitea", "", 1, 1, 1, 1},
 			{"gitea", "", 2, 1, 1, 0},
 			{"", packageType, 1, 1, 1, 1},
 			{"gitea", packageType, 1, 1, 1, 1},
 			{"gitea", "dummy", 1, 1, 0, 0},
+=======
+			{"proxgit", "", 1, 1, 1, 1},
+			{"proxgit", "", 2, 1, 1, 0},
+			{"", packageType, 1, 1, 1, 1},
+			{"proxgit", packageType, 1, 1, 1, 1},
+			{"proxgit", "dummy", 1, 1, 0, 0},
+>>>>>>> master
 		}
 
 		for i, c := range cases {

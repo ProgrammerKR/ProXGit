@@ -4,8 +4,13 @@
 package math
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup/internal"
 	giteaUtil "code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/markup/internal"
+	proxgitUtil "code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/parser"
@@ -29,7 +34,11 @@ type Extension struct {
 
 // NewExtension creates a new math extension with the provided options
 func NewExtension(renderInternal *internal.RenderInternal, opts ...Options) *Extension {
+<<<<<<< HEAD
 	opt := giteaUtil.OptionalArg(opts)
+=======
+	opt := proxgitUtil.OptionalArg(opts)
+>>>>>>> master
 	r := &Extension{
 		renderInternal: renderInternal,
 		options:        opt,

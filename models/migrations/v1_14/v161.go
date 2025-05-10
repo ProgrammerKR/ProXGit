@@ -6,7 +6,11 @@ package v1_14 //nolint
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )
@@ -26,7 +30,11 @@ func ConvertTaskTypeToString(x *xorm.Engine) error {
 	)
 
 	hookTaskTypes := map[int]string{
+<<<<<<< HEAD
 		GITEA:      "gitea",
+=======
+		GITEA:      "proxgit",
+>>>>>>> master
 		GOGS:       "gogs",
 		SLACK:      "slack",
 		DISCORD:    "discord",

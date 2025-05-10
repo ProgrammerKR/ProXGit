@@ -7,9 +7,15 @@ import (
 	"context"
 	"net/http"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/reqctx"
 	"code.gitea.io/gitea/modules/session"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/reqctx"
+	"code.proxgit.io/proxgit/modules/session"
+>>>>>>> master
 )
 
 type DataStore = reqctx.ContextDataProvider

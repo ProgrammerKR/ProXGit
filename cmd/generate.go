@@ -8,7 +8,11 @@ import (
 	"fmt"
 	"os"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/generate"
+=======
+	"code.proxgit.io/proxgit/modules/generate"
+>>>>>>> master
 
 	"github.com/mattn/go-isatty"
 	"github.com/urfave/cli/v2"

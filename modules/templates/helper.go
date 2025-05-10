@@ -13,6 +13,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/base"
 	"code.gitea.io/gitea/modules/htmlutil"
@@ -23,6 +24,18 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/services/gitdiff"
 	"code.gitea.io/gitea/services/webtheme"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/base"
+	"code.proxgit.io/proxgit/modules/htmlutil"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/svg"
+	"code.proxgit.io/proxgit/modules/templates/eval"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/services/gitdiff"
+	"code.proxgit.io/proxgit/services/webtheme"
+>>>>>>> master
 )
 
 // NewFuncMap returns functions for injecting to templates

@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
 	user_model "code.gitea.io/gitea/models/user"
@@ -19,6 +20,19 @@ import (
 	"code.gitea.io/gitea/services/forms"
 	cargo_service "code.gitea.io/gitea/services/packages/cargo"
 	container_service "code.gitea.io/gitea/services/packages/container"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	cargo_service "code.proxgit.io/proxgit/services/packages/cargo"
+	container_service "code.proxgit.io/proxgit/services/packages/container"
+>>>>>>> master
 )
 
 func SetPackagesContext(ctx *context.Context, owner *user_model.User) {

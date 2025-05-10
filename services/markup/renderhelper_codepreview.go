@@ -10,6 +10,7 @@ import (
 	"html/template"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/perm/access"
 	"code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unit"
@@ -21,6 +22,19 @@ import (
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 	gitea_context "code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/perm/access"
+	"code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unit"
+	"code.proxgit.io/proxgit/modules/charset"
+	"code.proxgit.io/proxgit/modules/git/languagestats"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/indexer/code"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func renderRepoFileCodePreview(ctx context.Context, opts markup.RenderCodePreviewOptions) (template.HTML, error) {
@@ -36,7 +50,11 @@ func renderRepoFileCodePreview(ctx context.Context, opts markup.RenderCodePrevie
 		return "", err
 	}
 
+<<<<<<< HEAD
 	webCtx := gitea_context.GetWebContext(ctx)
+=======
+	webCtx := proxgit_context.GetWebContext(ctx)
+>>>>>>> master
 	if webCtx == nil {
 		return "", errors.New("context is not a web context")
 	}

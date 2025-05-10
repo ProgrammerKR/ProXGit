@@ -70,7 +70,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_PID=Standard" -e "SA_PASSWORD=MwantsaSec
 ```
 之后便可以基于这个数据库进行集成测试
 ```
+<<<<<<< HEAD
 TEST_MSSQL_HOST=localhost:1433 TEST_MSSQL_DBNAME=gitea_test TEST_MSSQL_USERNAME=sa TEST_MSSQL_PASSWORD=MwantsaSecurePassword1 make test-mssql
+=======
+TEST_MSSQL_HOST=localhost:1433 TEST_MSSQL_DBNAME=proxgit_test TEST_MSSQL_USERNAME=sa TEST_MSSQL_PASSWORD=MwantsaSecurePassword1 make test-mssql
+>>>>>>> master
 ```
 
 ## 如何进行自定义的集成测试

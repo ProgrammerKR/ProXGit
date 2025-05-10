@@ -6,10 +6,17 @@ package stats
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/graceful"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // Indexer defines an interface to index repository stats
@@ -55,7 +62,11 @@ func populateRepoIndexer(ctx context.Context) {
 	}
 
 	// start with the maximum existing repo ID and work backwards, so that we
+<<<<<<< HEAD
 	// don't include repos that are created after gitea starts; such repos will
+=======
+	// don't include repos that are created after proxgit starts; such repos will
+>>>>>>> master
 	// already be added to the indexer, and we don't need to add them again.
 	for maxRepoID > 0 {
 		select {

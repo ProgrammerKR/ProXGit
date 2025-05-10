@@ -8,8 +8,13 @@ import (
 	"strings"
 	"unicode"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/git/attribute"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/git/attribute"
+>>>>>>> master
 )
 
 const (

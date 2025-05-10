@@ -71,7 +71,11 @@ func loadDBSetting(rootCfg ConfigProvider) {
 	Database.SSLMode = sec.Key("SSL_MODE").MustString("disable")
 	Database.CharsetCollation = sec.Key("CHARSET_COLLATION").String()
 
+<<<<<<< HEAD
 	Database.Path = sec.Key("PATH").MustString(filepath.Join(AppDataPath, "gitea.db"))
+=======
+	Database.Path = sec.Key("PATH").MustString(filepath.Join(AppDataPath, "proxgit.db"))
+>>>>>>> master
 	Database.Timeout = sec.Key("SQLITE_TIMEOUT").MustInt(500)
 	Database.SQLiteJournalMode = sec.Key("SQLITE_JOURNAL_MODE").MustString("")
 

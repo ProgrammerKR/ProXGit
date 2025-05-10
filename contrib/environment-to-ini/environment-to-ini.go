@@ -6,8 +6,13 @@ package main
 import (
 	"os"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )
@@ -16,7 +21,11 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "environment-to-ini"
 	app.Usage = "Use provided environment to update configuration ini"
+<<<<<<< HEAD
 	app.Description = `As a helper to allow docker users to update the gitea configuration
+=======
+	app.Description = `As a helper to allow docker users to update the proxgit configuration
+>>>>>>> master
 	through the environment, this command allows environment variables to
 	be mapped to values in the ini.
 
@@ -62,7 +71,11 @@ func main() {
 			Name:    "work-path",
 			Aliases: []string{"w"},
 			Value:   setting.AppWorkPath,
+<<<<<<< HEAD
 			Usage:   "Set the gitea working path",
+=======
+			Usage:   "Set the proxgit working path",
+>>>>>>> master
 		},
 		&cli.StringFlag{
 			Name:    "out",

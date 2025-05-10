@@ -11,13 +11,21 @@ SSL_MODE = disable
 
 [indexer]
 REPO_INDEXER_ENABLED = true
+<<<<<<< HEAD
 REPO_INDEXER_PATH = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mysql/indexers/repos.bleve
+=======
+REPO_INDEXER_PATH = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mysql/indexers/repos.bleve
+>>>>>>> master
 ISSUE_INDEXER_TYPE = elasticsearch
 ISSUE_INDEXER_CONN_STR = http://elastic:changeme@elasticsearch:9200
 
 [queue.issue_indexer]
 TYPE = level
+<<<<<<< HEAD
 DATADIR = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mysql/indexers/issues.queue
+=======
+DATADIR = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mysql/indexers/issues.queue
+>>>>>>> master
 
 [queue]
 TYPE = immediate
@@ -32,6 +40,7 @@ TYPE = immediate
 TYPE = immediate
 
 [repository]
+<<<<<<< HEAD
 ROOT = {{REPO_TEST_DIR}}tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mysql/gitea-repositories
 
 [repository.local]
@@ -39,6 +48,15 @@ LOCAL_COPY_PATH = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mysql/tmp/local-repo
 
 [repository.upload]
 TEMP_PATH = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mysql/tmp/uploads
+=======
+ROOT = {{REPO_TEST_DIR}}tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mysql/proxgit-repositories
+
+[repository.local]
+LOCAL_COPY_PATH = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mysql/tmp/local-repo
+
+[repository.upload]
+TEMP_PATH = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mysql/tmp/uploads
+>>>>>>> master
 
 [repository.signing]
 SIGNING_KEY = none
@@ -51,7 +69,11 @@ LOCAL_ROOT_URL   = http://127.0.0.1:3001/
 DISABLE_SSH      = false
 SSH_LISTEN_HOST  = localhost
 SSH_PORT         = 2201
+<<<<<<< HEAD
 APP_DATA_PATH    = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mysql/data
+=======
+APP_DATA_PATH    = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mysql/data
+>>>>>>> master
 BUILTIN_SSH_SERVER_USER = git
 START_SSH_SERVER = true
 OFFLINE_MODE     = false
@@ -63,7 +85,11 @@ SSH_TRUSTED_USER_CA_KEYS = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCb4DC1dMFnJ6pXW
 [mailer]
 ENABLED = true
 PROTOCOL = dummy
+<<<<<<< HEAD
 FROM = mysql-{{TEST_TYPE}}-test@gitea.io
+=======
+FROM = mysql-{{TEST_TYPE}}-test@proxgit.io
+>>>>>>> master
 
 [service]
 REGISTER_EMAIL_CONFIRM            = false
@@ -82,7 +108,11 @@ ENABLE_FEDERATED_AVATAR       = false
 
 [session]
 PROVIDER        = file
+<<<<<<< HEAD
 PROVIDER_CONFIG = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mysql/data/sessions
+=======
+PROVIDER_CONFIG = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mysql/data/sessions
+>>>>>>> master
 
 [log]
 MODE                 = {{TEST_LOGGER}}
@@ -104,7 +134,11 @@ INTERNAL_TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE0OTU1NTE2MTh9.h
 DISABLE_QUERY_AUTH_TOKEN = true
 
 [lfs]
+<<<<<<< HEAD
 PATH = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mysql/data/lfs
+=======
+PATH = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mysql/data/lfs
+>>>>>>> master
 
 [packages]
 ENABLED = true

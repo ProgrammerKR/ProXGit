@@ -16,6 +16,7 @@ import (
 	"testing"
 	texttmpl "text/template"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	issues_model "code.gitea.io/gitea/models/issues"
@@ -28,6 +29,20 @@ import (
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/services/attachment"
 	sender_service "code.gitea.io/gitea/services/mailer/sender"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/storage"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/services/attachment"
+	sender_service "code.proxgit.io/proxgit/services/mailer/sender"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -58,9 +73,15 @@ const bodyTpl = `
 
 func prepareMailerTest(t *testing.T) (doer *user_model.User, repo *repo_model.Repository, issue *issues_model.Issue, comment *issues_model.Comment) {
 	assert.NoError(t, unittest.PrepareTestDatabase())
+<<<<<<< HEAD
 	setting.MailService = &setting.Mailer{From: "test@gitea.com"}
 	setting.Domain = "localhost"
 	setting.AppURL = "https://try.gitea.io/"
+=======
+	setting.MailService = &setting.Mailer{From: "test@proxgit.com"}
+	setting.Domain = "localhost"
+	setting.AppURL = "https://try.proxgit.io/"
+>>>>>>> master
 
 	doer = unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 	repo = unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: 1, Owner: doer})
@@ -110,7 +131,11 @@ func TestComposeIssueComment(t *testing.T) {
 	subjectTemplates = texttmpl.Must(texttmpl.New("issue/comment").Parse(subjectTpl))
 	bodyTemplates = template.Must(template.New("issue/comment").Parse(bodyTpl))
 
+<<<<<<< HEAD
 	recipients := []*user_model.User{{Name: "Test", Email: "test@gitea.com"}, {Name: "Test2", Email: "test2@gitea.com"}}
+=======
+	recipients := []*user_model.User{{Name: "Test", Email: "test@proxgit.com"}, {Name: "Test2", Email: "test2@proxgit.com"}}
+>>>>>>> master
 	msgs, err := composeIssueCommentMessages(t.Context(), &mailComment{
 		Issue: issue, Doer: doer, ActionType: activities_model.ActionCommentIssue,
 		Content: fmt.Sprintf("test @%s %s#%d body", doer.Name, issue.Repo.FullName(), issue.Index),
@@ -172,7 +197,11 @@ func TestComposeIssueMessage(t *testing.T) {
 	subjectTemplates = texttmpl.Must(texttmpl.New("issue/new").Parse(subjectTpl))
 	bodyTemplates = template.Must(template.New("issue/new").Parse(bodyTpl))
 
+<<<<<<< HEAD
 	recipients := []*user_model.User{{Name: "Test", Email: "test@gitea.com"}, {Name: "Test2", Email: "test2@gitea.com"}}
+=======
+	recipients := []*user_model.User{{Name: "Test", Email: "test@proxgit.com"}, {Name: "Test2", Email: "test2@proxgit.com"}}
+>>>>>>> master
 	msgs, err := composeIssueCommentMessages(t.Context(), &mailComment{
 		Issue: issue, Doer: doer, ActionType: activities_model.ActionCreateIssue,
 		Content: "test body",
@@ -198,7 +227,11 @@ func TestComposeIssueMessage(t *testing.T) {
 
 func TestTemplateSelection(t *testing.T) {
 	doer, repo, issue, comment := prepareMailerTest(t)
+<<<<<<< HEAD
 	recipients := []*user_model.User{{Name: "Test", Email: "test@gitea.com"}}
+=======
+	recipients := []*user_model.User{{Name: "Test", Email: "test@proxgit.com"}}
+>>>>>>> master
 
 	subjectTemplates = texttmpl.Must(texttmpl.New("issue/default").Parse("issue/default/subject"))
 	texttmpl.Must(subjectTemplates.New("issue/new").Parse("issue/new/subject"))
@@ -256,7 +289,11 @@ func TestTemplateServices(t *testing.T) {
 		subjectTemplates = texttmpl.Must(texttmpl.New("issue/default").Parse(tplSubject))
 		bodyTemplates = template.Must(template.New("issue/default").Parse(tplBody))
 
+<<<<<<< HEAD
 		recipients := []*user_model.User{{Name: "Test", Email: "test@gitea.com"}}
+=======
+		recipients := []*user_model.User{{Name: "Test", Email: "test@proxgit.com"}}
+>>>>>>> master
 		msg := testComposeIssueCommentMessage(t, &mailComment{
 			Issue: issue, Doer: doer, ActionType: actionType,
 			Content: "test body", Comment: comment,
@@ -301,12 +338,17 @@ func TestGenerateAdditionalHeaders(t *testing.T) {
 	doer, _, issue, _ := prepareMailerTest(t)
 
 	comment := &mailComment{Issue: issue, Doer: doer}
+<<<<<<< HEAD
 	recipient := &user_model.User{Name: "test", Email: "test@gitea.com"}
+=======
+	recipient := &user_model.User{Name: "test", Email: "test@proxgit.com"}
+>>>>>>> master
 
 	headers := generateAdditionalHeaders(comment, "dummy-reason", recipient)
 
 	expected := map[string]string{
 		"List-ID":                   "user2/repo1 <repo1.user2.localhost>",
+<<<<<<< HEAD
 		"List-Archive":              "<https://try.gitea.io/user2/repo1>",
 		"X-Gitea-Reason":            "dummy-reason",
 		"X-Gitea-Sender":            "user2",
@@ -317,6 +359,18 @@ func TestGenerateAdditionalHeaders(t *testing.T) {
 		"X-Gitea-Repository-Link":   "https://try.gitea.io/user2/repo1",
 		"X-Gitea-Issue-ID":          "1",
 		"X-Gitea-Issue-Link":        "https://try.gitea.io/user2/repo1/issues/1",
+=======
+		"List-Archive":              "<https://try.proxgit.io/user2/repo1>",
+		"X-Gitea-Reason":            "dummy-reason",
+		"X-Gitea-Sender":            "user2",
+		"X-Gitea-Recipient":         "test",
+		"X-Gitea-Recipient-Address": "test@proxgit.com",
+		"X-Gitea-Repository":        "repo1",
+		"X-Gitea-Repository-Path":   "user2/repo1",
+		"X-Gitea-Repository-Link":   "https://try.proxgit.io/user2/repo1",
+		"X-Gitea-Issue-ID":          "1",
+		"X-Gitea-Issue-Link":        "https://try.proxgit.io/user2/repo1/issues/1",
+>>>>>>> master
 	}
 
 	for key, value := range expected {
@@ -518,7 +572,11 @@ func TestEmbedBase64Images(t *testing.T) {
 		issue.Content = fmt.Sprintf(`MSG-BEFORE <image src="attachments/%s"> MSG-AFTER`, att1.UUID)
 		require.NoError(t, issues_model.UpdateIssueCols(t.Context(), issue, "content"))
 
+<<<<<<< HEAD
 		recipients := []*user_model.User{{Name: "Test", Email: "test@gitea.com"}}
+=======
+		recipients := []*user_model.User{{Name: "Test", Email: "test@proxgit.com"}}
+>>>>>>> master
 		msgs, err := composeIssueCommentMessages(t.Context(), &mailComment{
 			Issue:      issue,
 			Doer:       user,

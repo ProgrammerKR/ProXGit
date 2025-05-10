@@ -7,8 +7,13 @@ import (
 	"os"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/generate"
 	"code.gitea.io/gitea/modules/test"
+=======
+	"code.proxgit.io/proxgit/modules/generate"
+	"code.proxgit.io/proxgit/modules/test"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

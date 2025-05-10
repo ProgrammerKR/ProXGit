@@ -6,7 +6,11 @@ package templates
 import (
 	"html/template"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 )
 
 func dateTimeLegacy(format string, datetime any, _ ...string) template.HTML {

@@ -12,8 +12,13 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	base "code.gitea.io/gitea/modules/migration"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	base "code.proxgit.io/proxgit/modules/migration"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	gitlab "gitlab.com/gitlab-org/api/client-go"
@@ -26,12 +31,20 @@ func TestGitlabDownloadRepo(t *testing.T) {
 		t.Skip("skipped test because GITLAB_READ_TOKEN was not in the environment")
 	}
 
+<<<<<<< HEAD
 	resp, err := http.Get("https://gitlab.com/gitea/test_repo")
+=======
+	resp, err := http.Get("https://gitlab.com/proxgit/test_repo")
+>>>>>>> master
 	if err != nil || resp.StatusCode != http.StatusOK {
 		t.Skipf("Can't access test repo, skipping %s", t.Name())
 	}
 	ctx := t.Context()
+<<<<<<< HEAD
 	downloader, err := NewGitlabDownloader(ctx, "https://gitlab.com", "gitea/test_repo", "", "", gitlabPersonalAccessToken)
+=======
+	downloader, err := NewGitlabDownloader(ctx, "https://gitlab.com", "proxgit/test_repo", "", "", gitlabPersonalAccessToken)
+>>>>>>> master
 	if err != nil {
 		t.Fatalf("NewGitlabDownloader is nil: %v", err)
 	}
@@ -41,9 +54,15 @@ func TestGitlabDownloadRepo(t *testing.T) {
 	assertRepositoryEqual(t, &base.Repository{
 		Name:          "test_repo",
 		Owner:         "",
+<<<<<<< HEAD
 		Description:   "Test repository for testing migration from gitlab to gitea",
 		CloneURL:      "https://gitlab.com/gitea/test_repo.git",
 		OriginalURL:   "https://gitlab.com/gitea/test_repo",
+=======
+		Description:   "Test repository for testing migration from gitlab to proxgit",
+		CloneURL:      "https://gitlab.com/proxgit/test_repo.git",
+		OriginalURL:   "https://gitlab.com/proxgit/test_repo",
+>>>>>>> master
 		DefaultBranch: "master",
 	}, repo)
 
@@ -280,10 +299,17 @@ func TestGitlabDownloadRepo(t *testing.T) {
 				UserName: "real6543",
 				Content:  "tada",
 			}},
+<<<<<<< HEAD
 			PatchURL: "https://gitlab.com/gitea/test_repo/-/merge_requests/2.patch",
 			Head: base.PullRequestBranch{
 				Ref:       "feat/test",
 				CloneURL:  "https://gitlab.com/gitea/test_repo/-/merge_requests/2",
+=======
+			PatchURL: "https://gitlab.com/proxgit/test_repo/-/merge_requests/2.patch",
+			Head: base.PullRequestBranch{
+				Ref:       "feat/test",
+				CloneURL:  "https://gitlab.com/proxgit/test_repo/-/merge_requests/2",
+>>>>>>> master
 				SHA:       "9f733b96b98a4175276edf6a2e1231489c3bdd23",
 				RepoName:  "test_repo",
 				OwnerName: "lafriks",

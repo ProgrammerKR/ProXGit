@@ -4,8 +4,13 @@
 		<div class="ui form">
 			<div class="field">
 				<label>{{svg "octicon-terminal"}} {{ctx.Locale.Tr "packages.debian.registry"}}</label>
+<<<<<<< HEAD
 				<div class="markup"><pre class="code-block"><code>sudo curl <origin-url data-url="{{AppSubUrl}}/api/packages/{{$.PackageDescriptor.Owner.Name}}/debian/repository.key"></origin-url> -o /etc/apt/keyrings/gitea-{{$.PackageDescriptor.Owner.Name}}.asc
 echo "deb [signed-by=/etc/apt/keyrings/gitea-{{$.PackageDescriptor.Owner.Name}}.asc] <origin-url data-url="{{AppSubUrl}}/api/packages/{{$.PackageDescriptor.Owner.Name}}/debian"></origin-url> $distribution $component" | sudo tee -a /etc/apt/sources.list.d/gitea.list
+=======
+				<div class="markup"><pre class="code-block"><code>sudo curl <origin-url data-url="{{AppSubUrl}}/api/packages/{{$.PackageDescriptor.Owner.Name}}/debian/repository.key"></origin-url> -o /etc/apt/keyrings/proxgit-{{$.PackageDescriptor.Owner.Name}}.asc
+echo "deb [signed-by=/etc/apt/keyrings/proxgit-{{$.PackageDescriptor.Owner.Name}}.asc] <origin-url data-url="{{AppSubUrl}}/api/packages/{{$.PackageDescriptor.Owner.Name}}/debian"></origin-url> $distribution $component" | sudo tee -a /etc/apt/sources.list.d/proxgit.list
+>>>>>>> master
 sudo apt update</code></pre></div>
 				<p>{{ctx.Locale.Tr "packages.debian.registry.info"}}</p>
 			</div>
@@ -16,7 +21,11 @@ sudo apt update</code></pre></div>
 				</div>
 			</div>
 			<div class="field">
+<<<<<<< HEAD
 				<label>{{ctx.Locale.Tr "packages.registry.documentation" "Debian" "https://docs.gitea.com/usage/packages/debian/"}}</label>
+=======
+				<label>{{ctx.Locale.Tr "packages.registry.documentation" "Debian" "https://docs.proxgit.com/usage/packages/debian/"}}</label>
+>>>>>>> master
 			</div>
 		</div>
 	</div>

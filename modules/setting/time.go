@@ -6,7 +6,11 @@ package setting
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // DefaultUILocation is the location on the UI, so that we can display the time on UI.

@@ -4,7 +4,11 @@
 package v1_24 //nolint
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

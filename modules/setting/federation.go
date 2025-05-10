@@ -4,7 +4,11 @@
 package setting
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/42wim/httpsig"
 )

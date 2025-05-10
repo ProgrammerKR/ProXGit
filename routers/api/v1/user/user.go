@@ -7,6 +7,7 @@ package user
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/structs"
@@ -14,6 +15,15 @@ import (
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/convert"
 	feed_service "code.gitea.io/gitea/services/feed"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	feed_service "code.proxgit.io/proxgit/services/feed"
+>>>>>>> master
 )
 
 // Search search users

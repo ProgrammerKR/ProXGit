@@ -8,11 +8,19 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -28,7 +36,11 @@ func TestAPIAdminOrgCreate(t *testing.T) {
 			UserName:    "user2_org",
 			FullName:    "User2's organization",
 			Description: "This organization created by admin for user2",
+<<<<<<< HEAD
 			Website:     "https://try.gitea.io",
+=======
+			Website:     "https://try.proxgit.io",
+>>>>>>> master
 			Location:    "Shanghai",
 			Visibility:  "private",
 		}
@@ -58,7 +70,11 @@ func TestAPIAdminOrgCreate(t *testing.T) {
 			UserName:    "user2_org",
 			FullName:    "User2's organization",
 			Description: "This organization created by admin for user2",
+<<<<<<< HEAD
 			Website:     "https://try.gitea.io",
+=======
+			Website:     "https://try.proxgit.io",
+>>>>>>> master
 			Location:    "Shanghai",
 			Visibility:  "notvalid",
 		}
@@ -75,7 +91,11 @@ func TestAPIAdminOrgCreate(t *testing.T) {
 			UserName:    "user2_org",
 			FullName:    "User2's organization",
 			Description: "This organization created by admin for user2",
+<<<<<<< HEAD
 			Website:     "https://try.gitea.io",
+=======
+			Website:     "https://try.proxgit.io",
+>>>>>>> master
 			Location:    "Shanghai",
 			Visibility:  "public",
 		}

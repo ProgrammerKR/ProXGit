@@ -3,7 +3,11 @@
 
 package repo
 
+<<<<<<< HEAD
 import "code.gitea.io/gitea/models/db"
+=======
+import "code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 
 // OrderByMap represents all possible search order
 var OrderByMap = map[string]map[string]db.SearchOrderBy{

@@ -7,11 +7,19 @@ import (
 	"context"
 	"time"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	container_model "code.gitea.io/gitea/models/packages/container"
 	"code.gitea.io/gitea/modules/optional"
 	container_module "code.gitea.io/gitea/modules/packages/container"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	container_model "code.proxgit.io/proxgit/models/packages/container"
+	"code.proxgit.io/proxgit/modules/optional"
+	container_module "code.proxgit.io/proxgit/modules/packages/container"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 
 	digest "github.com/opencontainers/go-digest"
 )

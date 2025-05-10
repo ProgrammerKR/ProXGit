@@ -34,7 +34,11 @@ func TestRepoLanguages(t *testing.T) {
 		})
 		session.MakeRequest(t, req, http.StatusSeeOther)
 
+<<<<<<< HEAD
 		// let gitea calculate language stats
+=======
+		// let proxgit calculate language stats
+>>>>>>> master
 		time.Sleep(time.Second)
 
 		// Save new file to master branch

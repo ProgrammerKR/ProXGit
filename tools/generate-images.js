@@ -57,7 +57,11 @@ async function generate(svg, path, {size, bg}) {
 }
 
 async function main() {
+<<<<<<< HEAD
   const gitea = argv.slice(2).includes('gitea');
+=======
+  const proxgit = argv.slice(2).includes('proxgit');
+>>>>>>> master
   const logoSvg = await readFile(new URL('../assets/logo.svg', import.meta.url), 'utf8');
   const faviconSvg = await readFile(new URL('../assets/favicon.svg', import.meta.url), 'utf8');
 
@@ -68,7 +72,11 @@ async function main() {
     generate(faviconSvg, '../public/assets/img/favicon.png', {size: 180}),
     generate(logoSvg, '../public/assets/img/avatar_default.png', {size: 200}),
     generate(logoSvg, '../public/assets/img/apple-touch-icon.png', {size: 180, bg: true}),
+<<<<<<< HEAD
     gitea && generate(logoSvg, '../public/assets/img/gitea.svg', {size: 32}),
+=======
+    proxgit && generate(logoSvg, '../public/assets/img/proxgit.svg', {size: 32}),
+>>>>>>> master
   ]);
 }
 

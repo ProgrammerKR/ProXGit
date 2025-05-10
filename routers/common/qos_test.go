@@ -7,9 +7,15 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/web/middleware"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/go-chi/chi/v5"
 	"github.com/stretchr/testify/assert"

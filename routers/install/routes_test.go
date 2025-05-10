@@ -8,7 +8,11 @@ import (
 	"net/http/httptest"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -29,7 +33,11 @@ func TestRoutes(t *testing.T) {
 	assert.Equal(t, 404, w.Code)
 
 	w = httptest.NewRecorder()
+<<<<<<< HEAD
 	req = httptest.NewRequest(http.MethodGet, "/assets/img/gitea.svg", nil)
+=======
+	req = httptest.NewRequest(http.MethodGet, "/assets/img/proxgit.svg", nil)
+>>>>>>> master
 	r.ServeHTTP(w, req)
 	assert.Equal(t, 200, w.Code)
 }

@@ -7,9 +7,15 @@ import (
 	"context"
 	"strconv"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	debian_module "code.gitea.io/gitea/modules/packages/debian"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	debian_module "code.proxgit.io/proxgit/modules/packages/debian"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

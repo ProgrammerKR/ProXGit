@@ -4,8 +4,13 @@
 package convert
 
 import (
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 func WebAssetDownloadURL(repo *repo_model.Repository, attach *repo_model.Attachment) string {

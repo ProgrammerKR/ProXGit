@@ -6,7 +6,11 @@ package markdown
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/svg"
+=======
+	"code.proxgit.io/proxgit/modules/svg"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/text"

@@ -6,6 +6,7 @@ package admin
 import (
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/setting"
@@ -13,6 +14,15 @@ import (
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/services/contexttest"
 	"code.gitea.io/gitea/services/forms"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/contexttest"
+	"code.proxgit.io/proxgit/services/forms"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -28,8 +38,13 @@ func TestNewUserPost_MustChangePassword(t *testing.T) {
 
 	ctx.Doer = u
 
+<<<<<<< HEAD
 	username := "gitea"
 	email := "gitea@gitea.io"
+=======
+	username := "proxgit"
+	email := "proxgit@proxgit.io"
+>>>>>>> master
 
 	form := forms.AdminCreateUserForm{
 		LoginType:          "local",
@@ -65,8 +80,13 @@ func TestNewUserPost_MustChangePasswordFalse(t *testing.T) {
 
 	ctx.Doer = u
 
+<<<<<<< HEAD
 	username := "gitea"
 	email := "gitea@gitea.io"
+=======
+	username := "proxgit"
+	email := "proxgit@proxgit.io"
+>>>>>>> master
 
 	form := forms.AdminCreateUserForm{
 		LoginType:          "local",
@@ -102,8 +122,13 @@ func TestNewUserPost_InvalidEmail(t *testing.T) {
 
 	ctx.Doer = u
 
+<<<<<<< HEAD
 	username := "gitea"
 	email := "gitea@gitea.io\r\n"
+=======
+	username := "proxgit"
+	email := "proxgit@proxgit.io\r\n"
+>>>>>>> master
 
 	form := forms.AdminCreateUserForm{
 		LoginType:          "local",
@@ -132,8 +157,13 @@ func TestNewUserPost_VisibilityDefaultPublic(t *testing.T) {
 
 	ctx.Doer = u
 
+<<<<<<< HEAD
 	username := "gitea"
 	email := "gitea@gitea.io"
+=======
+	username := "proxgit"
+	email := "proxgit@proxgit.io"
+>>>>>>> master
 
 	form := forms.AdminCreateUserForm{
 		LoginType:          "local",
@@ -170,8 +200,13 @@ func TestNewUserPost_VisibilityPrivate(t *testing.T) {
 
 	ctx.Doer = u
 
+<<<<<<< HEAD
 	username := "gitea"
 	email := "gitea@gitea.io"
+=======
+	username := "proxgit"
+	email := "proxgit@proxgit.io"
+>>>>>>> master
 
 	form := forms.AdminCreateUserForm{
 		LoginType:          "local",

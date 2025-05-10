@@ -8,14 +8,22 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestGenerateMessageID(t *testing.T) {
 	mailService := setting.Mailer{
+<<<<<<< HEAD
 		From: "test@gitea.com",
+=======
+		From: "test@proxgit.com",
+>>>>>>> master
 	}
 
 	setting.MailService = &mailService
@@ -44,12 +52,20 @@ func TestToMessage(t *testing.T) {
 		setting.MailService = oldConf
 	}()
 	setting.MailService = &setting.Mailer{
+<<<<<<< HEAD
 		From: "test@gitea.com",
+=======
+		From: "test@proxgit.com",
+>>>>>>> master
 	}
 
 	m1 := Message{
 		Info:            "info",
+<<<<<<< HEAD
 		FromAddress:     "test@gitea.com",
+=======
+		FromAddress:     "test@proxgit.com",
+>>>>>>> master
 		FromDisplayName: "Test Gitea",
 		To:              "a@b.com",
 		Subject:         "Issue X Closed",
@@ -69,7 +85,11 @@ func TestToMessage(t *testing.T) {
 	assertHeaders(t, map[string]string{
 		"Content-Type":             "multipart/alternative;",
 		"Date":                     "Mon, 01 Jan 0001 00:00:00 +0000",
+<<<<<<< HEAD
 		"From":                     "\"Test Gitea\" <test@gitea.com>",
+=======
+		"From":                     "\"Test Gitea\" <test@proxgit.com>",
+>>>>>>> master
 		"Message-ID":               "<autogen--6795364578871-69c000786adc60dc@localhost>",
 		"MIME-Version":             "1.0",
 		"Subject":                  "Issue X Closed",
@@ -89,7 +109,11 @@ func TestToMessage(t *testing.T) {
 	assertHeaders(t, map[string]string{
 		"Content-Type":             "multipart/alternative;",
 		"Date":                     "Mon, 01 Jan 0001 00:00:00 +0000",
+<<<<<<< HEAD
 		"From":                     "\"Test Gitea\" <test@gitea.com>",
+=======
+		"From":                     "\"Test Gitea\" <test@proxgit.com>",
+>>>>>>> master
 		"Message-ID":               "",
 		"MIME-Version":             "1.0",
 		"Subject":                  "Issue X Closed",

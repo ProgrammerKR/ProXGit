@@ -8,8 +8,13 @@ import (
 	"io"
 	"net/url"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 )
 
 func init() {

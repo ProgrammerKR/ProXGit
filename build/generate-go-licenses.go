@@ -16,7 +16,11 @@ import (
 	"sort"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/container"
+=======
+	"code.proxgit.io/proxgit/modules/container"
+>>>>>>> master
 )
 
 // regexp is based on go-license, excluding README and NOTICE
@@ -88,9 +92,15 @@ func main() {
 		pkgName := path.Dir(pkgPath)
 
 		// There might be a bug somewhere in go-licenses that sometimes interprets the
+<<<<<<< HEAD
 		// root package as "." and sometimes as "code.gitea.io/gitea". Workaround by
 		// removing both of them for the sake of stable output.
 		if pkgName == "." || pkgName == "code.gitea.io/gitea" {
+=======
+		// root package as "." and sometimes as "code.proxgit.io/proxgit". Workaround by
+		// removing both of them for the sake of stable output.
+		if pkgName == "." || pkgName == "code.proxgit.io/proxgit" {
+>>>>>>> master
 			continue
 		}
 

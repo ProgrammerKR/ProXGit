@@ -8,8 +8,13 @@ import (
 	"fmt"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"xorm.io/builder"
 )
@@ -134,6 +139,7 @@ func (pt Type) Name() string {
 func (pt Type) SVGName() string {
 	switch pt {
 	case TypeAlpine:
+<<<<<<< HEAD
 		return "gitea-alpine"
 	case TypeArch:
 		return "gitea-arch"
@@ -177,6 +183,51 @@ func (pt Type) SVGName() string {
 		return "gitea-swift"
 	case TypeVagrant:
 		return "gitea-vagrant"
+=======
+		return "proxgit-alpine"
+	case TypeArch:
+		return "proxgit-arch"
+	case TypeCargo:
+		return "proxgit-cargo"
+	case TypeChef:
+		return "proxgit-chef"
+	case TypeComposer:
+		return "proxgit-composer"
+	case TypeConan:
+		return "proxgit-conan"
+	case TypeConda:
+		return "proxgit-conda"
+	case TypeContainer:
+		return "octicon-container"
+	case TypeCran:
+		return "proxgit-cran"
+	case TypeDebian:
+		return "proxgit-debian"
+	case TypeGeneric:
+		return "octicon-package"
+	case TypeGo:
+		return "proxgit-go"
+	case TypeHelm:
+		return "proxgit-helm"
+	case TypeMaven:
+		return "proxgit-maven"
+	case TypeNpm:
+		return "proxgit-npm"
+	case TypeNuGet:
+		return "proxgit-nuget"
+	case TypePub:
+		return "proxgit-pub"
+	case TypePyPI:
+		return "proxgit-python"
+	case TypeRpm:
+		return "proxgit-rpm"
+	case TypeRubyGems:
+		return "proxgit-rubygems"
+	case TypeSwift:
+		return "proxgit-swift"
+	case TypeVagrant:
+		return "proxgit-vagrant"
+>>>>>>> master
 	}
 	panic("unknown package type: " + string(pt))
 }

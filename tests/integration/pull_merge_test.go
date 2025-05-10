@@ -17,6 +17,7 @@ import (
 	"testing"
 	"time"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
@@ -38,6 +39,29 @@ import (
 	repo_service "code.gitea.io/gitea/services/repository"
 	commitstatus_service "code.gitea.io/gitea/services/repository/commitstatus"
 	files_service "code.gitea.io/gitea/services/repository/files"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	pull_model "code.proxgit.io/proxgit/models/pull"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/queue"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/translation"
+	"code.proxgit.io/proxgit/services/automerge"
+	pull_service "code.proxgit.io/proxgit/services/pull"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+	commitstatus_service "code.proxgit.io/proxgit/services/repository/commitstatus"
+	files_service "code.proxgit.io/proxgit/services/repository/files"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -88,7 +112,11 @@ func testPullCleanUp(t *testing.T, session *TestSession, user, repo, pullnum str
 }
 
 func TestPullMerge(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		hookTasks, err := webhook.HookTasks(db.DefaultContext, 1, 1) // Retrieve previous hook number
 		assert.NoError(t, err)
 		hookTasksLenBefore := len(hookTasks)
@@ -110,7 +138,11 @@ func TestPullMerge(t *testing.T) {
 }
 
 func TestPullRebase(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		hookTasks, err := webhook.HookTasks(db.DefaultContext, 1, 1) // Retrieve previous hook number
 		assert.NoError(t, err)
 		hookTasksLenBefore := len(hookTasks)
@@ -132,7 +164,11 @@ func TestPullRebase(t *testing.T) {
 }
 
 func TestPullRebaseMerge(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		hookTasks, err := webhook.HookTasks(db.DefaultContext, 1, 1) // Retrieve previous hook number
 		assert.NoError(t, err)
 		hookTasksLenBefore := len(hookTasks)
@@ -154,7 +190,11 @@ func TestPullRebaseMerge(t *testing.T) {
 }
 
 func TestPullSquash(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		hookTasks, err := webhook.HookTasks(db.DefaultContext, 1, 1) // Retrieve previous hook number
 		assert.NoError(t, err)
 		hookTasksLenBefore := len(hookTasks)
@@ -177,7 +217,11 @@ func TestPullSquash(t *testing.T) {
 }
 
 func TestPullCleanUpAfterMerge(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
 		testEditFileToNewBranch(t, session, "user1", "repo1", "master", "feature/test", "README.md", "Hello, World (Edited - TestPullCleanUpAfterMerge)\n")
@@ -212,7 +256,11 @@ func TestPullCleanUpAfterMerge(t *testing.T) {
 }
 
 func TestCantMergeWorkInProgress(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
 		testEditFile(t, session, "user1", "repo1", "master", "README.md", "Hello, World (Edited)\n")
@@ -231,7 +279,11 @@ func TestCantMergeWorkInProgress(t *testing.T) {
 }
 
 func TestCantMergeConflict(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
 		testEditFileToNewBranch(t, session, "user1", "repo1", "master", "conflict", "README.md", "Hello, World (Edited Once)\n")
@@ -277,7 +329,11 @@ func TestCantMergeConflict(t *testing.T) {
 }
 
 func TestCantMergeUnrelated(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
 		testEditFileToNewBranch(t, session, "user1", "repo1", "master", "base", "README.md", "Hello, World (Edited Twice)\n")
@@ -372,7 +428,11 @@ func TestCantMergeUnrelated(t *testing.T) {
 }
 
 func TestFastForwardOnlyMerge(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
 		testEditFileToNewBranch(t, session, "user1", "repo1", "master", "update", "README.md", "Hello, World 2\n")
@@ -413,7 +473,11 @@ func TestFastForwardOnlyMerge(t *testing.T) {
 }
 
 func TestCantFastForwardOnlyMergeDiverging(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
 		testEditFileToNewBranch(t, session, "user1", "repo1", "master", "diverging", "README.md", "Hello, World diverged\n")
@@ -456,7 +520,11 @@ func TestCantFastForwardOnlyMergeDiverging(t *testing.T) {
 }
 
 func TestConflictChecking(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		user := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 2})
 
 		// Create new clean repo to test conflict checking.
@@ -536,7 +604,11 @@ func TestConflictChecking(t *testing.T) {
 }
 
 func TestPullRetargetChildOnBranchDelete(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 		testEditFileToNewBranch(t, session, "user2", "repo1", "master", "base-pr", "README.md", "Hello, World\n(Edited - TestPullRetargetOnCleanup - base PR)\n")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
@@ -570,7 +642,11 @@ func TestPullRetargetChildOnBranchDelete(t *testing.T) {
 }
 
 func TestPullDontRetargetChildOnWrongRepo(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user1")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
 		testEditFileToNewBranch(t, session, "user1", "repo1", "master", "base-pr", "README.md", "Hello, World\n(Edited - TestPullDontRetargetChildOnWrongRepo - base PR)\n")
@@ -607,7 +683,11 @@ func TestPullDontRetargetChildOnWrongRepo(t *testing.T) {
 }
 
 func TestPullRequestMergedWithNoPermissionDeleteBranch(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		session := loginUser(t, "user4")
 		testRepoFork(t, session, "user2", "repo1", "user4", "repo1", "")
 		testEditFileToNewBranch(t, session, "user4", "repo1", "master", "base-pr", "README.md", "Hello, World\n(Edited - TestPullDontRetargetChildOnWrongRepo - base PR)\n")
@@ -628,7 +708,11 @@ func TestPullRequestMergedWithNoPermissionDeleteBranch(t *testing.T) {
 }
 
 func TestPullMergeIndexerNotifier(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// create a pull request
 		session := loginUser(t, "user1")
 		testRepoFork(t, session, "user2", "repo1", "user1", "repo1", "")
@@ -703,7 +787,11 @@ func testResetRepo(t *testing.T, repoPath, branch, commitID string) {
 }
 
 func TestPullAutoMergeAfterCommitStatusSucceed(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// create a pull request
 		session := loginUser(t, "user1")
 		user1 := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 1})
@@ -732,7 +820,11 @@ func TestPullAutoMergeAfterCommitStatusSucceed(t *testing.T) {
 			"rule_name":             "master",
 			"enable_push":           "true",
 			"enable_status_check":   "true",
+<<<<<<< HEAD
 			"status_check_contexts": "gitea/actions",
+=======
+			"status_check_contexts": "proxgit/actions",
+>>>>>>> master
 		})
 		session.MakeRequest(t, req, http.StatusSeeOther)
 
@@ -769,8 +861,13 @@ func TestPullAutoMergeAfterCommitStatusSucceed(t *testing.T) {
 
 		err = commitstatus_service.CreateCommitStatus(db.DefaultContext, baseRepo, user1, sha, &git_model.CommitStatus{
 			State:     api.CommitStatusSuccess,
+<<<<<<< HEAD
 			TargetURL: "https://gitea.com",
 			Context:   "gitea/actions",
+=======
+			TargetURL: "https://proxgit.com",
+			Context:   "proxgit/actions",
+>>>>>>> master
 		})
 		assert.NoError(t, err)
 
@@ -786,7 +883,11 @@ func TestPullAutoMergeAfterCommitStatusSucceed(t *testing.T) {
 }
 
 func TestPullAutoMergeAfterCommitStatusSucceedAndApproval(t *testing.T) {
+<<<<<<< HEAD
 	onGiteaRun(t, func(t *testing.T, giteaURL *url.URL) {
+=======
+	onGiteaRun(t, func(t *testing.T, proxgitURL *url.URL) {
+>>>>>>> master
 		// create a pull request
 		session := loginUser(t, "user1")
 		user1 := unittest.AssertExistsAndLoadBean(t, &user_model.User{ID: 1})
@@ -815,7 +916,11 @@ func TestPullAutoMergeAfterCommitStatusSucceedAndApproval(t *testing.T) {
 			"rule_name":             "master",
 			"enable_push":           "true",
 			"enable_status_check":   "true",
+<<<<<<< HEAD
 			"status_check_contexts": "gitea/actions",
+=======
+			"status_check_contexts": "proxgit/actions",
+>>>>>>> master
 			"required_approvals":    "1",
 		})
 		session.MakeRequest(t, req, http.StatusSeeOther)
@@ -849,8 +954,13 @@ func TestPullAutoMergeAfterCommitStatusSucceedAndApproval(t *testing.T) {
 
 		err = commitstatus_service.CreateCommitStatus(db.DefaultContext, baseRepo, user1, sha, &git_model.CommitStatus{
 			State:     api.CommitStatusSuccess,
+<<<<<<< HEAD
 			TargetURL: "https://gitea.com",
 			Context:   "gitea/actions",
+=======
+			TargetURL: "https://proxgit.com",
+			Context:   "proxgit/actions",
+>>>>>>> master
 		})
 		assert.NoError(t, err)
 
@@ -943,7 +1053,11 @@ func TestPullAutoMergeAfterCommitStatusSucceedAndApprovalForAgitFlow(t *testing.
 			"rule_name":             "master",
 			"enable_push":           "true",
 			"enable_status_check":   "true",
+<<<<<<< HEAD
 			"status_check_contexts": "gitea/actions",
+=======
+			"status_check_contexts": "proxgit/actions",
+>>>>>>> master
 			"required_approvals":    "1",
 		})
 		session.MakeRequest(t, req, http.StatusSeeOther)
@@ -978,8 +1092,13 @@ func TestPullAutoMergeAfterCommitStatusSucceedAndApprovalForAgitFlow(t *testing.
 
 		err = commitstatus_service.CreateCommitStatus(db.DefaultContext, baseRepo, user1, sha, &git_model.CommitStatus{
 			State:     api.CommitStatusSuccess,
+<<<<<<< HEAD
 			TargetURL: "https://gitea.com",
 			Context:   "gitea/actions",
+=======
+			TargetURL: "https://proxgit.com",
+			Context:   "proxgit/actions",
+>>>>>>> master
 		})
 		assert.NoError(t, err)
 
@@ -1036,7 +1155,11 @@ func TestPullNonMergeForAdminWithBranchProtection(t *testing.T) {
 			"rule_name":                  "master",
 			"enable_push":                "true",
 			"enable_status_check":        "true",
+<<<<<<< HEAD
 			"status_check_contexts":      "gitea/actions",
+=======
+			"status_check_contexts":      "proxgit/actions",
+>>>>>>> master
 			"block_admin_merge_override": "true",
 		})
 		session.MakeRequest(t, pbCreateReq, http.StatusSeeOther)

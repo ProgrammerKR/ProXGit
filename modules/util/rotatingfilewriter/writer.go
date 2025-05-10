@@ -14,8 +14,13 @@ import (
 	"sync"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/graceful/releasereopen"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/graceful/releasereopen"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type Options struct {

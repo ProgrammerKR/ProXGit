@@ -7,9 +7,15 @@ import (
 	"context"
 	"strings"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	user_model "code.gitea.io/gitea/models/user"
 	container_module "code.gitea.io/gitea/modules/packages/container"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	user_model "code.proxgit.io/proxgit/models/user"
+	container_module "code.proxgit.io/proxgit/modules/packages/container"
+>>>>>>> master
 )
 
 // UpdateRepositoryNames updates the repository name property for all packages of the specific owner

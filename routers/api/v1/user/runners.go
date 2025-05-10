@@ -4,8 +4,13 @@
 package user
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/routers/api/v1/shared"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/routers/api/v1/shared"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // https://docs.github.com/en/rest/actions/self-hosted-runners?apiVersion=2022-11-28#create-a-registration-token-for-an-organization

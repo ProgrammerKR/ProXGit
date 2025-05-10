@@ -6,11 +6,19 @@ package user
 import (
 	"errors"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/services/forms"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/forms"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 func BlockedUsers(ctx *context.Context, blocker *user_model.User) {

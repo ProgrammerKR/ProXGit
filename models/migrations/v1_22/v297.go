@@ -4,7 +4,11 @@
 package v1_22 //nolint
 
 import (
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/perm"
+=======
+	"code.proxgit.io/proxgit/models/perm"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

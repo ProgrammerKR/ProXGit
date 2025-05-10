@@ -11,10 +11,17 @@ import (
 	"runtime"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/private"
 	process_module "code.gitea.io/gitea/modules/process"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/private"
+	process_module "code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 // Processes prints out the processes

@@ -9,10 +9,17 @@ import (
 	"io"
 	"os"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	packages_module "code.gitea.io/gitea/modules/packages"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/tempdir"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/tempdir"
+>>>>>>> master
 )
 
 var (

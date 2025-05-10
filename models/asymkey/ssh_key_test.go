@@ -12,9 +12,15 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/42wim/sshsig"
 	"github.com/stretchr/testify/assert"
@@ -135,7 +141,11 @@ AAAAC3NzaC1lZDI1NTE5AAAAICV0MGX/W9IvLA4FXpIuUcdDcbj5KX4syHgsTy7soVgf
 		{"---- NOT A REAL KEY ----"},
 		{"bad\nkey"},
 		{"\t\t:)\t\r\n"},
+<<<<<<< HEAD
 		{"\r\ntest \r\ngitea\r\n\r\n"},
+=======
+		{"\r\ntest \r\nproxgit\r\n\r\n"},
+>>>>>>> master
 	} {
 		_, err := CheckPublicKeyString(invalidKeys.content)
 		assert.Error(t, err)

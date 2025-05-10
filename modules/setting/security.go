@@ -8,9 +8,15 @@ import (
 	"os"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/auth/password/hash"
 	"code.gitea.io/gitea/modules/generate"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/auth/password/hash"
+	"code.proxgit.io/proxgit/modules/generate"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 // Security settings
@@ -109,12 +115,20 @@ func loadSecurityFrom(rootCfg ConfigProvider) {
 	LogInRememberDays = sec.Key("LOGIN_REMEMBER_DAYS").MustInt(31)
 	SecretKey = loadSecret(sec, "SECRET_KEY_URI", "SECRET_KEY")
 	if SecretKey == "" {
+<<<<<<< HEAD
 		// FIXME: https://github.com/go-gitea/gitea/issues/16832
+=======
+		// FIXME: https://github.com/go-proxgit/proxgit/issues/16832
+>>>>>>> master
 		// Until it supports rotating an existing secret key, we shouldn't move users off of the widely used default value
 		SecretKey = "!#@FDEWREWR&*(" //nolint:gosec
 	}
 
+<<<<<<< HEAD
 	CookieRememberName = sec.Key("COOKIE_REMEMBER_NAME").MustString("gitea_incredible")
+=======
+	CookieRememberName = sec.Key("COOKIE_REMEMBER_NAME").MustString("proxgit_incredible")
+>>>>>>> master
 
 	ReverseProxyAuthUser = sec.Key("REVERSE_PROXY_AUTHENTICATION_USER").MustString("X-WEBAUTH-USER")
 	ReverseProxyAuthEmail = sec.Key("REVERSE_PROXY_AUTHENTICATION_EMAIL").MustString("X-WEBAUTH-EMAIL")
@@ -180,6 +194,10 @@ func loadSecurityFrom(rootCfg ConfigProvider) {
 
 	// warn if the setting is set to false explicitly
 	if sectionHasDisableQueryAuthToken && !DisableQueryAuthToken {
+<<<<<<< HEAD
 		log.Warn("Enabling Query API Auth tokens is not recommended. DISABLE_QUERY_AUTH_TOKEN will default to true in gitea 1.23 and will be removed in gitea 1.24.")
+=======
+		log.Warn("Enabling Query API Auth tokens is not recommended. DISABLE_QUERY_AUTH_TOKEN will default to true in proxgit 1.23 and will be removed in proxgit 1.24.")
+>>>>>>> master
 	}
 }

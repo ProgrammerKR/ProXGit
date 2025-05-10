@@ -34,25 +34,41 @@ func TestRenderConfig_UnmarshalYAML(t *testing.T) {
 			"metatable", &RenderConfig{
 				Meta: "table",
 				Lang: "",
+<<<<<<< HEAD
 			}, "gitea: table",
+=======
+			}, "proxgit: table",
+>>>>>>> master
 		},
 		{
 			"metanone", &RenderConfig{
 				Meta: "none",
 				Lang: "",
+<<<<<<< HEAD
 			}, "gitea: none",
+=======
+			}, "proxgit: none",
+>>>>>>> master
 		},
 		{
 			"metadetails", &RenderConfig{
 				Meta: "details",
 				Lang: "",
+<<<<<<< HEAD
 			}, "gitea: details",
+=======
+			}, "proxgit: details",
+>>>>>>> master
 		},
 		{
 			"metawrong", &RenderConfig{
 				Meta: "details",
 				Lang: "",
+<<<<<<< HEAD
 			}, "gitea: wrong",
+=======
+			}, "proxgit: wrong",
+>>>>>>> master
 		},
 		{
 			"toc", &RenderConfig{
@@ -83,7 +99,11 @@ func TestRenderConfig_UnmarshalYAML(t *testing.T) {
 				Meta: "table",
 				Lang: "testlang",
 			}, `
+<<<<<<< HEAD
 				gitea:
+=======
+				proxgit:
+>>>>>>> master
 					lang: testlang
 				`,
 		},
@@ -93,7 +113,11 @@ func TestRenderConfig_UnmarshalYAML(t *testing.T) {
 				Lang: "testlang",
 			}, `
 	lang: notright
+<<<<<<< HEAD
 	gitea:
+=======
+	proxgit:
+>>>>>>> master
 		lang: testlang
 `,
 		},
@@ -102,7 +126,11 @@ func TestRenderConfig_UnmarshalYAML(t *testing.T) {
 				Meta: "table",
 				Lang: "testlang",
 			}, `
+<<<<<<< HEAD
 	gitea:
+=======
+	proxgit:
+>>>>>>> master
 		lang: testlang
 `,
 		},
@@ -114,7 +142,11 @@ func TestRenderConfig_UnmarshalYAML(t *testing.T) {
 			}, `
 	lang: one
 	include_toc: true
+<<<<<<< HEAD
 	gitea:
+=======
+	proxgit:
+>>>>>>> master
 		details_icon: smiley
 		meta: table
 		include_toc: true

@@ -6,9 +6,15 @@ package forms
 import (
 	"math/big"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/services/context"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 type hiddenCommentTypeGroupsType map[string][]issues_model.CommentType

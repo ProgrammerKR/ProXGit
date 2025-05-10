@@ -10,12 +10,21 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/tempdir"
 )
 
 var (
 	// AppPath represents the path to the gitea binary
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/tempdir"
+)
+
+var (
+	// AppPath represents the path to the proxgit binary
+>>>>>>> master
 	AppPath string
 
 	// AppWorkPath is the "working directory" of Gitea. It maps to the: WORK_PATH in app.ini, "--work-path" flag, environment variable GITEA_WORK_DIR.
@@ -201,11 +210,19 @@ func InitWorkPathAndCfgProvider(getEnvFn func(name string) string, args ArgWorkP
 // AppDataTempDir returns a managed temporary directory for the application data.
 // Using empty sub will get the managed base temp directory, and it's safe to delete it.
 // Gitea only creates subdirectories under it, but not the APP_TEMP_PATH directory itself.
+<<<<<<< HEAD
 // * When APP_TEMP_PATH="/tmp": the managed temp directory is "/tmp/gitea-tmp"
 // * When APP_TEMP_PATH is not set: the managed temp directory is "/{APP_DATA_PATH}/tmp"
 func AppDataTempDir(sub string) *tempdir.TempDir {
 	if appTempPathInternal != "" {
 		return tempdir.New(appTempPathInternal, "gitea-tmp/"+sub)
+=======
+// * When APP_TEMP_PATH="/tmp": the managed temp directory is "/tmp/proxgit-tmp"
+// * When APP_TEMP_PATH is not set: the managed temp directory is "/{APP_DATA_PATH}/tmp"
+func AppDataTempDir(sub string) *tempdir.TempDir {
+	if appTempPathInternal != "" {
+		return tempdir.New(appTempPathInternal, "proxgit-tmp/"+sub)
+>>>>>>> master
 	}
 	if AppDataPath == "" {
 		panic("setting.AppDataPath is not set")

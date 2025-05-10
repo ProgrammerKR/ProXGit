@@ -6,11 +6,19 @@ package files
 import (
 	"testing"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/services/contexttest"
 	"code.gitea.io/gitea/services/gitdiff"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/services/contexttest"
+	"code.proxgit.io/proxgit/services/gitdiff"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

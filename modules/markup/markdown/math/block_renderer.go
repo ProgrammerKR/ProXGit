@@ -6,8 +6,13 @@ package math
 import (
 	"html/template"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup/internal"
 	giteaUtil "code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/markup/internal"
+	proxgitUtil "code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	gast "github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/renderer"
@@ -51,11 +56,19 @@ func (r *BlockRenderer) writeLines(w util.BufWriter, source []byte, n gast.Node)
 func (r *BlockRenderer) renderBlock(w util.BufWriter, source []byte, node gast.Node, entering bool) (gast.WalkStatus, error) {
 	n := node.(*Block)
 	if entering {
+<<<<<<< HEAD
 		code := giteaUtil.Iif(n.Inline, "", `<pre class="code-block is-loading">`) + `<code class="language-math display">`
 		_ = r.renderInternal.FormatWithSafeAttrs(w, template.HTML(code))
 		r.writeLines(w, source, n)
 	} else {
 		_, _ = w.WriteString(`</code>` + giteaUtil.Iif(n.Inline, "", `</pre>`) + "\n")
+=======
+		code := proxgitUtil.Iif(n.Inline, "", `<pre class="code-block is-loading">`) + `<code class="language-math display">`
+		_ = r.renderInternal.FormatWithSafeAttrs(w, template.HTML(code))
+		r.writeLines(w, source, n)
+	} else {
+		_, _ = w.WriteString(`</code>` + proxgitUtil.Iif(n.Inline, "", `</pre>`) + "\n")
+>>>>>>> master
 	}
 	return gast.WalkContinue, nil
 }

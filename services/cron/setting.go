@@ -6,7 +6,11 @@ package cron
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/translation"
+=======
+	"code.proxgit.io/proxgit/modules/translation"
+>>>>>>> master
 )
 
 // Config represents a basic configuration interface that cron task

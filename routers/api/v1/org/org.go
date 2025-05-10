@@ -7,6 +7,7 @@ package org
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	activities_model "code.gitea.io/gitea/models/activities"
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/organization"
@@ -22,6 +23,23 @@ import (
 	feed_service "code.gitea.io/gitea/services/feed"
 	"code.gitea.io/gitea/services/org"
 	user_service "code.gitea.io/gitea/services/user"
+=======
+	activities_model "code.proxgit.io/proxgit/models/activities"
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/organization"
+	"code.proxgit.io/proxgit/models/perm"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/optional"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/api/v1/user"
+	"code.proxgit.io/proxgit/routers/api/v1/utils"
+	"code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/services/convert"
+	feed_service "code.proxgit.io/proxgit/services/feed"
+	"code.proxgit.io/proxgit/services/org"
+	user_service "code.proxgit.io/proxgit/services/user"
+>>>>>>> master
 )
 
 func listUserOrgs(ctx *context.APIContext, u *user_model.User) {

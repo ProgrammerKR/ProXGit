@@ -17,6 +17,7 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/migrations"
 	migrate_base "code.gitea.io/gitea/models/migrations/base"
@@ -28,6 +29,19 @@ import (
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/modules/testlogger"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/migrations"
+	migrate_base "code.proxgit.io/proxgit/models/migrations/base"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/charset"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/modules/testlogger"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"xorm.io/xorm"
@@ -37,6 +51,7 @@ var currentEngine *xorm.Engine
 
 func initMigrationTest(t *testing.T) func() {
 	testlogger.Init()
+<<<<<<< HEAD
 	giteaRoot := test.SetupGiteaRoot()
 	setting.AppPath = filepath.Join(giteaRoot, "gitea")
 	if _, err := os.Stat(setting.AppPath); err != nil {
@@ -50,12 +65,31 @@ func initMigrationTest(t *testing.T) func() {
 		setting.CustomConf = filepath.Join(giteaRoot, giteaConf)
 	} else {
 		setting.CustomConf = giteaConf
+=======
+	proxgitRoot := test.SetupGiteaRoot()
+	setting.AppPath = filepath.Join(proxgitRoot, "proxgit")
+	if _, err := os.Stat(setting.AppPath); err != nil {
+		testlogger.Fatalf(fmt.Sprintf("Could not find proxgit binary at %s\n", setting.AppPath))
+	}
+
+	proxgitConf := os.Getenv("GITEA_CONF")
+	if proxgitConf == "" {
+		testlogger.Fatalf("Environment variable $GITEA_CONF not set\n")
+	} else if !path.IsAbs(proxgitConf) {
+		setting.CustomConf = filepath.Join(proxgitRoot, proxgitConf)
+	} else {
+		setting.CustomConf = proxgitConf
+>>>>>>> master
 	}
 
 	unittest.InitSettingsForTesting()
 
 	assert.NotEmpty(t, setting.RepoRootPath)
+<<<<<<< HEAD
 	assert.NoError(t, unittest.SyncDirs(filepath.Join(filepath.Dir(setting.AppPath), "tests/gitea-repositories-meta"), setting.RepoRootPath))
+=======
+	assert.NoError(t, unittest.SyncDirs(filepath.Join(filepath.Dir(setting.AppPath), "tests/proxgit-repositories-meta"), setting.RepoRootPath))
+>>>>>>> master
 	assert.NoError(t, git.InitFull(t.Context()))
 	setting.LoadDBSetting()
 	setting.InitLoggersForTest()
@@ -69,7 +103,11 @@ func availableVersions() ([]string, error) {
 		return nil, err
 	}
 	defer migrationsDir.Close()
+<<<<<<< HEAD
 	versionRE, err := regexp.Compile("gitea-v(?P<version>.+)\\." + regexp.QuoteMeta(setting.Database.Type.String()) + "\\.sql.gz")
+=======
+	versionRE, err := regexp.Compile("proxgit-v(?P<version>.+)\\." + regexp.QuoteMeta(setting.Database.Type.String()) + "\\.sql.gz")
+>>>>>>> master
 	if err != nil {
 		return nil, err
 	}
@@ -90,7 +128,11 @@ func availableVersions() ([]string, error) {
 }
 
 func readSQLFromFile(version string) (string, error) {
+<<<<<<< HEAD
 	filename := fmt.Sprintf("tests/integration/migration-test/gitea-v%s.%s.sql.gz", version, setting.Database.Type)
+=======
+	filename := fmt.Sprintf("tests/integration/migration-test/proxgit-v%s.%s.sql.gz", version, setting.Database.Type)
+>>>>>>> master
 
 	if _, err := os.Stat(filename); os.IsNotExist(err) {
 		return "", nil
@@ -228,7 +270,11 @@ func restoreOldDB(t *testing.T, version string) {
 		assert.NoError(t, err)
 		defer db.Close()
 
+<<<<<<< HEAD
 		_, err = db.Exec("DROP DATABASE IF EXISTS [gitea]")
+=======
+		_, err = db.Exec("DROP DATABASE IF EXISTS [proxgit]")
+>>>>>>> master
 		assert.NoError(t, err)
 
 		statements := strings.Split(data, "\nGO\n")

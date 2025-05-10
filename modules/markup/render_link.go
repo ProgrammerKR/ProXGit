@@ -7,9 +7,15 @@ import (
 	"context"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/httplib"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 func resolveLinkRelative(ctx context.Context, base, cur, link string, absolute bool) (finalLink string) {
@@ -18,7 +24,11 @@ func resolveLinkRelative(ctx context.Context, base, cur, link string, absolute b
 	}
 	if strings.HasPrefix(link, "/") {
 		if strings.HasPrefix(link, base) && strings.Count(base, "/") >= 4 {
+<<<<<<< HEAD
 			// a trick to tolerate that some users were using absolut paths (the old gitea's behavior)
+=======
+			// a trick to tolerate that some users were using absolut paths (the old proxgit's behavior)
+>>>>>>> master
 			finalLink = link
 		} else {
 			finalLink = util.URLJoin(base, "./", link)

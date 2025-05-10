@@ -6,7 +6,11 @@ package migrations
 import (
 	"context"
 
+<<<<<<< HEAD
 	base "code.gitea.io/gitea/modules/migration"
+=======
+	base "code.proxgit.io/proxgit/modules/migration"
+>>>>>>> master
 )
 
 var _ base.Downloader = &PlainGitDownloader{}

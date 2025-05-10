@@ -6,10 +6,17 @@ package webhook
 import (
 	"testing"
 
+<<<<<<< HEAD
 	webhook_model "code.gitea.io/gitea/models/webhook"
 	"code.gitea.io/gitea/modules/json"
 	api "code.gitea.io/gitea/modules/structs"
 	webhook_module "code.gitea.io/gitea/modules/webhook"
+=======
+	webhook_model "code.proxgit.io/proxgit/models/webhook"
+	"code.proxgit.io/proxgit/modules/json"
+	api "code.proxgit.io/proxgit/modules/structs"
+	webhook_module "code.proxgit.io/proxgit/modules/webhook"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -72,7 +79,11 @@ func TestTelegramPayload(t *testing.T) {
 		pl, err := tc.Issue(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Issue opened: <a href="http://localhost:3000/test/repo/issues/2" rel="nofollow">#2 crash</a> by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Issue opened: <a href="http://localhost:3000/test/repo/issues/2" rel="nofollow">#2 crash</a> by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>
+>>>>>>> master
 
 issue body`, pl.Message)
 
@@ -80,7 +91,11 @@ issue body`, pl.Message)
 		pl, err = tc.Issue(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Issue closed: <a href="http://localhost:3000/test/repo/issues/2" rel="nofollow">#2 crash</a> by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>`, pl.Message)
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Issue closed: <a href="http://localhost:3000/test/repo/issues/2" rel="nofollow">#2 crash</a> by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>`, pl.Message)
+>>>>>>> master
 	})
 
 	t.Run("IssueComment", func(t *testing.T) {
@@ -89,7 +104,11 @@ issue body`, pl.Message)
 		pl, err := tc.IssueComment(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] New comment on issue <a href="http://localhost:3000/test/repo/issues/2" rel="nofollow">#2 crash</a> by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] New comment on issue <a href="http://localhost:3000/test/repo/issues/2" rel="nofollow">#2 crash</a> by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>
+>>>>>>> master
 more info needed`, pl.Message)
 	})
 
@@ -99,7 +118,11 @@ more info needed`, pl.Message)
 		pl, err := tc.PullRequest(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Pull request opened: <a href="http://localhost:3000/test/repo/pulls/12" rel="nofollow">#12 Fix bug</a> by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Pull request opened: <a href="http://localhost:3000/test/repo/pulls/12" rel="nofollow">#12 Fix bug</a> by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>
+>>>>>>> master
 fixes bug #2`, pl.Message)
 	})
 
@@ -109,7 +132,11 @@ fixes bug #2`, pl.Message)
 		pl, err := tc.IssueComment(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] New comment on pull request <a href="http://localhost:3000/test/repo/pulls/12" rel="nofollow">#12 Fix bug</a> by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] New comment on pull request <a href="http://localhost:3000/test/repo/pulls/12" rel="nofollow">#12 Fix bug</a> by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>
+>>>>>>> master
 changes requested`, pl.Message)
 	})
 
@@ -139,7 +166,11 @@ good job`, pl.Message)
 		pl, err := tc.Package(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `Package created: <a href="http://localhost:3000/user1/-/packages/container/GiteaContainer/latest" rel="nofollow">GiteaContainer:latest</a> by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>`, pl.Message)
+=======
+		assert.Equal(t, `Package created: <a href="http://localhost:3000/user1/-/packages/container/GiteaContainer/latest" rel="nofollow">GiteaContainer:latest</a> by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>`, pl.Message)
+>>>>>>> master
 	})
 
 	t.Run("Wiki", func(t *testing.T) {
@@ -149,19 +180,31 @@ good job`, pl.Message)
 		pl, err := tc.Wiki(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] New wiki page &#39;<a href="http://localhost:3000/test/repo/wiki/index" rel="nofollow">index</a>&#39; (Wiki change comment) by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>`, pl.Message)
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] New wiki page &#39;<a href="http://localhost:3000/test/repo/wiki/index" rel="nofollow">index</a>&#39; (Wiki change comment) by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>`, pl.Message)
+>>>>>>> master
 
 		p.Action = api.HookWikiEdited
 		pl, err = tc.Wiki(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Wiki page &#39;<a href="http://localhost:3000/test/repo/wiki/index" rel="nofollow">index</a>&#39; edited (Wiki change comment) by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>`, pl.Message)
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Wiki page &#39;<a href="http://localhost:3000/test/repo/wiki/index" rel="nofollow">index</a>&#39; edited (Wiki change comment) by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>`, pl.Message)
+>>>>>>> master
 
 		p.Action = api.HookWikiDeleted
 		pl, err = tc.Wiki(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Wiki page &#39;<a href="http://localhost:3000/test/repo/wiki/index" rel="nofollow">index</a>&#39; deleted by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>`, pl.Message)
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Wiki page &#39;<a href="http://localhost:3000/test/repo/wiki/index" rel="nofollow">index</a>&#39; deleted by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>`, pl.Message)
+>>>>>>> master
 	})
 
 	t.Run("Release", func(t *testing.T) {
@@ -170,7 +213,11 @@ good job`, pl.Message)
 		pl, err := tc.Release(p)
 		require.NoError(t, err)
 
+<<<<<<< HEAD
 		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Release created: <a href="http://localhost:3000/test/repo/releases/tag/v1.0" rel="nofollow">v1.0</a> by <a href="https://try.gitea.io/user1" rel="nofollow">user1</a>`, pl.Message)
+=======
+		assert.Equal(t, `[<a href="http://localhost:3000/test/repo" rel="nofollow">test/repo</a>] Release created: <a href="http://localhost:3000/test/repo/releases/tag/v1.0" rel="nofollow">v1.0</a> by <a href="https://try.proxgit.io/user1" rel="nofollow">user1</a>`, pl.Message)
+>>>>>>> master
 	})
 }
 

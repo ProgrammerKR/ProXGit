@@ -6,8 +6,13 @@ package issue
 import (
 	"context"
 
+<<<<<<< HEAD
 	issues_model "code.gitea.io/gitea/models/issues"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	issues_model "code.proxgit.io/proxgit/models/issues"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 )
 
 // CreateIssueReaction creates a reaction on an issue.

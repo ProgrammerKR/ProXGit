@@ -6,7 +6,11 @@ package gitrepo
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 )
 
 // GetBranchesByPath returns a branch by its path

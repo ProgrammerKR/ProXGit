@@ -10,6 +10,7 @@ import (
 	"strings"
 	"sync"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
 	user_model "code.gitea.io/gitea/models/user"
@@ -19,6 +20,17 @@ import (
 	"code.gitea.io/gitea/modules/templates"
 	"code.gitea.io/gitea/services/auth/source/sspi"
 	gitea_context "code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/db"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/optional"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/templates"
+	"code.proxgit.io/proxgit/services/auth/source/sspi"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 
 	gouuid "github.com/google/uuid"
 )
@@ -88,7 +100,11 @@ func (s *SSPI) Verify(req *http.Request, w http.ResponseWriter, store DataStore,
 		store.GetData()["EnableSSPI"] = true
 		// in this case, the Verify function is called in Gitea's web context
 		// FIXME: it doesn't look good to render the page here, why not redirect?
+<<<<<<< HEAD
 		gitea_context.GetWebContext(req.Context()).HTML(http.StatusUnauthorized, tplSignIn)
+=======
+		proxgit_context.GetWebContext(req.Context()).HTML(http.StatusUnauthorized, tplSignIn)
+>>>>>>> master
 		return nil, err
 	}
 	if outToken != "" {

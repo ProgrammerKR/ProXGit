@@ -7,8 +7,13 @@ import (
 	"context"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/42wim/sshsig"
 )
@@ -30,11 +35,19 @@ func VerifySSHKey(ctx context.Context, ownerID int64, fingerprint, token, signat
 		return "", ErrKeyNotExist{}
 	}
 
+<<<<<<< HEAD
 	err = sshsig.Verify(strings.NewReader(token), []byte(signature), []byte(key.Content), "gitea")
 	if err != nil {
 		// edge case for Windows based shells that will add CR LF if piped to ssh-keygen command
 		// see https://github.com/PowerShell/PowerShell/issues/5974
 		if sshsig.Verify(strings.NewReader(token+"\r\n"), []byte(signature), []byte(key.Content), "gitea") != nil {
+=======
+	err = sshsig.Verify(strings.NewReader(token), []byte(signature), []byte(key.Content), "proxgit")
+	if err != nil {
+		// edge case for Windows based shells that will add CR LF if piped to ssh-keygen command
+		// see https://github.com/PowerShell/PowerShell/issues/5974
+		if sshsig.Verify(strings.NewReader(token+"\r\n"), []byte(signature), []byte(key.Content), "proxgit") != nil {
+>>>>>>> master
 			log.Error("Unable to validate token signature. Error: %v", err)
 			return "", ErrSSHInvalidTokenSignature{
 				Fingerprint: key.Fingerprint,

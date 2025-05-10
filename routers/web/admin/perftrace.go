@@ -6,8 +6,13 @@ package admin
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/tailmsg"
 	"code.gitea.io/gitea/services/context"
+=======
+	"code.proxgit.io/proxgit/modules/tailmsg"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func PerfTrace(ctx *context.Context) {

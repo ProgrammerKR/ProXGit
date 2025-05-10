@@ -8,8 +8,13 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -210,13 +215,21 @@ ACCESS = file
 }
 `
 	dump := manager.GetLogger(log.DEFAULT).DumpWriters()
+<<<<<<< HEAD
 	require.JSONEq(t, strings.ReplaceAll(writerDump, "$FILENAME", tempPath("gitea.log")), toJSON(dump))
+=======
+	require.JSONEq(t, strings.ReplaceAll(writerDump, "$FILENAME", tempPath("proxgit.log")), toJSON(dump))
+>>>>>>> master
 
 	dump = manager.GetLogger("access").DumpWriters()
 	require.JSONEq(t, strings.ReplaceAll(writerDumpAccess, "$FILENAME", tempPath("access.log")), toJSON(dump))
 
 	dump = manager.GetLogger("router").DumpWriters()
+<<<<<<< HEAD
 	require.JSONEq(t, strings.ReplaceAll(writerDump, "$FILENAME", tempPath("gitea.log")), toJSON(dump))
+=======
+	require.JSONEq(t, strings.ReplaceAll(writerDump, "$FILENAME", tempPath("proxgit.log")), toJSON(dump))
+>>>>>>> master
 }
 
 func TestLogConfigLegacyModeDisable(t *testing.T) {
@@ -381,7 +394,11 @@ COMPRESSION_LEVEL = 4
 
 	dump := manager.GetLogger(log.DEFAULT).DumpWriters()
 	expected := writerDump
+<<<<<<< HEAD
 	expected = strings.ReplaceAll(expected, "$FILENAME-0", tempPath("gitea.log"))
+=======
+	expected = strings.ReplaceAll(expected, "$FILENAME-0", tempPath("proxgit.log"))
+>>>>>>> master
 	expected = strings.ReplaceAll(expected, "$FILENAME-1", tempPath("file-xxx.log"))
 	require.JSONEq(t, expected, toJSON(dump))
 }

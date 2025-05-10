@@ -13,5 +13,9 @@ fi
 if [ $# -gt 0 ]; then
     exec "$@"
 else
+<<<<<<< HEAD
     exec /usr/local/bin/gitea -c ${GITEA_APP_INI} web
+=======
+    exec /usr/local/bin/proxgit -c ${GITEA_APP_INI} web
+>>>>>>> master
 fi

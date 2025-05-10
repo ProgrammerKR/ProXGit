@@ -7,11 +7,19 @@ import (
 	"html/template"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/fileicon"
 	"code.gitea.io/gitea/modules/git"
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/services/contexttest"
+=======
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/fileicon"
+	"code.proxgit.io/proxgit/modules/git"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/services/contexttest"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -35,7 +43,11 @@ func TestGetTreeBySHA(t *testing.T) {
 	assert.NoError(t, err)
 	expectedTree := &api.GitTreeResponse{
 		SHA: "65f1bf27bc3bf70f64657658635e66094edbcb4d",
+<<<<<<< HEAD
 		URL: "https://try.gitea.io/api/v1/repos/user2/repo1/git/trees/65f1bf27bc3bf70f64657658635e66094edbcb4d",
+=======
+		URL: "https://try.proxgit.io/api/v1/repos/user2/repo1/git/trees/65f1bf27bc3bf70f64657658635e66094edbcb4d",
+>>>>>>> master
 		Entries: []api.GitEntry{
 			{
 				Path: "README.md",
@@ -43,7 +55,11 @@ func TestGetTreeBySHA(t *testing.T) {
 				Type: "blob",
 				Size: 30,
 				SHA:  "4b4851ad51df6a7d9f25c979345979eaeb5b349f",
+<<<<<<< HEAD
 				URL:  "https://try.gitea.io/api/v1/repos/user2/repo1/git/blobs/4b4851ad51df6a7d9f25c979345979eaeb5b349f",
+=======
+				URL:  "https://try.proxgit.io/api/v1/repos/user2/repo1/git/blobs/4b4851ad51df6a7d9f25c979345979eaeb5b349f",
+>>>>>>> master
 			},
 		},
 		Truncated:  false,

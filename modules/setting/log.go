@@ -10,8 +10,13 @@ import (
 	"path/filepath"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type LogGlobalConfig struct {
@@ -119,7 +124,11 @@ func loadLogModeByName(rootCfg ConfigProvider, loggerName, modeName string) (wri
 
 	writerName = modeName
 	defaultFlags := "stdflags"
+<<<<<<< HEAD
 	defaultFilaName := "gitea.log"
+=======
+	defaultFilaName := "proxgit.log"
+>>>>>>> master
 	if loggerName == "access" {
 		// "access" logger is special, by default it doesn't have output flags, so it also needs a new writer name to avoid conflicting with other writers.
 		// so "access" logger's writer name is usually "file.access" or "console.access"

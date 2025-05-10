@@ -8,9 +8,15 @@ import (
 	"fmt"
 	"sort"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	access_model "code.gitea.io/gitea/models/perm/access"
 	user_model "code.gitea.io/gitea/models/user"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	user_model "code.proxgit.io/proxgit/models/user"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

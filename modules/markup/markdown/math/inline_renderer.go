@@ -6,7 +6,11 @@ package math
 import (
 	"bytes"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/markup/internal"
+=======
+	"code.proxgit.io/proxgit/modules/markup/internal"
+>>>>>>> master
 
 	"github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/renderer"

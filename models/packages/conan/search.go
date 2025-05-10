@@ -9,10 +9,17 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	"code.gitea.io/gitea/modules/container"
 	conan_module "code.gitea.io/gitea/modules/packages/conan"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	"code.proxgit.io/proxgit/modules/container"
+	conan_module "code.proxgit.io/proxgit/modules/packages/conan"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

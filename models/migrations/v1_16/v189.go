@@ -7,8 +7,13 @@ import (
 	"encoding/binary"
 	"fmt"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/migrations/base"
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/models/migrations/base"
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

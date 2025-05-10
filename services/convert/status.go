@@ -6,9 +6,15 @@ package convert
 import (
 	"context"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	user_model "code.gitea.io/gitea/models/user"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	user_model "code.proxgit.io/proxgit/models/user"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // ToCommitStatus converts git_model.CommitStatus to api.CommitStatus

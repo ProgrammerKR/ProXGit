@@ -15,6 +15,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	git_model "code.gitea.io/gitea/models/git"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/git"
@@ -23,6 +24,16 @@ import (
 	repo_module "code.gitea.io/gitea/modules/repository"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	git_model "code.proxgit.io/proxgit/models/git"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/modules/log"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	"github.com/gobwas/glob"
 	"github.com/huandu/xstrings"
@@ -91,7 +102,11 @@ func generateExpansion(ctx context.Context, src string, templateRepo, generateRe
 	})
 }
 
+<<<<<<< HEAD
 // GiteaTemplate holds information about a .gitea/template file
+=======
+// GiteaTemplate holds information about a .proxgit/template file
+>>>>>>> master
 type GiteaTemplate struct {
 	Path    string
 	Content []byte
@@ -99,7 +114,11 @@ type GiteaTemplate struct {
 	globs []glob.Glob
 }
 
+<<<<<<< HEAD
 // Globs parses the .gitea/template globs or returns them if they were already parsed
+=======
+// Globs parses the .proxgit/template globs or returns them if they were already parsed
+>>>>>>> master
 func (gt *GiteaTemplate) Globs() []glob.Glob {
 	if gt.globs != nil {
 		return gt.globs
@@ -123,7 +142,11 @@ func (gt *GiteaTemplate) Globs() []glob.Glob {
 }
 
 func readGiteaTemplateFile(tmpDir string) (*GiteaTemplate, error) {
+<<<<<<< HEAD
 	gtPath := filepath.Join(tmpDir, ".gitea", "template")
+=======
+	gtPath := filepath.Join(tmpDir, ".proxgit", "template")
+>>>>>>> master
 	if _, err := os.Stat(gtPath); os.IsNotExist(err) {
 		return nil, nil
 	} else if err != nil {
@@ -138,11 +161,19 @@ func readGiteaTemplateFile(tmpDir string) (*GiteaTemplate, error) {
 	return &GiteaTemplate{Path: gtPath, Content: content}, nil
 }
 
+<<<<<<< HEAD
 func processGiteaTemplateFile(ctx context.Context, tmpDir string, templateRepo, generateRepo *repo_model.Repository, giteaTemplateFile *GiteaTemplate) error {
 	if err := util.Remove(giteaTemplateFile.Path); err != nil {
 		return fmt.Errorf("remove .giteatemplate: %w", err)
 	}
 	if len(giteaTemplateFile.Globs()) == 0 {
+=======
+func processGiteaTemplateFile(ctx context.Context, tmpDir string, templateRepo, generateRepo *repo_model.Repository, proxgitTemplateFile *GiteaTemplate) error {
+	if err := util.Remove(proxgitTemplateFile.Path); err != nil {
+		return fmt.Errorf("remove .proxgittemplate: %w", err)
+	}
+	if len(proxgitTemplateFile.Globs()) == 0 {
+>>>>>>> master
 		return nil // Avoid walking tree if there are no globs
 	}
 	tmpDirSlash := strings.TrimSuffix(filepath.ToSlash(tmpDir), "/") + "/"
@@ -156,7 +187,11 @@ func processGiteaTemplateFile(ctx context.Context, tmpDir string, templateRepo, 
 		}
 
 		base := strings.TrimPrefix(filepath.ToSlash(path), tmpDirSlash)
+<<<<<<< HEAD
 		for _, g := range giteaTemplateFile.Globs() {
+=======
+		for _, g := range proxgitTemplateFile.Globs() {
+>>>>>>> master
 			if g.Match(base) {
 				content, err := os.ReadFile(path)
 				if err != nil {
@@ -220,13 +255,22 @@ func generateRepoCommit(ctx context.Context, repo, templateRepo, generateRepo *r
 	}
 
 	// Variable expansion
+<<<<<<< HEAD
 	giteaTemplateFile, err := readGiteaTemplateFile(tmpDir)
+=======
+	proxgitTemplateFile, err := readGiteaTemplateFile(tmpDir)
+>>>>>>> master
 	if err != nil {
 		return fmt.Errorf("readGiteaTemplateFile: %w", err)
 	}
 
+<<<<<<< HEAD
 	if giteaTemplateFile != nil {
 		err = processGiteaTemplateFile(ctx, tmpDir, templateRepo, generateRepo, giteaTemplateFile)
+=======
+	if proxgitTemplateFile != nil {
+		err = processGiteaTemplateFile(ctx, tmpDir, templateRepo, generateRepo, proxgitTemplateFile)
+>>>>>>> master
 		if err != nil {
 			return err
 		}
@@ -256,7 +300,11 @@ func generateRepoCommit(ctx context.Context, repo, templateRepo, generateRepo *r
 }
 
 func generateGitContent(ctx context.Context, repo, templateRepo, generateRepo *repo_model.Repository) (err error) {
+<<<<<<< HEAD
 	tmpDir, cleanup, err := setting.AppDataTempDir("git-repo-content").MkdirTempRandom("gitea-" + repo.Name)
+=======
+	tmpDir, cleanup, err := setting.AppDataTempDir("git-repo-content").MkdirTempRandom("proxgit-" + repo.Name)
+>>>>>>> master
 	if err != nil {
 		return fmt.Errorf("failed to create temp dir for repository %s: %w", repo.FullName(), err)
 	}

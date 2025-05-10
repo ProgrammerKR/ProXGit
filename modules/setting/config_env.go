@@ -10,7 +10,11 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+>>>>>>> master
 )
 
 const (
@@ -167,7 +171,11 @@ func EnvironmentToConfig(cfg ConfigProvider, envs []string) (changed bool) {
 	return changed
 }
 
+<<<<<<< HEAD
 // InitGiteaEnvVars initializes the environment variables for gitea
+=======
+// InitGiteaEnvVars initializes the environment variables for proxgit
+>>>>>>> master
 func InitGiteaEnvVars() {
 	// Ideally Gitea should only accept the environment variables which it clearly knows instead of unsetting the ones it doesn't want,
 	// but the ideal behavior would be a breaking change, and it seems not bringing enough benefits to end users,

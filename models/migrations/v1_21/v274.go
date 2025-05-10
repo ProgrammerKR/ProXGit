@@ -5,7 +5,11 @@ package v1_21 //nolint
 import (
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/timeutil"
+=======
+	"code.proxgit.io/proxgit/modules/timeutil"
+>>>>>>> master
 
 	"xorm.io/xorm"
 )

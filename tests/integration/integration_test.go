@@ -21,6 +21,7 @@ import (
 	"sync/atomic"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/graceful"
@@ -33,6 +34,20 @@ import (
 	"code.gitea.io/gitea/routers"
 	gitea_context "code.gitea.io/gitea/services/context"
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/graceful"
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/modules/web/middleware"
+	"code.proxgit.io/proxgit/routers"
+	proxgit_context "code.proxgit.io/proxgit/services/context"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/stretchr/testify/assert"
@@ -142,7 +157,11 @@ func (s *TestSession) GetSiteCookie(name string) string {
 }
 
 func (s *TestSession) GetCookieFlashMessage() *middleware.Flash {
+<<<<<<< HEAD
 	cookie := s.GetSiteCookie(gitea_context.CookieNameFlash)
+=======
+	cookie := s.GetSiteCookie(proxgit_context.CookieNameFlash)
+>>>>>>> master
 	return middleware.ParseCookieFlashMessage(cookie)
 }
 

@@ -7,9 +7,15 @@ import (
 	"path/filepath"
 	"testing"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unittest"
 	"code.gitea.io/gitea/modules/setting"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	"code.proxgit.io/proxgit/models/unittest"
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
@@ -19,8 +25,13 @@ func TestRepository_WikiCloneLink(t *testing.T) {
 
 	repo := unittest.AssertExistsAndLoadBean(t, &repo_model.Repository{ID: 1})
 	cloneLink := repo.WikiCloneLink(t.Context(), nil)
+<<<<<<< HEAD
 	assert.Equal(t, "ssh://sshuser@try.gitea.io:3000/user2/repo1.wiki.git", cloneLink.SSH)
 	assert.Equal(t, "https://try.gitea.io/user2/repo1.wiki.git", cloneLink.HTTPS)
+=======
+	assert.Equal(t, "ssh://sshuser@try.proxgit.io:3000/user2/repo1.wiki.git", cloneLink.SSH)
+	assert.Equal(t, "https://try.proxgit.io/user2/repo1.wiki.git", cloneLink.HTTPS)
+>>>>>>> master
 }
 
 func TestWikiPath(t *testing.T) {

@@ -13,6 +13,7 @@ import (
 	"strings"
 	"unicode"
 
+<<<<<<< HEAD
 	packages_model "code.gitea.io/gitea/models/packages"
 	packages_module "code.gitea.io/gitea/modules/packages"
 	pypi_module "code.gitea.io/gitea/modules/packages/pypi"
@@ -21,6 +22,16 @@ import (
 	"code.gitea.io/gitea/routers/api/packages/helper"
 	"code.gitea.io/gitea/services/context"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	pypi_module "code.proxgit.io/proxgit/modules/packages/pypi"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/validation"
+	"code.proxgit.io/proxgit/routers/api/packages/helper"
+	"code.proxgit.io/proxgit/services/context"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 )
 
 // https://peps.python.org/pep-0426/#name

@@ -9,15 +9,24 @@ import (
 	"os"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/tempdir"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/tempdir"
+>>>>>>> master
 
 	"github.com/hashicorp/go-version"
 	"github.com/stretchr/testify/assert"
 )
 
 func testRun(m *testing.M) error {
+<<<<<<< HEAD
 	gitHomePath, cleanup, err := tempdir.OsTempDir("gitea-test").MkdirTempRandom("git-home")
+=======
+	gitHomePath, cleanup, err := tempdir.OsTempDir("proxgit-test").MkdirTempRandom("git-home")
+>>>>>>> master
 	if err != nil {
 		return fmt.Errorf("unable to create temp dir: %w", err)
 	}

@@ -10,12 +10,21 @@ import (
 	"io"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/markup"
 	"code.gitea.io/gitea/modules/markup/common"
 	"code.gitea.io/gitea/modules/markup/markdown/math"
 	"code.gitea.io/gitea/modules/setting"
 	giteautil "code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/markup"
+	"code.proxgit.io/proxgit/modules/markup/common"
+	"code.proxgit.io/proxgit/modules/markup/markdown/math"
+	"code.proxgit.io/proxgit/modules/setting"
+	proxgitutil "code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 
 	chromahtml "github.com/alecthomas/chroma/v2/formatters/html"
 	"github.com/yuin/goldmark"
@@ -79,7 +88,11 @@ func (r *GlodmarkRender) Renderer() renderer.Renderer {
 func (r *GlodmarkRender) highlightingRenderer(w util.BufWriter, c highlighting.CodeBlockContext, entering bool) {
 	if entering {
 		languageBytes, _ := c.Language()
+<<<<<<< HEAD
 		languageStr := giteautil.IfZero(string(languageBytes), "text")
+=======
+		languageStr := proxgitutil.IfZero(string(languageBytes), "text")
+>>>>>>> master
 
 		preClasses := "code-block"
 		if languageStr == "mermaid" || languageStr == "math" {
@@ -160,7 +173,11 @@ func render(ctx *markup.RenderContext, input io.Reader, output io.Writer) error 
 		log.Error("Unable to ReadAll: %v", err)
 		return err
 	}
+<<<<<<< HEAD
 	buf = giteautil.NormalizeEOL(buf)
+=======
+	buf = proxgitutil.NormalizeEOL(buf)
+>>>>>>> master
 
 	// FIXME: should we include a timeout to abort the renderer if it takes too long?
 	defer func() {
@@ -170,8 +187,13 @@ func render(ctx *markup.RenderContext, input io.Reader, output io.Writer) error 
 		}
 
 		log.Error("Panic in markdown: %v\n%s", err, log.Stack(2))
+<<<<<<< HEAD
 		escapedHTML := template.HTMLEscapeString(giteautil.UnsafeBytesToString(buf))
 		_, _ = output.Write(giteautil.UnsafeStringToBytes(escapedHTML))
+=======
+		escapedHTML := template.HTMLEscapeString(proxgitutil.UnsafeBytesToString(buf))
+		_, _ = output.Write(proxgitutil.UnsafeStringToBytes(escapedHTML))
+>>>>>>> master
 	}()
 
 	pc := newParserContext(ctx)

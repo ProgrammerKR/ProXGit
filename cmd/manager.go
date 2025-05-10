@@ -7,7 +7,11 @@ import (
 	"os"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/private"
+=======
+	"code.proxgit.io/proxgit/modules/private"
+>>>>>>> master
 
 	"github.com/urfave/cli/v2"
 )
@@ -16,8 +20,13 @@ var (
 	// CmdManager represents the manager command
 	CmdManager = &cli.Command{
 		Name:        "manager",
+<<<<<<< HEAD
 		Usage:       "Manage the running gitea process",
 		Description: "This is a command for managing the running gitea process",
+=======
+		Usage:       "Manage the running proxgit process",
+		Description: "This is a command for managing the running proxgit process",
+>>>>>>> master
 		Subcommands: []*cli.Command{
 			subcmdShutdown,
 			subcmdRestart,

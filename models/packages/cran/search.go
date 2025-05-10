@@ -8,9 +8,15 @@ import (
 	"strconv"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/models/packages"
 	cran_module "code.gitea.io/gitea/modules/packages/cran"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	"code.proxgit.io/proxgit/models/packages"
+	cran_module "code.proxgit.io/proxgit/modules/packages/cran"
+>>>>>>> master
 
 	"xorm.io/builder"
 )

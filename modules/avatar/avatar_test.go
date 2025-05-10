@@ -10,21 +10,36 @@ import (
 	"os"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
 
 func Test_RandomImageSize(t *testing.T) {
+<<<<<<< HEAD
 	_, err := RandomImageSize(0, []byte("gitea@local"))
 	assert.Error(t, err)
 
 	_, err = RandomImageSize(64, []byte("gitea@local"))
+=======
+	_, err := RandomImageSize(0, []byte("proxgit@local"))
+	assert.Error(t, err)
+
+	_, err = RandomImageSize(64, []byte("proxgit@local"))
+>>>>>>> master
 	assert.NoError(t, err)
 }
 
 func Test_RandomImage(t *testing.T) {
+<<<<<<< HEAD
 	_, err := RandomImage([]byte("gitea@local"))
+=======
+	_, err := RandomImage([]byte("proxgit@local"))
+>>>>>>> master
 	assert.NoError(t, err)
 }
 

@@ -6,7 +6,11 @@ package actions
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 )
 
 // ActionTaskOutput represents an output of ActionTask.

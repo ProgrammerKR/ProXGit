@@ -10,7 +10,11 @@ import (
 	"fmt"
 	"os"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+>>>>>>> master
 )
 
 func checkAttrCommand(gitRepo *git.Repository, treeish string, filenames, attributes []string) (*git.Command, []string, func(), error) {

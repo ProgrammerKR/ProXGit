@@ -4,7 +4,11 @@
 package swagger
 
 import (
+<<<<<<< HEAD
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // Issue

@@ -11,6 +11,7 @@ import (
 	"os"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	packages_model "code.gitea.io/gitea/models/packages"
 	container_model "code.gitea.io/gitea/models/packages/container"
@@ -20,6 +21,17 @@ import (
 	container_module "code.gitea.io/gitea/modules/packages/container"
 	"code.gitea.io/gitea/modules/util"
 	packages_service "code.gitea.io/gitea/services/packages"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	packages_model "code.proxgit.io/proxgit/models/packages"
+	container_model "code.proxgit.io/proxgit/models/packages/container"
+	"code.proxgit.io/proxgit/modules/globallock"
+	"code.proxgit.io/proxgit/modules/log"
+	packages_module "code.proxgit.io/proxgit/modules/packages"
+	container_module "code.proxgit.io/proxgit/modules/packages/container"
+	"code.proxgit.io/proxgit/modules/util"
+	packages_service "code.proxgit.io/proxgit/services/packages"
+>>>>>>> master
 )
 
 // saveAsPackageBlob creates a package blob from an upload
@@ -47,7 +59,11 @@ func saveAsPackageBlob(ctx context.Context, hsr packages_module.HashedSizeReader
 			return err
 		}
 		// FIXME: Workaround to be removed in v1.20
+<<<<<<< HEAD
 		// https://github.com/go-gitea/gitea/issues/19586
+=======
+		// https://github.com/go-proxgit/proxgit/issues/19586
+>>>>>>> master
 		if exists {
 			err = contentStore.Has(packages_module.BlobHash256Key(pb.HashSHA256))
 			if err != nil && (errors.Is(err, util.ErrNotExist) || errors.Is(err, os.ErrNotExist)) {

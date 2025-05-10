@@ -13,7 +13,11 @@ With those caveats above, this command provides a generic way of
 converting suitably structured environment variables into any ini
 value.
 
+<<<<<<< HEAD
 To use the command is very simple just run it and the default gitea
+=======
+To use the command is very simple just run it and the default proxgit
+>>>>>>> master
 app.ini will be rewritten to take account of the variables provided,
 however there are various options to give slightly different
 behavior and these can be interrogated with the `-h` option.

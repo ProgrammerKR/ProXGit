@@ -6,10 +6,17 @@ package repo
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/gitrepo"
 	"code.gitea.io/gitea/services/context"
 	archiver_service "code.gitea.io/gitea/services/repository/archiver"
+=======
+	"code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/gitrepo"
+	"code.proxgit.io/proxgit/services/context"
+	archiver_service "code.proxgit.io/proxgit/services/repository/archiver"
+>>>>>>> master
 )
 
 func DownloadArchive(ctx *context.APIContext) {

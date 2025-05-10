@@ -10,16 +10,27 @@ import (
 	"io"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )
 
 const (
+<<<<<<< HEAD
 	author        = "gitea"
 	description   = "Package Description"
 	projectURL    = "https://gitea.io"
 	repositoryURL = "https://gitea.io/gitea/gitea"
+=======
+	author        = "proxgit"
+	description   = "Package Description"
+	projectURL    = "https://proxgit.io"
+	repositoryURL = "https://proxgit.io/proxgit/proxgit"
+>>>>>>> master
 )
 
 func TestParseMetadataFromBox(t *testing.T) {

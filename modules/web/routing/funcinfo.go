@@ -130,7 +130,11 @@ func copyFuncInfo(l *FuncInfo) *FuncInfo {
 	}
 }
 
+<<<<<<< HEAD
 // shortenFilename generates a short source code filename from a full package path, eg: "code.gitea.io/routers/common/logger_context.go" => "common/logger_context.go"
+=======
+// shortenFilename generates a short source code filename from a full package path, eg: "code.proxgit.io/routers/common/logger_context.go" => "common/logger_context.go"
+>>>>>>> master
 func shortenFilename(filename, fallback string) string {
 	if filename == "" {
 		return fallback

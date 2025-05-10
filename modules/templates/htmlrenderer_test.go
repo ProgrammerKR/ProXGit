@@ -10,7 +10,11 @@ import (
 	"strings"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/assetfs"
+=======
+	"code.proxgit.io/proxgit/modules/assetfs"
+>>>>>>> master
 
 	"github.com/stretchr/testify/assert"
 )

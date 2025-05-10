@@ -10,6 +10,7 @@ import (
 	"os"
 	"testing"
 
+<<<<<<< HEAD
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/unittest"
 	user_model "code.gitea.io/gitea/models/user"
@@ -18,6 +19,16 @@ import (
 	api "code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/test"
 	"code.gitea.io/gitea/tests"
+=======
+	auth_model "code.proxgit.io/proxgit/models/auth"
+	"code.proxgit.io/proxgit/models/unittest"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/process"
+	"code.proxgit.io/proxgit/modules/setting"
+	api "code.proxgit.io/proxgit/modules/structs"
+	"code.proxgit.io/proxgit/modules/test"
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 
 	"github.com/ProtonMail/go-crypto/openpgp"
 	"github.com/ProtonMail/go-crypto/openpgp/armor"
@@ -37,8 +48,13 @@ func TestGPGGit(t *testing.T) {
 	require.NoError(t, err, "importTestingKey")
 
 	defer test.MockVariableValue(&setting.Repository.Signing.SigningKey, rootKeyPair.PrimaryKey.KeyIdShortString())()
+<<<<<<< HEAD
 	defer test.MockVariableValue(&setting.Repository.Signing.SigningName, "gitea")()
 	defer test.MockVariableValue(&setting.Repository.Signing.SigningEmail, "gitea@fake.local")()
+=======
+	defer test.MockVariableValue(&setting.Repository.Signing.SigningName, "proxgit")()
+	defer test.MockVariableValue(&setting.Repository.Signing.SigningEmail, "proxgit@fake.local")()
+>>>>>>> master
 	defer test.MockVariableValue(&setting.Repository.Signing.InitialCommit, []string{"never"})()
 	defer test.MockVariableValue(&setting.Repository.Signing.CRUDActions, []string{"never"})()
 
@@ -101,13 +117,21 @@ func TestGPGGit(t *testing.T) {
 				t, testCtx, user, "master", "always", "signed-always.txt", func(t *testing.T, response api.FileResponse) {
 					require.NotNil(t, response.Verification, "no verification provided with response! %v", response)
 					require.True(t, response.Verification.Verified)
+<<<<<<< HEAD
 					assert.Equal(t, "gitea@fake.local", response.Verification.Signer.Email)
+=======
+					assert.Equal(t, "proxgit@fake.local", response.Verification.Signer.Email)
+>>>>>>> master
 				}))
 			t.Run("CreateCRUDFile-ParentSigned-always", crudActionCreateFile(
 				t, testCtx, user, "parentsigned", "parentsigned-always", "signed-parent2.txt", func(t *testing.T, response api.FileResponse) {
 					require.NotNil(t, response.Verification, "no verification provided with response! %v", response)
 					require.True(t, response.Verification.Verified)
+<<<<<<< HEAD
 					assert.Equal(t, "gitea@fake.local", response.Verification.Signer.Email)
+=======
+					assert.Equal(t, "proxgit@fake.local", response.Verification.Signer.Email)
+>>>>>>> master
 				}))
 		})
 
@@ -119,7 +143,11 @@ func TestGPGGit(t *testing.T) {
 				t, testCtx, user, "always", "always-parentsigned", "signed-always-parentsigned.txt", func(t *testing.T, response api.FileResponse) {
 					require.NotNil(t, response.Verification, "no verification provided with response! %v", response)
 					require.True(t, response.Verification.Verified)
+<<<<<<< HEAD
 					assert.Equal(t, "gitea@fake.local", response.Verification.Signer.Email)
+=======
+					assert.Equal(t, "proxgit@fake.local", response.Verification.Signer.Email)
+>>>>>>> master
 				}))
 		})
 
@@ -132,7 +160,11 @@ func TestGPGGit(t *testing.T) {
 				require.NotNil(t, branch.Commit, "no commit provided with branch! %v", branch)
 				require.NotNil(t, branch.Commit.Verification, "no verification provided with branch commit! %v", branch.Commit)
 				require.True(t, branch.Commit.Verification.Verified)
+<<<<<<< HEAD
 				assert.Equal(t, "gitea@fake.local", branch.Commit.Verification.Signer.Email)
+=======
+				assert.Equal(t, "proxgit@fake.local", branch.Commit.Verification.Signer.Email)
+>>>>>>> master
 			}))
 		})
 
@@ -155,7 +187,11 @@ func TestGPGGit(t *testing.T) {
 			t.Run("CreateCRUDFile-ParentSigned", crudActionCreateFile(
 				t, testCtx, user, "master", "parentsigned", "signed-parent.txt", func(t *testing.T, response api.FileResponse) {
 					require.True(t, response.Verification.Verified)
+<<<<<<< HEAD
 					assert.Equal(t, "gitea@fake.local", response.Verification.Signer.Email)
+=======
+					assert.Equal(t, "proxgit@fake.local", response.Verification.Signer.Email)
+>>>>>>> master
 				}))
 		})
 
@@ -167,7 +203,11 @@ func TestGPGGit(t *testing.T) {
 			t.Run("CreateCRUDFile-Always", crudActionCreateFile(
 				t, testCtx, user, "master", "always", "signed-always.txt", func(t *testing.T, response api.FileResponse) {
 					require.True(t, response.Verification.Verified)
+<<<<<<< HEAD
 					assert.Equal(t, "gitea@fake.local", response.Verification.Signer.Email)
+=======
+					assert.Equal(t, "proxgit@fake.local", response.Verification.Signer.Email)
+>>>>>>> master
 				}))
 		})
 

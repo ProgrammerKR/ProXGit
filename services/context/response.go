@@ -6,7 +6,11 @@ package context
 import (
 	"net/http"
 
+<<<<<<< HEAD
 	web_types "code.gitea.io/gitea/modules/web/types"
+=======
+	web_types "code.proxgit.io/proxgit/modules/web/types"
+>>>>>>> master
 )
 
 // ResponseWriter represents a response writer for HTTP

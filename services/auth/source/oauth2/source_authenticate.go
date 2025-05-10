@@ -6,8 +6,13 @@ package oauth2
 import (
 	"context"
 
+<<<<<<< HEAD
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/services/auth/source/db"
+=======
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/services/auth/source/db"
+>>>>>>> master
 )
 
 // Authenticate falls back to the db authenticator

@@ -10,11 +10,19 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	actions_model "code.gitea.io/gitea/models/actions"
 	"code.gitea.io/gitea/modules/util"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/routers/web/repo/actions"
 	"code.gitea.io/gitea/services/context"
+=======
+	actions_model "code.proxgit.io/proxgit/models/actions"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/modules/web"
+	"code.proxgit.io/proxgit/routers/web/repo/actions"
+	"code.proxgit.io/proxgit/services/context"
+>>>>>>> master
 )
 
 func generateMockStepsLog(logCur actions.LogCursor) (stepsLog []*actions.ViewStepLog) {

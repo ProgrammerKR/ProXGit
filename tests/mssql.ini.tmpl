@@ -11,11 +11,19 @@ SSL_MODE = disable
 
 [indexer]
 REPO_INDEXER_ENABLED = true
+<<<<<<< HEAD
 REPO_INDEXER_PATH = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/indexers/repos.bleve
 
 [queue.issue_indexer]
 TYPE = level
 DATADIR = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/indexers/issues.queue
+=======
+REPO_INDEXER_PATH = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/indexers/repos.bleve
+
+[queue.issue_indexer]
+TYPE = level
+DATADIR = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/indexers/issues.queue
+>>>>>>> master
 
 [queue]
 TYPE = immediate
@@ -30,6 +38,7 @@ TYPE = immediate
 TYPE = immediate
 
 [repository]
+<<<<<<< HEAD
 ROOT = {{REPO_TEST_DIR}}tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/gitea-repositories
 
 [repository.local]
@@ -37,6 +46,15 @@ LOCAL_COPY_PATH = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/tmp/local-repo
 
 [repository.upload]
 TEMP_PATH = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/tmp/uploads
+=======
+ROOT = {{REPO_TEST_DIR}}tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/proxgit-repositories
+
+[repository.local]
+LOCAL_COPY_PATH = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/tmp/local-repo
+
+[repository.upload]
+TEMP_PATH = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/tmp/uploads
+>>>>>>> master
 
 [repository.signing]
 SIGNING_KEY = none
@@ -53,14 +71,22 @@ START_SSH_SERVER = true
 LFS_START_SERVER = true
 OFFLINE_MODE     = false
 LFS_JWT_SECRET   = Tv_MjmZuHqpIY6GFl12ebgkRAMt4RlWt0v4EHKSXO0w
+<<<<<<< HEAD
 APP_DATA_PATH    = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/data
+=======
+APP_DATA_PATH    = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/data
+>>>>>>> master
 BUILTIN_SSH_SERVER_USER = git
 SSH_TRUSTED_USER_CA_KEYS = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCb4DC1dMFnJ6pXWo7GMxTchtzmJHYzfN6sZ9FAPFR4ijMLfGki+olvOMO5Fql1/yGnGfbELQa1S6y4shSvj/5K+zUFScmEXYf3Gcr87RqilLkyk16RS+cHNB1u87xTHbETaa3nyCJeGQRpd4IQ4NKob745mwDZ7jQBH8AZEng50Oh8y8fi8skBBBzaYp1ilgvzG740L7uex6fHV62myq0SXeCa+oJUjq326FU8y+Vsa32H8A3e7tOgXZPdt2TVNltx2S9H2WO8RMi7LfaSwARNfy1zu+bfR50r6ef8Yx5YKCMz4wWb1SHU1GS800mjOjlInLQORYRNMlSwR1+vLlVDciOqFapDSbj+YOVOawR0R1aqlSKpZkt33DuOBPx9qe6CVnIi7Z+Px/KqM+OLCzlLY/RS+LbxQpDWcfTVRiP+S5qRTcE3M3UioN/e0BE/1+MpX90IGpvVkA63ILYbKEa4bM3ASL7ChTCr6xN5XT+GpVJveFKK1cfNx9ExHI4rzYE=
 
 [mailer]
 ENABLED = true
 PROTOCOL = dummy
+<<<<<<< HEAD
 FROM = mssql-{{TEST_TYPE}}-test@gitea.io
+=======
+FROM = mssql-{{TEST_TYPE}}-test@proxgit.io
+>>>>>>> master
 
 [service]
 REGISTER_EMAIL_CONFIRM            = false
@@ -76,12 +102,21 @@ ENABLE_NOTIFY_MAIL                = true
 [picture]
 DISABLE_GRAVATAR              = false
 ENABLE_FEDERATED_AVATAR       = false
+<<<<<<< HEAD
 AVATAR_UPLOAD_PATH            = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/data/avatars
 REPOSITORY_AVATAR_UPLOAD_PATH = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/data/repo-avatars
 
 [session]
 PROVIDER        = file
 PROVIDER_CONFIG = tests/{{TEST_TYPE}}/gitea-{{TEST_TYPE}}-mssql/data/sessions
+=======
+AVATAR_UPLOAD_PATH            = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/data/avatars
+REPOSITORY_AVATAR_UPLOAD_PATH = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/data/repo-avatars
+
+[session]
+PROVIDER        = file
+PROVIDER_CONFIG = tests/{{TEST_TYPE}}/proxgit-{{TEST_TYPE}}-mssql/data/sessions
+>>>>>>> master
 
 [log]
 MODE                 = {{TEST_LOGGER}}
@@ -107,7 +142,11 @@ STORAGE_TYPE = azureblob
 AZURE_BLOB_ENDPOINT = http://devstoreaccount1.azurite.local:10000
 AZURE_BLOB_ACCOUNT_NAME = devstoreaccount1
 AZURE_BLOB_ACCOUNT_KEY = "Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw=="
+<<<<<<< HEAD
 AZURE_BLOB_CONTAINER = gitea
+=======
+AZURE_BLOB_CONTAINER = proxgit
+>>>>>>> master
 SERVE_DIRECT = false
 
 [packages]

@@ -6,7 +6,11 @@ package repo
 import (
 	"context"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
+=======
+	"code.proxgit.io/proxgit/models/db"
+>>>>>>> master
 )
 
 // MergeStyle represents the approach to merge commits into base branch.

@@ -7,8 +7,13 @@ package convert
 import (
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/structs"
+=======
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // ToCorrectPageSize makes sure page size is in allowed range.
@@ -26,7 +31,11 @@ func ToGitServiceType(value string) structs.GitServiceType {
 	switch strings.ToLower(value) {
 	case "github":
 		return structs.GithubService
+<<<<<<< HEAD
 	case "gitea":
+=======
+	case "proxgit":
+>>>>>>> master
 		return structs.GiteaService
 	case "gitlab":
 		return structs.GitlabService

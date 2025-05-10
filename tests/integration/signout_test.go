@@ -7,7 +7,11 @@ import (
 	"net/http"
 	"testing"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/tests"
+=======
+	"code.proxgit.io/proxgit/tests"
+>>>>>>> master
 )
 
 func TestSignOut(t *testing.T) {

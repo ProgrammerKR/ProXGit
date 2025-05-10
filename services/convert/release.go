@@ -6,8 +6,13 @@ package convert
 import (
 	"context"
 
+<<<<<<< HEAD
 	repo_model "code.gitea.io/gitea/models/repo"
 	api "code.gitea.io/gitea/modules/structs"
+=======
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	api "code.proxgit.io/proxgit/modules/structs"
+>>>>>>> master
 )
 
 // ToAPIRelease convert a repo_model.Release to api.Release

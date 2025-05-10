@@ -12,8 +12,13 @@ import (
 	"sync/atomic"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/json"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.proxgit.io/proxgit/modules/json"
+	"code.proxgit.io/proxgit/modules/util"
+>>>>>>> master
 )
 
 type LoggerImpl struct {

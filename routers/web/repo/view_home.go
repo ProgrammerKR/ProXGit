@@ -13,6 +13,7 @@ import (
 	"strings"
 	"time"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/models/db"
 	git_model "code.gitea.io/gitea/models/git"
 	access_model "code.gitea.io/gitea/models/perm/access"
@@ -30,6 +31,25 @@ import (
 	"code.gitea.io/gitea/routers/web/feed"
 	"code.gitea.io/gitea/services/context"
 	repo_service "code.gitea.io/gitea/services/repository"
+=======
+	"code.proxgit.io/proxgit/models/db"
+	git_model "code.proxgit.io/proxgit/models/git"
+	access_model "code.proxgit.io/proxgit/models/perm/access"
+	repo_model "code.proxgit.io/proxgit/models/repo"
+	unit_model "code.proxgit.io/proxgit/models/unit"
+	user_model "code.proxgit.io/proxgit/models/user"
+	"code.proxgit.io/proxgit/modules/git"
+	giturl "code.proxgit.io/proxgit/modules/git/url"
+	"code.proxgit.io/proxgit/modules/httplib"
+	"code.proxgit.io/proxgit/modules/log"
+	repo_module "code.proxgit.io/proxgit/modules/repository"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/modules/svg"
+	"code.proxgit.io/proxgit/modules/util"
+	"code.proxgit.io/proxgit/routers/web/feed"
+	"code.proxgit.io/proxgit/services/context"
+	repo_service "code.proxgit.io/proxgit/services/repository"
+>>>>>>> master
 )
 
 func checkOutdatedBranch(ctx *context.Context) {
@@ -53,7 +73,11 @@ func checkOutdatedBranch(ctx *context.Context) {
 	}
 
 	if dbBranch.CommitID != commit.ID.String() {
+<<<<<<< HEAD
 		ctx.Flash.Warning(ctx.Tr("repo.error.broken_git_hook", "https://docs.gitea.com/help/faq#push-hook--webhook--actions-arent-running"), true)
+=======
+		ctx.Flash.Warning(ctx.Tr("repo.error.broken_git_hook", "https://docs.proxgit.com/help/faq#push-hook--webhook--actions-arent-running"), true)
+>>>>>>> master
 	}
 }
 
@@ -78,9 +102,15 @@ func prepareOpenWithEditorApps(ctx *context.Context) {
 		schema, _, _ := strings.Cut(app.OpenURL, ":")
 		var iconHTML template.HTML
 		if schema == "vscode" || schema == "vscodium" || schema == "jetbrains" {
+<<<<<<< HEAD
 			iconHTML = svg.RenderHTML("gitea-"+schema, 16)
 		} else {
 			iconHTML = svg.RenderHTML("gitea-git", 16) // TODO: it could support user's customized icon in the future
+=======
+			iconHTML = svg.RenderHTML("proxgit-"+schema, 16)
+		} else {
+			iconHTML = svg.RenderHTML("proxgit-git", 16) // TODO: it could support user's customized icon in the future
+>>>>>>> master
 		}
 		tmplApps = append(tmplApps, map[string]any{
 			"DisplayName": app.DisplayName,
@@ -482,7 +512,11 @@ func RedirectRepoTreeToSrc(ctx *context.Context) {
 	// This is done intentionally so that Gitea's repo URL structure matches other forges (GitHub/GitLab) provide,
 	// allowing us to construct submodule URLs across forges easily.
 	// For example, when viewing a submodule, we can simply construct the link as:
+<<<<<<< HEAD
 	// * "https://gitea/owner/repo/tree/{CommitID}"
+=======
+	// * "https://proxgit/owner/repo/tree/{CommitID}"
+>>>>>>> master
 	// * "https://github/owner/repo/tree/{CommitID}"
 	// * "https://gitlab/owner/repo/tree/{CommitID}"
 	// Then no matter which forge the submodule is using, the link works.

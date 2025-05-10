@@ -8,9 +8,15 @@ import (
 	"net/http"
 	"reflect"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/web/routing"
 	"code.gitea.io/gitea/modules/web/types"
+=======
+	"code.proxgit.io/proxgit/modules/log"
+	"code.proxgit.io/proxgit/modules/web/routing"
+	"code.proxgit.io/proxgit/modules/web/types"
+>>>>>>> master
 )
 
 var responseStatusProviders = map[reflect.Type]func(req *http.Request) types.ResponseStatusProvider{}
