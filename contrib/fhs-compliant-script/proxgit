@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#############################################################################
+# This script sets some defaults for proxgit to run in a FHS compliant manner #
+#############################################################################
+
+# It assumes that you place this script as proxgit in /usr/bin
+#
+# And place the original in /usr/lib/proxgit with working files in /var/lib/proxgit
+# and main configuration in /etc/proxgit/app.ini
+GITEA="/usr/lib/proxgit/proxgit"
+WORK_DIR="/var/lib/proxgit"
+APP_INI="/etc/proxgit/app.ini"
+
+APP_INI_SET=""
+for i in "$@"; do
+	case "$i" in
+	"-c")
+		APP_INI_SET=1
+		;;
+	"-c="*)
+		APP_INI_SET=1
+		;;
+	"--config")
+		APP_INI_SET=1
+		;;
+	"--config="*)
+		APP_INI_SET=1
+		;;
+	*)
+	;;
+	esac
+done
+
+if [ -z "$APP_INI_SET" ]; then
+	CONF_ARG=("-c" "${GITEA_APP_INI:-$APP_INI}")
+fi
+
+# Provide FHS compliant defaults
+GITEA_WORK_DIR="${GITEA_WORK_DIR:-$WORK_DIR}" exec -a "$0" "$GITEA" "${CONF_ARG[@]}"  "$@"

@@ -1,0 +1,32 @@
+// Copyright 2025 The Gitea Authors. All rights reserved.
+// SPDX-License-Identifier: MIT
+
+package repo
+
+import (
+	"net/http"
+	"testing"
+
+	"code.proxgit.io/proxgit/models/unittest"
+	git_module "code.proxgit.io/proxgit/modules/git"
+	"code.proxgit.io/proxgit/modules/setting"
+	"code.proxgit.io/proxgit/services/contexttest"
+
+	"github.com/stretchr/testify/assert"
+)
+
+func TestViewHomeSubmoduleRedirect(t *testing.T) {
+	unittest.PrepareTestEnv(t)
+
+	ctx, _ := contexttest.MockContext(t, "/user2/repo1/src/branch/master/test-submodule")
+	submodule := &git_module.SubModule{Path: "test-submodule", URL: setting.AppURL + "user2/repo-other.git"}
+	handleRepoViewSubmodule(ctx, submodule)
+	assert.Equal(t, http.StatusSeeOther, ctx.Resp.WrittenStatus())
+	assert.Equal(t, "/user2/repo-other", ctx.Resp.Header().Get("Location"))
+
+	ctx, _ = contexttest.MockContext(t, "/user2/repo1/src/branch/master/test-submodule")
+	submodule = &git_module.SubModule{Path: "test-submodule", URL: "https://other/user2/repo-other.git"}
+	handleRepoViewSubmodule(ctx, submodule)
+	// do not auto-redirect for external URLs, to avoid open redirect or phishing
+	assert.Equal(t, http.StatusNotFound, ctx.Resp.WrittenStatus())
+}

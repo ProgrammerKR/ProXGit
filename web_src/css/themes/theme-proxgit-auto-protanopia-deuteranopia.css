@@ -1,0 +1,6 @@
+@import "./theme-proxgit-light-protanopia-deuteranopia.css" (prefers-color-scheme: light);
+@import "./theme-proxgit-dark-protanopia-deuteranopia.css" (prefers-color-scheme: dark);
+
+proxgit-theme-meta-info {
+  --theme-display-name: "Auto (Red/Green Colorblind-friendly)";
+}

@@ -1,0 +1,48 @@
+#!/bin/sh
+#
+# $FreeBSD$
+#
+# PROVIDE: proxgit
+# REQUIRE: NETWORKING SYSLOG
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable proxgit:
+#
+#proxgit_enable="YES"
+
+. /etc/rc.subr
+
+name="proxgit"
+rcvar="proxgit_enable"
+
+load_rc_config $name
+
+: ${proxgit_user:="git"}
+: ${proxgit_enable:="NO"}
+: ${proxgit_directory:="/var/lib/proxgit"}
+
+command="/usr/local/bin/proxgit web -c /etc/proxgit/app.ini"
+procname="$(echo $command |cut -d' ' -f1)"
+
+pidfile="${proxgit_directory}/${name}.pid"
+
+start_cmd="${name}_start"
+stop_cmd="${name}_stop"
+
+proxgit_start() {
+	cd ${proxgit_directory}
+	export USER=${proxgit_user}
+	export HOME=/usr/home/${proxgit_user}
+	export GITEA_WORK_DIR=${proxgit_directory}
+	/usr/sbin/daemon -f -u ${proxgit_user} -p ${pidfile} $command
+}
+
+proxgit_stop() {
+	if [ ! -f $pidfile ]; then
+		echo "GITEA PID File not found. Maybe GITEA is not running?"
+	else
+		kill $(cat $pidfile)
+	fi
+}
+
+run_rc_command "$1"

@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "go",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "linux": {
+        "args": ["build", "-o", "proxgit", "${workspaceRoot}/main.go" ]
+      },
+      "osx": {
+        "args": ["build", "-o", "proxgit", "${workspaceRoot}/main.go" ]
+      },
+      "windows": {
+        "args": ["build", "-o", "proxgit.exe", "\"${workspaceRoot}\\main.go\""]
+      },
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Build (with SQLite3)",
+      "type": "shell",
+      "command": "go",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "linux": {
+        "args": ["build", "-tags=\"sqlite sqlite_unlock_notify\"", "-o", "proxgit", "${workspaceRoot}/main.go"]
+      },
+      "osx": {
+        "args": ["build", "-tags=\"sqlite sqlite_unlock_notify\"", "-o", "proxgit", "${workspaceRoot}/main.go"]
+      },
+      "windows": {
+        "args": ["build", "-tags=\"sqlite sqlite_unlock_notify\"", "-o", "proxgit.exe", "\"${workspaceRoot}\\main.go\""]
+      },
+      "problemMatcher": ["$go"]
+    }
+  ]
+}

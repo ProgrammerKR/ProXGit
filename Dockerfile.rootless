@@ -1,0 +1,90 @@
+# Build stage
+FROM docker.io/library/golang:1.24-alpine3.21 AS build-env
+
+ARG GOPROXY
+ENV GOPROXY=${GOPROXY:-direct}
+
+ARG GITEA_VERSION
+ARG TAGS="sqlite sqlite_unlock_notify"
+ENV TAGS="bindata timetzdata $TAGS"
+ARG CGO_EXTRA_CFLAGS
+
+#Build deps
+RUN apk --no-cache add \
+    build-base \
+    git \
+    nodejs \
+    npm \
+    && rm -rf /var/cache/apk/*
+
+# Setup repo
+COPY . ${GOPATH}/src/code.proxgit.io/proxgit
+WORKDIR ${GOPATH}/src/code.proxgit.io/proxgit
+
+# Checkout version if set
+RUN if [ -n "${GITEA_VERSION}" ]; then git checkout "${GITEA_VERSION}"; fi \
+ && make clean-all build
+
+# Begin env-to-ini build
+RUN go build contrib/environment-to-ini/environment-to-ini.go
+
+# Copy local files
+COPY docker/rootless /tmp/local
+
+# Set permissions
+RUN chmod 755 /tmp/local/usr/local/bin/docker-entrypoint.sh \
+              /tmp/local/usr/local/bin/docker-setup.sh \
+              /tmp/local/usr/local/bin/proxgit \
+              /go/src/code.proxgit.io/proxgit/proxgit \
+              /go/src/code.proxgit.io/proxgit/environment-to-ini
+RUN chmod 644 /go/src/code.proxgit.io/proxgit/contrib/autocompletion/bash_autocomplete
+
+FROM docker.io/library/alpine:3.21
+LABEL maintainer="maintainers@proxgit.io"
+
+EXPOSE 2222 3000
+
+RUN apk --no-cache add \
+    bash \
+    ca-certificates \
+    dumb-init \
+    gettext \
+    git \
+    curl \
+    gnupg \
+    && rm -rf /var/cache/apk/*
+
+RUN addgroup \
+    -S -g 1000 \
+    git && \
+  adduser \
+    -S -H -D \
+    -h /var/lib/proxgit/git \
+    -s /bin/bash \
+    -u 1000 \
+    -G git \
+    git
+
+RUN mkdir -p /var/lib/proxgit /etc/proxgit
+RUN chown git:git /var/lib/proxgit /etc/proxgit
+
+COPY --from=build-env /tmp/local /
+COPY --from=build-env --chown=root:root /go/src/code.proxgit.io/proxgit/proxgit /app/proxgit/proxgit
+COPY --from=build-env --chown=root:root /go/src/code.proxgit.io/proxgit/environment-to-ini /usr/local/bin/environment-to-ini
+COPY --from=build-env /go/src/code.proxgit.io/proxgit/contrib/autocompletion/bash_autocomplete /etc/profile.d/proxgit_bash_autocomplete.sh
+
+# git:git
+USER 1000:1000
+ENV GITEA_WORK_DIR=/var/lib/proxgit
+ENV GITEA_CUSTOM=/var/lib/proxgit/custom
+ENV GITEA_TEMP=/tmp/proxgit
+ENV TMPDIR=/tmp/proxgit
+
+# TODO add to docs the ability to define the ini to load (useful to test and revert a config)
+ENV GITEA_APP_INI=/etc/proxgit/app.ini
+ENV HOME="/var/lib/proxgit/git"
+VOLUME ["/var/lib/proxgit", "/etc/proxgit"]
+WORKDIR /var/lib/proxgit
+
+ENTRYPOINT ["/usr/bin/dumb-init", "--", "/usr/local/bin/docker-entrypoint.sh"]
+CMD []
